@@ -4,6 +4,7 @@ import neuroLesson2 from './lessons/neuro-lesson02.json';
 import compLecture from './lessons/compcog-lecture01.json';
 import compTutorial from './lessons/compcog-tutorial01.json';
 import geneticsLecture from './lessons/genetics-lecture01.json';
+import geneticsTutorial from "./lessons/genetics-tutorial01.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -104,6 +105,15 @@ export const subjects = [
       lessons: 1,
       duration: geneticsLecture.duration?.estimatedStudyMinutes ?? null,
       topics: [geneticsLecture.title]
+    },
+    {
+      id: "genetics-tutorial-1",
+      name: "תרגול 1 — חוקי מנדל ודומיננטיות מלאה",
+      description: geneticsTutorial.description,
+      lessonIds: [geneticsTutorial.id],
+      lessons: 1,
+      duration: null,
+      topics: [geneticsTutorial.title]
     }]
   }
 ];

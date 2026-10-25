@@ -9,6 +9,7 @@ import neuroLesson2 from "../data/lessons/neuro-lesson02.json";
 import InteractiveSummary from "../components/InteractiveSummary";
 import neuropathologyIntro from "../data/lessons/neuropathology-lecture01.json";
 import geneticsLecture from '../data/lessons/genetics-lecture01.json';
+import geneticsTutorial from "../data/lessons/genetics-tutorial01.json";
 import "../styles/interactive-summary.css";
 
 
@@ -19,6 +20,7 @@ const lessonMap = {
   [neuroLesson2.id]: neuroLesson2,
   [neuropathologyIntro.id]: neuropathologyIntro,
   [geneticsLecture.id]: geneticsLecture,
+  [geneticsTutorial.id]: geneticsTutorial
 };
 
 export default function LessonPage({
@@ -136,7 +138,6 @@ export default function LessonPage({
           ['summary', 'סיכום השיעור'],
           ['concepts', 'מושגים'],
           ['conceptPractice', 'תרגול מושגים'],
-          ['readings', 'קריאה'],
           ['quiz', 'שאלון תרגול'],
         ].map(([id, label]) => (
           <button
@@ -180,26 +181,6 @@ export default function LessonPage({
           key={lesson.id}
           concepts={lesson.concepts}
         />
-      )}
-
-      {tab === 'readings' && (
-        <div className="study-cards">
-          {(lesson.readings || []).map((reading, index) => (
-            <article key={reading.id || reading.title || index} className="study-card">
-              <BookOpen size={22} color="#189b56" />
-              <h2 dir="auto">{reading.title}</h2>
-              {(reading.authors || reading.year) && (
-                <p>
-                  {reading.authors || ''} {reading.year && `(${reading.year})`}
-                </p>
-              )}
-              {reading.notes && <small>{reading.notes}</small>}
-              {reading.file && (
-                <PDFViewer file={reading.file} title={reading.title} />
-              )}
-            </article>
-          ))}
-        </div>
       )}
 
       {tab === 'quiz' && (

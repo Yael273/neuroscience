@@ -13,9 +13,10 @@ import compTutorial from "./data/lessons/compcog-tutorial01.json";
 import neuropathologyIntro from "./data/lessons/neuropathology-lecture01.json";
 import geneticsLecture from './data/lessons/genetics-lecture01.json';
 import ScrollToTop from "./components/ScrollToTop";
+import geneticsTutorial from "./data/lessons/genetics-tutorial01.json";
 
 const lessonsById = Object.fromEntries(
-  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture].map(lesson => [lesson.id, lesson])
+  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial].map(lesson => [lesson.id, lesson])
 );
 
 export default function App() {
