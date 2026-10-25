@@ -732,3 +732,104 @@
     height: auto;
     object-fit: contain;
 }
+
+/* Mobile comparison tables: transform wide tables into readable stacked cards.
+   Desktop table layout is deliberately unchanged. */
+@media (max-width: 640px) {
+    .interactive-summary,
+    .interactive-topic,
+    .interactive-topic-content,
+    .learning-visual-blocks,
+    .learning-visual,
+    .learning-table-scroll {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .interactive-topic {
+        padding: 14px;
+    }
+
+    .learning-visual--comparison {
+        padding: 12px;
+    }
+
+    .learning-table-scroll {
+        width: 100%;
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .learning-comparison-table {
+        width: 100%;
+        min-width: 0;
+        display: block;
+        border-collapse: separate;
+        background: transparent;
+    }
+
+    .learning-comparison-table thead {
+        /* Retain accessible header information while replacing the visual header. */
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .learning-comparison-table tbody {
+        display: grid;
+        gap: 10px;
+    }
+
+    .learning-comparison-table tbody tr {
+        display: grid;
+        gap: 0;
+        padding: 5px 12px;
+        border: 1px solid #e6deef;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(44, 25, 77, .04);
+    }
+
+    .learning-comparison-table tbody th,
+    .learning-comparison-table tbody td {
+        display: grid;
+        grid-template-columns: minmax(80px, 36%) minmax(0, 1fr);
+        align-items: start;
+        gap: 10px;
+        width: 100%;
+        min-width: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0edf3;
+        font-size: 13px;
+        line-height: 1.6;
+        font-weight: 400;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-align: right;
+    }
+
+    .learning-comparison-table tbody th {
+        font-weight: 700;
+    }
+
+    .learning-comparison-table tbody tr > :last-child {
+        border-bottom: 0;
+    }
+
+    .learning-comparison-table tbody th::before,
+    .learning-comparison-table tbody td::before {
+        content: attr(data-label);
+        color: #77599b;
+        font-weight: 700;
+        font-size: 12px;
+        overflow-wrap: break-word;
+    }
+}

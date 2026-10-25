@@ -151,8 +151,8 @@ export default function InteractiveSummary({
                               <thead><tr>{block.columns.map((col, ci) => <th key={ci} scope="col">{col}</th>)}</tr></thead>
                               <tbody>{block.rows.map((row, ri) => (
                                 <tr key={ri}>{row.map((cell, ci) => ci === 0
-                                  ? <th scope="row" key={ci} dir="auto">{cell}</th>
-                                  : <td key={ci} dir="auto">{cell}</td>)}</tr>
+                                  ? <th scope="row" key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</th>
+                                  : <td key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</td>)}</tr>
                               ))}</tbody>
                             </table>
                           </div>
