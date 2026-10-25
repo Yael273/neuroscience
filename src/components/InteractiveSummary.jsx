@@ -3,6 +3,7 @@ import { Bookmark, BookmarkCheck, CheckCircle2, ChevronDown, RotateCcw } from "l
 import InteractiveImage from "./InteractiveImage";
 import ProcessFlow from "./ProcessFlow";
 import "../styles/learning-colors.css";
+import { assetUrl } from "../utils/assetUrl";
 
 
 // Each section may optionally have an image and a check question in the JSON.
@@ -183,7 +184,7 @@ export default function InteractiveSummary({
 
                 {hasImage && !section.image.hotspots?.length && (
                   <figure className="interactive-topic-figure">
-                    <img src={section.image.src} alt={section.image.alt || section.title} loading="lazy" />
+                    <img src={assetUrl(section.image.src)} alt={section.image.alt || section.title} loading="lazy" />
                     <figcaption>מתוך המצגת המקורית · שקופית {section.image.slide}</figcaption>
                   </figure>
                 )}

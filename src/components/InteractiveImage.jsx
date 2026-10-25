@@ -1,6 +1,7 @@
 
 import React from "react";
 import "../styles/interactive-image.css";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function InteractiveImage({ image }) {
   if (!image?.src) {
@@ -13,7 +14,7 @@ export default function InteractiveImage({ image }) {
     <div className="interactive-diagram" dir="rtl">
       <div className="interactive-diagram-stage">
         <img
-          src={image.src}
+          src={assetUrl(image.src)}
           alt={image.alt || "Interactive diagram"}
           className="interactive-diagram-img"
           loading="lazy"

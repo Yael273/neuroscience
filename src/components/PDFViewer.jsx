@@ -1,5 +1,6 @@
 
 import React from "react";
+import { assetUrl } from "../utils/assetUrl";
 
 function PDFViewer({ file, title }) {
   return (
@@ -7,7 +8,7 @@ function PDFViewer({ file, title }) {
       {/* <h3>{title}</h3> */}
 
       <iframe
-        src={file}
+        src={assetUrl(file)}
         title={title}
         width="100%"
         height="600"
@@ -17,7 +18,7 @@ function PDFViewer({ file, title }) {
         }}
       />
 
-      <a href={file} target="_blank" rel="noreferrer">
+      <a href={assetUrl(file)} target="_blank" rel="noreferrer">
         פתיחת הקובץ בחלון חדש
       </a>
     </div>
