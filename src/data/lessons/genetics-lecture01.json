@@ -1283,5 +1283,12 @@
       "source": "שקופיות 29–35 במצגת"
     }
   ],
-  "readings": []
+  "readings": [
+    {
+      "id": "genetics-lecture01-slides",
+      "title": "מצגת הרצאות 1–2 — יסודות הגנטיקה",
+      "notes": "מצגת ההרצאות המקורית, 36 שקופיות.",
+      "file": "/pdfs/genetics/GenLect1_2026_Special_fusion_1-2.pdf"
+    }
+  ]
 }
