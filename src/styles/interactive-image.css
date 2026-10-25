@@ -1,0 +1,212 @@
+
+/* ==========================================
+   Interactive Image - Main Container
+========================================== */
+
+.interactive-diagram {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 0;
+}
+
+/* Image and markers share the same container */
+.interactive-diagram-stage {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Image */
+.interactive-diagram-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+/* ==========================================
+   Interactive Markers
+========================================== */
+
+/* Position relative to the image */
+.interactive-diagram-point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Green numbered circles */
+.interactive-diagram-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 33px;
+  height: 33px;
+  padding: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background-color: #16834c;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Marker hover */
+.interactive-diagram-marker:hover,
+.interactive-diagram-marker:focus-visible {
+  background-color: #0d6037;
+  transform: scale(1.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Keyboard accessibility */
+.interactive-diagram-marker:focus-visible {
+  outline: 3px solid #85cfa7;
+  outline-offset: 3px;
+}
+
+/* Bring active marker and tooltip to front */
+.interactive-diagram-point:hover,
+.interactive-diagram-point:focus-within {
+  z-index: 20;
+}
+
+
+/* ==========================================
+   Tooltip - Hidden by Default
+========================================== */
+
+.interactive-diagram-tooltip {
+  position: absolute;
+  top: 50%;
+
+  width: 245px;
+  max-width: min(245px, 70vw);
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  background-color: #ffffff;
+  border: 1px solid #d8e9df;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+
+  direction: rtl;
+  text-align: right;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(-50%) scale(0.96);
+  transform-origin: center;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+/* Show tooltip on mouse hover or keyboard focus */
+.interactive-diagram-point:hover
+.interactive-diagram-tooltip,
+.interactive-diagram-point:focus-within
+.interactive-diagram-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+/* Tooltip positioning */
+.interactive-diagram-tooltip.open-right {
+  left: calc(100% + 12px);
+}
+
+.interactive-diagram-tooltip.open-left {
+  right: calc(100% + 12px);
+}
+
+
+/* ==========================================
+   Tooltip Content
+========================================== */
+
+.interactive-diagram-tooltip strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #176c42;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.interactive-diagram-tooltip p {
+  margin: 0;
+
+  color: #3b4540;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   Responsive Design
+========================================== */
+
+@media (max-width: 768px) {
+  .interactive-diagram-stage {
+    max-width: 100%;
+  }
+
+  .interactive-diagram-marker {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .interactive-diagram-tooltip {
+    width: 190px;
+    max-width: 60vw;
+    padding: 12px;
+  }
+
+  .interactive-diagram-tooltip strong {
+    font-size: 13px;
+  }
+
+  .interactive-diagram-tooltip p {
+    font-size: 12px;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .interactive-diagram-marker,
+  .interactive-diagram-tooltip {
+    transition: none;
+  }
+}

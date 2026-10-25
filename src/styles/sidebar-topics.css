@@ -1,0 +1,250 @@
+/* Lesson topics nested in the right-hand sidebar */
+.sidebar-chapter-group {
+    width: 100%;
+}
+
+.sidebar-chapter-name {
+    flex: 1;
+    text-align: right;
+    min-width: 0;
+}
+
+.sidebar-chapter-group>.chapter-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+}
+
+.sidebar-topics {
+    margin: 3px 15px 13px 0;
+    padding-right: 10px;
+    border-right: 1px solid #dce9e1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar-topic {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 8px;
+    min-width: 0;
+}
+
+.sidebar-topic:hover {
+    background: #f0f9f3;
+}
+
+.sidebar-topic-link {
+    font: inherit;
+    font-size: 12px;
+    color: #456052;
+    flex: 1;
+    min-width: 0;
+    text-align: right;
+    border: 0;
+    background: none;
+    padding: 8px 6px;
+    cursor: pointer;
+    line-height: 1.45;
+}
+
+.sidebar-topic-link:hover,
+.sidebar-topic-link:focus-visible {
+    color: #137d45;
+}
+
+.sidebar-topic-bookmark {
+    color: #8a9c91;
+    background: transparent;
+    border: 0;
+    padding: 6px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-topic-bookmark.saved {
+    color: #168449;
+}
+
+.sidebar-topic-bookmark:hover,
+.sidebar-topic-bookmark:focus-visible {
+    background: #e3f5e9;
+}
+
+.interactive-topic {
+    scroll-margin-top: 24px;
+}
+
+
+/* Smooth opening animation for lesson topics */
+
+@keyframes topicsOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+        clip-path: inset(0 0 100% 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* Topic list container */
+.sidebar-topics {
+    animation: topicsOpen 0.75s ease-out both;
+    transform-origin: top;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .sidebar-topics {
+        animation: none;
+    }
+}
+
+
+.lesson-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #198754;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.lesson-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.lesson-toggle svg.is-closed {
+    transform: rotate(90deg);
+}
+
+.lesson-toggle:hover {
+    color: #12683f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lesson-toggle svg {
+        transition: none;
+    }
+}
+
+/* Lesson header and toggle button */
+
+.sidebar-chapter-group>.chapter-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.sidebar-chapter-group .sidebar-chapter-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: right;
+    cursor: pointer;
+}
+
+.lesson-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #189b56;
+    cursor: pointer;
+}
+
+.lesson-toggle:hover {
+    background: #eaf7ee;
+}
+
+.lesson-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.lesson-toggle svg.is-closed {
+    transform: rotate(90deg);
+}
+
+/* Smooth opening and closing */
+
+.sidebar-topics-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+        grid-template-rows 0.35s ease,
+        opacity 0.25s ease;
+}
+
+.sidebar-topics-panel.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.sidebar-topics-panel.closed {
+    pointer-events: none;
+}
+
+.sidebar-topics-panel>.sidebar-topics {
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sidebar-topics-panel,
+    .lesson-toggle svg {
+        transition: none;
+    }
+}
+
+/* Highlight the topic currently visible in the lesson */
+
+.sidebar-topic-link {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar-topic-link.active {
+    /* background-color: #e8f7ee; */
+    color: #16834c;
+    font-weight: 700;
+    border-radius: 7px;
+    /* box-shadow: inset -3px 0 0 #20ad60; */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar-topic-link {
+        transition: none;
+    }
+}

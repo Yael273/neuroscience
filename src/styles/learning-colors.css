@@ -1,0 +1,169 @@
+/* Learning colors — minimal visual hierarchy for InteractiveSummary.
+   Add via: import "../styles/learning-colors.css"; in InteractiveSummary.jsx.
+   No JSON changes or markup changes required. */
+.interactive-summary {
+  --learn-concept: #4268bb;
+  --learn-concept-bg: #f5f8ff;
+  --learn-memory: #21864d;
+  --learn-memory-bg: #eef9f2;
+  --learn-process: #168c89;
+  --learn-process-bg: #f3fbfa;
+  --learn-compare: #7953b4;
+  --learn-compare-bg: #f8f5ff;
+  --learn-quiz: #a96210;
+  --learn-quiz-bg: #fffaef;
+}
+
+/* Concept definitions: a slim accent, without adding boxes. */
+.interactive-summary .interactive-detail {
+  background: #fff;
+  border-color: #e3e9f3;
+  border-inline-start: 3px solid #9cb7e8;
+  box-shadow: none;
+}
+
+.interactive-summary .interactive-detail strong {
+  color: #35599b;
+}
+
+/* Takeaways / key principles */
+.interactive-summary .learning-visual--takeaway {
+  background: var(--learn-memory-bg);
+  border: 1px solid #d7eddd;
+  border-inline-start: 4px solid var(--learn-memory);
+  border-right: 0;
+  box-shadow: none;
+}
+
+.interactive-summary .learning-visual--takeaway>h4 {
+  color: #17673c;
+}
+
+.interactive-summary .learning-takeaway {
+  color: #325844;
+}
+
+/* Process: a single subtle section, no nested decorative panels. */
+.interactive-summary .learning-visual--process {
+  background: var(--learn-process-bg);
+  border-color: #d9ecea;
+  box-shadow: none;
+}
+
+/* ProcessFlow already renders its own title; hide only the duplicate parent title. */
+.interactive-summary .learning-visual--process>h4 {
+  display: none;
+}
+
+.interactive-summary .process-flow {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 5px 0;
+}
+
+.interactive-summary .process-flow-title {
+  color: #126d6b;
+}
+
+.interactive-summary .process-flow-arrow {
+  color: #168c89;
+}
+
+.interactive-summary .process-flow-step strong {
+  color: #2866a0;
+}
+
+.interactive-summary .process-flow-step:nth-of-type(2) strong {
+  color: #7853a8;
+}
+
+.interactive-summary .process-flow-step:nth-of-type(3) strong {
+  color: #168c89;
+}
+
+.interactive-summary .process-flow-step:nth-of-type(4) strong {
+  color: #9d640f;
+}
+
+/* Keep the fallback for older list-style process renderer, if present. */
+.interactive-summary .learning-step-number {
+  background: #dff3f0;
+  color: #147d79;
+}
+
+/* Comparison tables: lavender only in heading and subtle alternating rows. */
+.interactive-summary .learning-visual--comparison {
+  background: #fff;
+  border-color: #e6dff2;
+  box-shadow: none;
+}
+
+.interactive-summary .learning-visual--comparison>h4 {
+  color: var(--learn-compare);
+}
+
+.interactive-summary .learning-visual--comparison .learning-table-scroll {
+  border-color: #e5dff0;
+}
+
+.interactive-summary .learning-comparison-table thead th {
+  background: #f1ebfc;
+  color: #5d398f;
+}
+
+.interactive-summary .learning-comparison-table tbody tr:nth-child(even) {
+  background: #fcfbff;
+}
+
+.interactive-summary .learning-comparison-table tbody th {
+  color: #49356c;
+}
+
+/* Checks: amber signals practice, green/red still reserved for correctness. */
+.interactive-summary .interactive-check {
+  background: var(--learn-quiz-bg);
+  border-color: #f1e3c9;
+  border-inline-start: 3px solid #dba651;
+}
+
+.interactive-summary .interactive-check-heading>span {
+  color: var(--learn-quiz);
+}
+
+.interactive-summary .interactive-check-heading>strong {
+  color: #473728;
+}
+
+.interactive-summary .interactive-check-option {
+  background: #fff;
+}
+
+.interactive-summary .interactive-check-option:not(:disabled):hover {
+  border-color: #d4a45b;
+  background: #fffdf7;
+}
+
+.interactive-summary .interactive-option-marker {
+  background: #faefdd;
+  color: #8f5c17;
+}
+
+/* The original correct / incorrect indicators are intentionally not recolored. */
+
+/* Image panel: soft pink accent only on the existing ordinary figure container. */
+.interactive-summary .interactive-topic-figure {
+  background: #fffbfd;
+  border-color: #f1e1e9;
+}
+
+.interactive-summary .interactive-topic-figure figcaption {
+  color: #946c7d;
+}
+
+/* Preserve existing navigation and overall green site identity. */
+@media (prefers-reduced-motion: reduce) {
+  .interactive-summary .interactive-check-option {
+    transition: none;
+  }
+}

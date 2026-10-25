@@ -1,0 +1,74 @@
+
+/* Minimal process diagram */
+
+.process-flow {
+  width: 100%;
+  padding: 14px 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.process-flow-title {
+  margin: 0 0 20px;
+  color: #174c32;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.process-flow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  direction: rtl;
+}
+
+.process-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 110px;
+  max-width: 195px;
+  text-align: center;
+}
+
+.process-flow-step strong {
+  color: #174c32;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.process-flow-step span {
+  color: #64756b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.process-flow-arrow {
+  flex-shrink: 0;
+  color: #20ad60;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+/* Mobile layout */
+
+@media (max-width: 650px) {
+  .process-flow-steps {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .process-flow-step {
+    max-width: 100%;
+  }
+
+  .process-flow-arrow {
+    transform: rotate(-90deg);
+  }
+}
