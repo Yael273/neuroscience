@@ -134,6 +134,20 @@ export const subjects = [
         duration: 0,
         lessonIds: ["molecular-neurobiology-synaptic-transmission-01"],
         topics: ["העברה סינפטית ומודל מאגרי הווזיקולות"]
+      },
+      {
+        id: "molecular-synaptic-organization",
+        name: "הרצאה 2 — ארגון קדם ובתר־סינפטי",
+        description: "הפרדת פאזות, קונדנסטים וננו־עמודות סינפטיות",
+        lessons: 1,
+        duration: 0,
+        lessonIds: ["molecular-neurobiology-synaptic-organization-02"],
+        topics: [
+          "הפרדת פאזות וקונדנסט הסינפסין",
+          "חשיבות הפרדת הפאזות בתא העצב",
+          "ננו־עמודות טרנס־סינפטיות",
+          "תכונות החומר של ה־PSD"
+        ]
       }
     ]
   }
