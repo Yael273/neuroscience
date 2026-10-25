@@ -115,5 +115,26 @@ export const subjects = [
       duration: null,
       topics: [geneticsTutorial.title]
     }]
+  },
+  {
+    id: "molecular_neurobiology",
+    name: "נוירוביולוגיה מולקולרית",
+    symbol: "🧬",
+    progress: 0,
+    color: "#4773bd",
+    soft: "#ebf1ff",
+    subtitle: "העברה סינפטית ומודל מאגרי הווזיקולות",
+    search: "חיפוש בנוירוביולוגיה מולקולרית",
+    chapters: [
+      {
+        id: "molecular-synaptic-transmission",
+        name: "הרצאה 1 — העברה סינפטית",
+        description: "מבט מולקולרי וכמותי על העברה סינפטית",
+        lessons: 1,
+        duration: 0,
+        lessonIds: ["molecular-neurobiology-synaptic-transmission-01"],
+        topics: ["העברה סינפטית ומודל מאגרי הווזיקולות"]
+      }
+    ]
   }
 ];

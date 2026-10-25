@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, BookOpen, CheckCircle2, RotateCcw } from 'lucide-react';
-import PDFViewer from '../components/PDFViewer';
 import neuroLesson from "../data/lessons/lesson1.json";
 import compLecture from "../data/lessons/compcog-lecture01.json";
 import compTutorial from "../data/lessons/compcog-tutorial01.json";
@@ -10,6 +9,7 @@ import InteractiveSummary from "../components/InteractiveSummary";
 import neuropathologyIntro from "../data/lessons/neuropathology-lecture01.json";
 import geneticsLecture from '../data/lessons/genetics-lecture01.json';
 import geneticsTutorial from "../data/lessons/genetics-tutorial01.json";
+import molecularLecture from "../data/lessons/molecular-neurobiology-lecture01.json";
 import "../styles/interactive-summary.css";
 
 
@@ -20,7 +20,8 @@ const lessonMap = {
   [neuroLesson2.id]: neuroLesson2,
   [neuropathologyIntro.id]: neuropathologyIntro,
   [geneticsLecture.id]: geneticsLecture,
-  [geneticsTutorial.id]: geneticsTutorial
+  [geneticsTutorial.id]: geneticsTutorial,
+  [molecularLecture.id]: molecularLecture,
 };
 
 export default function LessonPage({
