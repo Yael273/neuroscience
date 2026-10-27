@@ -5,6 +5,10 @@ import compLecture from './lessons/compcog-lecture01.json';
 import compTutorial from './lessons/compcog-tutorial01.json';
 import geneticsLecture from './lessons/genetics-lecture01.json';
 import geneticsTutorial from "./lessons/genetics-tutorial01.json";
+import molecularLecture from "./lessons/molecular-neurobiology-lecture01.json";
+import molecularLecture2 from "./lessons/molecular-neurobiology-lecture02.json";
+import brainImagingLesson from "./lessons/brain-imaging-lesson01.json";
+import brainImagingLesson2 from "./lessons/brain-imaging-lesson02.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -148,6 +152,42 @@ export const subjects = [
           "ננו־עמודות טרנס־סינפטיות",
           "תכונות החומר של ה־PSD"
         ]
+      }
+    ]
+  },
+
+  {
+    id: 'brain_imaging',
+    name: 'מבוא לדימות מוח האדם',
+    symbol: '🧠',
+    color: '#6278B5',
+    soft: '#EEF2FF',
+    subtitle: 'הדמיה מבנית ותפקודית, MRI, fMRI ושיטות לחקר המוח',
+    search: 'חיפוש במבוא לדימות מוח האדם',
+    chapters: [
+      {
+        id: 'brain-imaging-intro',
+        name: 'הרצאה 1 — מבוא לדימות מוח האדם',
+        description: 'רקע היסטורי, אנטומיה ושיטות דימות מוחי',
+        lessonIds: ['brain-imaging-lesson-01'],
+        lessons: 1,
+        duration: 0,
+        topics: [
+          'רקע היסטורי ומהפכה קוגניטיבית',
+          'לוקליזציה של תפקודים במוח',
+          'אבני הבניין ומישורי חיתוך',
+          'CT, MRI ו-DTI',
+          'דימות תפקודי ורישום תא בודד'
+        ]
+      },
+      {
+        id: 'brain-imaging-lesson-2',
+        name: 'הרצאה 2 — שיטות מדידה וגרייה עצבית',
+        description: brainImagingLesson2.description,
+        lessonIds: [brainImagingLesson2.id],
+        lessons: 1,
+        duration: brainImagingLesson2.duration?.estimatedStudyMinutes ?? null,
+        topics: [brainImagingLesson2.title]
       }
     ]
   }

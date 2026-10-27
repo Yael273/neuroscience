@@ -16,10 +16,11 @@ import ScrollToTop from "./components/ScrollToTop";
 import geneticsTutorial from "./data/lessons/genetics-tutorial01.json";
 import molecularLecture from "./data/lessons/molecular-neurobiology-lecture01.json";
 import molecularLecture2 from "./data/lessons/molecular-neurobiology-lecture02.json";
-
+import brainImagingLesson from "./data/lessons/brain-imaging-lesson01.json";
+import brainImagingLesson2 from "./data/lessons/brain-imaging-lesson02.json"
 
 const lessonsById = Object.fromEntries(
-  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2].map(lesson => [lesson.id, lesson])
+  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2].map(lesson => [lesson.id, lesson])
 );
 
 export default function App() {
