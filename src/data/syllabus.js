@@ -9,6 +9,7 @@ import molecularLecture from "./lessons/molecular-neurobiology-lecture01.json";
 import molecularLecture2 from "./lessons/molecular-neurobiology-lecture02.json";
 import brainImagingLesson from "./lessons/brain-imaging-lesson01.json";
 import brainImagingLesson2 from "./lessons/brain-imaging-lesson02.json";
+import consciousnessLesson from "./lessons/consciousness-lesson01.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -190,5 +191,27 @@ export const subjects = [
         topics: [brainImagingLesson2.title]
       }
     ]
+  },
+
+  {
+    id: 'consciousness_and_psychopathology',
+    name: 'תודעה ופסיכופתולוגיה',
+    symbol: '💭',
+    color: '#8265AE',
+    soft: '#F4EFFF',
+    subtitle: 'החוויה הסובייקטיבית, גוף–נפש ותיאוריות של תודעה',
+    search: 'חיפוש בתודעה ופסיכופתולוגיה',
+    chapters: [
+      {
+        id: 'consciousness-lecture-1',
+        name: 'הרצאה 1 — מבוא לתודעה ופסיכופתולוגיה',
+        description: consciousnessLesson.description,
+        lessonIds: [consciousnessLesson.id],
+        lessons: 1,
+        duration: consciousnessLesson.duration?.estimatedStudyMinutes ?? null,
+        topics: consciousnessLesson.sections.map(section => section.title)
+      }
+    ]
   }
+
 ];
