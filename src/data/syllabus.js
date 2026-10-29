@@ -10,6 +10,7 @@ import molecularLecture2 from "./lessons/molecular-neurobiology-lecture02.json";
 import brainImagingLesson from "./lessons/brain-imaging-lesson01.json";
 import brainImagingLesson2 from "./lessons/brain-imaging-lesson02.json";
 import consciousnessLesson from "./lessons/consciousness-lesson01.json";
+import membraneTransportLesson from "./lessons/membrane-transport-lesson01.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -212,6 +213,28 @@ export const subjects = [
         topics: consciousnessLesson.sections.map(section => section.title)
       }
     ]
+  },
+
+  {
+    id: 'membrane_transport',
+    name: 'מעבר חומרים דרך ממברנות ביולוגיות',
+    symbol: '💧',
+    color: '#287A91',
+    soft: '#E8F6F8',
+    subtitle: 'תעלות ונשאים, אוסמוזה, אקוופורינים ומאזן מים',
+    search: 'חיפוש במעבר חומרים דרך ממברנות ביולוגיות',
+    chapters: [
+      {
+        id: 'membrane-transport-lecture-1',
+        name: 'הרצאה 1 — אקוופורינים ומעבר חומרים',
+        description: membraneTransportLesson.description,
+        lessonIds: [membraneTransportLesson.id],
+        lessons: 1,
+        duration: membraneTransportLesson.duration?.estimatedStudyMinutes ?? null,
+        topics: membraneTransportLesson.sections.map(section => section.title)
+      }
+    ]
   }
+
 
 ];
