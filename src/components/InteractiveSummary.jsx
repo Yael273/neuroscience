@@ -6,6 +6,75 @@ import "../styles/learning-colors.css";
 import { assetUrl } from "../utils/assetUrl";
 
 
+
+// Opt-in textbook layout: only sections with learningFlow use this renderer.
+// Other lessons continue to use the original JSON structure and layout.
+function LessonFlowVisual({ block }) {
+  if (!block) return null;
+  return (
+    <div className={`learning-visual learning-visual--${block.type} textbook-visual`}>
+      <h4>{block.title}</h4>
+      {block.type === "comparison" && (
+        <div className="learning-table-scroll" role="region" tabIndex={0} aria-label={block.title}>
+          <table className="learning-comparison-table">
+            <thead><tr>{block.columns.map((col, i) => <th scope="col" key={i}>{col}</th>)}</tr></thead>
+            <tbody>{block.rows.map((row, ri) => (
+              <tr key={ri}>{row.map((cell, ci) => ci === 0
+                ? <th scope="row" key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</th>
+                : <td key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</td>)}</tr>
+            ))}</tbody>
+          </table>
+        </div>
+      )}
+      {block.type === "process" && <ProcessFlow block={block} />}
+      {block.type === "takeaway" && <p className="learning-takeaway">{block.text}</p>}
+    </div>
+  );
+}
+
+function LessonNarrative({ section, lessonId }) {
+  return (
+    <div className="textbook-reading">
+      {section.learningQuestion && (
+        <div className="textbook-question">
+          <span>השאלה המרכזית</span>
+          <h4>{section.learningQuestion}</h4>
+        </div>
+      )}
+      {(section.learningFlow || []).map((part, i) => {
+        if (part.type === "intro" || part.type === "paragraph") {
+          return <p className="textbook-paragraph" key={i}>{part.text}</p>;
+        }
+        if (part.type === "explanation") {
+          return (
+            <section className="textbook-subsection" key={i}>
+              <h4>{part.title}</h4>
+              <p>{part.text}</p>
+            </section>
+          );
+        }
+        if (part.type === "visual") {
+          return <LessonFlowVisual key={i} block={section.visualBlocks?.[part.index]} />;
+        }
+        if (part.type === "image" && section.image?.src) {
+          return section.image.hotspots?.length ? (
+            <InteractiveImage key={`${lessonId}-${section.id}-${i}`} image={section.image} title={section.title} />
+          ) : (
+            <figure key={i} className="interactive-topic-figure textbook-figure">
+              <img src={assetUrl(section.image.src)} alt={section.image.alt || section.title} loading="lazy" />
+              <figcaption>מתוך המצגת המקורית · שקופית {section.image.slide}</figcaption>
+            </figure>
+          );
+        }
+        if (part.type === "takeaway") {
+          return <aside className="textbook-note" key={i}><strong>{part.title || "מה חשוב לזכור?"}</strong><p>{part.text}</p></aside>;
+        }
+        return null;
+      })}
+    </div>
+  );
+}
+
 // Each section may optionally have an image and a check question in the JSON.
 export default function InteractiveSummary({
   sections = [], lessonId, topicRequest,
@@ -13,6 +82,7 @@ export default function InteractiveSummary({
 }) {
   const [answers, setAnswers] = useState({});
   const [expanded, setExpanded] = useState({});
+  const [expandedDetails, setExpandedDetails] = useState({});
   const [activeTopicId, setActiveTopicId] = useState(sections[0]?.id ?? null);
   const savedIds = savedTopicIds;
   const toggleBookmark = onTopicBookmark;
@@ -21,6 +91,7 @@ export default function InteractiveSummary({
   useEffect(() => {
     setAnswers({});
     setExpanded({});
+    setExpandedDetails({});
     const firstTopicId = sections[0]?.id ?? null;
     setActiveTopicId(firstTopicId);
     onActiveTopicChange?.(firstTopicId);
@@ -139,7 +210,47 @@ export default function InteractiveSummary({
 
             {isExpanded && (
               <div className="interactive-topic-content">
+                {section.learningFlow?.length > 0 ? (
+                  <LessonNarrative section={section} lessonId={lessonId} />
+                ) : (
+                  <>
                 <p className="interactive-topic-summary">{section.summary}</p>
+                {section.details?.length > 0 && (
+                  <section className="interactive-topic-details" aria-label="הסברים והרחבות">
+                    {section.details.map((item, detailIndex) => {
+                      const detailKey = `${section.id}-${detailIndex}`;
+                      const isLong = (item.explanation?.length ?? 0) > 270;
+                      const showAll = Boolean(expandedDetails[detailKey]);
+                      return (
+                        <div className="interactive-detail" key={detailKey}>
+                          <h4 className="interactive-detail-heading">{item.term}</h4>
+                          <p
+                            id={`detail-${detailKey}`}
+                            className={`interactive-detail-text${isLong && !showAll ? " is-clamped" : ""}`}
+                          >
+                            {item.explanation}
+                          </p>
+                          {isLong && (
+                            <button
+                              type="button"
+                              className="interactive-detail-more"
+                              aria-expanded={showAll}
+                              aria-controls={`detail-${detailKey}`}
+                              onClick={() => setExpandedDetails(previous => ({
+                                ...previous,
+                                [detailKey]: !showAll,
+                              }))}
+                            >
+                              {showAll ? "הצג פחות" : "קראי את ההסבר המלא"}
+                              <ChevronDown size={15} className={showAll ? "detail-chevron-up" : ""} />
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </section>
+                )}
+
                 {section.visualBlocks?.length > 0 && (
                   <div className="learning-visual-blocks">
                     {section.visualBlocks.map((block, blockIndex) => (
@@ -167,16 +278,7 @@ export default function InteractiveSummary({
                     ))}
                   </div>
                 )}
-                {section.details?.length > 0 && (
-                  <div className="interactive-topic-details">
-                    {section.details.map((item, detailIndex) => (
-                      <div className="interactive-detail" key={`${section.id}-${detailIndex}`}>
-                        <strong dir="auto">{item.term}</strong>
-                        <p>{item.explanation}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
+
 
                 {hasImage && section.image.hotspots?.length > 0 && (
                   <InteractiveImage key={`${lessonId}-${section.id}`} image={section.image} title={section.title} />
@@ -187,6 +289,9 @@ export default function InteractiveSummary({
                     <img src={assetUrl(section.image.src)} alt={section.image.alt || section.title} loading="lazy" />
                     <figcaption>מתוך המצגת המקורית · שקופית {section.image.slide}</figcaption>
                   </figure>
+                )}
+
+                  </>
                 )}
 
                 {check && (
