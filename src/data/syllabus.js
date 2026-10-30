@@ -11,6 +11,8 @@ import brainImagingLesson from "./lessons/brain-imaging-lesson01.json";
 import brainImagingLesson2 from "./lessons/brain-imaging-lesson02.json";
 import consciousnessLesson from "./lessons/consciousness-lesson01.json";
 import membraneTransportLesson from "./lessons/membrane-transport-lesson01.json";
+import neuropathologyLesson from "./lessons/neuropathology-lecture01.json";
+import appliedGenetics from "./lessons/applied-genetics-lecture01.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -89,7 +91,7 @@ export const subjects = [
       id: "np-motor-introduction",
       name: "מבוא לבקרה מוטורית",
       description: "הרצאה 1: בקרה מוטורית כבסיס להבנת פתולוגיות",
-      lessonIds: ["neuropathology-motor-intro-01"],
+      lessonIds: ["neuropathology-lecture01"],
       lessons: 1,
       duration: 0,
       topics: ["מבוא לבקרה מוטורית ולנוירופתולוגיה"]
@@ -232,6 +234,26 @@ export const subjects = [
         lessons: 1,
         duration: membraneTransportLesson.duration?.estimatedStudyMinutes ?? null,
         topics: membraneTransportLesson.sections.map(section => section.title)
+      }
+    ]
+  },
+  {
+    id: "applied-genetics",
+    name: "גנטיקה יישומית",
+    symbol: "🧬",
+    color: "#8B5CF6",
+    soft: "#F3EEFF",
+    subtitle: "שונות גנטית, גנטיקה של אוכלוסיות וסמנים גנטיים",
+    search: "חיפוש בגנטיקה יישומית",
+    chapters: [
+      {
+        id: "applied-genetics-lecture-1",
+        name: "הרצאה 1 — מבוא לגנטיקה יישומית",
+        description: appliedGenetics.description,
+        lessonIds: [appliedGenetics.id],
+        lessons: 1,
+        duration: appliedGenetics.duration?.estimatedStudyMinutes ?? null,
+        topics: appliedGenetics.sections.map(section => section.title)
       }
     ]
   }

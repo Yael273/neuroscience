@@ -20,9 +20,10 @@ import brainImagingLesson from "./data/lessons/brain-imaging-lesson01.json";
 import brainImagingLesson2 from "./data/lessons/brain-imaging-lesson02.json"
 import consciousnessLesson from "./data/lessons/consciousness-lesson01.json";
 import membraneTransportLesson from "./data/lessons/membrane-transport-lesson01.json";
+import appliedGenetics from "./data/lessons/applied-genetics-lecture01.json";
 
 const lessonsById = Object.fromEntries(
-  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, membraneTransportLesson].map(lesson => [lesson.id, lesson])
+  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, membraneTransportLesson, appliedGenetics].map(lesson => [lesson.id, lesson])
 );
 
 export default function App() {
