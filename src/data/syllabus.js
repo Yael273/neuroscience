@@ -10,9 +10,9 @@ import molecularLecture2 from "./lessons/molecular-neurobiology-lecture02.json";
 import brainImagingLesson from "./lessons/brain-imaging-lesson01.json";
 import brainImagingLesson2 from "./lessons/brain-imaging-lesson02.json";
 import consciousnessLesson from "./lessons/consciousness-lesson01.json";
-import membraneTransportLesson from "./lessons/membrane-transport-lesson01.json";
 import neuropathologyLesson from "./lessons/neuropathology-lecture01.json";
 import appliedGenetics from "./lessons/applied-genetics-lecture01.json";
+
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -156,6 +156,26 @@ export const subjects = [
           "ננו־עמודות טרנס־סינפטיות",
           "תכונות החומר של ה־PSD"
         ]
+      },
+      {
+        id: "molecular-exocytosis-mechanism",
+        name: "הרצאה 3 — מנגנון האקסוציטוזה",
+        description: "איחוי שלפוחיות סינפטיות, חלבוני SNARE, חיישן הסידן ותעלות סידן",
+        lessons: 1,
+        duration: 0,
+        lessonIds: ["molecular-neurobiology-lecture-03"],
+        topics: [
+          "מנגנון האיחוי של שלפוחיות סינפטיות",
+          "מבנה קומפלקס SNARE ומודל הרוכסן",
+          "פירוק קומפלקס SNARE — NSF ו־α-SNAP",
+          "Docking ו־Priming — חלבוני Munc13, Munc18 ו־RIM",
+          "Synaptotagmin — חיישן הסידן",
+          "Complexin ובקרת שחרור הנוירוטרנסמיטרים",
+          "שחרור סינכרוני ואסינכרוני",
+          "ננו־דומיינים ומיקרו־דומיינים של סידן",
+          "תעלות סידן מסוג CaV וארגונן באזור הפעיל",
+          "הקשר בין ארגון הסינפסה לתכונות השחרור"
+        ]
       }
     ]
   },
@@ -213,27 +233,6 @@ export const subjects = [
         lessons: 1,
         duration: consciousnessLesson.duration?.estimatedStudyMinutes ?? null,
         topics: consciousnessLesson.sections.map(section => section.title)
-      }
-    ]
-  },
-
-  {
-    id: 'membrane_transport',
-    name: 'מעבר חומרים דרך ממברנות ביולוגיות',
-    symbol: '💧',
-    color: '#287A91',
-    soft: '#E8F6F8',
-    subtitle: 'תעלות ונשאים, אוסמוזה, אקוופורינים ומאזן מים',
-    search: 'חיפוש במעבר חומרים דרך ממברנות ביולוגיות',
-    chapters: [
-      {
-        id: 'membrane-transport-lecture-1',
-        name: 'הרצאה 1 — אקוופורינים ומעבר חומרים',
-        description: membraneTransportLesson.description,
-        lessonIds: [membraneTransportLesson.id],
-        lessons: 1,
-        duration: membraneTransportLesson.duration?.estimatedStudyMinutes ?? null,
-        topics: membraneTransportLesson.sections.map(section => section.title)
       }
     ]
   },

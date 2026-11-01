@@ -56,13 +56,16 @@ function LessonNarrative({ section, lessonId }) {
         if (part.type === "visual") {
           return <LessonFlowVisual key={i} block={section.visualBlocks?.[part.index]} />;
         }
-        if (part.type === "image" && section.image?.src) {
-          return section.image.hotspots?.length ? (
-            <InteractiveImage key={`${lessonId}-${section.id}-${i}`} image={section.image} title={section.title} />
+        if (part.type === "image") {
+          // Support multiple positioned slide images per topic, with legacy fallback.
+          const image = part.src ? part : section.image;
+          if (!image?.src) return null;
+          return image.hotspots?.length ? (
+            <InteractiveImage key={`${lessonId}-${section.id}-${i}`} image={image} title={section.title} />
           ) : (
             <figure key={i} className="interactive-topic-figure textbook-figure">
-              <img src={assetUrl(section.image.src)} alt={section.image.alt || section.title} loading="lazy" />
-              <figcaption>מתוך המצגת המקורית · שקופית {section.image.slide}</figcaption>
+              <img src={assetUrl(image.src)} alt={image.alt || section.title} loading="lazy" />
+              <figcaption>{image.caption || `מתוך המצגת המקורית · שקופית ${image.slide}`}</figcaption>
             </figure>
           );
         }
