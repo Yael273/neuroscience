@@ -12,7 +12,7 @@ import brainImagingLesson2 from "./lessons/brain-imaging-lesson02.json";
 import consciousnessLesson from "./lessons/consciousness-lesson01.json";
 import neuropathologyLesson from "./lessons/neuropathology-lecture01.json";
 import appliedGenetics from "./lessons/applied-genetics-lecture01.json";
-
+import molecularLecture03 from "./lessons/molecular-neurobiology-lecture03.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -253,6 +253,35 @@ export const subjects = [
         lessons: 1,
         duration: appliedGenetics.duration?.estimatedStudyMinutes ?? null,
         topics: appliedGenetics.sections.map(section => section.title)
+      }
+    ]
+  },
+  {
+    id: "buddhism_philosophy",
+    name: "בודהיזם כפילוסופיה",
+    symbol: "☸️",
+    progress: 0,
+    color: "#B17652",
+    soft: "#FBF1E9",
+    subtitle: "מחשבה בודהיסטית, חינוך קונטמפלטיבי והרקע ההודי",
+    search: "חיפוש בבודהיזם כפילוסופיה",
+    chapters: [
+      {
+        id: "buddhism-philosophy-introduction",
+        name: "שיעור 1 — מבוא",
+        description: "בודהיזם ופילוסופיה, שאלת השחרור, התרבות הוודית ומקורות ראשוניים",
+        lessons: 1,
+        duration: 0,
+        lessonIds: ["buddhism-philosophy-lecture-01"],
+        topics: [
+          "פתיחת הקורס: מה נחקור בבודהיזם כפילוסופיה?",
+          "קשב, ניסיון וחינוך קונטמפלטיבי",
+          "האם הבודהיזם הוא פילוסופיה? שאלת השחרור",
+          "אירוצנטריות וסיווג מסורות מחשבה",
+          "התפשטות הבודהיזם באסיה: קריאה ביקורתית של המפה",
+          "עולם המחשבה ההודי: התרבות הוודית והרקע ההיסטורי",
+          "טקסטים וודיים: ריג־ודה וברהמנה — מדוע קורבן הוא רעיון מרכזי?"
+        ]
       }
     ]
   }
