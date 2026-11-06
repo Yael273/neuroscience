@@ -16,6 +16,7 @@ import molecularLecture03 from "./lessons/molecular-neurobiology-lecture03.json"
 import buddhismLecture01 from "./lessons/buddhism-philosophy-lecture01.json";
 import buddhismLecture02 from "./lessons/buddhism-philosophy-lecture02.json";
 import buddhismLecture03 from "./lessons/buddhism-philosophy-lecture03.json";
+import appliedGeneticsLecture02 from "./lessons/applied-genetics-lecture02.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -256,6 +257,15 @@ export const subjects = [
         lessons: 1,
         duration: appliedGenetics.duration?.estimatedStudyMinutes ?? null,
         topics: appliedGenetics.sections.map(section => section.title)
+      },
+      {
+        id: "applied-genetics-lecture-2",
+        name: "הרצאה 2 — סמנים גנטיים ותאחיזה",
+        description: "סמנים גנטיים, משפחות אינפורמטיביות, שיטות לזיהוי שונות ב-DNA, PCR, RFLP, RAPD ו-SCAR",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [appliedGeneticsLecture02.id],
+        topics: appliedGeneticsLecture02.sections.map(section => section.title)
       }
     ]
   },
