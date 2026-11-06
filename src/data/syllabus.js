@@ -13,6 +13,9 @@ import consciousnessLesson from "./lessons/consciousness-lesson01.json";
 import neuropathologyLesson from "./lessons/neuropathology-lecture01.json";
 import appliedGenetics from "./lessons/applied-genetics-lecture01.json";
 import molecularLecture03 from "./lessons/molecular-neurobiology-lecture03.json";
+import buddhismLecture01 from "./lessons/buddhism-philosophy-lecture01.json";
+import buddhismLecture02 from "./lessons/buddhism-philosophy-lecture02.json";
+import buddhismLecture03 from "./lessons/buddhism-philosophy-lecture03.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -256,35 +259,47 @@ export const subjects = [
       }
     ]
   },
+
   {
     id: "buddhism_philosophy",
     name: "בודהיזם כפילוסופיה",
     symbol: "☸️",
     progress: 0,
-    color: "#B17652",
-    soft: "#FBF1E9",
-    subtitle: "מחשבה בודהיסטית, חינוך קונטמפלטיבי והרקע ההודי",
+    color: "#B77950",
+    soft: "#FFF3E9",
+    subtitle: "מחשבה בודהיסטית, פילוסופיה ודרך השחרור",
     search: "חיפוש בבודהיזם כפילוסופיה",
     chapters: [
       {
-        id: "buddhism-philosophy-introduction",
-        name: "שיעור 1 — מבוא",
-        description: "בודהיזם ופילוסופיה, שאלת השחרור, התרבות הוודית ומקורות ראשוניים",
+        id: "buddhism-introduction",
+        name: "שיעור 1 — מבוא לבודהיזם כפילוסופיה",
+        description: "בודהיזם ופילוסופיה, קשב, התרבות הוודית והמפנה האופנישדי",
         lessons: 1,
         duration: 0,
-        lessonIds: ["buddhism-philosophy-lecture-01"],
-        topics: [
-          "פתיחת הקורס: מה נחקור בבודהיזם כפילוסופיה?",
-          "קשב, ניסיון וחינוך קונטמפלטיבי",
-          "האם הבודהיזם הוא פילוסופיה? שאלת השחרור",
-          "אירוצנטריות וסיווג מסורות מחשבה",
-          "התפשטות הבודהיזם באסיה: קריאה ביקורתית של המפה",
-          "עולם המחשבה ההודי: התרבות הוודית והרקע ההיסטורי",
-          "טקסטים וודיים: ריג־ודה וברהמנה — מדוע קורבן הוא רעיון מרכזי?"
-        ]
+        lessonIds: [buddhismLecture01.id],
+        topics: buddhismLecture01.sections.map(section => section.title)
+      },
+      {
+        id: "buddhism-indian-thought-and-buddha",
+        name: "שיעור 2 — עולם המחשבה ההודי וחיי הבודהה",
+        description: "אטמן וברהמן, קארמה, סמסרה, סידהארתה גאוטמה ודרך האמצע",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [buddhismLecture02.id],
+        topics: buddhismLecture02.sections.map(section => section.title)
+      },
+      {
+        id: "buddhism-four-noble-truths",
+        name: "שיעור 3 — ארבע האמיתות הנאצלות",
+        description: "דוקהה, השתוקקות, היאחזות, נירוונה והנתיב בן שמונת האיברים",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [buddhismLecture03.id],
+        topics: buddhismLecture03.sections.map(section => section.title)
       }
     ]
   }
+
 
 
 ];
