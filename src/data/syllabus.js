@@ -17,6 +17,7 @@ import buddhismLecture01 from "./lessons/buddhism-philosophy-lecture01.json";
 import buddhismLecture02 from "./lessons/buddhism-philosophy-lecture02.json";
 import buddhismLecture03 from "./lessons/buddhism-philosophy-lecture03.json";
 import appliedGeneticsLecture02 from "./lessons/applied-genetics-lecture02.json";
+import neuroLesson22 from "./lessons/lesson2-generalorg.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -49,6 +50,15 @@ export const subjects = [
         lessons: 1,
         duration: null,
         topics: [neuroLesson2.title]
+      },
+      {
+        id: "neuro-chapter-2",
+        name: "שיעור 2 — אנטומיה כללית ועקרונות ארגון במערכת העצבים המרכזית",
+        description: "מבנה מערכת העצבים, מסלולים תחושתיים ומוטוריים, חציית קו האמצע, הומונקולוס, צרבלום וגרעיני בסיס",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [neuroLesson22.id],
+        topics: neuroLesson22.sections.map((section) => section.title),
       }
     ]
   },
