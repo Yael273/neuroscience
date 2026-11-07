@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Bookmark, BookmarkCheck, CheckCircle2, ChevronDown, RotateCcw } from "lucide-react";
 import InteractiveImage from "./InteractiveImage";
 import ProcessFlow from "./ProcessFlow";
+import LessonVisual from "./LessonVisual";
 import "../styles/learning-colors.css";
 import { assetUrl } from "../utils/assetUrl";
 
@@ -28,6 +29,7 @@ function LessonFlowVisual({ block }) {
       )}
       {block.type === "process" && <ProcessFlow block={block} />}
       {block.type === "takeaway" && <p className="learning-takeaway">{block.text}</p>}
+
     </div>
   );
 }
@@ -217,82 +219,106 @@ export default function InteractiveSummary({
                   <LessonNarrative section={section} lessonId={lessonId} />
                 ) : (
                   <>
-                <p className="interactive-topic-summary">{section.summary}</p>
-                {section.details?.length > 0 && (
-                  <section className="interactive-topic-details" aria-label="הסברים והרחבות">
-                    {section.details.map((item, detailIndex) => {
-                      const detailKey = `${section.id}-${detailIndex}`;
-                      const isLong = (item.explanation?.length ?? 0) > 270;
-                      const showAll = Boolean(expandedDetails[detailKey]);
-                      return (
-                        <div className="interactive-detail" key={detailKey}>
-                          <h4 className="interactive-detail-heading">{item.term}</h4>
-                          <p
-                            id={`detail-${detailKey}`}
-                            className={`interactive-detail-text${isLong && !showAll ? " is-clamped" : ""}`}
-                          >
-                            {item.explanation}
-                          </p>
-                          {isLong && (
-                            <button
-                              type="button"
-                              className="interactive-detail-more"
-                              aria-expanded={showAll}
-                              aria-controls={`detail-${detailKey}`}
-                              onClick={() => setExpandedDetails(previous => ({
-                                ...previous,
-                                [detailKey]: !showAll,
-                              }))}
-                            >
-                              {showAll ? "הצג פחות" : "קראי את ההסבר המלא"}
-                              <ChevronDown size={15} className={showAll ? "detail-chevron-up" : ""} />
-                            </button>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </section>
-                )}
+                    <p className="interactive-topic-summary">{section.summary}</p>
+                    {section.details?.length > 0 && (
+                      <section className="interactive-topic-details" aria-label="הסברים והרחבות">
+                        {section.details.map((item, detailIndex) => {
+                          const detailKey = `${section.id}-${detailIndex}`;
+                          const isLong = (item.explanation?.length ?? 0) > 270;
+                          const showAll = Boolean(expandedDetails[detailKey]);
+                          return (
+                            <div className="interactive-detail" key={detailKey}>
+                              <h4 className="interactive-detail-heading">{item.term}</h4>
+                              <p
+                                id={`detail-${detailKey}`}
+                                className={`interactive-detail-text${isLong && !showAll ? " is-clamped" : ""}`}
+                              >
+                                {item.explanation}
+                              </p>
+                              {isLong && (
+                                <button
+                                  type="button"
+                                  className="interactive-detail-more"
+                                  aria-expanded={showAll}
+                                  aria-controls={`detail-${detailKey}`}
+                                  onClick={() => setExpandedDetails(previous => ({
+                                    ...previous,
+                                    [detailKey]: !showAll,
+                                  }))}
+                                >
+                                  {showAll ? "הצג פחות" : "קראי את ההסבר המלא"}
+                                  <ChevronDown size={15} className={showAll ? "detail-chevron-up" : ""} />
+                                </button>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </section>
+                    )}
 
-                {section.visualBlocks?.length > 0 && (
-                  <div className="learning-visual-blocks">
-                    {section.visualBlocks.map((block, blockIndex) => (
-                      <div className={`learning-visual learning-visual--${block.type}`} key={`${section.id}-visual-${blockIndex}`}>
-                        <h4>{block.title}</h4>
-                        {block.type === "comparison" && (
-                          <div className="learning-table-scroll" role="region" tabIndex={0} aria-label={block.title}>
-                            <table className="learning-comparison-table">
-                              <thead><tr>{block.columns.map((col, ci) => <th key={ci} scope="col">{col}</th>)}</tr></thead>
-                              <tbody>{block.rows.map((row, ri) => (
-                                <tr key={ri}>{row.map((cell, ci) => ci === 0
-                                  ? <th scope="row" key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</th>
-                                  : <td key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</td>)}</tr>
-                              ))}</tbody>
-                            </table>
+                    {section.visualBlocks?.length > 0 && (
+                      <div className="learning-visual-blocks">
+                        {section.visualBlocks.map((block, blockIndex) => (
+                          <div className={`learning-visual learning-visual--${block.type}`} key={`${section.id}-visual-${blockIndex}`}>
+                            <h4>{block.title}</h4>
+                            {block.type === "comparison" && (
+                              <div className="learning-table-scroll" role="region" tabIndex={0} aria-label={block.title}>
+                                <table className="learning-comparison-table">
+                                  <thead><tr>{block.columns.map((col, ci) => <th key={ci} scope="col">{col}</th>)}</tr></thead>
+                                  <tbody>{block.rows.map((row, ri) => (
+                                    <tr key={ri}>{row.map((cell, ci) => ci === 0
+                                      ? <th scope="row" key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</th>
+                                      : <td key={ci} dir="auto" data-label={block.columns[ci]}>{cell}</td>)}</tr>
+                                  ))}</tbody>
+                                </table>
+                              </div>
+                            )}
+
+
+                            {(block.type === "image" || block.type === "diagram") && (
+                              <figure className="learning-figure">
+                                <img
+                                  src={block.src || block.asset}
+                                  alt={block.alt || block.description || block.title || "תרשים לימודי"}
+                                  className="learning-figure-image"
+                                  loading="lazy"
+                                />
+
+                                {(block.caption || block.description) && (
+                                  <figcaption>
+                                    {block.caption || block.description}
+                                  </figcaption>
+                                )}
+                              </figure>
+                            )}
+
+
+                            {block.type === "process" && (
+                              <ProcessFlow block={block} />
+                            )}
+
+                            {block.type === "takeaway" && <p className="learning-takeaway">{block.text}</p>}
+
+                            {["image", "diagram", "chart", "calculator", "frameSequence"].includes(block.type) && (
+                              <LessonVisual block={block} />
+                            )}
                           </div>
-                        )}
+                        ))}
 
-                        {block.type === "process" && (
-                          <ProcessFlow block={block} />
-                        )}
-
-                        {block.type === "takeaway" && <p className="learning-takeaway">{block.text}</p>}
                       </div>
-                    ))}
-                  </div>
-                )}
+                    )}
 
 
-                {hasImage && section.image.hotspots?.length > 0 && (
-                  <InteractiveImage key={`${lessonId}-${section.id}`} image={section.image} title={section.title} />
-                )}
+                    {hasImage && section.image.hotspots?.length > 0 && (
+                      <InteractiveImage key={`${lessonId}-${section.id}`} image={section.image} title={section.title} />
+                    )}
 
-                {hasImage && !section.image.hotspots?.length && (
-                  <figure className="interactive-topic-figure">
-                    <img src={assetUrl(section.image.src)} alt={section.image.alt || section.title} loading="lazy" />
-                    <figcaption>מתוך המצגת המקורית · שקופית {section.image.slide}</figcaption>
-                  </figure>
-                )}
+                    {hasImage && !section.image.hotspots?.length && (
+                      <figure className="interactive-topic-figure">
+                        <img src={assetUrl(section.image.src)} alt={section.image.alt || section.title} loading="lazy" />
+                        <figcaption>מתוך המצגת המקורית · שקופית {section.image.slide}</figcaption>
+                      </figure>
+                    )}
 
                   </>
                 )}

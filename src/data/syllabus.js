@@ -18,6 +18,7 @@ import buddhismLecture02 from "./lessons/buddhism-philosophy-lecture02.json";
 import buddhismLecture03 from "./lessons/buddhism-philosophy-lecture03.json";
 import appliedGeneticsLecture02 from "./lessons/applied-genetics-lecture02.json";
 import neuroLesson22 from "./lessons/lesson2-generalorg.json";
+import brainImagingLesson03 from "./lessons/brain-imaging-lesson03.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -226,7 +227,16 @@ export const subjects = [
         lessons: 1,
         duration: brainImagingLesson2.duration?.estimatedStudyMinutes ?? null,
         topics: [brainImagingLesson2.title]
-      }
+      },
+      {
+        id: "brain-imaging-chapter-03",
+        name: "שיעור 3 — מיפוי מוחי והפיזיקה הבסיסית של MRI",
+        description: "שיטות למיפוי מוחי, גירוי מוחי, ספין, מומנט מגנטי, פרצסיה, תדירות לרמור, פולס RF והרפיה",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [brainImagingLesson03.id],
+        topics: brainImagingLesson03.sections.map((section) => section.title),
+      },
     ]
   },
 

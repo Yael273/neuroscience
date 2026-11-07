@@ -1,0 +1,6188 @@
+{
+  "id": "brain-imaging-lecture-03",
+  "subjectId": "brain-imaging",
+  "type": "lecture",
+  "title": "שיעור 3 — מבוא ופיזיקה בסיסית של MRI ו־fMRI",
+  "number": 3,
+  "lecturer": null,
+  "description": "גרסה מלאה ומורחבת של סיכום שיעור 3, כולל כל 166 שקופיות כתמונות WebP, גרפי SVG עריכים, הדמיות, תיאורי רכיבים, טבלאות, נוסחאות, מילון מושגים, שאלות תרגול ואנימציות מבוססות רצפי שקופיות.",
+  "duration": {
+    "lectureMinutes": null,
+    "estimatedStudyMinutes": null
+  },
+  "slides": {
+    "file": "Lesson3-Intro+BasicPhysics-2026b(1).pdf",
+    "pages": 166,
+    "contentStartsAtPage": 2
+  },
+  "sections": [
+    {
+      "id": "brainimg-l3-s1",
+      "title": "מיפוי מוחי: מבני לעומת תפקודי",
+      "slidePages": [
+        2,
+        11
+      ],
+      "summary": "מיפוי מוחי עונה על שאלות שונות: מיפוי מבני מתאר אנטומיה ופגיעות, ואילו מיפוי תפקודי עוסק בקשר בין פעילות מוחית לתפקוד. מדידה תפקודית עשויה להיות ישירה יחסית (EEG/MEG/רישום יחידה) או עקיפה דרך תגובות פיזיולוגיות (fMRI/PET). אפשר גם ליצור שינוי יזום בפעילות ולבחון את השפעתו.",
+      "details": [
+        {
+          "term": "מיפוי מבני",
+          "explanation": "הצגה של מיקום, גודל ומאפייני רקמות המוח. דוגמאות: CT ו־MRI מבני."
+        },
+        {
+          "term": "מיפוי תפקודי",
+          "explanation": "בחינת הקשר בין הפעילות המוחית לבין מטלות ותהליכי תחושה, תנועה וקוגניציה."
+        },
+        {
+          "term": "מדידה ישירה יחסית",
+          "explanation": "EEG מודד אותות חשמליים מהקרקפת; MEG מודד את השדות המגנטיים שיוצרים זרמים עצביים; רישום Single-unit מודד פעילות של נוירונים."
+        },
+        {
+          "term": "מדידה עקיפה",
+          "explanation": "fMRI ו־PET משתמשים במדדים פיזיולוגיים הנלווים לפעילות עצבית ולא מודדים ישירות פוטנציאלי פעולה."
+        },
+        {
+          "term": "התערבות סיבתית",
+          "explanation": "גירוי מוחי או פגיעה יכולים לבדוק אם שינוי בפעילות אזור משנה ביצוע של תפקוד."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "comparison",
+          "title": "גישות מיפוי",
+          "columns": [
+            "מיפוי מבני",
+            "מיפוי תפקודי"
+          ],
+          "rows": [
+            [
+              "CT, MRI מבני",
+              "EEG, MEG, fMRI, PET"
+            ],
+            [
+              "אנטומיה ופגיעות",
+              "שינויי פעילות ותפקוד"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "מיפוי מבני ותפקודי",
+          "assetId": "slide-011",
+          "src": "assets/slides/slide-011.webp",
+          "alt": "תרשים החלוקה לשיטות מיפוי מוח",
+          "caption": "תרשים החלוקה לשיטות מיפוי מוח",
+          "fit": "contain",
+          "sourceSlide": 11
+        },
+        {
+          "type": "image",
+          "title": "טווחי רזולוציה של שיטות מיפוי",
+          "assetId": "slide-003",
+          "src": "assets/slides/slide-003.webp",
+          "alt": "טווחי רזולוציה של שיטות מיפוי",
+          "caption": "שקופית 3 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 3
+        }
+      ],
+      "check": {
+        "question": "מה מספק מחקר fMRI באופן טיפוסי?",
+        "options": [
+          "מדידה ישירה של פוטנציאל פעולה בנוירון יחיד",
+          "מדידה עקיפה של שינויים הקשורים לפעילות מוחית",
+          "הדמיה של עצמות הגולגולת בלבד"
+        ],
+        "correctAnswer": 1,
+        "explanation": "fMRI מודד שינויי אות המבוססים על תהליכים פיזיולוגיים הקשורים לפעילות עצבית."
+      },
+      "slideGallery": [
+        "slide-002",
+        "slide-011"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s2",
+      "title": "גירוי קורטיקלי ישיר – Direct Cortical Stimulation",
+      "slidePages": [
+        3,
+        4
+      ],
+      "summary": "החוקרים מפעילים זרם חשמלי ישירות על קורטקס חשוף ובוחנים שינוי תפקודי. היסטורית השיטה תרמה למיפוי קורטקס מוטורי וסנסורי ולהומונקולוס של פנפילד. השיטה פולשנית, והזרם עשוי להשפיע גם על אזורים אחרים.",
+      "details": [
+        {
+          "term": "Fritsch & Hitzig, 1870",
+          "explanation": "הדגימו כי גירוי אזורים קדמיים במוח כלב יכול לעורר תנועות בצד הנגדי."
+        },
+        {
+          "term": "David Ferrier, 1876",
+          "explanation": "מיפה אזורים מוטוריים וסנסוריים."
+        },
+        {
+          "term": "Charles Sherrington, 1911",
+          "explanation": "חקר ומיפה את הקורטקס המוטורי בקופי אדם."
+        },
+        {
+          "term": "Wilder Penfield",
+          "explanation": "מיפוי שיטתי של ייצוגי גוף בקורטקס האנושי במהלך ניתוחים."
+        },
+        {
+          "term": "Homunculus",
+          "explanation": "ייצוג חלקי הגוף בקורטקס; גודל הייצוג קשור לדרישות תחושתיות ומוטוריות ולא בהכרח לגודל האיבר."
+        },
+        {
+          "term": "מגבלות",
+          "explanation": "פולשנות, התפשטות השפעת הזרם, ופער בין אתר הגירוי לבין מקור התגובה."
+        }
+      ],
+      "check": {
+        "question": "מהי מגבלה מרכזית של גירוי קורטיקלי ישיר?",
+        "options": [
+          "הוא אינו מסוגל לגרום לתגובה מוטורית",
+          "השיטה פולשנית והזרם עשוי להשפיע על אזורים מרוחקים",
+          "הוא מודד רק זרימת דם"
+        ],
+        "correctAnswer": 1,
+        "explanation": "גירוי ישיר מחייב גישה למוח ואינו מבטיח השפעה מרחבית מקומית לחלוטין."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "הומונקולוס וגירוי חשמלי ישיר",
+          "assetId": "slide-004",
+          "src": "assets/slides/slide-004.webp",
+          "alt": "מיפוי מוטורי שנעשה באמצעות גירוי קורטיקלי ישיר",
+          "caption": "מיפוי מוטורי שנעשה באמצעות גירוי קורטיקלי ישיר",
+          "fit": "contain",
+          "sourceSlide": 4
+        }
+      ],
+      "slideGallery": [
+        "slide-003",
+        "slide-004"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s3",
+      "title": "מחקרי פגיעות מוחיות – Lesion Studies",
+      "slidePages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "summary": "השוואה בין מיקום פגיעה מוחית לבין הפרעות תפקוד מאפשרת לבחון אילו אזורים חיוניים לתפקוד. הדוגמאות במצגת כוללות את ברוקה, פיניאס גייג׳, מחקרי שבץ ומיפוי פגיעה–תסמין באפרקסיה. נדרש להיזהר מהסקה על לוקליזציה מדויקת בגלל רשתות עצביות, נזק לסיבים ושונות בין חולים.",
+      "details": [
+        {
+          "term": "Broca, 1861",
+          "explanation": "פגיעה באזור פרונטלי שמאלי נקשרה לקשיים בהפקת שפה."
+        },
+        {
+          "term": "Phineas Gage",
+          "explanation": "פגיעה פרונטלית שנחקרה בהקשר שינויי התנהגות ותפקודים ניהוליים."
+        },
+        {
+          "term": "Necessary",
+          "explanation": "אזור הכרחי כאשר תפקוד תקין תלוי בתקינותו."
+        },
+        {
+          "term": "Sufficient",
+          "explanation": "פעילות של רכיב מספיקה ליצירת תוצאה מסוימת בתנאים מוגדרים; פגיעה אינה מוכיחה זאת כשלעצמה."
+        },
+        {
+          "term": "VLSM",
+          "explanation": "Voxel-based lesion-symptom mapping: ניתוח סטטיסטי המקשר בין פגיעה בווקסלים מסוימים לבין תסמינים."
+        },
+        {
+          "term": "Apraxia",
+          "explanation": "קושי בביצוע תנועות מיומנות או מחוות למרות יכולות בסיסיות שמורות יחסית; המחקרים במצגת בוחנים מחוות עם כלים וחיקוי."
+        },
+        {
+          "term": "מגבלות השיטה",
+          "explanation": "נזקים מפושטים, נזק למסלולי תקשורת, הטרוגניות בין חולים ושינויים עקב המחלה עצמה."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "takeaway",
+          "title": "חשוב לזכור",
+          "text": "מחקרי פגיעות מספקים ראיות לנחיצות תפקודית, אך מחייבים זהירות בפרשנות של מיקום ותפקיד."
+        },
+        {
+          "type": "image",
+          "title": "דוגמאות: ברוקה ופיניאס גייג׳",
+          "assetId": "slide-006",
+          "src": "assets/slides/slide-006.webp",
+          "alt": "דוגמאות: ברוקה ופיניאס גייג׳",
+          "caption": "שקופית 6 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 6
+        },
+        {
+          "type": "image",
+          "title": "מיפוי פגיעות מוח לאחר שבץ",
+          "assetId": "slide-007",
+          "src": "assets/slides/slide-007.webp",
+          "alt": "מיפוי פגיעות מוח לאחר שבץ",
+          "caption": "שקופית 7 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 7
+        },
+        {
+          "type": "image",
+          "title": "מחקר אפרקסיה ו־VLSM",
+          "assetId": "slide-008",
+          "src": "assets/slides/slide-008.webp",
+          "alt": "מחקר אפרקסיה ו־VLSM",
+          "caption": "שקופית 8 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 8
+        }
+      ],
+      "check": {
+        "question": "מדוע פגיעה באזור מסוים לא מוכיחה שכל התפקוד ממוקם בו?",
+        "options": [
+          "כי אזורים פועלים ברשתות ופגיעה עשויה לשבש מסלולים ותהליכים רחבים",
+          "כי כל הפגיעות הפיכות",
+          "כי פגיעה אינה יכולה להשפיע על התנהגות"
+        ],
+        "correctAnswer": 0,
+        "explanation": "המוח פועל דרך רשתות מקושרות והפגיעה יכולה להשפיע על רכיבים נוספים."
+      },
+      "slideGallery": [
+        "slide-005",
+        "slide-006",
+        "slide-007",
+        "slide-008",
+        "slide-009"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s4",
+      "title": "גירוי מגנטי חוצה גולגולת – TMS",
+      "slidePages": [
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "summary": "זרם קצר בסליל יוצר שדה מגנטי משתנה, המשרה שדה חשמלי ברקמת המוח. גירוי יכול לשנות פעילות עצבית, לשבש ביצוע בזמן מסוים או לשמש בנוירומודולציה. המצגת מציגה Single pulse, Double pulse ו־rTMS, שימושים קליניים ומגבלות השיטה.",
+      "details": [
+        {
+          "term": "מנגנון פיזיקלי",
+          "explanation": "זרם בסליל ← שדה מגנטי משתנה ← שדה חשמלי מושרה במוח ← שינוי בפעילות עצבית."
+        },
+        {
+          "term": "Single pulse",
+          "explanation": "פולס בודד שמאפשר לבדוק חלונות זמן חשובים לעיבוד."
+        },
+        {
+          "term": "Paired pulse",
+          "explanation": "שני פולסים במרווחים קבועים לחקר מנגנוני עירור ועיכוב."
+        },
+        {
+          "term": "SICI",
+          "explanation": "Short-interval intracortical inhibition – עיכוב תוך־קורטיקלי קצר טווח."
+        },
+        {
+          "term": "ICF",
+          "explanation": "Intracortical facilitation – הקלה תוך־קורטיקלית."
+        },
+        {
+          "term": "TCI",
+          "explanation": "Transcallosal inhibition – עיכוב דרך קשרים בין־המיספריים."
+        },
+        {
+          "term": "CSP",
+          "explanation": "Cortical silent period – תקופת שקט יחסית בפעילות שרירית לאחר גירוי מוטורי."
+        },
+        {
+          "term": "rTMS",
+          "explanation": "רצפי פולסים חוזרים שיכולים לגרום לשינוי בעוררות החורג ממשך הפולס."
+        },
+        {
+          "term": "Virtual lesion",
+          "explanation": "שיבוש זמני והפיך יחסית המאפשר לבדוק תרומה סיבתית של אזור."
+        },
+        {
+          "term": "שימושים",
+          "explanation": "מחקר של תזמון ושל נחיצות אזורים; יישומים קליניים הנחקרים/משמשים בהקשרים כמו דיכאון והתמכרויות."
+        },
+        {
+          "term": "מגבלות",
+          "explanation": "השפעה מרחבית לא מדויקת לחלוטין, חדירה מוגבלת יחסית לאזורים עמוקים, ופעולה על רשתות רחבות."
+        },
+        {
+          "term": "הבהרה לגבי תדרים",
+          "explanation": "בשקופית 16 מופיע תיאור תדרים הפוך לכלל המקובל בפרוטוקולים רבים; בניסוי ספציפי התוצאה תלויה בפרוטוקול ובמצב המערכת."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "process",
+          "title": "מנגנון TMS",
+          "steps": [
+            {
+              "title": "זרם בסליל",
+              "description": "פולס קצר יוצר שדה מגנטי משתנה"
+            },
+            {
+              "title": "השראה אלקטרומגנטית",
+              "description": "נוצר שדה חשמלי ברקמת המוח"
+            },
+            {
+              "title": "תגובה עצבית",
+              "description": "פעילות רשתות עצביות משתנה"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "דיאגרמת מנגנון TMS",
+          "assetId": "slide-013",
+          "src": "assets/slides/slide-013.webp",
+          "alt": "דיאגרמת מנגנון TMS",
+          "caption": "שקופית 13 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 13
+        },
+        {
+          "type": "image",
+          "title": "Single-Pulse TMS – תוצאות לפי זמן",
+          "assetId": "slide-014",
+          "src": "assets/slides/slide-014.webp",
+          "alt": "Single-Pulse TMS – תוצאות לפי זמן",
+          "caption": "שקופית 14 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 14
+        },
+        {
+          "type": "image",
+          "title": "מדדי Paired Pulse TMS",
+          "assetId": "slide-015",
+          "src": "assets/slides/slide-015.webp",
+          "alt": "מדדי Paired Pulse TMS",
+          "caption": "שקופית 15 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 15
+        },
+        {
+          "type": "image",
+          "title": "שימושים וטיפולים",
+          "assetId": "slide-017",
+          "src": "assets/slides/slide-017.webp",
+          "alt": "שימושים וטיפולים",
+          "caption": "שקופית 17 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 17
+        }
+      ],
+      "check": {
+        "question": "מדוע TMS יכול לעזור לחקור סיבתיות?",
+        "options": [
+          "כי הוא מודד רק זרימת דם",
+          "כי הוא יוצר הפרעה זמנית בפעילות אזור ובודק את השפעתה על התנהגות",
+          "כי הוא מדמה אנטומיה"
+        ],
+        "correctAnswer": 1,
+        "explanation": "שינוי יזום של פעילות וניטור הביצוע מאפשרים לבחון קשר סיבתי יותר מאשר מתאם בלבד."
+      },
+      "slideGallery": [
+        "slide-010",
+        "slide-012",
+        "slide-013",
+        "slide-014",
+        "slide-015",
+        "slide-016",
+        "slide-017",
+        "slide-018"
+      ],
+      "importantNotes": [
+        {
+          "type": "correction",
+          "text": "בשקופית 16 מצוין תיאור תדרי rTMS שאינו תואם את כלל האצבע הנפוץ בפרוטוקולים רבים; כלל האצבע המקובל הוא שגירוי בתדר נמוך נוטה לעכב וגבוה נוטה לעורר, אך ההשפעה תלויה בפרוטוקול.",
+          "sourceSlide": 16,
+          "status": "explanatory-clarification"
+        }
+      ]
+    },
+    {
+      "id": "brainimg-l3-s5",
+      "title": "גירוי זרם ישר – tDCS",
+      "slidePages": [
+        19
+      ],
+      "summary": "tDCS מעביר זרם חשמלי חלש דרך אלקטרודות על הקרקפת, המשנה את המצב החשמלי של הממברנות ואת העוררות העצבית. השפעותיו בדרך כלל תת־ספיות, עשויות להיות מעוררות או מעכבות, ומיקום ההשפעה אינו חד כמו בגירוי ממוקד.",
+      "details": [
+        {
+          "term": "tDCS",
+          "explanation": "Transcranial Direct Current Stimulation – גירוי חשמלי לא פולשני באמצעות אלקטרודות."
+        },
+        {
+          "term": "השפעה תת־ספית",
+          "explanation": "שינוי ההסתברות להפעלת נוירונים, לא בהכרח יצירת פוטנציאל פעולה ישיר."
+        },
+        {
+          "term": "משך השפעה",
+          "explanation": "אפשריים אפקטים קצרים או ממושכים יותר."
+        },
+        {
+          "term": "רזולוציה מרחבית",
+          "explanation": "נמוכה יחסית; הזרם מתפשט בין האלקטרודות."
+        }
+      ],
+      "check": {
+        "question": "מה ההבדל העקרוני בין tDCS ל־TMS?",
+        "options": [
+          "tDCS משתמש בזרם חלש דרך אלקטרודות; TMS בשדה מגנטי משתנה",
+          "tDCS מחייב ניתוח ו־TMS לא",
+          "TMS מודד רק מבנה"
+        ],
+        "correctAnswer": 0,
+        "explanation": "שתי השיטות משנות פעילות אך האמצעי הפיזיקלי להעברת ההשפעה שונה."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "מכשיר tDCS ואלקטרודות",
+          "assetId": "slide-019",
+          "src": "assets/slides/slide-019.webp",
+          "alt": "מכשיר tDCS ואלקטרודות",
+          "caption": "שקופית 19 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 19
+        }
+      ],
+      "slideGallery": [
+        "slide-019"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s6",
+      "title": "מבוא לפיזיקה של דימות תהודה מגנטית",
+      "slidePages": [
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "summary": "החלק השני במצגת עובר משיטות מחקר מוחי לעקרונות יצירת אות ב־MRI: גרעינים בעלי ספין, שדה מגנטי ראשי, פרצסיה, גירוי בגלי רדיו ורלקסציה. פיזיקה זו היא בסיס להבנת דימות MR ו־fMRI בהמשך.",
+      "details": [
+        {
+          "term": "MRI",
+          "explanation": "Magnetic Resonance Imaging – דימות על בסיס תהודה מגנטית גרעינית."
+        },
+        {
+          "term": "fMRI",
+          "explanation": "שימוש במדידות MRI לחקר שינויים פיזיולוגיים הקשורים לפעילות מוחית."
+        },
+        {
+          "term": "יצירת האות",
+          "explanation": "עירור מערכת הספינים ומדידת מתח חשמלי המושרה בסליל במהלך שינוי המגנטיזציה."
+        },
+        {
+          "term": "תוכנית המצגת",
+          "explanation": "המצגת מציינת גם בטיחות, יצירת תמונה וניגודיות כנושאים כלליים, אך הקטע הנלמד כאן מתמקד ביסודות יצירת האות."
+        }
+      ],
+      "check": {
+        "question": "מהו מוקד החלק הפיזיקלי במצגת?",
+        "options": [
+          "מנגנון יצירת אות MR מפרוטונים",
+          "מיפוי מפורט של כל גרעיני המוח",
+          "ניתוח סטטיסטי של fMRI"
+        ],
+        "correctAnswer": 0,
+        "explanation": "החלק מסביר כיצד תכונות מגנטיות של גרעינים מולידות אות מדיד."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "הנושאים במצגת",
+          "assetId": "slide-023",
+          "src": "assets/slides/slide-023.webp",
+          "alt": "הנושאים במצגת",
+          "caption": "שקופית 23 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 23
+        },
+        {
+          "type": "image",
+          "title": "מפת מושגים פיזיקלית",
+          "assetId": "slide-024",
+          "src": "assets/slides/slide-024.webp",
+          "alt": "מפת מושגים פיזיקלית",
+          "caption": "שקופית 24 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 24
+        }
+      ],
+      "slideGallery": [
+        "slide-020",
+        "slide-021",
+        "slide-022",
+        "slide-023",
+        "slide-024"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s7",
+      "title": "מבנה האטום וחשיבות גרעין המימן",
+      "slidePages": [
+        25,
+        26
+      ],
+      "summary": "אטום כולל פרוטונים ונויטרונים בגרעין ואלקטרונים סביבו. מימן הוא הגרעין העיקרי המשמש ב־MRI בשל שפע אטומי המימן במים וברקמות הגוף. לפרוטון מימן יש ספין ומומנט מגנטי ולכן אפשר למדוד ממנו אות.",
+      "details": [
+        {
+          "term": "פרוטון",
+          "explanation": "חלקיק בעל מטען חיובי הנמצא בגרעין."
+        },
+        {
+          "term": "נויטרון",
+          "explanation": "חלקיק חסר מטען חשמלי הנמצא בגרעין."
+        },
+        {
+          "term": "אלקטרון",
+          "explanation": "חלקיק טעון שלילית בסביבת הגרעין."
+        },
+        {
+          "term": "מימן ¹H",
+          "explanation": "האיזוטופ הנפוץ ביותר של מימן; גרעינו הוא פרוטון יחיד."
+        },
+        {
+          "term": "שפע בגוף",
+          "explanation": "המצגת מציינת סדר גודל של 5×10²⁷ אטומי מימן בגוף ממוצע."
+        }
+      ],
+      "check": {
+        "question": "למה משתמשים בעיקר במימן ב־MRI?",
+        "options": [
+          "כי הוא נפוץ מאוד ברקמות ובעל מומנט מגנטי",
+          "כי הוא חסר ספין",
+          "כי אין מימן במים"
+        ],
+        "correctAnswer": 0,
+        "explanation": "מימן שופע בגוף ותכונות גרעינו מאפשרות מדידה מגנטית."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "מבנה האטום והמימן",
+          "assetId": "slide-025",
+          "src": "assets/slides/slide-025.webp",
+          "alt": "מבנה האטום והמימן",
+          "caption": "שקופית 25 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 25
+        },
+        {
+          "type": "image",
+          "title": "הטבלה המחזורית ומספר אטומי",
+          "assetId": "slide-026",
+          "src": "assets/slides/slide-026.webp",
+          "alt": "הטבלה המחזורית ומספר אטומי",
+          "caption": "שקופית 26 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 26
+        }
+      ],
+      "slideGallery": [
+        "slide-025",
+        "slide-026"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s8",
+      "title": "ספין, תנע זוויתי ומומנט מגנטי",
+      "slidePages": [
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "summary": "Spin הוא תכונה קוונטית של גרעין הקשורה לתנע זוויתי פנימי. המצגת משתמשת באנלוגיית סיבוב מטען כדי להמחיש את הקשר בין תנועה למגנטיות. מומנט מגנטי μ קשור לתנע הזוויתי J באמצעות היחס הגירומגנטי γ.",
+      "details": [
+        {
+          "term": "Spin",
+          "explanation": "תנע זוויתי פנימי קוונטי, לא סיבוב ממשי של כדור קטן סביב עצמו."
+        },
+        {
+          "term": "Angular momentum J",
+          "explanation": "תנע זוויתי. במודל הקלאסי J=mωr², אולם תיאור ספין גרעיני מדויק הוא קוונטי."
+        },
+        {
+          "term": "Magnetic moment μ",
+          "explanation": "וקטור המתאר אינטראקציה של הגרעין עם שדה מגנטי."
+        },
+        {
+          "term": "Gyromagnetic ratio γ",
+          "explanation": "קבוע גרעיני המקשר בין מומנט מגנטי לתנע זוויתי: μ=γJ (בהגדרה הזוויתית)."
+        },
+        {
+          "term": "Right-hand rule",
+          "explanation": "כלל לקביעת כיוון השדה המגנטי סביב זרם חשמלי."
+        },
+        {
+          "term": "גרעינים מתאימים ל־MRI",
+          "explanation": "גרעינים בעלי ספין שאינו אפס, למשל ¹H, ¹³C, ¹⁹F ו־²³Na."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "takeaway",
+          "title": "חשוב לזכור",
+          "text": "המודל של פרוטון מסתובב הוא המחשה; ספין גרעיני הוא תופעה קוונטית."
+        },
+        {
+          "type": "image",
+          "title": "ספין ומומנט מגנטי",
+          "assetId": "slide-027",
+          "src": "assets/slides/slide-027.webp",
+          "alt": "ספין ומומנט מגנטי",
+          "caption": "שקופית 27 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 27
+        },
+        {
+          "type": "image",
+          "title": "כלל יד ימין",
+          "assetId": "slide-028",
+          "src": "assets/slides/slide-028.webp",
+          "alt": "כלל יד ימין",
+          "caption": "שקופית 28 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 28
+        },
+        {
+          "type": "image",
+          "title": "הקשר בין תנע זוויתי למומנט מגנטי",
+          "assetId": "slide-030",
+          "src": "assets/slides/slide-030.webp",
+          "alt": "הקשר בין תנע זוויתי למומנט מגנטי",
+          "caption": "שקופית 30 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 30
+        }
+      ],
+      "check": {
+        "question": "מה מתאר המומנט המגנטי?",
+        "options": [
+          "האינטראקציה המגנטית של גרעין עם שדה",
+          "רק את מספר האלקטרונים",
+          "את מיקום הגרעין במוח"
+        ],
+        "correctAnswer": 0,
+        "explanation": "המומנט המגנטי הוא תכונה וקטורית מרכזית לתגובת גרעין לשדה."
+      },
+      "slideGallery": [
+        "slide-027",
+        "slide-028",
+        "slide-029",
+        "slide-030",
+        "slide-031"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s9",
+      "title": "ספינים בשדה חיצוני ומגנטיזציה נטו",
+      "slidePages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "summary": "ללא שדה חיצוני חזק, המומנטים המגנטיים מתפלגים כך שהסכום הכולל קטן מאוד. בשדה B₀ נוצרת העדפה סטטיסטית למצבי אנרגיה מסוימים, ולכן מתקבלת מגנטיזציה נטו M לאורך כיוון השדה.",
+      "details": [
+        {
+          "term": "B₀",
+          "explanation": "השדה המגנטי הראשי במכשיר MRI."
+        },
+        {
+          "term": "מגנטיזציה נטו M",
+          "explanation": "סכום וקטורי של התרומות המגנטיות של הספינים בנפח מסוים."
+        },
+        {
+          "term": "בהיעדר שדה",
+          "explanation": "כיוונים שונים מביאים לביטול הדדי כמעט מלא של התרומות."
+        },
+        {
+          "term": "בשדה חזק",
+          "explanation": "נוצר עודף קטן באכלוס מצב האנרגיה הנמוך וכך גדלה המגנטיזציה הכוללת."
+        },
+        {
+          "term": "ציר Z",
+          "explanation": "מקובל להגדיר את כיוון B₀ בתור ציר Z."
+        },
+        {
+          "term": "מגנטיזציה רוחבית",
+          "explanation": "במצב שיווי משקל הרכיבים במישור XY מתבטלים בממוצע."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "process",
+          "title": "יצירת מגנטיזציה נטו",
+          "steps": [
+            {
+              "title": "ללא B₀",
+              "description": "כיוונים שונים ומגנטיזציה זעירה"
+            },
+            {
+              "title": "הפעלת B₀",
+              "description": "פיצול מצבי אנרגיה והעדפת מצב נמוך"
+            },
+            {
+              "title": "סכימה",
+              "description": "מגנטיזציה מאקרוסקופית לאורך Z"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "מומנטים בהיעדר שדה ובנוכחות שדה",
+          "assetId": "slide-033",
+          "src": "assets/slides/slide-033.webp",
+          "alt": "מומנטים בהיעדר שדה ובנוכחות שדה",
+          "caption": "שקופית 33 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 33
+        },
+        {
+          "type": "image",
+          "title": "מגנט ראשי B₀",
+          "assetId": "slide-036",
+          "src": "assets/slides/slide-036.webp",
+          "alt": "מגנט ראשי B₀",
+          "caption": "שקופית 36 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 36
+        },
+        {
+          "type": "diagram",
+          "title": "המחשה: מגנטיזציה נטו",
+          "asset": "assets/diagrams/magnetization-b0.svg",
+          "diagramType": "magnetization",
+          "description": "ללא שדה התרומות מבטלות זו את זו; עם שדה חזק מתקבלת מגנטיזציה נטו לאורך Z."
+        }
+      ],
+      "check": {
+        "question": "מה יוצר מגנטיזציה נטו במכשיר MRI?",
+        "options": [
+          "עודף סטטיסטי קטן של מצבי ספין מקבילים לשדה",
+          "כל הפרוטונים נעצרים לחלוטין",
+          "היעלמות כל המומנטים המגנטיים"
+        ],
+        "correctAnswer": 0,
+        "explanation": "קיימת אוכלוסייה מעט גדולה יותר במצב האנרגיה הנמוך, וסכום התרומות אינו מתאפס."
+      },
+      "slideGallery": [
+        "slide-032",
+        "slide-033",
+        "slide-034",
+        "slide-035",
+        "slide-036",
+        "slide-037",
+        "slide-038",
+        "slide-039",
+        "slide-040",
+        "slide-041",
+        "slide-042"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s10",
+      "title": "פרצסיה – Precession",
+      "slidePages": [
+        43,
+        44,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "summary": "כאשר גרעין בעל מומנט מגנטי נמצא בשדה B₀, כיוון המומנט מבצע תנועת פרצסיה סביב ציר השדה. זהו שינוי מחזורי של הכיוון, בדומה לציר של סביבון נטוי. קצב התנועה נקבע מתכונות הגרעין ומעוצמת B₀.",
+      "details": [
+        {
+          "term": "Precession",
+          "explanation": "תנועה מחזורית של כיוון המומנט המגנטי סביב השדה החיצוני."
+        },
+        {
+          "term": "אנלוגיית סביבון",
+          "explanation": "ציר סביבון נוטה ומתווה מסלול חרוטי; זו המחשה גאומטרית לתנועת הפרצסיה."
+        },
+        {
+          "term": "תדירות פרצסיה",
+          "explanation": "נקראת תדירות לרמור, ותלויה ב־γ וב־B₀."
+        },
+        {
+          "term": "חשיבות לפרוטוקול",
+          "explanation": "פולס RF צריך להתאים בקירוב לתדירות זו כדי לעורר תהודה."
+        }
+      ],
+      "check": {
+        "question": "סביב איזה כיוון מתבצעת פרצסיה?",
+        "options": [
+          "ציר השדה B₀",
+          "ציר אקראי שאינו תלוי בשדה",
+          "רק סביב סליל הקליטה"
+        ],
+        "correctAnswer": 0,
+        "explanation": "המומנט המגנטי מבצע פרצסיה סביב כיוון השדה המגנטי החיצוני."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "פרצסיה – המחשה",
+          "assetId": "slide-043",
+          "src": "assets/slides/slide-043.webp",
+          "alt": "פרצסיה – המחשה",
+          "caption": "שקופית 43 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 43
+        },
+        {
+          "type": "diagram",
+          "title": "חרוט הפרצסיה",
+          "asset": "assets/diagrams/precession-cone.svg",
+          "diagramType": "precession",
+          "description": "וקטור המומנט המגנטי מבצע תנועה סביב כיוון השדה הראשי."
+        },
+        {
+          "type": "frameSequence",
+          "title": "פרצסיה",
+          "frames": [
+            {
+              "slidePage": 48,
+              "assetId": "slide-048",
+              "src": "assets/slides/slide-048.webp"
+            },
+            {
+              "slidePage": 49,
+              "assetId": "slide-049",
+              "src": "assets/slides/slide-049.webp"
+            },
+            {
+              "slidePage": 50,
+              "assetId": "slide-050",
+              "src": "assets/slides/slide-050.webp"
+            },
+            {
+              "slidePage": 51,
+              "assetId": "slide-051",
+              "src": "assets/slides/slide-051.webp"
+            },
+            {
+              "slidePage": 52,
+              "assetId": "slide-052",
+              "src": "assets/slides/slide-052.webp"
+            },
+            {
+              "slidePage": 53,
+              "assetId": "slide-053",
+              "src": "assets/slides/slide-053.webp"
+            },
+            {
+              "slidePage": 54,
+              "assetId": "slide-054",
+              "src": "assets/slides/slide-054.webp"
+            },
+            {
+              "slidePage": 55,
+              "assetId": "slide-055",
+              "src": "assets/slides/slide-055.webp"
+            },
+            {
+              "slidePage": 56,
+              "assetId": "slide-056",
+              "src": "assets/slides/slide-056.webp"
+            },
+            {
+              "slidePage": 57,
+              "assetId": "slide-057",
+              "src": "assets/slides/slide-057.webp"
+            },
+            {
+              "slidePage": 58,
+              "assetId": "slide-058",
+              "src": "assets/slides/slide-058.webp"
+            },
+            {
+              "slidePage": 59,
+              "assetId": "slide-059",
+              "src": "assets/slides/slide-059.webp"
+            },
+            {
+              "slidePage": 60,
+              "assetId": "slide-060",
+              "src": "assets/slides/slide-060.webp"
+            },
+            {
+              "slidePage": 61,
+              "assetId": "slide-061",
+              "src": "assets/slides/slide-061.webp"
+            },
+            {
+              "slidePage": 62,
+              "assetId": "slide-062",
+              "src": "assets/slides/slide-062.webp"
+            },
+            {
+              "slidePage": 63,
+              "assetId": "slide-063",
+              "src": "assets/slides/slide-063.webp"
+            },
+            {
+              "slidePage": 64,
+              "assetId": "slide-064",
+              "src": "assets/slides/slide-064.webp"
+            },
+            {
+              "slidePage": 65,
+              "assetId": "slide-065",
+              "src": "assets/slides/slide-065.webp"
+            },
+            {
+              "slidePage": 66,
+              "assetId": "slide-066",
+              "src": "assets/slides/slide-066.webp"
+            },
+            {
+              "slidePage": 67,
+              "assetId": "slide-067",
+              "src": "assets/slides/slide-067.webp"
+            },
+            {
+              "slidePage": 68,
+              "assetId": "slide-068",
+              "src": "assets/slides/slide-068.webp"
+            },
+            {
+              "slidePage": 69,
+              "assetId": "slide-069",
+              "src": "assets/slides/slide-069.webp"
+            }
+          ],
+          "playback": {
+            "mode": "manual-or-auto",
+            "fps": 2,
+            "loop": true
+          },
+          "description": "רצף השקופיות המקורי משמש כאנימציה מדורגת; ניתן להצגה כקרוסלה או כהנפשה."
+        }
+      ],
+      "slideGallery": [
+        "slide-043",
+        "slide-044",
+        "slide-047",
+        "slide-048",
+        "slide-049",
+        "slide-050",
+        "slide-051",
+        "slide-052",
+        "slide-053",
+        "slide-054",
+        "slide-055",
+        "slide-056",
+        "slide-057",
+        "slide-058",
+        "slide-059",
+        "slide-060",
+        "slide-061",
+        "slide-062",
+        "slide-063",
+        "slide-064",
+        "slide-065",
+        "slide-066",
+        "slide-067",
+        "slide-068",
+        "slide-069"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s11",
+      "title": "היחס הגירומגנטי ותדירות לרמור",
+      "slidePages": [
+        45,
+        46,
+        70,
+        71,
+        72,
+        73
+      ],
+      "summary": "תדירות לרמור היא תדירות הפרצסיה של גרעין מסוים בשדה מגנטי. היא גדלה באופן לינארי עם עוצמת השדה. כאשר γ מבוטא ב־MHz/T מתקיים f₀=γB₀; עבור ¹H, γ≈42.58MHz/T.",
+      "details": [
+        {
+          "term": "Gyromagnetic ratio",
+          "explanation": "היחס הגירומגנטי תלוי בסוג הגרעין: ¹H 42.58, ³¹P 17.25, ²³Na 11.27, ¹³C 10.71, ¹⁹F 40.08 MHz/T לפי המצגת."
+        },
+        {
+          "term": "Larmor frequency",
+          "explanation": "תדירות הפרצסיה: f₀=γB₀ כאשר γ ביחידות מחזורים לשנייה לטסלה."
+        },
+        {
+          "term": "תדירות זוויתית",
+          "explanation": "כאשר משתמשים ב־γ זוויתי, ω₀=γB₀ ביחידות rad/s."
+        },
+        {
+          "term": "דוגמת 1.5 טסלה",
+          "explanation": "למימן f₀≈42.58×1.5=63.87MHz."
+        },
+        {
+          "term": "דוגמת 3 טסלה",
+          "explanation": "למימן f₀≈42.58×3=127.74MHz."
+        },
+        {
+          "term": "1 טסלה",
+          "explanation": "שווה 10,000 גאוס; השדה במכשיר MRI חזק בהרבה מהשדה המגנטי של כדור הארץ."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "comparison",
+          "title": "דוגמאות לרמור עבור מימן",
+          "columns": [
+            "שדה",
+            "תדירות"
+          ],
+          "rows": [
+            [
+              "0.5 T",
+              "21.29 MHz"
+            ],
+            [
+              "1 T",
+              "42.58 MHz"
+            ],
+            [
+              "1.5 T",
+              "63.87 MHz"
+            ],
+            [
+              "3 T",
+              "127.74 MHz"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "יחס גירומגנטי",
+          "assetId": "slide-045",
+          "src": "assets/slides/slide-045.webp",
+          "alt": "יחס גירומגנטי",
+          "caption": "שקופית 45 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 45
+        },
+        {
+          "type": "image",
+          "title": "טבלת תדירות לרמור",
+          "assetId": "slide-046",
+          "src": "assets/slides/slide-046.webp",
+          "alt": "טבלת תדירות לרמור",
+          "caption": "שקופית 46 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 46
+        },
+        {
+          "type": "calculator",
+          "title": "מחשבון תדירות לרמור לגרעין מימן",
+          "calculatorType": "larmor",
+          "variable": "B0",
+          "units": "Tesla",
+          "min": 0.5,
+          "max": 7,
+          "step": 0.5,
+          "initial": 3,
+          "formula": "42.58 * B0",
+          "outputUnits": "MHz",
+          "examples": [
+            {
+              "B0": 0.5,
+              "frequencyMHz": 21.29
+            },
+            {
+              "B0": 1.5,
+              "frequencyMHz": 63.87
+            },
+            {
+              "B0": 3,
+              "frequencyMHz": 127.74
+            }
+          ]
+        }
+      ],
+      "check": {
+        "question": "מה תדירות לרמור של ¹H ב־3T בקירוב?",
+        "options": [
+          "42.58 MHz",
+          "127.74 MHz",
+          "3 MHz"
+        ],
+        "correctAnswer": 1,
+        "explanation": "42.58 MHz/T × 3 T = 127.74 MHz."
+      },
+      "slideGallery": [
+        "slide-045",
+        "slide-046",
+        "slide-070",
+        "slide-071",
+        "slide-072",
+        "slide-073"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s12",
+      "title": "מצבי האנרגיה בשדה: מקביל ומנוגד",
+      "slidePages": [
+        70,
+        71,
+        72
+      ],
+      "summary": "בשדה B₀ קיימים עבור גרעין מימן שני מצבי אנרגיה ביחס לשדה. המצב המקביל הוא בעל אנרגיה נמוכה יותר, והמצב המנוגד הוא בעל אנרגיה גבוהה יותר. בטמפרטורת הגוף יש יתרון מספרי קטן למצב הנמוך, המביא למגנטיזציה נטו.",
+      "details": [
+        {
+          "term": "Parallel",
+          "explanation": "מצב שבו המומנט המגנטי מקביל לשדה; אנרגיה נמוכה."
+        },
+        {
+          "term": "Antiparallel",
+          "explanation": "מצב שבו המומנט המגנטי מנוגד לשדה; אנרגיה גבוהה."
+        },
+        {
+          "term": "Zeeman effect",
+          "explanation": "פיצול רמות אנרגיה בנוכחות שדה מגנטי."
+        },
+        {
+          "term": "עוצמת B₀",
+          "explanation": "שדה חזק יותר יוצר הפרש אנרגיה גדול יותר בין המצבים."
+        },
+        {
+          "term": "טמפרטורה",
+          "explanation": "משפיעה על היחס בין אוכלוסיות מצבי האנרגיה."
+        },
+        {
+          "term": "מגנטיזציה נטו",
+          "explanation": "תוצאה של הפרש אוכלוסיות קטן המצטבר במערכת עם מספר עצום של גרעינים."
+        }
+      ],
+      "check": {
+        "question": "איזה מצב אנרגיה מאוכלס מעט יותר בשיווי משקל?",
+        "options": [
+          "מקביל לשדה B₀",
+          "מנוגד לשדה B₀",
+          "שני המצבים תמיד זהים"
+        ],
+        "correctAnswer": 0,
+        "explanation": "המצב המקביל נמוך יותר באנרגיה ולכן מאוכלס מעט יותר בטמפרטורה סופית."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "מצבי אנרגיה – Parallel / Antiparallel",
+          "assetId": "slide-070",
+          "src": "assets/slides/slide-070.webp",
+          "alt": "מצבי אנרגיה – Parallel / Antiparallel",
+          "caption": "שקופית 70 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 70
+        },
+        {
+          "type": "image",
+          "title": "Zeeman effect",
+          "assetId": "slide-072",
+          "src": "assets/slides/slide-072.webp",
+          "alt": "Zeeman effect",
+          "caption": "שקופית 72 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 72
+        }
+      ],
+      "slideGallery": [
+        "slide-070",
+        "slide-071",
+        "slide-072"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s13",
+      "title": "תהודה וגלי רדיו – Resonance and RF",
+      "slidePages": [
+        74,
+        75,
+        76
+      ],
+      "summary": "כדי לעורר את מערכת הספינים, מקרינים פולס גלי רדיו (RF) בתדירות התואמת בקירוב לתדירות לרמור. התאמת התדירות מאפשרת העברת אנרגיה יעילה, באנלוגיה לדחיפת נדנדה בקצב התנודה שלה.",
+      "details": [
+        {
+          "term": "RF – Radio Frequency",
+          "explanation": "פולס אלקטרומגנטי בתדר רדיו המשמש לעירור הספינים."
+        },
+        {
+          "term": "Resonance",
+          "explanation": "תגובה חזקה לגירוי מחזורי בתדירות מתאימה."
+        },
+        {
+          "term": "Excitation",
+          "explanation": "הוצאת מערכת הספינים משיווי משקל בעקבות קליטת אנרגיה."
+        },
+        {
+          "term": "אנלוגיית נדנדה",
+          "explanation": "תזמון נכון של הדחיפות מגביר את התנודה; כך התדירות המתאימה מאפשרת עירור יעיל."
+        }
+      ],
+      "check": {
+        "question": "באיזו תדירות צריך לפעול RF לצורך עירור יעיל?",
+        "options": [
+          "בתדירות לרמור של הגרעין הנמדד",
+          "בכל תדירות שרירותית",
+          "בתדירות קבועה שאינה תלויה ב־B₀"
+        ],
+        "correctAnswer": 0,
+        "explanation": "תהודה תלויה בהתאמה בין תדירות הגירוי לתדירות הפרצסיה."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "שלב העירור – Excitation",
+          "assetId": "slide-074",
+          "src": "assets/slides/slide-074.webp",
+          "alt": "שלב העירור – Excitation",
+          "caption": "שקופית 74 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 74
+        },
+        {
+          "type": "image",
+          "title": "אנלוגיה לתהודה",
+          "assetId": "slide-076",
+          "src": "assets/slides/slide-076.webp",
+          "alt": "אנלוגיה לתהודה",
+          "caption": "שקופית 76 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 76
+        }
+      ],
+      "slideGallery": [
+        "slide-074",
+        "slide-075",
+        "slide-076"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s14",
+      "title": "עירור, Flip Angle ומגנטיזציה רוחבית",
+      "slidePages": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "summary": "פולס RF משנה את כיוון וקטור המגנטיזציה הכוללת. פולס 90° אידיאלי מעביר אותה מציר Z למישור XY, ויוצר רכיב רוחבי גדול. פולס 180° אידיאלי ממצב שיווי משקל הופך את המגנטיזציה האורכית לכיוון Z השלילי.",
+      "details": [
+        {
+          "term": "Longitudinal magnetization Mz",
+          "explanation": "הרכיב של המגנטיזציה הכוללת לאורך השדה B₀."
+        },
+        {
+          "term": "Transverse magnetization Mxy",
+          "explanation": "הרכיב במישור XY המאונך ל־B₀."
+        },
+        {
+          "term": "שיווי משקל",
+          "explanation": "Mz=M₀, ובממוצע Mxy=0."
+        },
+        {
+          "term": "Flip angle",
+          "explanation": "הזווית שבה פולס RF מטה את וקטור המגנטיזציה."
+        },
+        {
+          "term": "90° pulse",
+          "explanation": "בתנאים אידיאליים Mz≈0 ואילו Mxy מקסימלי."
+        },
+        {
+          "term": "180° pulse",
+          "explanation": "ממצב שיווי משקל הופך את Mz לכיוון השלילי."
+        },
+        {
+          "term": "סנכרון מופעי",
+          "explanation": "עירור מאפשר ליצור רכיב מגנטיזציה רוחבי קוהרנטי שממנו ניתן לקבל אות."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "comparison",
+          "title": "רכיבי המגנטיזציה",
+          "columns": [
+            "רכיב",
+            "כיוון",
+            "מצב בעקבות פולס 90°"
+          ],
+          "rows": [
+            [
+              "Mz",
+              "ציר Z",
+              "מתאפס אידיאלית"
+            ],
+            [
+              "Mxy",
+              "מישור XY",
+              "מרבי אידיאלית"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "פולס RF והטיה",
+          "assetId": "slide-078",
+          "src": "assets/slides/slide-078.webp",
+          "alt": "פולס RF והטיה",
+          "caption": "שקופית 78 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 78
+        },
+        {
+          "type": "image",
+          "title": "90° pulse",
+          "assetId": "slide-110",
+          "src": "assets/slides/slide-110.webp",
+          "alt": "90° pulse",
+          "caption": "שקופית 110 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 110
+        },
+        {
+          "type": "diagram",
+          "title": "השוואת זוויות העירור",
+          "asset": "assets/diagrams/rf-flip-angles.svg",
+          "diagramType": "flipAngles",
+          "states": [
+            {
+              "angle": 0,
+              "Mz": 1,
+              "Mxy": 0
+            },
+            {
+              "angle": 90,
+              "Mz": 0,
+              "Mxy": 1
+            },
+            {
+              "angle": 180,
+              "Mz": -1,
+              "Mxy": 0
+            }
+          ]
+        },
+        {
+          "type": "frameSequence",
+          "title": "עירור ופולס RF",
+          "frames": [
+            {
+              "slidePage": 78,
+              "assetId": "slide-078",
+              "src": "assets/slides/slide-078.webp"
+            },
+            {
+              "slidePage": 79,
+              "assetId": "slide-079",
+              "src": "assets/slides/slide-079.webp"
+            },
+            {
+              "slidePage": 80,
+              "assetId": "slide-080",
+              "src": "assets/slides/slide-080.webp"
+            },
+            {
+              "slidePage": 81,
+              "assetId": "slide-081",
+              "src": "assets/slides/slide-081.webp"
+            },
+            {
+              "slidePage": 82,
+              "assetId": "slide-082",
+              "src": "assets/slides/slide-082.webp"
+            },
+            {
+              "slidePage": 83,
+              "assetId": "slide-083",
+              "src": "assets/slides/slide-083.webp"
+            },
+            {
+              "slidePage": 84,
+              "assetId": "slide-084",
+              "src": "assets/slides/slide-084.webp"
+            },
+            {
+              "slidePage": 85,
+              "assetId": "slide-085",
+              "src": "assets/slides/slide-085.webp"
+            },
+            {
+              "slidePage": 86,
+              "assetId": "slide-086",
+              "src": "assets/slides/slide-086.webp"
+            },
+            {
+              "slidePage": 87,
+              "assetId": "slide-087",
+              "src": "assets/slides/slide-087.webp"
+            },
+            {
+              "slidePage": 88,
+              "assetId": "slide-088",
+              "src": "assets/slides/slide-088.webp"
+            },
+            {
+              "slidePage": 89,
+              "assetId": "slide-089",
+              "src": "assets/slides/slide-089.webp"
+            },
+            {
+              "slidePage": 90,
+              "assetId": "slide-090",
+              "src": "assets/slides/slide-090.webp"
+            },
+            {
+              "slidePage": 91,
+              "assetId": "slide-091",
+              "src": "assets/slides/slide-091.webp"
+            },
+            {
+              "slidePage": 92,
+              "assetId": "slide-092",
+              "src": "assets/slides/slide-092.webp"
+            },
+            {
+              "slidePage": 93,
+              "assetId": "slide-093",
+              "src": "assets/slides/slide-093.webp"
+            },
+            {
+              "slidePage": 94,
+              "assetId": "slide-094",
+              "src": "assets/slides/slide-094.webp"
+            },
+            {
+              "slidePage": 95,
+              "assetId": "slide-095",
+              "src": "assets/slides/slide-095.webp"
+            },
+            {
+              "slidePage": 96,
+              "assetId": "slide-096",
+              "src": "assets/slides/slide-096.webp"
+            },
+            {
+              "slidePage": 97,
+              "assetId": "slide-097",
+              "src": "assets/slides/slide-097.webp"
+            },
+            {
+              "slidePage": 98,
+              "assetId": "slide-098",
+              "src": "assets/slides/slide-098.webp"
+            },
+            {
+              "slidePage": 99,
+              "assetId": "slide-099",
+              "src": "assets/slides/slide-099.webp"
+            },
+            {
+              "slidePage": 100,
+              "assetId": "slide-100",
+              "src": "assets/slides/slide-100.webp"
+            },
+            {
+              "slidePage": 101,
+              "assetId": "slide-101",
+              "src": "assets/slides/slide-101.webp"
+            },
+            {
+              "slidePage": 102,
+              "assetId": "slide-102",
+              "src": "assets/slides/slide-102.webp"
+            },
+            {
+              "slidePage": 103,
+              "assetId": "slide-103",
+              "src": "assets/slides/slide-103.webp"
+            },
+            {
+              "slidePage": 104,
+              "assetId": "slide-104",
+              "src": "assets/slides/slide-104.webp"
+            },
+            {
+              "slidePage": 105,
+              "assetId": "slide-105",
+              "src": "assets/slides/slide-105.webp"
+            },
+            {
+              "slidePage": 106,
+              "assetId": "slide-106",
+              "src": "assets/slides/slide-106.webp"
+            },
+            {
+              "slidePage": 107,
+              "assetId": "slide-107",
+              "src": "assets/slides/slide-107.webp"
+            },
+            {
+              "slidePage": 108,
+              "assetId": "slide-108",
+              "src": "assets/slides/slide-108.webp"
+            },
+            {
+              "slidePage": 109,
+              "assetId": "slide-109",
+              "src": "assets/slides/slide-109.webp"
+            },
+            {
+              "slidePage": 110,
+              "assetId": "slide-110",
+              "src": "assets/slides/slide-110.webp"
+            },
+            {
+              "slidePage": 111,
+              "assetId": "slide-111",
+              "src": "assets/slides/slide-111.webp"
+            },
+            {
+              "slidePage": 112,
+              "assetId": "slide-112",
+              "src": "assets/slides/slide-112.webp"
+            }
+          ],
+          "playback": {
+            "mode": "manual-or-auto",
+            "fps": 2,
+            "loop": true
+          },
+          "description": "רצף השקופיות המקורי משמש כאנימציה מדורגת; ניתן להצגה כקרוסלה או כהנפשה."
+        }
+      ],
+      "check": {
+        "question": "מה יקרה למגנטיזציה אחרי פולס 90° אידיאלי משיווי משקל?",
+        "options": [
+          "הרכיב הרוחבי יהיה גדול והאורכי יתאפס",
+          "הספינים יאבדו את כל מטענם",
+          "B₀ יכבה"
+        ],
+        "correctAnswer": 0,
+        "explanation": "פולס 90° מטה את וקטור המגנטיזציה למישור הרוחבי."
+      },
+      "slideGallery": [
+        "slide-077",
+        "slide-078",
+        "slide-079",
+        "slide-080",
+        "slide-081",
+        "slide-082",
+        "slide-083",
+        "slide-084",
+        "slide-085",
+        "slide-086",
+        "slide-087",
+        "slide-088",
+        "slide-089",
+        "slide-090",
+        "slide-091",
+        "slide-092",
+        "slide-093",
+        "slide-094",
+        "slide-095",
+        "slide-096",
+        "slide-097",
+        "slide-098",
+        "slide-099",
+        "slide-100",
+        "slide-101",
+        "slide-102",
+        "slide-103",
+        "slide-104",
+        "slide-105",
+        "slide-106",
+        "slide-107",
+        "slide-108",
+        "slide-109",
+        "slide-110",
+        "slide-111",
+        "slide-112"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s15",
+      "title": "יצירת אות MR ו־FID",
+      "slidePages": [
+        73,
+        74,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "summary": "לאחר העירור המגנטיזציה הרוחבית המסתובבת גורמת לשינוי שטף מגנטי דרך סליל הקליטה, וכך מושרה בו מתח חשמלי מדיד. האות התנודתי דועך בהדרגה ונקרא Free Induction Decay (FID).",
+      "details": [
+        {
+          "term": "סליל קליטה",
+          "explanation": "רכיב המודד מתח חשמלי המושרה עקב שינוי שטף מגנטי."
+        },
+        {
+          "term": "Induction",
+          "explanation": "השראה אלקטרומגנטית: שינוי בשטף מגנטי יוצר מתח."
+        },
+        {
+          "term": "FID",
+          "explanation": "Free Induction Decay – אות MR תנודתי שהמשרעת שלו דועכת לאחר עירור."
+        },
+        {
+          "term": "Dephasing",
+          "explanation": "הפרדה הדרגתית של מופעי הפרוטונים, המקטינה את המגנטיזציה הרוחבית."
+        },
+        {
+          "term": "מדידה עקיפה",
+          "explanation": "המכשיר מודד אות חשמלי ולא מצלם פרוטונים בנפרד."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "process",
+          "title": "איך נוצר אות MR?",
+          "steps": [
+            {
+              "title": "פולס RF",
+              "description": "יצירת מגנטיזציה רוחבית"
+            },
+            {
+              "title": "פרצסיה",
+              "description": "שינוי מחזורי של שטף מגנטי"
+            },
+            {
+              "title": "סליל קליטה",
+              "description": "השראת מתח חשמלי"
+            },
+            {
+              "title": "FID",
+              "description": "אות תנודתי שדועך עם הזמן"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "title": "רכיבי קליטה ושידור RF",
+          "assetId": "slide-114",
+          "src": "assets/slides/slide-114.webp",
+          "alt": "רכיבי קליטה ושידור RF",
+          "caption": "שקופית 114 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 114
+        },
+        {
+          "type": "image",
+          "title": "הסבר אות ה־MR",
+          "assetId": "slide-129",
+          "src": "assets/slides/slide-129.webp",
+          "alt": "הסבר אות ה־MR",
+          "caption": "שקופית 129 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 129
+        },
+        {
+          "type": "frameSequence",
+          "title": "קליטת אות MR",
+          "frames": [
+            {
+              "slidePage": 114,
+              "assetId": "slide-114",
+              "src": "assets/slides/slide-114.webp"
+            },
+            {
+              "slidePage": 115,
+              "assetId": "slide-115",
+              "src": "assets/slides/slide-115.webp"
+            },
+            {
+              "slidePage": 116,
+              "assetId": "slide-116",
+              "src": "assets/slides/slide-116.webp"
+            },
+            {
+              "slidePage": 117,
+              "assetId": "slide-117",
+              "src": "assets/slides/slide-117.webp"
+            },
+            {
+              "slidePage": 118,
+              "assetId": "slide-118",
+              "src": "assets/slides/slide-118.webp"
+            },
+            {
+              "slidePage": 119,
+              "assetId": "slide-119",
+              "src": "assets/slides/slide-119.webp"
+            },
+            {
+              "slidePage": 120,
+              "assetId": "slide-120",
+              "src": "assets/slides/slide-120.webp"
+            },
+            {
+              "slidePage": 121,
+              "assetId": "slide-121",
+              "src": "assets/slides/slide-121.webp"
+            },
+            {
+              "slidePage": 122,
+              "assetId": "slide-122",
+              "src": "assets/slides/slide-122.webp"
+            },
+            {
+              "slidePage": 123,
+              "assetId": "slide-123",
+              "src": "assets/slides/slide-123.webp"
+            },
+            {
+              "slidePage": 124,
+              "assetId": "slide-124",
+              "src": "assets/slides/slide-124.webp"
+            },
+            {
+              "slidePage": 125,
+              "assetId": "slide-125",
+              "src": "assets/slides/slide-125.webp"
+            },
+            {
+              "slidePage": 126,
+              "assetId": "slide-126",
+              "src": "assets/slides/slide-126.webp"
+            },
+            {
+              "slidePage": 127,
+              "assetId": "slide-127",
+              "src": "assets/slides/slide-127.webp"
+            },
+            {
+              "slidePage": 128,
+              "assetId": "slide-128",
+              "src": "assets/slides/slide-128.webp"
+            },
+            {
+              "slidePage": 129,
+              "assetId": "slide-129",
+              "src": "assets/slides/slide-129.webp"
+            }
+          ],
+          "playback": {
+            "mode": "manual-or-auto",
+            "fps": 2,
+            "loop": true
+          },
+          "description": "רצף השקופיות המקורי משמש כאנימציה מדורגת; ניתן להצגה כקרוסלה או כהנפשה."
+        }
+      ],
+      "check": {
+        "question": "מהו FID?",
+        "options": [
+          "אות MR המתנודד ודועך לאחר העירור",
+          "זרם ה־RF בזמן שהמגנט כבוי",
+          "מדד ישיר של ירי נוירונים"
+        ],
+        "correctAnswer": 0,
+        "explanation": "FID הוא מתח תנודתי ודועך המתקבל עקב המגנטיזציה הרוחבית המשתנה."
+      },
+      "slideGallery": [
+        "slide-073",
+        "slide-074",
+        "slide-113",
+        "slide-114",
+        "slide-115",
+        "slide-116",
+        "slide-117",
+        "slide-118",
+        "slide-119",
+        "slide-120"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s16",
+      "title": "רלקסציה – Relaxation",
+      "slidePages": [
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148
+      ],
+      "summary": "לאחר סיום פולס ה־RF הספינים חוזרים בהדרגה למצב שיווי משקל. במקביל מתרחשים שני תהליכים: התאוששות המגנטיזציה האורכית (T1) ודעיכת המגנטיזציה הרוחבית (T2).",
+      "details": [
+        {
+          "term": "Relaxation",
+          "explanation": "חזרה הדרגתית של מערכת הספינים למצב שיווי משקל."
+        },
+        {
+          "term": "T1",
+          "explanation": "התאוששות של רכיב Mz לאורך B₀."
+        },
+        {
+          "term": "T2",
+          "explanation": "אובדן קוהרנטיות ודעיכת רכיב Mxy."
+        },
+        {
+          "term": "מקביליות",
+          "explanation": "T1 ו־T2 מתרחשים בעת ובעונה אחת אך מודדים היבטים שונים."
+        },
+        {
+          "term": "חשיבות ניגודיות",
+          "explanation": "רקמות שונות נבדלות בקבועי הזמן שלהן, ולכן ניתן לייצר הבדלים בעוצמת האות."
+        }
+      ],
+      "check": {
+        "question": "מה מתרחש כאשר פולס ה־RF מסתיים?",
+        "options": [
+          "T1 ו־T2 יכולים להתקיים במקביל",
+          "רק T1 מתרחש תמיד",
+          "כל המומנטים המגנטיים נעלמים"
+        ],
+        "correctAnswer": 0,
+        "explanation": "תהליכי התאוששות אורכית ודעיכה רוחבית מתקדמים במקביל."
+      },
+      "visualBlocks": [
+        {
+          "type": "image",
+          "title": "עירור ורלקסציה",
+          "assetId": "slide-113",
+          "src": "assets/slides/slide-113.webp",
+          "alt": "עירור ורלקסציה",
+          "caption": "שקופית 113 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 113
+        },
+        {
+          "type": "image",
+          "title": "מנגנוני רלקסציה",
+          "assetId": "slide-148",
+          "src": "assets/slides/slide-148.webp",
+          "alt": "מנגנוני רלקסציה",
+          "caption": "שקופית 148 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 148
+        },
+        {
+          "type": "frameSequence",
+          "title": "חזרת המגנטיזציה",
+          "frames": [
+            {
+              "slidePage": 130,
+              "assetId": "slide-130",
+              "src": "assets/slides/slide-130.webp"
+            },
+            {
+              "slidePage": 131,
+              "assetId": "slide-131",
+              "src": "assets/slides/slide-131.webp"
+            },
+            {
+              "slidePage": 132,
+              "assetId": "slide-132",
+              "src": "assets/slides/slide-132.webp"
+            },
+            {
+              "slidePage": 133,
+              "assetId": "slide-133",
+              "src": "assets/slides/slide-133.webp"
+            },
+            {
+              "slidePage": 134,
+              "assetId": "slide-134",
+              "src": "assets/slides/slide-134.webp"
+            },
+            {
+              "slidePage": 135,
+              "assetId": "slide-135",
+              "src": "assets/slides/slide-135.webp"
+            },
+            {
+              "slidePage": 136,
+              "assetId": "slide-136",
+              "src": "assets/slides/slide-136.webp"
+            },
+            {
+              "slidePage": 137,
+              "assetId": "slide-137",
+              "src": "assets/slides/slide-137.webp"
+            },
+            {
+              "slidePage": 138,
+              "assetId": "slide-138",
+              "src": "assets/slides/slide-138.webp"
+            },
+            {
+              "slidePage": 139,
+              "assetId": "slide-139",
+              "src": "assets/slides/slide-139.webp"
+            },
+            {
+              "slidePage": 140,
+              "assetId": "slide-140",
+              "src": "assets/slides/slide-140.webp"
+            },
+            {
+              "slidePage": 141,
+              "assetId": "slide-141",
+              "src": "assets/slides/slide-141.webp"
+            },
+            {
+              "slidePage": 142,
+              "assetId": "slide-142",
+              "src": "assets/slides/slide-142.webp"
+            },
+            {
+              "slidePage": 143,
+              "assetId": "slide-143",
+              "src": "assets/slides/slide-143.webp"
+            },
+            {
+              "slidePage": 144,
+              "assetId": "slide-144",
+              "src": "assets/slides/slide-144.webp"
+            },
+            {
+              "slidePage": 145,
+              "assetId": "slide-145",
+              "src": "assets/slides/slide-145.webp"
+            },
+            {
+              "slidePage": 146,
+              "assetId": "slide-146",
+              "src": "assets/slides/slide-146.webp"
+            },
+            {
+              "slidePage": 147,
+              "assetId": "slide-147",
+              "src": "assets/slides/slide-147.webp"
+            }
+          ],
+          "playback": {
+            "mode": "manual-or-auto",
+            "fps": 2,
+            "loop": true
+          },
+          "description": "רצף השקופיות המקורי משמש כאנימציה מדורגת; ניתן להצגה כקרוסלה או כהנפשה."
+        }
+      ],
+      "slideGallery": [
+        "slide-113",
+        "slide-114",
+        "slide-115",
+        "slide-116",
+        "slide-117",
+        "slide-118",
+        "slide-119",
+        "slide-120",
+        "slide-121",
+        "slide-122",
+        "slide-123",
+        "slide-124",
+        "slide-125",
+        "slide-126",
+        "slide-127",
+        "slide-128",
+        "slide-129",
+        "slide-130",
+        "slide-131",
+        "slide-132",
+        "slide-133",
+        "slide-134",
+        "slide-135",
+        "slide-136",
+        "slide-137",
+        "slide-138",
+        "slide-139",
+        "slide-140",
+        "slide-141",
+        "slide-142",
+        "slide-143",
+        "slide-144",
+        "slide-145",
+        "slide-146",
+        "slide-147",
+        "slide-148"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s17",
+      "title": "T1 – התאוששות אורכית (Spin–Lattice)",
+      "slidePages": [
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165
+      ],
+      "summary": "T1 הוא קבוע הזמן של חזרת המגנטיזציה האורכית לערך שיווי המשקל. התהליך כרוך בחילוף אנרגיה בין מערכת הספינים לבין הסביבה המולקולרית. לאחר פולס 90° אידיאלי, Mz(t)=M₀(1−e^(−t/T1)); בזמן T1 היא מגיעה לכ־63% מהערך הסופי.",
+      "details": [
+        {
+          "term": "Spin–Lattice relaxation",
+          "explanation": "רלקסציה הכרוכה בחילוף אנרגיה עם הסביבה."
+        },
+        {
+          "term": "T1",
+          "explanation": "קבוע זמן ההתאוששות האורכית."
+        },
+        {
+          "term": "משוואה",
+          "explanation": "Mz(t)=M₀(1−exp(−t/T1)) לאחר פולס 90° אידיאלי."
+        },
+        {
+          "term": "פרשנות 63%",
+          "explanation": "לאחר זמן T1 המגנטיזציה האורכית מגיעה לכ־63.2% מ־M₀."
+        },
+        {
+          "term": "T1 קצר",
+          "explanation": "התאוששות אורכית מהירה יותר."
+        },
+        {
+          "term": "T1 ארוך",
+          "explanation": "התאוששות אורכית איטית יותר."
+        },
+        {
+          "term": "הבדלים בין רקמות",
+          "explanation": "המצגת מציגה בקירוב T1: חומר לבן ~0.6s, חומר אפור ~1s, CSF ~4s, קרומי המוח ~0.5–2.2s; הערכים תלויים גם בעוצמת השדה ובתנאי המדידה."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "comparison",
+          "title": "ערכי T1 לדוגמה מהמצגת",
+          "columns": [
+            "רקמה",
+            "T1 בקירוב"
+          ],
+          "rows": [
+            [
+              "חומר לבן",
+              "0.6 שניות"
+            ],
+            [
+              "חומר אפור",
+              "1 שנייה"
+            ],
+            [
+              "CSF",
+              "4 שניות"
+            ],
+            [
+              "קרומי המוח",
+              "0.5–2.2 שניות"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "המשוואה והתהליך של T1",
+          "assetId": "slide-149",
+          "src": "assets/slides/slide-149.webp",
+          "alt": "המשוואה והתהליך של T1",
+          "caption": "שקופית 149 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 149
+        },
+        {
+          "type": "image",
+          "title": "הגרף בשקופית 164",
+          "assetId": "slide-164",
+          "src": "assets/slides/slide-164.webp",
+          "alt": "הגרף בשקופית 164",
+          "caption": "שקופית 164 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 164
+        },
+        {
+          "type": "image",
+          "title": "טבלת זמני T1 לרקמות",
+          "assetId": "slide-165",
+          "src": "assets/slides/slide-165.webp",
+          "alt": "טבלת זמני T1 לרקמות",
+          "caption": "שקופית 165 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 165
+        },
+        {
+          "type": "chart",
+          "title": "התאוששות אורכית – T1",
+          "chartType": "line",
+          "asset": "assets/diagrams/t1-recovery.svg",
+          "equation": "Mz(t) = M0(1 − exp(−t/T1))",
+          "xLabel": "זמן ביחידות של קבוע הזמן",
+          "yLabel": "מגנטיזציה מנורמלת",
+          "xKey": "time",
+          "series": [
+            {
+              "dataKey": "value",
+              "label": "התאוששות אורכית – T1"
+            }
+          ],
+          "data": [
+            {
+              "time": 0.0,
+              "value": 0.0
+            },
+            {
+              "time": 0.1,
+              "value": 0.095163
+            },
+            {
+              "time": 0.2,
+              "value": 0.181269
+            },
+            {
+              "time": 0.3,
+              "value": 0.259182
+            },
+            {
+              "time": 0.4,
+              "value": 0.32968
+            },
+            {
+              "time": 0.5,
+              "value": 0.393469
+            },
+            {
+              "time": 0.6,
+              "value": 0.451188
+            },
+            {
+              "time": 0.7,
+              "value": 0.503415
+            },
+            {
+              "time": 0.8,
+              "value": 0.550671
+            },
+            {
+              "time": 0.9,
+              "value": 0.59343
+            },
+            {
+              "time": 1.0,
+              "value": 0.632121
+            },
+            {
+              "time": 1.1,
+              "value": 0.667129
+            },
+            {
+              "time": 1.2,
+              "value": 0.698806
+            },
+            {
+              "time": 1.3,
+              "value": 0.727468
+            },
+            {
+              "time": 1.4,
+              "value": 0.753403
+            },
+            {
+              "time": 1.5,
+              "value": 0.77687
+            },
+            {
+              "time": 1.6,
+              "value": 0.798103
+            },
+            {
+              "time": 1.7,
+              "value": 0.817316
+            },
+            {
+              "time": 1.8,
+              "value": 0.834701
+            },
+            {
+              "time": 1.9,
+              "value": 0.850431
+            },
+            {
+              "time": 2.0,
+              "value": 0.864665
+            },
+            {
+              "time": 2.1,
+              "value": 0.877544
+            },
+            {
+              "time": 2.2,
+              "value": 0.889197
+            },
+            {
+              "time": 2.3,
+              "value": 0.899741
+            },
+            {
+              "time": 2.4,
+              "value": 0.909282
+            },
+            {
+              "time": 2.5,
+              "value": 0.917915
+            },
+            {
+              "time": 2.6,
+              "value": 0.925726
+            },
+            {
+              "time": 2.7,
+              "value": 0.932794
+            },
+            {
+              "time": 2.8,
+              "value": 0.93919
+            },
+            {
+              "time": 2.9,
+              "value": 0.944977
+            },
+            {
+              "time": 3.0,
+              "value": 0.950213
+            },
+            {
+              "time": 3.1,
+              "value": 0.954951
+            },
+            {
+              "time": 3.2,
+              "value": 0.959238
+            },
+            {
+              "time": 3.3,
+              "value": 0.963117
+            },
+            {
+              "time": 3.4,
+              "value": 0.966627
+            },
+            {
+              "time": 3.5,
+              "value": 0.969803
+            },
+            {
+              "time": 3.6,
+              "value": 0.972676
+            },
+            {
+              "time": 3.7,
+              "value": 0.975276
+            },
+            {
+              "time": 3.8,
+              "value": 0.977629
+            },
+            {
+              "time": 3.9,
+              "value": 0.979758
+            },
+            {
+              "time": 4.0,
+              "value": 0.981684
+            },
+            {
+              "time": 4.1,
+              "value": 0.983427
+            },
+            {
+              "time": 4.2,
+              "value": 0.985004
+            },
+            {
+              "time": 4.3,
+              "value": 0.986431
+            },
+            {
+              "time": 4.4,
+              "value": 0.987723
+            },
+            {
+              "time": 4.5,
+              "value": 0.988891
+            },
+            {
+              "time": 4.6,
+              "value": 0.989948
+            },
+            {
+              "time": 4.7,
+              "value": 0.990905
+            },
+            {
+              "time": 4.8,
+              "value": 0.99177
+            },
+            {
+              "time": 4.9,
+              "value": 0.992553
+            },
+            {
+              "time": 5.0,
+              "value": 0.993262
+            }
+          ],
+          "annotations": [
+            {
+              "x": 1,
+              "y": 0.63212,
+              "label": "63.2% מהערך הסופי"
+            }
+          ],
+          "explanation": "T1 עולה בקירוב ל־100% לאחר מספר קבועי זמן."
+        },
+        {
+          "type": "frameSequence",
+          "title": "אנימציה של T1",
+          "frames": [
+            {
+              "slidePage": 150,
+              "assetId": "slide-150",
+              "src": "assets/slides/slide-150.webp"
+            },
+            {
+              "slidePage": 151,
+              "assetId": "slide-151",
+              "src": "assets/slides/slide-151.webp"
+            },
+            {
+              "slidePage": 152,
+              "assetId": "slide-152",
+              "src": "assets/slides/slide-152.webp"
+            },
+            {
+              "slidePage": 153,
+              "assetId": "slide-153",
+              "src": "assets/slides/slide-153.webp"
+            },
+            {
+              "slidePage": 154,
+              "assetId": "slide-154",
+              "src": "assets/slides/slide-154.webp"
+            },
+            {
+              "slidePage": 155,
+              "assetId": "slide-155",
+              "src": "assets/slides/slide-155.webp"
+            },
+            {
+              "slidePage": 156,
+              "assetId": "slide-156",
+              "src": "assets/slides/slide-156.webp"
+            },
+            {
+              "slidePage": 157,
+              "assetId": "slide-157",
+              "src": "assets/slides/slide-157.webp"
+            },
+            {
+              "slidePage": 158,
+              "assetId": "slide-158",
+              "src": "assets/slides/slide-158.webp"
+            },
+            {
+              "slidePage": 159,
+              "assetId": "slide-159",
+              "src": "assets/slides/slide-159.webp"
+            },
+            {
+              "slidePage": 160,
+              "assetId": "slide-160",
+              "src": "assets/slides/slide-160.webp"
+            },
+            {
+              "slidePage": 161,
+              "assetId": "slide-161",
+              "src": "assets/slides/slide-161.webp"
+            },
+            {
+              "slidePage": 162,
+              "assetId": "slide-162",
+              "src": "assets/slides/slide-162.webp"
+            },
+            {
+              "slidePage": 163,
+              "assetId": "slide-163",
+              "src": "assets/slides/slide-163.webp"
+            },
+            {
+              "slidePage": 164,
+              "assetId": "slide-164",
+              "src": "assets/slides/slide-164.webp"
+            }
+          ],
+          "playback": {
+            "mode": "manual-or-auto",
+            "fps": 2,
+            "loop": true
+          },
+          "description": "רצף השקופיות המקורי משמש כאנימציה מדורגת; ניתן להצגה כקרוסלה או כהנפשה."
+        }
+      ],
+      "check": {
+        "question": "מה משמעות הזמן T1 אחרי פולס 90°?",
+        "options": [
+          "המגנטיזציה האורכית הגיעה לכ־63% מערך שיווי המשקל",
+          "המגנטיזציה הרוחבית נשארה ב־100%",
+          "תדירות לרמור הפכה לאפס"
+        ],
+        "correctAnswer": 0,
+        "explanation": "התאוששות אקספוננציאלית נותנת Mz(T1)/M₀=1−e⁻¹≈0.632."
+      },
+      "slideGallery": [
+        "slide-149",
+        "slide-150",
+        "slide-151",
+        "slide-152",
+        "slide-153",
+        "slide-154",
+        "slide-155",
+        "slide-156",
+        "slide-157",
+        "slide-158",
+        "slide-159",
+        "slide-160",
+        "slide-161",
+        "slide-162",
+        "slide-163",
+        "slide-164",
+        "slide-165"
+      ],
+      "importantNotes": []
+    },
+    {
+      "id": "brainimg-l3-s18",
+      "title": "T2 – דעיכה רוחבית (Spin–Spin)",
+      "slidePages": [
+        166
+      ],
+      "summary": "T2 מתאר אובדן קוהרנטיות של הספינים במישור XY. השפעות מגנטיות מקומיות גורמות להבדלי מופע, כך שהתרומות הרוחביות מבטלות זו את זו. מקובל לכתוב Mxy(t)=Mxy(0)e^(−t/T2): בזמן T2 נשארים כ־37% מהמגנטיזציה הרוחבית ההתחלתית.",
+      "details": [
+        {
+          "term": "Spin–Spin relaxation",
+          "explanation": "רלקסציה רוחבית הקשורה באינטראקציות מגנטיות בין ספינים."
+        },
+        {
+          "term": "Dephasing",
+          "explanation": "הפרדה של מופעי הספינים המובילה להפחתת המגנטיזציה הרוחבית."
+        },
+        {
+          "term": "T2",
+          "explanation": "קבוע זמן דעיכת המגנטיזציה הרוחבית."
+        },
+        {
+          "term": "משוואה",
+          "explanation": "Mxy(t)=Mxy(0)exp(−t/T2)."
+        },
+        {
+          "term": "פרשנות 37%",
+          "explanation": "לאחר זמן T2 נותרת מגנטיזציה רוחבית בשיעור e⁻¹≈36.8%."
+        },
+        {
+          "term": "T2 קצר",
+          "explanation": "דעיכה רוחבית מהירה."
+        },
+        {
+          "term": "T2 ארוך",
+          "explanation": "שמירה על קוהרנטיות רוחבית לאורך זמן רב יותר."
+        },
+        {
+          "term": "גבול הכיסוי במצגת",
+          "explanation": "המצגת מסתיימת בתחילת הצגת T2; פירוט המשוואה וההסבר כאן נכללו בסיכום הלימודי, ואינם בהכרח מפורטים כולם בשקופית הסיום."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "comparison",
+          "title": "T1 לעומת T2",
+          "columns": [
+            "T1",
+            "T2"
+          ],
+          "rows": [
+            [
+              "התאוששות אורכית לאורך Z",
+              "דעיכה רוחבית במישור XY"
+            ],
+            [
+              "Spin–Lattice",
+              "Spin–Spin"
+            ],
+            [
+              "63% התאוששות לאחר קבוע זמן אחד",
+              "37% נותר לאחר קבוע זמן אחד"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "title": "T2 דעיכה רוחבית",
+          "assetId": "slide-166",
+          "src": "assets/slides/slide-166.webp",
+          "alt": "T2 דעיכה רוחבית",
+          "caption": "שקופית 166 מהמצגת",
+          "fit": "contain",
+          "sourceSlide": 166
+        },
+        {
+          "type": "chart",
+          "title": "דעיכה רוחבית – T2",
+          "chartType": "line",
+          "asset": "assets/diagrams/t2-decay.svg",
+          "equation": "Mxy(t) = Mxy(0) × exp(−t/T2)",
+          "xLabel": "זמן ביחידות של קבוע הזמן",
+          "yLabel": "מגנטיזציה מנורמלת",
+          "xKey": "time",
+          "series": [
+            {
+              "dataKey": "value",
+              "label": "דעיכה רוחבית – T2"
+            }
+          ],
+          "data": [
+            {
+              "time": 0.0,
+              "value": 1.0
+            },
+            {
+              "time": 0.1,
+              "value": 0.904837
+            },
+            {
+              "time": 0.2,
+              "value": 0.818731
+            },
+            {
+              "time": 0.3,
+              "value": 0.740818
+            },
+            {
+              "time": 0.4,
+              "value": 0.67032
+            },
+            {
+              "time": 0.5,
+              "value": 0.606531
+            },
+            {
+              "time": 0.6,
+              "value": 0.548812
+            },
+            {
+              "time": 0.7,
+              "value": 0.496585
+            },
+            {
+              "time": 0.8,
+              "value": 0.449329
+            },
+            {
+              "time": 0.9,
+              "value": 0.40657
+            },
+            {
+              "time": 1.0,
+              "value": 0.367879
+            },
+            {
+              "time": 1.1,
+              "value": 0.332871
+            },
+            {
+              "time": 1.2,
+              "value": 0.301194
+            },
+            {
+              "time": 1.3,
+              "value": 0.272532
+            },
+            {
+              "time": 1.4,
+              "value": 0.246597
+            },
+            {
+              "time": 1.5,
+              "value": 0.22313
+            },
+            {
+              "time": 1.6,
+              "value": 0.201897
+            },
+            {
+              "time": 1.7,
+              "value": 0.182684
+            },
+            {
+              "time": 1.8,
+              "value": 0.165299
+            },
+            {
+              "time": 1.9,
+              "value": 0.149569
+            },
+            {
+              "time": 2.0,
+              "value": 0.135335
+            },
+            {
+              "time": 2.1,
+              "value": 0.122456
+            },
+            {
+              "time": 2.2,
+              "value": 0.110803
+            },
+            {
+              "time": 2.3,
+              "value": 0.100259
+            },
+            {
+              "time": 2.4,
+              "value": 0.090718
+            },
+            {
+              "time": 2.5,
+              "value": 0.082085
+            },
+            {
+              "time": 2.6,
+              "value": 0.074274
+            },
+            {
+              "time": 2.7,
+              "value": 0.067206
+            },
+            {
+              "time": 2.8,
+              "value": 0.06081
+            },
+            {
+              "time": 2.9,
+              "value": 0.055023
+            },
+            {
+              "time": 3.0,
+              "value": 0.049787
+            },
+            {
+              "time": 3.1,
+              "value": 0.045049
+            },
+            {
+              "time": 3.2,
+              "value": 0.040762
+            },
+            {
+              "time": 3.3,
+              "value": 0.036883
+            },
+            {
+              "time": 3.4,
+              "value": 0.033373
+            },
+            {
+              "time": 3.5,
+              "value": 0.030197
+            },
+            {
+              "time": 3.6,
+              "value": 0.027324
+            },
+            {
+              "time": 3.7,
+              "value": 0.024724
+            },
+            {
+              "time": 3.8,
+              "value": 0.022371
+            },
+            {
+              "time": 3.9,
+              "value": 0.020242
+            },
+            {
+              "time": 4.0,
+              "value": 0.018316
+            },
+            {
+              "time": 4.1,
+              "value": 0.016573
+            },
+            {
+              "time": 4.2,
+              "value": 0.014996
+            },
+            {
+              "time": 4.3,
+              "value": 0.013569
+            },
+            {
+              "time": 4.4,
+              "value": 0.012277
+            },
+            {
+              "time": 4.5,
+              "value": 0.011109
+            },
+            {
+              "time": 4.6,
+              "value": 0.010052
+            },
+            {
+              "time": 4.7,
+              "value": 0.009095
+            },
+            {
+              "time": 4.8,
+              "value": 0.00823
+            },
+            {
+              "time": 4.9,
+              "value": 0.007447
+            },
+            {
+              "time": 5.0,
+              "value": 0.006738
+            }
+          ],
+          "annotations": [
+            {
+              "x": 1,
+              "y": 0.36788,
+              "label": "36.8% מהערך ההתחלתי"
+            }
+          ],
+          "explanation": "T2 דועך לכיוון אפס לאחר מספר קבועי זמן."
+        }
+      ],
+      "check": {
+        "question": "כמה מהמגנטיזציה הרוחבית נשאר אחרי זמן T2?",
+        "options": [
+          "כ־37%",
+          "כ־63%",
+          "כ־100%"
+        ],
+        "correctAnswer": 0,
+        "explanation": "לפי דעיכה אקספוננציאלית, e⁻¹≈0.368."
+      },
+      "slideGallery": [
+        "slide-166"
+      ],
+      "importantNotes": [
+        {
+          "type": "source-boundary",
+          "text": "המצגת מסתיימת במבוא ל־T2 בשקופית 166; משוואת הדעיכה והגרף המלא הם הרחבה פדגוגית של הסיכום, ולא צילום ישיר של שקופית מקורית."
+        }
+      ]
+    },
+    {
+      "id": "brainimg-l3-s19",
+      "title": "רצף התהליך הכולל – מפרוטונים לאות MRI",
+      "slidePages": [
+        25,
+        32,
+        43,
+        46,
+        74,
+        113,
+        149,
+        166
+      ],
+      "summary": "החיבור בין החלקים: מימן בעל ספין ומומנט מגנטי → שדה B₀ יוצר מגנטיזציה נטו → הפרוטונים מבצעים פרצסיה בתדירות לרמור → פולס RF בתדר המתאים מטה את המגנטיזציה → רכיב רוחבי משתנה משרה אות בסליל → T1 ו־T2 מסבירים את החזרה לשיווי משקל והדעיכה.",
+      "details": [
+        {
+          "term": "1. גרעין",
+          "explanation": "למימן יש ספין ומומנט מגנטי."
+        },
+        {
+          "term": "2. B₀",
+          "explanation": "יוצר הפרש מצבי אנרגיה ומגנטיזציה לאורך Z."
+        },
+        {
+          "term": "3. פרצסיה",
+          "explanation": "תנועה בתדירות לרמור."
+        },
+        {
+          "term": "4. RF",
+          "explanation": "פולס מעורר את מערכת הספינים."
+        },
+        {
+          "term": "5. קליטה",
+          "explanation": "מגנטיזציה רוחבית משתנה משרה מתח בסליל."
+        },
+        {
+          "term": "6. רלקסציה",
+          "explanation": "T1 משחזר את Mz ו־T2 מקטין את Mxy."
+        },
+        {
+          "term": "המשך הדימות",
+          "explanation": "האות משמש בהמשך בסיס ליצירת תמונות, אך יצירת התמונה המרחבית אינה מפותחת במלואה במצגת."
+        }
+      ],
+      "visualBlocks": [
+        {
+          "type": "process",
+          "title": "סדר הפעולות",
+          "steps": [
+            {
+              "title": "שדה B₀",
+              "description": "מגנטיזציה נטו ופרצסיה"
+            },
+            {
+              "title": "פולס RF",
+              "description": "עירור והטיית המגנטיזציה"
+            },
+            {
+              "title": "קליטת FID",
+              "description": "מתח מושרה בסליל"
+            },
+            {
+              "title": "רלקסציה",
+              "description": "התאוששות T1 ודעיכה T2"
+            }
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "T1 לעומת T2",
+          "columns": [
+            "T1",
+            "T2"
+          ],
+          "rows": [
+            [
+              "התאוששות לאורך Z",
+              "דעיכה במישור XY"
+            ],
+            [
+              "החלפת אנרגיה עם הסביבה",
+              "אובדן קוהרנטיות בין ספינים"
+            ],
+            [
+              "63.2% התאוששות אחרי T1",
+              "36.8% נותר אחרי T2"
+            ]
+          ]
+        },
+        {
+          "type": "chart",
+          "title": "גרף T1",
+          "chartType": "line",
+          "asset": "assets/diagrams/t1-recovery.svg",
+          "equation": "Mz(t) = M0(1 − exp(−t/T1))",
+          "xLabel": "זמן ביחידות של קבוע הזמן",
+          "yLabel": "מגנטיזציה מנורמלת",
+          "xKey": "time",
+          "series": [
+            {
+              "dataKey": "value",
+              "label": "גרף T1"
+            }
+          ],
+          "data": [
+            {
+              "time": 0.0,
+              "value": 0.0
+            },
+            {
+              "time": 0.1,
+              "value": 0.095163
+            },
+            {
+              "time": 0.2,
+              "value": 0.181269
+            },
+            {
+              "time": 0.3,
+              "value": 0.259182
+            },
+            {
+              "time": 0.4,
+              "value": 0.32968
+            },
+            {
+              "time": 0.5,
+              "value": 0.393469
+            },
+            {
+              "time": 0.6,
+              "value": 0.451188
+            },
+            {
+              "time": 0.7,
+              "value": 0.503415
+            },
+            {
+              "time": 0.8,
+              "value": 0.550671
+            },
+            {
+              "time": 0.9,
+              "value": 0.59343
+            },
+            {
+              "time": 1.0,
+              "value": 0.632121
+            },
+            {
+              "time": 1.1,
+              "value": 0.667129
+            },
+            {
+              "time": 1.2,
+              "value": 0.698806
+            },
+            {
+              "time": 1.3,
+              "value": 0.727468
+            },
+            {
+              "time": 1.4,
+              "value": 0.753403
+            },
+            {
+              "time": 1.5,
+              "value": 0.77687
+            },
+            {
+              "time": 1.6,
+              "value": 0.798103
+            },
+            {
+              "time": 1.7,
+              "value": 0.817316
+            },
+            {
+              "time": 1.8,
+              "value": 0.834701
+            },
+            {
+              "time": 1.9,
+              "value": 0.850431
+            },
+            {
+              "time": 2.0,
+              "value": 0.864665
+            },
+            {
+              "time": 2.1,
+              "value": 0.877544
+            },
+            {
+              "time": 2.2,
+              "value": 0.889197
+            },
+            {
+              "time": 2.3,
+              "value": 0.899741
+            },
+            {
+              "time": 2.4,
+              "value": 0.909282
+            },
+            {
+              "time": 2.5,
+              "value": 0.917915
+            },
+            {
+              "time": 2.6,
+              "value": 0.925726
+            },
+            {
+              "time": 2.7,
+              "value": 0.932794
+            },
+            {
+              "time": 2.8,
+              "value": 0.93919
+            },
+            {
+              "time": 2.9,
+              "value": 0.944977
+            },
+            {
+              "time": 3.0,
+              "value": 0.950213
+            },
+            {
+              "time": 3.1,
+              "value": 0.954951
+            },
+            {
+              "time": 3.2,
+              "value": 0.959238
+            },
+            {
+              "time": 3.3,
+              "value": 0.963117
+            },
+            {
+              "time": 3.4,
+              "value": 0.966627
+            },
+            {
+              "time": 3.5,
+              "value": 0.969803
+            },
+            {
+              "time": 3.6,
+              "value": 0.972676
+            },
+            {
+              "time": 3.7,
+              "value": 0.975276
+            },
+            {
+              "time": 3.8,
+              "value": 0.977629
+            },
+            {
+              "time": 3.9,
+              "value": 0.979758
+            },
+            {
+              "time": 4.0,
+              "value": 0.981684
+            },
+            {
+              "time": 4.1,
+              "value": 0.983427
+            },
+            {
+              "time": 4.2,
+              "value": 0.985004
+            },
+            {
+              "time": 4.3,
+              "value": 0.986431
+            },
+            {
+              "time": 4.4,
+              "value": 0.987723
+            },
+            {
+              "time": 4.5,
+              "value": 0.988891
+            },
+            {
+              "time": 4.6,
+              "value": 0.989948
+            },
+            {
+              "time": 4.7,
+              "value": 0.990905
+            },
+            {
+              "time": 4.8,
+              "value": 0.99177
+            },
+            {
+              "time": 4.9,
+              "value": 0.992553
+            },
+            {
+              "time": 5.0,
+              "value": 0.993262
+            }
+          ],
+          "annotations": [
+            {
+              "x": 1,
+              "y": 0.63212,
+              "label": "63.2% מהערך הסופי"
+            }
+          ],
+          "explanation": "T1 עולה בקירוב ל־100% לאחר מספר קבועי זמן."
+        },
+        {
+          "type": "chart",
+          "title": "גרף T2",
+          "chartType": "line",
+          "asset": "assets/diagrams/t2-decay.svg",
+          "equation": "Mxy(t) = Mxy(0) × exp(−t/T2)",
+          "xLabel": "זמן ביחידות של קבוע הזמן",
+          "yLabel": "מגנטיזציה מנורמלת",
+          "xKey": "time",
+          "series": [
+            {
+              "dataKey": "value",
+              "label": "גרף T2"
+            }
+          ],
+          "data": [
+            {
+              "time": 0.0,
+              "value": 1.0
+            },
+            {
+              "time": 0.1,
+              "value": 0.904837
+            },
+            {
+              "time": 0.2,
+              "value": 0.818731
+            },
+            {
+              "time": 0.3,
+              "value": 0.740818
+            },
+            {
+              "time": 0.4,
+              "value": 0.67032
+            },
+            {
+              "time": 0.5,
+              "value": 0.606531
+            },
+            {
+              "time": 0.6,
+              "value": 0.548812
+            },
+            {
+              "time": 0.7,
+              "value": 0.496585
+            },
+            {
+              "time": 0.8,
+              "value": 0.449329
+            },
+            {
+              "time": 0.9,
+              "value": 0.40657
+            },
+            {
+              "time": 1.0,
+              "value": 0.367879
+            },
+            {
+              "time": 1.1,
+              "value": 0.332871
+            },
+            {
+              "time": 1.2,
+              "value": 0.301194
+            },
+            {
+              "time": 1.3,
+              "value": 0.272532
+            },
+            {
+              "time": 1.4,
+              "value": 0.246597
+            },
+            {
+              "time": 1.5,
+              "value": 0.22313
+            },
+            {
+              "time": 1.6,
+              "value": 0.201897
+            },
+            {
+              "time": 1.7,
+              "value": 0.182684
+            },
+            {
+              "time": 1.8,
+              "value": 0.165299
+            },
+            {
+              "time": 1.9,
+              "value": 0.149569
+            },
+            {
+              "time": 2.0,
+              "value": 0.135335
+            },
+            {
+              "time": 2.1,
+              "value": 0.122456
+            },
+            {
+              "time": 2.2,
+              "value": 0.110803
+            },
+            {
+              "time": 2.3,
+              "value": 0.100259
+            },
+            {
+              "time": 2.4,
+              "value": 0.090718
+            },
+            {
+              "time": 2.5,
+              "value": 0.082085
+            },
+            {
+              "time": 2.6,
+              "value": 0.074274
+            },
+            {
+              "time": 2.7,
+              "value": 0.067206
+            },
+            {
+              "time": 2.8,
+              "value": 0.06081
+            },
+            {
+              "time": 2.9,
+              "value": 0.055023
+            },
+            {
+              "time": 3.0,
+              "value": 0.049787
+            },
+            {
+              "time": 3.1,
+              "value": 0.045049
+            },
+            {
+              "time": 3.2,
+              "value": 0.040762
+            },
+            {
+              "time": 3.3,
+              "value": 0.036883
+            },
+            {
+              "time": 3.4,
+              "value": 0.033373
+            },
+            {
+              "time": 3.5,
+              "value": 0.030197
+            },
+            {
+              "time": 3.6,
+              "value": 0.027324
+            },
+            {
+              "time": 3.7,
+              "value": 0.024724
+            },
+            {
+              "time": 3.8,
+              "value": 0.022371
+            },
+            {
+              "time": 3.9,
+              "value": 0.020242
+            },
+            {
+              "time": 4.0,
+              "value": 0.018316
+            },
+            {
+              "time": 4.1,
+              "value": 0.016573
+            },
+            {
+              "time": 4.2,
+              "value": 0.014996
+            },
+            {
+              "time": 4.3,
+              "value": 0.013569
+            },
+            {
+              "time": 4.4,
+              "value": 0.012277
+            },
+            {
+              "time": 4.5,
+              "value": 0.011109
+            },
+            {
+              "time": 4.6,
+              "value": 0.010052
+            },
+            {
+              "time": 4.7,
+              "value": 0.009095
+            },
+            {
+              "time": 4.8,
+              "value": 0.00823
+            },
+            {
+              "time": 4.9,
+              "value": 0.007447
+            },
+            {
+              "time": 5.0,
+              "value": 0.006738
+            }
+          ],
+          "annotations": [
+            {
+              "x": 1,
+              "y": 0.36788,
+              "label": "36.8% מהערך ההתחלתי"
+            }
+          ],
+          "explanation": "T2 דועך לכיוון אפס לאחר מספר קבועי זמן."
+        }
+      ],
+      "check": {
+        "question": "איזה סדר מתאר נכון את עקרון יצירת האות?",
+        "options": [
+          "B₀ ← RF ← מגנטיזציה רוחבית ← אות בסליל ← רלקסציה",
+          "רלקסציה ← היעלמות פרוטונים ← CT",
+          "פוטנציאל פעולה ← חשמל ישיר בנוירון ← תמונת עצמות"
+        ],
+        "correctAnswer": 0,
+        "explanation": "השדה מכין את המערכת, RF מעורר ויוצר מגנטיזציה רוחבית, והסליל קולט אות המשתנה בזמן."
+      },
+      "slideGallery": [
+        "slide-025",
+        "slide-032",
+        "slide-043",
+        "slide-046",
+        "slide-074",
+        "slide-113",
+        "slide-149",
+        "slide-166"
+      ],
+      "importantNotes": []
+    }
+  ],
+  "keyPoints": [
+    "מיפוי מבני ומיפוי תפקודי עונים על שאלות שונות.",
+    "Lesion ו־TMS עשויים לספק ראיות על תרומה סיבתית של אזור מוחי.",
+    "לגרעיני מימן יש ספין ומומנט מגנטי ולכן הם בסיס מדידת MR.",
+    "השדה B₀ יוצר מגנטיזציה נטו בכיוון Z.",
+    "תדירות לרמור תלויה ב־γ וב־B₀: f₀=γB₀.",
+    "RF בתדירות המתאימה מעורר את מערכת הספינים ומטה את המגנטיזציה.",
+    "FID הוא אות תנודתי ודועך שנקלט בסליל.",
+    "T1 מתאר התאוששות אורכית; T2 מתאר דעיכה רוחבית."
+  ],
+  "glossary": [
+    {
+      "term": "Brain Mapping",
+      "definition": "מיפוי מוחי מבני או תפקודי."
+    },
+    {
+      "term": "Direct Cortical Stimulation",
+      "definition": "גירוי חשמלי ישיר של אזור קורטיקלי."
+    },
+    {
+      "term": "Lesion Studies",
+      "definition": "חקר הקשר בין פגיעה מוחית לבין ליקוי תפקודי."
+    },
+    {
+      "term": "Necessary",
+      "definition": "נחוץ לביצוע תפקוד."
+    },
+    {
+      "term": "Sufficient",
+      "definition": "מספיק ליצירת תוצאה בהינתן התנאים המתאימים."
+    },
+    {
+      "term": "VLSM",
+      "definition": "מיפוי סטטיסטי של קשר בין ווקסלי פגיעה לתסמין."
+    },
+    {
+      "term": "TMS",
+      "definition": "גירוי מגנטי חוצה גולגולת."
+    },
+    {
+      "term": "tDCS",
+      "definition": "גירוי זרם חשמלי ישיר דרך הקרקפת."
+    },
+    {
+      "term": "MRI",
+      "definition": "Magnetic Resonance Imaging."
+    },
+    {
+      "term": "fMRI",
+      "definition": "דימות תהודה מגנטית תפקודי."
+    },
+    {
+      "term": "¹H",
+      "definition": "גרעין מימן הנפוץ בשימוש ב־MRI."
+    },
+    {
+      "term": "Spin",
+      "definition": "תנע זוויתי פנימי קוונטי."
+    },
+    {
+      "term": "Angular momentum J",
+      "definition": "תנע זוויתי."
+    },
+    {
+      "term": "Magnetic moment μ",
+      "definition": "וקטור המתאר את תגובת הגרעין לשדה מגנטי."
+    },
+    {
+      "term": "Gyromagnetic ratio γ",
+      "definition": "קבוע המקשר תנע זוויתי ומומנט מגנטי."
+    },
+    {
+      "term": "B₀",
+      "definition": "השדה המגנטי הראשי."
+    },
+    {
+      "term": "Net Magnetization M",
+      "definition": "סכום וקטורי של רגעים מגנטיים."
+    },
+    {
+      "term": "Mz",
+      "definition": "רכיב המגנטיזציה לאורך Z."
+    },
+    {
+      "term": "Mxy",
+      "definition": "רכיב המגנטיזציה במישור XY."
+    },
+    {
+      "term": "Parallel",
+      "definition": "מצב מומנט מקביל לשדה, אנרגיה נמוכה."
+    },
+    {
+      "term": "Antiparallel",
+      "definition": "מצב מומנט מנוגד לשדה, אנרגיה גבוהה."
+    },
+    {
+      "term": "Zeeman Effect",
+      "definition": "פיצול רמות אנרגיה בשדה מגנטי."
+    },
+    {
+      "term": "Precession",
+      "definition": "תנועה מחזורית סביב כיוון השדה."
+    },
+    {
+      "term": "Larmor Frequency",
+      "definition": "תדירות הפרצסיה, f₀=γB₀."
+    },
+    {
+      "term": "RF Pulse",
+      "definition": "פולס גלי רדיו לעירור."
+    },
+    {
+      "term": "Flip Angle",
+      "definition": "זווית הטיית וקטור המגנטיזציה בעקבות RF."
+    },
+    {
+      "term": "FID",
+      "definition": "אות תנודתי ודועך לאחר העירור."
+    },
+    {
+      "term": "Relaxation",
+      "definition": "חזרת מערכת הספינים לשיווי משקל."
+    },
+    {
+      "term": "T1",
+      "definition": "קבוע זמן ההתאוששות האורכית."
+    },
+    {
+      "term": "T2",
+      "definition": "קבוע זמן דעיכת המגנטיזציה הרוחבית."
+    },
+    {
+      "term": "Dephasing",
+      "definition": "אובדן התיאום במופעים של הספינים."
+    },
+    {
+      "term": "Spin–Lattice",
+      "definition": "רלקסציה של המגנטיזציה האורכית."
+    },
+    {
+      "term": "Spin–Spin",
+      "definition": "רלקסציה של המגנטיזציה הרוחבית."
+    }
+  ],
+  "readings": [
+    {
+      "id": "brainimg-l3-slides",
+      "title": "מצגת מקורית – שיעור 3, מבוא ופיזיקה בסיסית",
+      "notes": "יש לעדכן את הנתיב לפי מיקום קובץ ה־PDF בפרויקט.",
+      "file": "/pdfs/brain-imaging/Lesson3-Intro+BasicPhysics-2026b.pdf"
+    }
+  ],
+  "quizAnswerNote": "שאלות התרגול המקוריות והשאלות שבסיכום הן תרגול לימודי שנוסח על בסיס חומר השיעור, לא שאלות מבחן רשמיות.",
+  "quiz": [
+    {
+      "id": "brainimg-l3-q1",
+      "type": "single",
+      "question": "מה מספק מחקר fMRI באופן טיפוסי?",
+      "options": [
+        "מדידה ישירה של פוטנציאל פעולה בנוירון יחיד",
+        "מדידה עקיפה של שינויים הקשורים לפעילות מוחית",
+        "הדמיה של עצמות הגולגולת בלבד"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "fMRI מודד שינויי אות המבוססים על תהליכים פיזיולוגיים הקשורים לפעילות עצבית.",
+      "source": "שקופיות 2, 11"
+    },
+    {
+      "id": "brainimg-l3-q2",
+      "type": "single",
+      "question": "מהי מגבלה מרכזית של גירוי קורטיקלי ישיר?",
+      "options": [
+        "הוא אינו מסוגל לגרום לתגובה מוטורית",
+        "השיטה פולשנית והזרם עשוי להשפיע על אזורים מרוחקים",
+        "הוא מודד רק זרימת דם"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "גירוי ישיר מחייב גישה למוח ואינו מבטיח השפעה מרחבית מקומית לחלוטין.",
+      "source": "שקופיות 3, 4"
+    },
+    {
+      "id": "brainimg-l3-q3",
+      "type": "single",
+      "question": "מדוע פגיעה באזור מסוים לא מוכיחה שכל התפקוד ממוקם בו?",
+      "options": [
+        "כי אזורים פועלים ברשתות ופגיעה עשויה לשבש מסלולים ותהליכים רחבים",
+        "כי כל הפגיעות הפיכות",
+        "כי פגיעה אינה יכולה להשפיע על התנהגות"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "המוח פועל דרך רשתות מקושרות והפגיעה יכולה להשפיע על רכיבים נוספים.",
+      "source": "שקופיות 5, 6, 7, 8, 9"
+    },
+    {
+      "id": "brainimg-l3-q4",
+      "type": "single",
+      "question": "מדוע TMS יכול לעזור לחקור סיבתיות?",
+      "options": [
+        "כי הוא מודד רק זרימת דם",
+        "כי הוא יוצר הפרעה זמנית בפעילות אזור ובודק את השפעתה על התנהגות",
+        "כי הוא מדמה אנטומיה"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "שינוי יזום של פעילות וניטור הביצוע מאפשרים לבחון קשר סיבתי יותר מאשר מתאם בלבד.",
+      "source": "שקופיות 10, 12, 13, 14, 15"
+    },
+    {
+      "id": "brainimg-l3-q5",
+      "type": "single",
+      "question": "מה ההבדל העקרוני בין tDCS ל־TMS?",
+      "options": [
+        "tDCS משתמש בזרם חלש דרך אלקטרודות; TMS בשדה מגנטי משתנה",
+        "tDCS מחייב ניתוח ו־TMS לא",
+        "TMS מודד רק מבנה"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "שתי השיטות משנות פעילות אך האמצעי הפיזיקלי להעברת ההשפעה שונה.",
+      "source": "שקופיות 19"
+    },
+    {
+      "id": "brainimg-l3-q6",
+      "type": "single",
+      "question": "מהו מוקד החלק הפיזיקלי במצגת?",
+      "options": [
+        "מנגנון יצירת אות MR מפרוטונים",
+        "מיפוי מפורט של כל גרעיני המוח",
+        "ניתוח סטטיסטי של fMRI"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "החלק מסביר כיצד תכונות מגנטיות של גרעינים מולידות אות מדיד.",
+      "source": "שקופיות 20, 21, 22, 23, 24"
+    },
+    {
+      "id": "brainimg-l3-q7",
+      "type": "single",
+      "question": "למה משתמשים בעיקר במימן ב־MRI?",
+      "options": [
+        "כי הוא נפוץ מאוד ברקמות ובעל מומנט מגנטי",
+        "כי הוא חסר ספין",
+        "כי אין מימן במים"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "מימן שופע בגוף ותכונות גרעינו מאפשרות מדידה מגנטית.",
+      "source": "שקופיות 25, 26"
+    },
+    {
+      "id": "brainimg-l3-q8",
+      "type": "single",
+      "question": "מה מתאר המומנט המגנטי?",
+      "options": [
+        "האינטראקציה המגנטית של גרעין עם שדה",
+        "רק את מספר האלקטרונים",
+        "את מיקום הגרעין במוח"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "המומנט המגנטי הוא תכונה וקטורית מרכזית לתגובת גרעין לשדה.",
+      "source": "שקופיות 27, 28, 29, 30, 31"
+    },
+    {
+      "id": "brainimg-l3-q9",
+      "type": "single",
+      "question": "מה יוצר מגנטיזציה נטו במכשיר MRI?",
+      "options": [
+        "עודף סטטיסטי קטן של מצבי ספין מקבילים לשדה",
+        "כל הפרוטונים נעצרים לחלוטין",
+        "היעלמות כל המומנטים המגנטיים"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "קיימת אוכלוסייה מעט גדולה יותר במצב האנרגיה הנמוך, וסכום התרומות אינו מתאפס.",
+      "source": "שקופיות 32, 33, 34, 35, 36"
+    },
+    {
+      "id": "brainimg-l3-q10",
+      "type": "single",
+      "question": "סביב איזה כיוון מתבצעת פרצסיה?",
+      "options": [
+        "ציר השדה B₀",
+        "ציר אקראי שאינו תלוי בשדה",
+        "רק סביב סליל הקליטה"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "המומנט המגנטי מבצע פרצסיה סביב כיוון השדה המגנטי החיצוני.",
+      "source": "שקופיות 43, 44, 47, 48, 49"
+    },
+    {
+      "id": "brainimg-l3-q11",
+      "type": "single",
+      "question": "מה תדירות לרמור של ¹H ב־3T בקירוב?",
+      "options": [
+        "42.58 MHz",
+        "127.74 MHz",
+        "3 MHz"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "42.58 MHz/T × 3 T = 127.74 MHz.",
+      "source": "שקופיות 45, 46, 70, 71, 72"
+    },
+    {
+      "id": "brainimg-l3-q12",
+      "type": "single",
+      "question": "איזה מצב אנרגיה מאוכלס מעט יותר בשיווי משקל?",
+      "options": [
+        "מקביל לשדה B₀",
+        "מנוגד לשדה B₀",
+        "שני המצבים תמיד זהים"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "המצב המקביל נמוך יותר באנרגיה ולכן מאוכלס מעט יותר בטמפרטורה סופית.",
+      "source": "שקופיות 70, 71, 72"
+    },
+    {
+      "id": "brainimg-l3-q13",
+      "type": "single",
+      "question": "באיזו תדירות צריך לפעול RF לצורך עירור יעיל?",
+      "options": [
+        "בתדירות לרמור של הגרעין הנמדד",
+        "בכל תדירות שרירותית",
+        "בתדירות קבועה שאינה תלויה ב־B₀"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "תהודה תלויה בהתאמה בין תדירות הגירוי לתדירות הפרצסיה.",
+      "source": "שקופיות 74, 75, 76"
+    },
+    {
+      "id": "brainimg-l3-q14",
+      "type": "single",
+      "question": "מה יקרה למגנטיזציה אחרי פולס 90° אידיאלי משיווי משקל?",
+      "options": [
+        "הרכיב הרוחבי יהיה גדול והאורכי יתאפס",
+        "הספינים יאבדו את כל מטענם",
+        "B₀ יכבה"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "פולס 90° מטה את וקטור המגנטיזציה למישור הרוחבי.",
+      "source": "שקופיות 77, 78, 79, 80, 81"
+    },
+    {
+      "id": "brainimg-l3-q15",
+      "type": "single",
+      "question": "מהו FID?",
+      "options": [
+        "אות MR המתנודד ודועך לאחר העירור",
+        "זרם ה־RF בזמן שהמגנט כבוי",
+        "מדד ישיר של ירי נוירונים"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "FID הוא מתח תנודתי ודועך המתקבל עקב המגנטיזציה הרוחבית המשתנה.",
+      "source": "שקופיות 73, 74, 113, 114, 115"
+    },
+    {
+      "id": "brainimg-l3-q16",
+      "type": "single",
+      "question": "מה מתרחש כאשר פולס ה־RF מסתיים?",
+      "options": [
+        "T1 ו־T2 יכולים להתקיים במקביל",
+        "רק T1 מתרחש תמיד",
+        "כל המומנטים המגנטיים נעלמים"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "תהליכי התאוששות אורכית ודעיכה רוחבית מתקדמים במקביל.",
+      "source": "שקופיות 113, 114, 115, 116, 117"
+    },
+    {
+      "id": "brainimg-l3-q17",
+      "type": "single",
+      "question": "מה משמעות הזמן T1 אחרי פולס 90°?",
+      "options": [
+        "המגנטיזציה האורכית הגיעה לכ־63% מערך שיווי המשקל",
+        "המגנטיזציה הרוחבית נשארה ב־100%",
+        "תדירות לרמור הפכה לאפס"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "התאוששות אקספוננציאלית נותנת Mz(T1)/M₀=1−e⁻¹≈0.632.",
+      "source": "שקופיות 149, 150, 151, 152, 153"
+    },
+    {
+      "id": "brainimg-l3-q18",
+      "type": "single",
+      "question": "כמה מהמגנטיזציה הרוחבית נשאר אחרי זמן T2?",
+      "options": [
+        "כ־37%",
+        "כ־63%",
+        "כ־100%"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "לפי דעיכה אקספוננציאלית, e⁻¹≈0.368.",
+      "source": "שקופיות 166"
+    },
+    {
+      "id": "brainimg-l3-q19",
+      "type": "single",
+      "question": "איזה סדר מתאר נכון את עקרון יצירת האות?",
+      "options": [
+        "B₀ ← RF ← מגנטיזציה רוחבית ← אות בסליל ← רלקסציה",
+        "רלקסציה ← היעלמות פרוטונים ← CT",
+        "פוטנציאל פעולה ← חשמל ישיר בנוירון ← תמונת עצמות"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "השדה מכין את המערכת, RF מעורר ויוצר מגנטיזציה רוחבית, והסליל קולט אות המשתנה בזמן.",
+      "source": "שקופיות 25, 32, 43, 46, 74"
+    },
+    {
+      "id": "brainimg-l3-q20",
+      "type": "single",
+      "question": "מהי מגבלה מרכזית במחקרי Lesions?",
+      "options": [
+        "פגיעות עלולות להיות מפושטות ולכלול מסלולי סיבים",
+        "אין כל שונות בין נבדקים",
+        "הוא מודד פוטנציאלי פעולה ישירות"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "השונות והיקף הפגיעה מגבילים את היכולת לשייך תפקוד לנקודה אחת.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    },
+    {
+      "id": "brainimg-l3-q21",
+      "type": "single",
+      "question": "מהו Mz בשיווי משקל לפני עירור אידיאלי?",
+      "options": [
+        "M₀",
+        "0 תמיד",
+        "Mxy"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "בשיווי משקל המגנטיזציה נטו מכוונת לאורך השדה.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    },
+    {
+      "id": "brainimg-l3-q22",
+      "type": "single",
+      "question": "מהו Mxy בשיווי משקל?",
+      "options": [
+        "בערך 0",
+        "תמיד שווה ל־M₀",
+        "גדל ללא הגבלה"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "ללא קוהרנטיות רוחבית התרומות מתבטלות בממוצע.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    },
+    {
+      "id": "brainimg-l3-q23",
+      "type": "single",
+      "question": "איזה מבין שני קבועי הזמן מתאר חילוף אנרגיה עם הסביבה?",
+      "options": [
+        "T1",
+        "T2",
+        "תדירות לרמור"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "T1 נקרא גם Spin–Lattice relaxation.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    },
+    {
+      "id": "brainimg-l3-q24",
+      "type": "single",
+      "question": "מה מלמד שימוש ב־TMS בזמן שונה של ביצוע משימה?",
+      "options": [
+        "על חלונות הזמן של עיבוד חיוני",
+        "רק על מבנה הגולגולת",
+        "על ריכוז המימן בדם"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "שינוי בזמן הפולס מסייע לזהות תזמון תפקודי.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    },
+    {
+      "id": "brainimg-l3-q25",
+      "type": "single",
+      "question": "מהו התפקיד של הפרצסיה ב־MRI?",
+      "options": [
+        "היא מגדירה תדר שביחס אליו פועל RF ונמדד אות",
+        "היא מבטלת את הצורך בשדה",
+        "היא מייצרת תמונת CT"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "תדירות הפרצסיה קשורה לתהודה ולשינוי המחזורי הנמדד.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    },
+    {
+      "id": "brainimg-l3-q26",
+      "type": "single",
+      "question": "איזה ניסוח נכון לגבי Spin?",
+      "options": [
+        "זוהי תכונה קוונטית פנימית",
+        "הפרוטון הוא בהכרח כדור שמסתובב מכנית",
+        "הספין נוצר רק בזמן RF"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "האנלוגיה של סיבוב כדור אינה תיאור פיזיקלי מדויק של ספין גרעיני.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    },
+    {
+      "id": "brainimg-l3-q27",
+      "type": "single",
+      "question": "מדוע רקמות יכולות להופיע בעוצמות אות שונות?",
+      "options": [
+        "כי קיימים ביניהן הבדלים בתכונות רלקסציה ובתכולת פרוטונים",
+        "כי לכל הרקמות זמני T1 ו־T2 זהים",
+        "כי רקמת המוח אינה מכילה מים"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "הבדלי תכונות הרקמה תורמים לניגודיות ה־MRI.",
+      "source": "חזרה אינטגרטיבית על נושאי השיעור"
+    }
+  ],
+  "readingOrder": [
+    {
+      "order": 1,
+      "heading": "מיפוי מוחי – Brain Mapping",
+      "sectionId": "brainimg-l3-s1",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 2,
+      "heading": "גירוי חשמלי ישיר – Direct Cortical Stimulation",
+      "sectionId": "brainimg-l3-s2",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 3,
+      "heading": "מחקרי פגיעות מוחיות – Lesion Studies",
+      "sectionId": "brainimg-l3-s3",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 4,
+      "heading": "גירוי מגנטי חוצה גולגולת – TMS",
+      "sectionId": "brainimg-l3-s4",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 5,
+      "heading": "גירוי חשמלי דרך הגולגולת – tDCS",
+      "sectionId": "brainimg-l3-s5",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 6,
+      "heading": "השוואה בין שיטות המחקר",
+      "sectionId": "brainimg-l3-s1",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 7,
+      "heading": "מהו MRI?",
+      "sectionId": "brainimg-l3-s6",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 8,
+      "heading": "מבנה האטום והפרוטון",
+      "sectionId": "brainimg-l3-s7",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 9,
+      "heading": "Spin – ספין גרעיני",
+      "sectionId": "brainimg-l3-s8",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 10,
+      "heading": "כלל יד ימין – Right-Hand Rule",
+      "sectionId": "brainimg-l3-s8",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 11,
+      "heading": "השדה המגנטי הראשי – B₀",
+      "sectionId": "brainimg-l3-s9",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 12,
+      "heading": "מצבי אנרגיה – Parallel/Antiparallel",
+      "sectionId": "brainimg-l3-s12",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 13,
+      "heading": "מגנטיזציה אורכית ורוחבית",
+      "sectionId": "brainimg-l3-s9",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 14,
+      "heading": "Precession – פרצסיה",
+      "sectionId": "brainimg-l3-s10",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 15,
+      "heading": "Larmor Frequency – תדירות לרמור",
+      "sectionId": "brainimg-l3-s11",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 16,
+      "heading": "כיצד נוצרת תהודה מגנטית?",
+      "sectionId": "brainimg-l3-s13",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 17,
+      "heading": "פולס RF וזווית העירור",
+      "sectionId": "brainimg-l3-s14",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 18,
+      "heading": "יצירת אות ה־MRI – MR Signal Generation",
+      "sectionId": "brainimg-l3-s15",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 19,
+      "heading": "Relaxation – רלקסציה",
+      "sectionId": "brainimg-l3-s16",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 20,
+      "heading": "T1 – רלקסציה אורכית",
+      "sectionId": "brainimg-l3-s17",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 21,
+      "heading": "T2 – רלקסציה רוחבית",
+      "sectionId": "brainimg-l3-s18",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 22,
+      "heading": "השוואה בין T1 ל־T2",
+      "sectionId": "brainimg-l3-s19",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    },
+    {
+      "order": 23,
+      "heading": "התהליך הכולל – מפרוטונים לאות MRI",
+      "sectionId": "brainimg-l3-s19",
+      "sectionRef": "sections",
+      "display": "full",
+      "source": "detailed Hebrew summary; original presentation figures are available under assets/slides"
+    }
+  ],
+  "visualAssetManifest": {
+    "slide-001": {
+      "id": "slide-001",
+      "slidePage": 1,
+      "src": "assets/slides/slide-001.webp",
+      "alt": "שקופית מקורית 1 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-002": {
+      "id": "slide-002",
+      "slidePage": 2,
+      "src": "assets/slides/slide-002.webp",
+      "alt": "שקופית מקורית 2 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-003": {
+      "id": "slide-003",
+      "slidePage": 3,
+      "src": "assets/slides/slide-003.webp",
+      "alt": "שקופית מקורית 3 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-004": {
+      "id": "slide-004",
+      "slidePage": 4,
+      "src": "assets/slides/slide-004.webp",
+      "alt": "שקופית מקורית 4 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-005": {
+      "id": "slide-005",
+      "slidePage": 5,
+      "src": "assets/slides/slide-005.webp",
+      "alt": "שקופית מקורית 5 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-006": {
+      "id": "slide-006",
+      "slidePage": 6,
+      "src": "assets/slides/slide-006.webp",
+      "alt": "שקופית מקורית 6 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-007": {
+      "id": "slide-007",
+      "slidePage": 7,
+      "src": "assets/slides/slide-007.webp",
+      "alt": "שקופית מקורית 7 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-008": {
+      "id": "slide-008",
+      "slidePage": 8,
+      "src": "assets/slides/slide-008.webp",
+      "alt": "שקופית מקורית 8 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-009": {
+      "id": "slide-009",
+      "slidePage": 9,
+      "src": "assets/slides/slide-009.webp",
+      "alt": "שקופית מקורית 9 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-010": {
+      "id": "slide-010",
+      "slidePage": 10,
+      "src": "assets/slides/slide-010.webp",
+      "alt": "שקופית מקורית 10 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-011": {
+      "id": "slide-011",
+      "slidePage": 11,
+      "src": "assets/slides/slide-011.webp",
+      "alt": "שקופית מקורית 11 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-012": {
+      "id": "slide-012",
+      "slidePage": 12,
+      "src": "assets/slides/slide-012.webp",
+      "alt": "שקופית מקורית 12 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-013": {
+      "id": "slide-013",
+      "slidePage": 13,
+      "src": "assets/slides/slide-013.webp",
+      "alt": "שקופית מקורית 13 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-014": {
+      "id": "slide-014",
+      "slidePage": 14,
+      "src": "assets/slides/slide-014.webp",
+      "alt": "שקופית מקורית 14 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-015": {
+      "id": "slide-015",
+      "slidePage": 15,
+      "src": "assets/slides/slide-015.webp",
+      "alt": "שקופית מקורית 15 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-016": {
+      "id": "slide-016",
+      "slidePage": 16,
+      "src": "assets/slides/slide-016.webp",
+      "alt": "שקופית מקורית 16 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-017": {
+      "id": "slide-017",
+      "slidePage": 17,
+      "src": "assets/slides/slide-017.webp",
+      "alt": "שקופית מקורית 17 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-018": {
+      "id": "slide-018",
+      "slidePage": 18,
+      "src": "assets/slides/slide-018.webp",
+      "alt": "שקופית מקורית 18 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-019": {
+      "id": "slide-019",
+      "slidePage": 19,
+      "src": "assets/slides/slide-019.webp",
+      "alt": "שקופית מקורית 19 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-020": {
+      "id": "slide-020",
+      "slidePage": 20,
+      "src": "assets/slides/slide-020.webp",
+      "alt": "שקופית מקורית 20 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-021": {
+      "id": "slide-021",
+      "slidePage": 21,
+      "src": "assets/slides/slide-021.webp",
+      "alt": "שקופית מקורית 21 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-022": {
+      "id": "slide-022",
+      "slidePage": 22,
+      "src": "assets/slides/slide-022.webp",
+      "alt": "שקופית מקורית 22 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-023": {
+      "id": "slide-023",
+      "slidePage": 23,
+      "src": "assets/slides/slide-023.webp",
+      "alt": "שקופית מקורית 23 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-024": {
+      "id": "slide-024",
+      "slidePage": 24,
+      "src": "assets/slides/slide-024.webp",
+      "alt": "שקופית מקורית 24 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-025": {
+      "id": "slide-025",
+      "slidePage": 25,
+      "src": "assets/slides/slide-025.webp",
+      "alt": "שקופית מקורית 25 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-026": {
+      "id": "slide-026",
+      "slidePage": 26,
+      "src": "assets/slides/slide-026.webp",
+      "alt": "שקופית מקורית 26 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-027": {
+      "id": "slide-027",
+      "slidePage": 27,
+      "src": "assets/slides/slide-027.webp",
+      "alt": "שקופית מקורית 27 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-028": {
+      "id": "slide-028",
+      "slidePage": 28,
+      "src": "assets/slides/slide-028.webp",
+      "alt": "שקופית מקורית 28 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-029": {
+      "id": "slide-029",
+      "slidePage": 29,
+      "src": "assets/slides/slide-029.webp",
+      "alt": "שקופית מקורית 29 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-030": {
+      "id": "slide-030",
+      "slidePage": 30,
+      "src": "assets/slides/slide-030.webp",
+      "alt": "שקופית מקורית 30 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-031": {
+      "id": "slide-031",
+      "slidePage": 31,
+      "src": "assets/slides/slide-031.webp",
+      "alt": "שקופית מקורית 31 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-032": {
+      "id": "slide-032",
+      "slidePage": 32,
+      "src": "assets/slides/slide-032.webp",
+      "alt": "שקופית מקורית 32 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-033": {
+      "id": "slide-033",
+      "slidePage": 33,
+      "src": "assets/slides/slide-033.webp",
+      "alt": "שקופית מקורית 33 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-034": {
+      "id": "slide-034",
+      "slidePage": 34,
+      "src": "assets/slides/slide-034.webp",
+      "alt": "שקופית מקורית 34 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-035": {
+      "id": "slide-035",
+      "slidePage": 35,
+      "src": "assets/slides/slide-035.webp",
+      "alt": "שקופית מקורית 35 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-036": {
+      "id": "slide-036",
+      "slidePage": 36,
+      "src": "assets/slides/slide-036.webp",
+      "alt": "שקופית מקורית 36 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-037": {
+      "id": "slide-037",
+      "slidePage": 37,
+      "src": "assets/slides/slide-037.webp",
+      "alt": "שקופית מקורית 37 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-038": {
+      "id": "slide-038",
+      "slidePage": 38,
+      "src": "assets/slides/slide-038.webp",
+      "alt": "שקופית מקורית 38 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-039": {
+      "id": "slide-039",
+      "slidePage": 39,
+      "src": "assets/slides/slide-039.webp",
+      "alt": "שקופית מקורית 39 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-040": {
+      "id": "slide-040",
+      "slidePage": 40,
+      "src": "assets/slides/slide-040.webp",
+      "alt": "שקופית מקורית 40 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-041": {
+      "id": "slide-041",
+      "slidePage": 41,
+      "src": "assets/slides/slide-041.webp",
+      "alt": "שקופית מקורית 41 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-042": {
+      "id": "slide-042",
+      "slidePage": 42,
+      "src": "assets/slides/slide-042.webp",
+      "alt": "שקופית מקורית 42 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-043": {
+      "id": "slide-043",
+      "slidePage": 43,
+      "src": "assets/slides/slide-043.webp",
+      "alt": "שקופית מקורית 43 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-044": {
+      "id": "slide-044",
+      "slidePage": 44,
+      "src": "assets/slides/slide-044.webp",
+      "alt": "שקופית מקורית 44 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-045": {
+      "id": "slide-045",
+      "slidePage": 45,
+      "src": "assets/slides/slide-045.webp",
+      "alt": "שקופית מקורית 45 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-046": {
+      "id": "slide-046",
+      "slidePage": 46,
+      "src": "assets/slides/slide-046.webp",
+      "alt": "שקופית מקורית 46 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-047": {
+      "id": "slide-047",
+      "slidePage": 47,
+      "src": "assets/slides/slide-047.webp",
+      "alt": "שקופית מקורית 47 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-048": {
+      "id": "slide-048",
+      "slidePage": 48,
+      "src": "assets/slides/slide-048.webp",
+      "alt": "שקופית מקורית 48 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-049": {
+      "id": "slide-049",
+      "slidePage": 49,
+      "src": "assets/slides/slide-049.webp",
+      "alt": "שקופית מקורית 49 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-050": {
+      "id": "slide-050",
+      "slidePage": 50,
+      "src": "assets/slides/slide-050.webp",
+      "alt": "שקופית מקורית 50 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-051": {
+      "id": "slide-051",
+      "slidePage": 51,
+      "src": "assets/slides/slide-051.webp",
+      "alt": "שקופית מקורית 51 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-052": {
+      "id": "slide-052",
+      "slidePage": 52,
+      "src": "assets/slides/slide-052.webp",
+      "alt": "שקופית מקורית 52 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-053": {
+      "id": "slide-053",
+      "slidePage": 53,
+      "src": "assets/slides/slide-053.webp",
+      "alt": "שקופית מקורית 53 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-054": {
+      "id": "slide-054",
+      "slidePage": 54,
+      "src": "assets/slides/slide-054.webp",
+      "alt": "שקופית מקורית 54 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-055": {
+      "id": "slide-055",
+      "slidePage": 55,
+      "src": "assets/slides/slide-055.webp",
+      "alt": "שקופית מקורית 55 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-056": {
+      "id": "slide-056",
+      "slidePage": 56,
+      "src": "assets/slides/slide-056.webp",
+      "alt": "שקופית מקורית 56 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-057": {
+      "id": "slide-057",
+      "slidePage": 57,
+      "src": "assets/slides/slide-057.webp",
+      "alt": "שקופית מקורית 57 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-058": {
+      "id": "slide-058",
+      "slidePage": 58,
+      "src": "assets/slides/slide-058.webp",
+      "alt": "שקופית מקורית 58 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-059": {
+      "id": "slide-059",
+      "slidePage": 59,
+      "src": "assets/slides/slide-059.webp",
+      "alt": "שקופית מקורית 59 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-060": {
+      "id": "slide-060",
+      "slidePage": 60,
+      "src": "assets/slides/slide-060.webp",
+      "alt": "שקופית מקורית 60 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-061": {
+      "id": "slide-061",
+      "slidePage": 61,
+      "src": "assets/slides/slide-061.webp",
+      "alt": "שקופית מקורית 61 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-062": {
+      "id": "slide-062",
+      "slidePage": 62,
+      "src": "assets/slides/slide-062.webp",
+      "alt": "שקופית מקורית 62 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-063": {
+      "id": "slide-063",
+      "slidePage": 63,
+      "src": "assets/slides/slide-063.webp",
+      "alt": "שקופית מקורית 63 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-064": {
+      "id": "slide-064",
+      "slidePage": 64,
+      "src": "assets/slides/slide-064.webp",
+      "alt": "שקופית מקורית 64 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-065": {
+      "id": "slide-065",
+      "slidePage": 65,
+      "src": "assets/slides/slide-065.webp",
+      "alt": "שקופית מקורית 65 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-066": {
+      "id": "slide-066",
+      "slidePage": 66,
+      "src": "assets/slides/slide-066.webp",
+      "alt": "שקופית מקורית 66 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-067": {
+      "id": "slide-067",
+      "slidePage": 67,
+      "src": "assets/slides/slide-067.webp",
+      "alt": "שקופית מקורית 67 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-068": {
+      "id": "slide-068",
+      "slidePage": 68,
+      "src": "assets/slides/slide-068.webp",
+      "alt": "שקופית מקורית 68 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-069": {
+      "id": "slide-069",
+      "slidePage": 69,
+      "src": "assets/slides/slide-069.webp",
+      "alt": "שקופית מקורית 69 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-070": {
+      "id": "slide-070",
+      "slidePage": 70,
+      "src": "assets/slides/slide-070.webp",
+      "alt": "שקופית מקורית 70 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-071": {
+      "id": "slide-071",
+      "slidePage": 71,
+      "src": "assets/slides/slide-071.webp",
+      "alt": "שקופית מקורית 71 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-072": {
+      "id": "slide-072",
+      "slidePage": 72,
+      "src": "assets/slides/slide-072.webp",
+      "alt": "שקופית מקורית 72 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-073": {
+      "id": "slide-073",
+      "slidePage": 73,
+      "src": "assets/slides/slide-073.webp",
+      "alt": "שקופית מקורית 73 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-074": {
+      "id": "slide-074",
+      "slidePage": 74,
+      "src": "assets/slides/slide-074.webp",
+      "alt": "שקופית מקורית 74 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-075": {
+      "id": "slide-075",
+      "slidePage": 75,
+      "src": "assets/slides/slide-075.webp",
+      "alt": "שקופית מקורית 75 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-076": {
+      "id": "slide-076",
+      "slidePage": 76,
+      "src": "assets/slides/slide-076.webp",
+      "alt": "שקופית מקורית 76 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-077": {
+      "id": "slide-077",
+      "slidePage": 77,
+      "src": "assets/slides/slide-077.webp",
+      "alt": "שקופית מקורית 77 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-078": {
+      "id": "slide-078",
+      "slidePage": 78,
+      "src": "assets/slides/slide-078.webp",
+      "alt": "שקופית מקורית 78 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-079": {
+      "id": "slide-079",
+      "slidePage": 79,
+      "src": "assets/slides/slide-079.webp",
+      "alt": "שקופית מקורית 79 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-080": {
+      "id": "slide-080",
+      "slidePage": 80,
+      "src": "assets/slides/slide-080.webp",
+      "alt": "שקופית מקורית 80 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-081": {
+      "id": "slide-081",
+      "slidePage": 81,
+      "src": "assets/slides/slide-081.webp",
+      "alt": "שקופית מקורית 81 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-082": {
+      "id": "slide-082",
+      "slidePage": 82,
+      "src": "assets/slides/slide-082.webp",
+      "alt": "שקופית מקורית 82 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-083": {
+      "id": "slide-083",
+      "slidePage": 83,
+      "src": "assets/slides/slide-083.webp",
+      "alt": "שקופית מקורית 83 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-084": {
+      "id": "slide-084",
+      "slidePage": 84,
+      "src": "assets/slides/slide-084.webp",
+      "alt": "שקופית מקורית 84 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-085": {
+      "id": "slide-085",
+      "slidePage": 85,
+      "src": "assets/slides/slide-085.webp",
+      "alt": "שקופית מקורית 85 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-086": {
+      "id": "slide-086",
+      "slidePage": 86,
+      "src": "assets/slides/slide-086.webp",
+      "alt": "שקופית מקורית 86 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-087": {
+      "id": "slide-087",
+      "slidePage": 87,
+      "src": "assets/slides/slide-087.webp",
+      "alt": "שקופית מקורית 87 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-088": {
+      "id": "slide-088",
+      "slidePage": 88,
+      "src": "assets/slides/slide-088.webp",
+      "alt": "שקופית מקורית 88 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-089": {
+      "id": "slide-089",
+      "slidePage": 89,
+      "src": "assets/slides/slide-089.webp",
+      "alt": "שקופית מקורית 89 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-090": {
+      "id": "slide-090",
+      "slidePage": 90,
+      "src": "assets/slides/slide-090.webp",
+      "alt": "שקופית מקורית 90 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-091": {
+      "id": "slide-091",
+      "slidePage": 91,
+      "src": "assets/slides/slide-091.webp",
+      "alt": "שקופית מקורית 91 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-092": {
+      "id": "slide-092",
+      "slidePage": 92,
+      "src": "assets/slides/slide-092.webp",
+      "alt": "שקופית מקורית 92 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-093": {
+      "id": "slide-093",
+      "slidePage": 93,
+      "src": "assets/slides/slide-093.webp",
+      "alt": "שקופית מקורית 93 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-094": {
+      "id": "slide-094",
+      "slidePage": 94,
+      "src": "assets/slides/slide-094.webp",
+      "alt": "שקופית מקורית 94 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-095": {
+      "id": "slide-095",
+      "slidePage": 95,
+      "src": "assets/slides/slide-095.webp",
+      "alt": "שקופית מקורית 95 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-096": {
+      "id": "slide-096",
+      "slidePage": 96,
+      "src": "assets/slides/slide-096.webp",
+      "alt": "שקופית מקורית 96 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-097": {
+      "id": "slide-097",
+      "slidePage": 97,
+      "src": "assets/slides/slide-097.webp",
+      "alt": "שקופית מקורית 97 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-098": {
+      "id": "slide-098",
+      "slidePage": 98,
+      "src": "assets/slides/slide-098.webp",
+      "alt": "שקופית מקורית 98 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-099": {
+      "id": "slide-099",
+      "slidePage": 99,
+      "src": "assets/slides/slide-099.webp",
+      "alt": "שקופית מקורית 99 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-100": {
+      "id": "slide-100",
+      "slidePage": 100,
+      "src": "assets/slides/slide-100.webp",
+      "alt": "שקופית מקורית 100 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-101": {
+      "id": "slide-101",
+      "slidePage": 101,
+      "src": "assets/slides/slide-101.webp",
+      "alt": "שקופית מקורית 101 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-102": {
+      "id": "slide-102",
+      "slidePage": 102,
+      "src": "assets/slides/slide-102.webp",
+      "alt": "שקופית מקורית 102 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-103": {
+      "id": "slide-103",
+      "slidePage": 103,
+      "src": "assets/slides/slide-103.webp",
+      "alt": "שקופית מקורית 103 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-104": {
+      "id": "slide-104",
+      "slidePage": 104,
+      "src": "assets/slides/slide-104.webp",
+      "alt": "שקופית מקורית 104 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-105": {
+      "id": "slide-105",
+      "slidePage": 105,
+      "src": "assets/slides/slide-105.webp",
+      "alt": "שקופית מקורית 105 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-106": {
+      "id": "slide-106",
+      "slidePage": 106,
+      "src": "assets/slides/slide-106.webp",
+      "alt": "שקופית מקורית 106 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-107": {
+      "id": "slide-107",
+      "slidePage": 107,
+      "src": "assets/slides/slide-107.webp",
+      "alt": "שקופית מקורית 107 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-108": {
+      "id": "slide-108",
+      "slidePage": 108,
+      "src": "assets/slides/slide-108.webp",
+      "alt": "שקופית מקורית 108 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-109": {
+      "id": "slide-109",
+      "slidePage": 109,
+      "src": "assets/slides/slide-109.webp",
+      "alt": "שקופית מקורית 109 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-110": {
+      "id": "slide-110",
+      "slidePage": 110,
+      "src": "assets/slides/slide-110.webp",
+      "alt": "שקופית מקורית 110 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-111": {
+      "id": "slide-111",
+      "slidePage": 111,
+      "src": "assets/slides/slide-111.webp",
+      "alt": "שקופית מקורית 111 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-112": {
+      "id": "slide-112",
+      "slidePage": 112,
+      "src": "assets/slides/slide-112.webp",
+      "alt": "שקופית מקורית 112 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-113": {
+      "id": "slide-113",
+      "slidePage": 113,
+      "src": "assets/slides/slide-113.webp",
+      "alt": "שקופית מקורית 113 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-114": {
+      "id": "slide-114",
+      "slidePage": 114,
+      "src": "assets/slides/slide-114.webp",
+      "alt": "שקופית מקורית 114 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-115": {
+      "id": "slide-115",
+      "slidePage": 115,
+      "src": "assets/slides/slide-115.webp",
+      "alt": "שקופית מקורית 115 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-116": {
+      "id": "slide-116",
+      "slidePage": 116,
+      "src": "assets/slides/slide-116.webp",
+      "alt": "שקופית מקורית 116 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-117": {
+      "id": "slide-117",
+      "slidePage": 117,
+      "src": "assets/slides/slide-117.webp",
+      "alt": "שקופית מקורית 117 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-118": {
+      "id": "slide-118",
+      "slidePage": 118,
+      "src": "assets/slides/slide-118.webp",
+      "alt": "שקופית מקורית 118 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-119": {
+      "id": "slide-119",
+      "slidePage": 119,
+      "src": "assets/slides/slide-119.webp",
+      "alt": "שקופית מקורית 119 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-120": {
+      "id": "slide-120",
+      "slidePage": 120,
+      "src": "assets/slides/slide-120.webp",
+      "alt": "שקופית מקורית 120 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-121": {
+      "id": "slide-121",
+      "slidePage": 121,
+      "src": "assets/slides/slide-121.webp",
+      "alt": "שקופית מקורית 121 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-122": {
+      "id": "slide-122",
+      "slidePage": 122,
+      "src": "assets/slides/slide-122.webp",
+      "alt": "שקופית מקורית 122 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-123": {
+      "id": "slide-123",
+      "slidePage": 123,
+      "src": "assets/slides/slide-123.webp",
+      "alt": "שקופית מקורית 123 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-124": {
+      "id": "slide-124",
+      "slidePage": 124,
+      "src": "assets/slides/slide-124.webp",
+      "alt": "שקופית מקורית 124 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-125": {
+      "id": "slide-125",
+      "slidePage": 125,
+      "src": "assets/slides/slide-125.webp",
+      "alt": "שקופית מקורית 125 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-126": {
+      "id": "slide-126",
+      "slidePage": 126,
+      "src": "assets/slides/slide-126.webp",
+      "alt": "שקופית מקורית 126 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-127": {
+      "id": "slide-127",
+      "slidePage": 127,
+      "src": "assets/slides/slide-127.webp",
+      "alt": "שקופית מקורית 127 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-128": {
+      "id": "slide-128",
+      "slidePage": 128,
+      "src": "assets/slides/slide-128.webp",
+      "alt": "שקופית מקורית 128 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-129": {
+      "id": "slide-129",
+      "slidePage": 129,
+      "src": "assets/slides/slide-129.webp",
+      "alt": "שקופית מקורית 129 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-130": {
+      "id": "slide-130",
+      "slidePage": 130,
+      "src": "assets/slides/slide-130.webp",
+      "alt": "שקופית מקורית 130 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-131": {
+      "id": "slide-131",
+      "slidePage": 131,
+      "src": "assets/slides/slide-131.webp",
+      "alt": "שקופית מקורית 131 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-132": {
+      "id": "slide-132",
+      "slidePage": 132,
+      "src": "assets/slides/slide-132.webp",
+      "alt": "שקופית מקורית 132 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-133": {
+      "id": "slide-133",
+      "slidePage": 133,
+      "src": "assets/slides/slide-133.webp",
+      "alt": "שקופית מקורית 133 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-134": {
+      "id": "slide-134",
+      "slidePage": 134,
+      "src": "assets/slides/slide-134.webp",
+      "alt": "שקופית מקורית 134 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-135": {
+      "id": "slide-135",
+      "slidePage": 135,
+      "src": "assets/slides/slide-135.webp",
+      "alt": "שקופית מקורית 135 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-136": {
+      "id": "slide-136",
+      "slidePage": 136,
+      "src": "assets/slides/slide-136.webp",
+      "alt": "שקופית מקורית 136 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-137": {
+      "id": "slide-137",
+      "slidePage": 137,
+      "src": "assets/slides/slide-137.webp",
+      "alt": "שקופית מקורית 137 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-138": {
+      "id": "slide-138",
+      "slidePage": 138,
+      "src": "assets/slides/slide-138.webp",
+      "alt": "שקופית מקורית 138 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-139": {
+      "id": "slide-139",
+      "slidePage": 139,
+      "src": "assets/slides/slide-139.webp",
+      "alt": "שקופית מקורית 139 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-140": {
+      "id": "slide-140",
+      "slidePage": 140,
+      "src": "assets/slides/slide-140.webp",
+      "alt": "שקופית מקורית 140 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-141": {
+      "id": "slide-141",
+      "slidePage": 141,
+      "src": "assets/slides/slide-141.webp",
+      "alt": "שקופית מקורית 141 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-142": {
+      "id": "slide-142",
+      "slidePage": 142,
+      "src": "assets/slides/slide-142.webp",
+      "alt": "שקופית מקורית 142 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-143": {
+      "id": "slide-143",
+      "slidePage": 143,
+      "src": "assets/slides/slide-143.webp",
+      "alt": "שקופית מקורית 143 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-144": {
+      "id": "slide-144",
+      "slidePage": 144,
+      "src": "assets/slides/slide-144.webp",
+      "alt": "שקופית מקורית 144 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-145": {
+      "id": "slide-145",
+      "slidePage": 145,
+      "src": "assets/slides/slide-145.webp",
+      "alt": "שקופית מקורית 145 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-146": {
+      "id": "slide-146",
+      "slidePage": 146,
+      "src": "assets/slides/slide-146.webp",
+      "alt": "שקופית מקורית 146 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-147": {
+      "id": "slide-147",
+      "slidePage": 147,
+      "src": "assets/slides/slide-147.webp",
+      "alt": "שקופית מקורית 147 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-148": {
+      "id": "slide-148",
+      "slidePage": 148,
+      "src": "assets/slides/slide-148.webp",
+      "alt": "שקופית מקורית 148 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-149": {
+      "id": "slide-149",
+      "slidePage": 149,
+      "src": "assets/slides/slide-149.webp",
+      "alt": "שקופית מקורית 149 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-150": {
+      "id": "slide-150",
+      "slidePage": 150,
+      "src": "assets/slides/slide-150.webp",
+      "alt": "שקופית מקורית 150 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-151": {
+      "id": "slide-151",
+      "slidePage": 151,
+      "src": "assets/slides/slide-151.webp",
+      "alt": "שקופית מקורית 151 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-152": {
+      "id": "slide-152",
+      "slidePage": 152,
+      "src": "assets/slides/slide-152.webp",
+      "alt": "שקופית מקורית 152 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-153": {
+      "id": "slide-153",
+      "slidePage": 153,
+      "src": "assets/slides/slide-153.webp",
+      "alt": "שקופית מקורית 153 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-154": {
+      "id": "slide-154",
+      "slidePage": 154,
+      "src": "assets/slides/slide-154.webp",
+      "alt": "שקופית מקורית 154 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-155": {
+      "id": "slide-155",
+      "slidePage": 155,
+      "src": "assets/slides/slide-155.webp",
+      "alt": "שקופית מקורית 155 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-156": {
+      "id": "slide-156",
+      "slidePage": 156,
+      "src": "assets/slides/slide-156.webp",
+      "alt": "שקופית מקורית 156 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-157": {
+      "id": "slide-157",
+      "slidePage": 157,
+      "src": "assets/slides/slide-157.webp",
+      "alt": "שקופית מקורית 157 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-158": {
+      "id": "slide-158",
+      "slidePage": 158,
+      "src": "assets/slides/slide-158.webp",
+      "alt": "שקופית מקורית 158 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-159": {
+      "id": "slide-159",
+      "slidePage": 159,
+      "src": "assets/slides/slide-159.webp",
+      "alt": "שקופית מקורית 159 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-160": {
+      "id": "slide-160",
+      "slidePage": 160,
+      "src": "assets/slides/slide-160.webp",
+      "alt": "שקופית מקורית 160 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-161": {
+      "id": "slide-161",
+      "slidePage": 161,
+      "src": "assets/slides/slide-161.webp",
+      "alt": "שקופית מקורית 161 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-162": {
+      "id": "slide-162",
+      "slidePage": 162,
+      "src": "assets/slides/slide-162.webp",
+      "alt": "שקופית מקורית 162 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-163": {
+      "id": "slide-163",
+      "slidePage": 163,
+      "src": "assets/slides/slide-163.webp",
+      "alt": "שקופית מקורית 163 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-164": {
+      "id": "slide-164",
+      "slidePage": 164,
+      "src": "assets/slides/slide-164.webp",
+      "alt": "שקופית מקורית 164 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-165": {
+      "id": "slide-165",
+      "slidePage": 165,
+      "src": "assets/slides/slide-165.webp",
+      "alt": "שקופית מקורית 165 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    },
+    "slide-166": {
+      "id": "slide-166",
+      "slidePage": 166,
+      "src": "assets/slides/slide-166.webp",
+      "alt": "שקופית מקורית 166 מתוך המצגת",
+      "credit": "Original uploaded course presentation",
+      "source": "presentation"
+    }
+  },
+  "visualAssetBasePath": "assets/",
+  "originalPresentation": {
+    "name": "Lesson3-Intro+BasicPhysics-2026b(1).pdf",
+    "pageCount": 166,
+    "allSlidesIncluded": true,
+    "description": "כל השקופיות נכללו כתמונות לשימוש מקומי; תמונות מקוריות אינן מוטמעות כ־base64 בתוך JSON כדי לא לנפח אותו."
+  },
+  "animationSequences": [
+    {
+      "id": "precession",
+      "title": "פרצסיה",
+      "frames": [
+        "slide-048",
+        "slide-049",
+        "slide-050",
+        "slide-051",
+        "slide-052",
+        "slide-053",
+        "slide-054",
+        "slide-055",
+        "slide-056",
+        "slide-057",
+        "slide-058",
+        "slide-059",
+        "slide-060",
+        "slide-061",
+        "slide-062",
+        "slide-063",
+        "slide-064",
+        "slide-065",
+        "slide-066",
+        "slide-067",
+        "slide-068",
+        "slide-069"
+      ]
+    },
+    {
+      "id": "excitation",
+      "title": "עירור ופולס RF",
+      "frames": [
+        "slide-078",
+        "slide-079",
+        "slide-080",
+        "slide-081",
+        "slide-082",
+        "slide-083",
+        "slide-084",
+        "slide-085",
+        "slide-086",
+        "slide-087",
+        "slide-088",
+        "slide-089",
+        "slide-090",
+        "slide-091",
+        "slide-092",
+        "slide-093",
+        "slide-094",
+        "slide-095",
+        "slide-096",
+        "slide-097",
+        "slide-098",
+        "slide-099",
+        "slide-100",
+        "slide-101",
+        "slide-102",
+        "slide-103",
+        "slide-104",
+        "slide-105",
+        "slide-106",
+        "slide-107",
+        "slide-108",
+        "slide-109",
+        "slide-110",
+        "slide-111",
+        "slide-112"
+      ]
+    },
+    {
+      "id": "signal-detection",
+      "title": "קליטת אות MR",
+      "frames": [
+        "slide-114",
+        "slide-115",
+        "slide-116",
+        "slide-117",
+        "slide-118",
+        "slide-119",
+        "slide-120",
+        "slide-121",
+        "slide-122",
+        "slide-123",
+        "slide-124",
+        "slide-125",
+        "slide-126",
+        "slide-127",
+        "slide-128",
+        "slide-129"
+      ]
+    },
+    {
+      "id": "relaxation",
+      "title": "חזרת המגנטיזציה",
+      "frames": [
+        "slide-130",
+        "slide-131",
+        "slide-132",
+        "slide-133",
+        "slide-134",
+        "slide-135",
+        "slide-136",
+        "slide-137",
+        "slide-138",
+        "slide-139",
+        "slide-140",
+        "slide-141",
+        "slide-142",
+        "slide-143",
+        "slide-144",
+        "slide-145",
+        "slide-146",
+        "slide-147"
+      ]
+    },
+    {
+      "id": "t1-recovery",
+      "title": "אנימציה של T1",
+      "frames": [
+        "slide-150",
+        "slide-151",
+        "slide-152",
+        "slide-153",
+        "slide-154",
+        "slide-155",
+        "slide-156",
+        "slide-157",
+        "slide-158",
+        "slide-159",
+        "slide-160",
+        "slide-161",
+        "slide-162",
+        "slide-163",
+        "slide-164"
+      ]
+    }
+  ],
+  "renderingGuidance": {
+    "direction": "rtl",
+    "contentLanguage": "he",
+    "mathDirection": "ltr",
+    "supportedVisualBlockTypes": [
+      "comparison",
+      "takeaway",
+      "process",
+      "image",
+      "diagram",
+      "chart",
+      "calculator",
+      "frameSequence"
+    ],
+    "implementation": "יש למפות visualBlocks לרכיבי React מתאימים. הסוגים image, diagram, chart, calculator, frameSequence הם מבנים נתמכים במידע אך אינם נבנים אוטומטית ללא רכיבי תצוגה.",
+    "images": "כל נתיבי התמונות וה־SVG מתחילים ב־assets/ ומתאימים לקבצים שנמצאים ב־publicassets/ של פרויקט Vite/React.",
+    "originalNotes": "גרפים ונוסחאות מסוימים הם הסברים לימודיים שנוספו לסיכום ואינם בהכרח מופיעים במפורש במצגת.",
+    "concepts": "concepts הוא מערך מושגים ברמה העליונה, המקביל ל־glossary, כדי לתמוך בגישה lesson.concepts.map."
+  },
+  "formulas": [
+    {
+      "id": "angular-momentum",
+      "latex": "J=m\\omega r^2",
+      "display": "J = mωr²",
+      "meaning": "מודל קלאסי לתנע זוויתי; אנלוגיה להסבר ספין"
+    },
+    {
+      "id": "magnetic-moment",
+      "latex": "\\mu=\\gamma J",
+      "display": "μ = γJ",
+      "meaning": "קשר בין מומנט מגנטי לתנע זוויתי"
+    },
+    {
+      "id": "larmor",
+      "latex": "f_0=\\gamma B_0",
+      "display": "f₀ = γB₀",
+      "units": "γ ביחידות MHz/T"
+    },
+    {
+      "id": "t1",
+      "latex": "M_z(t)=M_0(1-e^{-t/T_1})",
+      "display": "Mz(t) = M0(1 − e^(−t/T1))",
+      "note": "מתייחס להתאוששות לאחר 90° אידיאלי"
+    },
+    {
+      "id": "t2",
+      "latex": "M_{xy}(t)=M_{xy}(0)e^{-t/T_2}",
+      "display": "Mxy(t) = Mxy(0) e^(−t/T2)",
+      "note": "הרחבה לימודית המשלימה את השקופית האחרונה"
+    }
+  ],
+  "comparisonTables": [
+    {
+      "id": "methods",
+      "title": "השוואת שיטות מחקר",
+      "columns": [
+        "שיטה",
+        "מטרה",
+        "יתרון"
+      ],
+      "rows": [
+        [
+          "MRI",
+          "מיפוי מבנה",
+          "אנטומיה מפורטת"
+        ],
+        [
+          "fMRI",
+          "שינויי פעילות עקיפים",
+          "מיפוי תפקודי"
+        ],
+        [
+          "EEG",
+          "פעילות חשמלית",
+          "רזולוציה זמנית גבוהה"
+        ],
+        [
+          "MEG",
+          "שדות מגנטיים מפעילות עצבית",
+          "רזולוציה זמנית גבוהה"
+        ],
+        [
+          "Lesions",
+          "השפעת פגיעה",
+          "בחינת נחיצות"
+        ],
+        [
+          "TMS",
+          "שינוי פעילות מגנטי",
+          "התערבות זמנית"
+        ],
+        [
+          "tDCS",
+          "שינוי עוררות חשמלי",
+          "נוירומודולציה"
+        ]
+      ]
+    },
+    {
+      "id": "t1-t2",
+      "title": "T1 לעומת T2",
+      "columns": [
+        "מאפיין",
+        "T1",
+        "T2"
+      ],
+      "rows": [
+        [
+          "כיוון",
+          "Z",
+          "XY"
+        ],
+        [
+          "תהליך",
+          "התאוששות",
+          "דעיכה"
+        ],
+        [
+          "מנגנון",
+          "Spin–Lattice",
+          "Spin–Spin"
+        ],
+        [
+          "זמן אופייני",
+          "כ־63% התאוששות",
+          "כ־37% נותר"
+        ]
+      ]
+    }
+  ],
+  "keyNumbers": [
+    {
+      "term": "יחס גירומגנטי של מימן",
+      "value": 42.58,
+      "unit": "MHz/T"
+    },
+    {
+      "term": "תדירות ב־1.5T",
+      "value": 63.87,
+      "unit": "MHz"
+    },
+    {
+      "term": "תדירות ב־3T",
+      "value": 127.74,
+      "unit": "MHz"
+    },
+    {
+      "term": "T1 לאחר קבוע זמן אחד",
+      "value": 63.21,
+      "unit": "% recovery"
+    },
+    {
+      "term": "T2 לאחר קבוע זמן אחד",
+      "value": 36.79,
+      "unit": "% remaining"
+    }
+  ],
+  "recapQuiz": [
+    {
+      "id": "recap-q1",
+      "type": "single",
+      "question": "מה ההבדל העיקרי בין MRI מבני לבין fMRI?",
+      "options": [
+        "MRI מבני מתמקד במבנה, ו־fMRI בשינויים הקשורים לפעילות מוחית",
+        "MRI מבני מודד רק פעילות חשמלית ו־fMRI מודד רק אנטומיה",
+        "אין ביניהם הבדל"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "MRI מבני מתאר רקמות ואנטומיה; fMRI חוקר שינויים פיזיולוגיים הקשורים לפעילות עצבית."
+    },
+    {
+      "id": "recap-q2",
+      "type": "single",
+      "question": "מדוע גרעיני מימן מתאימים במיוחד ל־MRI?",
+      "options": [
+        "כי אין להם מטען חשמלי",
+        "כי הם נפוצים מאוד בגוף ובעלי ספין ומומנט מגנטי",
+        "כי אינם מושפעים משדה מגנטי"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "מימן נפוץ בגוף וגרעינו בעל תכונות מגנטיות מתאימות."
+    },
+    {
+      "id": "recap-q3",
+      "type": "single",
+      "question": "מה קורה כאשר עוצמת השדה B₀ גדלה?",
+      "options": [
+        "תדירות לרמור קטנה",
+        "תדירות לרמור אינה משתנה",
+        "תדירות לרמור גדלה"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "explanation": "תדירות לרמור יחסית ישר לעוצמת השדה."
+    },
+    {
+      "id": "recap-q4",
+      "type": "single",
+      "question": "מהי השפעת פולס RF של 90° בתנאים אידיאליים?",
+      "options": [
+        "הטיית המגנטיזציה הכוללת למישור XY",
+        "ביטול השדה B₀",
+        "החזרת המערכת לשיווי משקל"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "פולס 90° מטה את המגנטיזציה למישור XY."
+    },
+    {
+      "id": "recap-q5",
+      "type": "single",
+      "question": "מה מייצג T1?",
+      "options": [
+        "קצב הפרצסיה",
+        "קבוע זמן ההתאוששות האורכית",
+        "קבוע זמן הדעיכה הרוחבית"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "T1 מתאר התאוששות מגנטיזציה אורכית."
+    },
+    {
+      "id": "recap-q6",
+      "type": "single",
+      "question": "לאחר זמן T2, מה נותר מהמגנטיזציה הרוחבית ההתחלתית?",
+      "options": [
+        "כ־63%",
+        "כ־100%",
+        "כ־37%"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "explanation": "נותרו כ־36.8%."
+    }
+  ],
+  "sourceLimitations": [
+    "תמונות המקור נלקחו משקופיות המצגת שהועלתה, ולא מחיפוש תמונות חיצוני.",
+    "הגרפים של T1 ו־T2 ושלוש הדיאגרמות הם הדגמות שנוצרו לפי הסיכום; לא גרפיקה מקורית מהמצגת.",
+    "מצגת המקור מסתיימת בתחילת הצגת T2; משוואת T2 מלאה בגרף היא תוספת פדגוגית.",
+    "נדרשת התאמה בקוד האתר להצגת visualBlocks מסוגים חדשים."
+  ],
+  "concepts": [
+    {
+      "term": "Brain Mapping",
+      "definition": "מיפוי מוחי מבני או תפקודי.",
+      "name": "Brain Mapping",
+      "title": "Brain Mapping",
+      "explanation": "מיפוי מוחי מבני או תפקודי."
+    },
+    {
+      "term": "Direct Cortical Stimulation",
+      "definition": "גירוי חשמלי ישיר של אזור קורטיקלי.",
+      "name": "Direct Cortical Stimulation",
+      "title": "Direct Cortical Stimulation",
+      "explanation": "גירוי חשמלי ישיר של אזור קורטיקלי."
+    },
+    {
+      "term": "Lesion Studies",
+      "definition": "חקר הקשר בין פגיעה מוחית לבין ליקוי תפקודי.",
+      "name": "Lesion Studies",
+      "title": "Lesion Studies",
+      "explanation": "חקר הקשר בין פגיעה מוחית לבין ליקוי תפקודי."
+    },
+    {
+      "term": "Necessary",
+      "definition": "נחוץ לביצוע תפקוד.",
+      "name": "Necessary",
+      "title": "Necessary",
+      "explanation": "נחוץ לביצוע תפקוד."
+    },
+    {
+      "term": "Sufficient",
+      "definition": "מספיק ליצירת תוצאה בהינתן התנאים המתאימים.",
+      "name": "Sufficient",
+      "title": "Sufficient",
+      "explanation": "מספיק ליצירת תוצאה בהינתן התנאים המתאימים."
+    },
+    {
+      "term": "VLSM",
+      "definition": "מיפוי סטטיסטי של קשר בין ווקסלי פגיעה לתסמין.",
+      "name": "VLSM",
+      "title": "VLSM",
+      "explanation": "מיפוי סטטיסטי של קשר בין ווקסלי פגיעה לתסמין."
+    },
+    {
+      "term": "TMS",
+      "definition": "גירוי מגנטי חוצה גולגולת.",
+      "name": "TMS",
+      "title": "TMS",
+      "explanation": "גירוי מגנטי חוצה גולגולת."
+    },
+    {
+      "term": "tDCS",
+      "definition": "גירוי זרם חשמלי ישיר דרך הקרקפת.",
+      "name": "tDCS",
+      "title": "tDCS",
+      "explanation": "גירוי זרם חשמלי ישיר דרך הקרקפת."
+    },
+    {
+      "term": "MRI",
+      "definition": "Magnetic Resonance Imaging.",
+      "name": "MRI",
+      "title": "MRI",
+      "explanation": "Magnetic Resonance Imaging."
+    },
+    {
+      "term": "fMRI",
+      "definition": "דימות תהודה מגנטית תפקודי.",
+      "name": "fMRI",
+      "title": "fMRI",
+      "explanation": "דימות תהודה מגנטית תפקודי."
+    },
+    {
+      "term": "¹H",
+      "definition": "גרעין מימן הנפוץ בשימוש ב־MRI.",
+      "name": "¹H",
+      "title": "¹H",
+      "explanation": "גרעין מימן הנפוץ בשימוש ב־MRI."
+    },
+    {
+      "term": "Spin",
+      "definition": "תנע זוויתי פנימי קוונטי.",
+      "name": "Spin",
+      "title": "Spin",
+      "explanation": "תנע זוויתי פנימי קוונטי."
+    },
+    {
+      "term": "Angular momentum J",
+      "definition": "תנע זוויתי.",
+      "name": "Angular momentum J",
+      "title": "Angular momentum J",
+      "explanation": "תנע זוויתי."
+    },
+    {
+      "term": "Magnetic moment μ",
+      "definition": "וקטור המתאר את תגובת הגרעין לשדה מגנטי.",
+      "name": "Magnetic moment μ",
+      "title": "Magnetic moment μ",
+      "explanation": "וקטור המתאר את תגובת הגרעין לשדה מגנטי."
+    },
+    {
+      "term": "Gyromagnetic ratio γ",
+      "definition": "קבוע המקשר תנע זוויתי ומומנט מגנטי.",
+      "name": "Gyromagnetic ratio γ",
+      "title": "Gyromagnetic ratio γ",
+      "explanation": "קבוע המקשר תנע זוויתי ומומנט מגנטי."
+    },
+    {
+      "term": "B₀",
+      "definition": "השדה המגנטי הראשי.",
+      "name": "B₀",
+      "title": "B₀",
+      "explanation": "השדה המגנטי הראשי."
+    },
+    {
+      "term": "Net Magnetization M",
+      "definition": "סכום וקטורי של רגעים מגנטיים.",
+      "name": "Net Magnetization M",
+      "title": "Net Magnetization M",
+      "explanation": "סכום וקטורי של רגעים מגנטיים."
+    },
+    {
+      "term": "Mz",
+      "definition": "רכיב המגנטיזציה לאורך Z.",
+      "name": "Mz",
+      "title": "Mz",
+      "explanation": "רכיב המגנטיזציה לאורך Z."
+    },
+    {
+      "term": "Mxy",
+      "definition": "רכיב המגנטיזציה במישור XY.",
+      "name": "Mxy",
+      "title": "Mxy",
+      "explanation": "רכיב המגנטיזציה במישור XY."
+    },
+    {
+      "term": "Parallel",
+      "definition": "מצב מומנט מקביל לשדה, אנרגיה נמוכה.",
+      "name": "Parallel",
+      "title": "Parallel",
+      "explanation": "מצב מומנט מקביל לשדה, אנרגיה נמוכה."
+    },
+    {
+      "term": "Antiparallel",
+      "definition": "מצב מומנט מנוגד לשדה, אנרגיה גבוהה.",
+      "name": "Antiparallel",
+      "title": "Antiparallel",
+      "explanation": "מצב מומנט מנוגד לשדה, אנרגיה גבוהה."
+    },
+    {
+      "term": "Zeeman Effect",
+      "definition": "פיצול רמות אנרגיה בשדה מגנטי.",
+      "name": "Zeeman Effect",
+      "title": "Zeeman Effect",
+      "explanation": "פיצול רמות אנרגיה בשדה מגנטי."
+    },
+    {
+      "term": "Precession",
+      "definition": "תנועה מחזורית סביב כיוון השדה.",
+      "name": "Precession",
+      "title": "Precession",
+      "explanation": "תנועה מחזורית סביב כיוון השדה."
+    },
+    {
+      "term": "Larmor Frequency",
+      "definition": "תדירות הפרצסיה, f₀=γB₀.",
+      "name": "Larmor Frequency",
+      "title": "Larmor Frequency",
+      "explanation": "תדירות הפרצסיה, f₀=γB₀."
+    },
+    {
+      "term": "RF Pulse",
+      "definition": "פולס גלי רדיו לעירור.",
+      "name": "RF Pulse",
+      "title": "RF Pulse",
+      "explanation": "פולס גלי רדיו לעירור."
+    },
+    {
+      "term": "Flip Angle",
+      "definition": "זווית הטיית וקטור המגנטיזציה בעקבות RF.",
+      "name": "Flip Angle",
+      "title": "Flip Angle",
+      "explanation": "זווית הטיית וקטור המגנטיזציה בעקבות RF."
+    },
+    {
+      "term": "FID",
+      "definition": "אות תנודתי ודועך לאחר העירור.",
+      "name": "FID",
+      "title": "FID",
+      "explanation": "אות תנודתי ודועך לאחר העירור."
+    },
+    {
+      "term": "Relaxation",
+      "definition": "חזרת מערכת הספינים לשיווי משקל.",
+      "name": "Relaxation",
+      "title": "Relaxation",
+      "explanation": "חזרת מערכת הספינים לשיווי משקל."
+    },
+    {
+      "term": "T1",
+      "definition": "קבוע זמן ההתאוששות האורכית.",
+      "name": "T1",
+      "title": "T1",
+      "explanation": "קבוע זמן ההתאוששות האורכית."
+    },
+    {
+      "term": "T2",
+      "definition": "קבוע זמן דעיכת המגנטיזציה הרוחבית.",
+      "name": "T2",
+      "title": "T2",
+      "explanation": "קבוע זמן דעיכת המגנטיזציה הרוחבית."
+    },
+    {
+      "term": "Dephasing",
+      "definition": "אובדן התיאום במופעים של הספינים.",
+      "name": "Dephasing",
+      "title": "Dephasing",
+      "explanation": "אובדן התיאום במופעים של הספינים."
+    },
+    {
+      "term": "Spin–Lattice",
+      "definition": "רלקסציה של המגנטיזציה האורכית.",
+      "name": "Spin–Lattice",
+      "title": "Spin–Lattice",
+      "explanation": "רלקסציה של המגנטיזציה האורכית."
+    },
+    {
+      "term": "Spin–Spin",
+      "definition": "רלקסציה של המגנטיזציה הרוחבית.",
+      "name": "Spin–Spin",
+      "title": "Spin–Spin",
+      "explanation": "רלקסציה של המגנטיזציה הרוחבית."
+    }
+  ]
+}

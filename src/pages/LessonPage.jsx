@@ -21,6 +21,7 @@ import buddhismLecture02 from "../data/lessons/buddhism-philosophy-lecture02.jso
 import buddhismLecture03 from "../data/lessons/buddhism-philosophy-lecture03.json";
 import appliedGeneticsLecture02 from "../data/lessons/applied-genetics-lecture02.json";
 import neuroLesson22 from "../data/lessons/lesson2-generalorg.json";
+import brainImagingLesson03 from "../data/lessons/brain-imaging-lesson03.json";
 import "../styles/interactive-summary.css";
 
 
@@ -43,7 +44,8 @@ const lessonMap = {
   [buddhismLecture02.id]: buddhismLecture02,
   [buddhismLecture03.id]: buddhismLecture03,
   [appliedGeneticsLecture02.id]: appliedGeneticsLecture02,
-  [neuroLesson22.id]: neuroLesson22
+  [neuroLesson22.id]: neuroLesson22,
+  [brainImagingLesson03.id]: brainImagingLesson03
 };
 
 export default function LessonPage({

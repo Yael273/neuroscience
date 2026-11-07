@@ -1,0 +1,165 @@
+.lv-figure {
+    margin: 0 auto;
+    max-width: 780px;
+    text-align: center;
+}
+
+.lv-image,
+.lv-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+.lv-figure figcaption,
+.lv-hint {
+    font-size: .88rem;
+    line-height: 1.65;
+    color: #60736d;
+    margin: 10px 0 0;
+}
+
+.lv-frame {
+    background: #f0f5f3;
+    border: 1px solid #dce8e2;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    min-height: 210px;
+}
+
+.lv-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.lv-controls button {
+    background: #fff;
+    border: 1px solid #cbded5;
+    border-radius: 9px;
+    padding: 8px 14px;
+    cursor: pointer;
+    color: #245844;
+}
+
+.lv-controls button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.lv-controls button:hover:not(:disabled) {
+    background: #e5f4ed;
+}
+
+.lv-controls label {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: .86rem;
+}
+
+.lv-controls select {
+    border: 1px solid #cbded5;
+    background: #fff;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.lv-count {
+    color: #516b60;
+    font-variant-numeric: tabular-nums;
+}
+
+.lv-scrub {
+    width: 100%;
+    accent-color: #19865c;
+    cursor: pointer;
+}
+
+.lv-chart-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    direction: ltr;
+}
+
+.lv-chart-readout {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    font-size: .86rem;
+    color: #294f41;
+}
+
+.lv-equation {
+    text-align: center;
+    font-family: inherit;
+    font-variant-numeric: tabular-nums;
+    color: #254e40;
+    background: #edf7f1;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.lv-calculator {
+    display: grid;
+    gap: 12px;
+}
+
+.lv-calc-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lv-calc-row input[type=range] {
+    flex: 1;
+    accent-color: #19865c;
+}
+
+.lv-calc-row input[type=number] {
+    width: 90px;
+    border: 1px solid #cbded5;
+    border-radius: 8px;
+    padding: 7px;
+    text-align: center;
+}
+
+.lv-result {
+    background: #edf7f1;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.lv-result strong {
+    font-size: 1.3rem;
+    color: #126344;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lv-controls button {
+        transition: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .lv-calc-row {
+        flex-wrap: wrap;
+    }
+
+    .lv-result strong {
+        font-size: 1.1rem;
+    }
+}
