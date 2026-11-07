@@ -22,6 +22,12 @@ import buddhismLecture03 from "../data/lessons/buddhism-philosophy-lecture03.jso
 import appliedGeneticsLecture02 from "../data/lessons/applied-genetics-lecture02.json";
 import neuroLesson22 from "../data/lessons/lesson2-generalorg.json";
 import brainImagingLesson03 from "../data/lessons/brain-imaging-lesson03.json";
+import compLecture02 from "../data/lessons/compcog-lecture02.json";
+import compMathReview from "../data/lessons/compcog-math-review.json";
+import compLecture03 from "../data/lessons/compcog-lecture03.json";
+import compTutorial02 from "../data/lessons/compcog-tutorial02.json";
+import compTutorial03 from "../data/lessons/compcog-tutorial03.json";
+
 import "../styles/interactive-summary.css";
 
 
@@ -45,7 +51,12 @@ const lessonMap = {
   [buddhismLecture03.id]: buddhismLecture03,
   [appliedGeneticsLecture02.id]: appliedGeneticsLecture02,
   [neuroLesson22.id]: neuroLesson22,
-  [brainImagingLesson03.id]: brainImagingLesson03
+  [brainImagingLesson03.id]: brainImagingLesson03,
+  [compLecture02.id]: compLecture02,
+  [compMathReview.id]: compMathReview,
+  [compLecture03.id]: compLecture03,
+  [compTutorial02.id]: compTutorial02,
+  [compTutorial03.id]: compTutorial03,
 };
 
 export default function LessonPage({

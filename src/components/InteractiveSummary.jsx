@@ -3,6 +3,7 @@ import { Bookmark, BookmarkCheck, CheckCircle2, ChevronDown, RotateCcw } from "l
 import InteractiveImage from "./InteractiveImage";
 import ProcessFlow from "./ProcessFlow";
 import LessonVisual from "./LessonVisual";
+import MathLessonContent from "./MathLessonContent";
 import "../styles/learning-colors.css";
 import { assetUrl } from "../utils/assetUrl";
 
@@ -220,41 +221,34 @@ export default function InteractiveSummary({
                 ) : (
                   <>
                     <p className="interactive-topic-summary">{section.summary}</p>
-                    {section.details?.length > 0 && (
-                      <section className="interactive-topic-details" aria-label="הסברים והרחבות">
-                        {section.details.map((item, detailIndex) => {
-                          const detailKey = `${section.id}-${detailIndex}`;
-                          const isLong = (item.explanation?.length ?? 0) > 270;
-                          const showAll = Boolean(expandedDetails[detailKey]);
-                          return (
-                            <div className="interactive-detail" key={detailKey}>
-                              <h4 className="interactive-detail-heading">{item.term}</h4>
-                              <p
-                                id={`detail-${detailKey}`}
-                                className={`interactive-detail-text${isLong && !showAll ? " is-clamped" : ""}`}
-                              >
-                                {item.explanation}
-                              </p>
-                              {isLong && (
-                                <button
-                                  type="button"
-                                  className="interactive-detail-more"
-                                  aria-expanded={showAll}
-                                  aria-controls={`detail-${detailKey}`}
-                                  onClick={() => setExpandedDetails(previous => ({
-                                    ...previous,
-                                    [detailKey]: !showAll,
-                                  }))}
-                                >
-                                  {showAll ? "הצג פחות" : "קראי את ההסבר המלא"}
-                                  <ChevronDown size={15} className={showAll ? "detail-chevron-up" : ""} />
-                                </button>
+
+
+
+
+                    {section.formulas?.length > 0 ||
+                      section.examples?.length > 0 ? (
+                      <MathLessonContent section={section} />
+                    ) : (
+                      section.details?.length > 0 && (
+                        <div className="interactive-topic-details">
+                          {section.details.map((item, i) => (
+                            <div key={i} className="interactive-detail">
+                              {typeof item === "string" ? (
+                                <p>{item}</p>
+                              ) : (
+                                <>
+                                  <strong>{item.term}</strong>
+                                  <p>{item.explanation}</p>
+                                </>
                               )}
                             </div>
-                          );
-                        })}
-                      </section>
+                          ))}
+                        </div>
+                      )
                     )}
+
+
+
 
                     {section.visualBlocks?.length > 0 && (
                       <div className="learning-visual-blocks">

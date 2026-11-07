@@ -27,9 +27,14 @@ import buddhismLecture03 from "./data/lessons/buddhism-philosophy-lecture03.json
 import appliedGeneticsLecture02 from "./data/lessons/applied-genetics-lecture02.json";
 import neuroLesson22 from "./data/lessons/lesson2-generalorg.json";
 import brainImagingLesson03 from "./data/lessons/brain-imaging-lesson03.json";
+import compLecture02 from "./data/lessons/compcog-lecture02.json";
+import compMathReview from "./data/lessons/compcog-math-review.json";
+import compLecture03 from "./data/lessons/compcog-lecture03.json";
+import compTutorial02 from "./data/lessons/compcog-tutorial02.json";
+import compTutorial03 from "./data/lessons/compcog-tutorial03.json";
 
 const lessonsById = Object.fromEntries(
-  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, appliedGenetics, molecularLecture03, buddhismLecture01, buddhismLecture02, buddhismLecture03, appliedGeneticsLecture02, neuroLesson22, brainImagingLesson03].map(lesson => [lesson.id, lesson])
+  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, appliedGenetics, molecularLecture03, buddhismLecture01, buddhismLecture02, buddhismLecture03, appliedGeneticsLecture02, neuroLesson22, brainImagingLesson03, compLecture02, compMathReview, compLecture03, compTutorial02, compTutorial03].map(lesson => [lesson.id, lesson])
 );
 
 export default function App() {

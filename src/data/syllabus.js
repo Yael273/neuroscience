@@ -19,6 +19,11 @@ import buddhismLecture03 from "./lessons/buddhism-philosophy-lecture03.json";
 import appliedGeneticsLecture02 from "./lessons/applied-genetics-lecture02.json";
 import neuroLesson22 from "./lessons/lesson2-generalorg.json";
 import brainImagingLesson03 from "./lessons/brain-imaging-lesson03.json";
+import compLecture02 from "./lessons/compcog-lecture02.json";
+import compMathReview from "./lessons/compcog-math-review.json";
+import compLecture03 from "./lessons/compcog-lecture03.json";
+import compTutorial02 from "./lessons/compcog-tutorial02.json";
+import compTutorial03 from "./lessons/compcog-tutorial03.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -91,7 +96,49 @@ export const subjects = [
         lessons: 1,
         duration: null,
         topics: [compTutorial.title]
-      }
+      },
+      {
+        id: "compcog-chapter-lecture02",
+        name: "הרצאה 2 — נגזרות של פונקציות רבות־משתנים",
+        description: "נגזרות חלקיות, לינאריזציה, כלל השרשרת, גרדיאנט ונקודות קיצון",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [compLecture02.id],
+        topics: compLecture02.sections.map((section) => section.title),
+      },
+      {
+        id: "compcog-math-review-chapter",
+        name: "חזרה לבוחן — יסודות מתמטיים",
+        description: "דף נוסחאות, נגזרות, גרדיאנט, לינאריזציה, נגזרת כיוונית ונרמול",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [compMathReview.id],
+        topics: compMathReview.sections.map((section) => section.title),
+      },
+      {
+        id: "compcog-lecture03-chapter",
+        name: "הרצאה 3 — נוירון לינארי, רגרסיה והכללה",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [compLecture03.id],
+        topics: compLecture03.sections.map(s => s.title),
+      },
+      {
+        id: "compcog-tutorial02-chapter",
+        name: "תרגול 2 — נגזרות וגרדיאנט",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [compTutorial02.id],
+        topics: compTutorial02.sections.map(s => s.title),
+      },
+      {
+        id: "compcog-tutorial03-chapter",
+        name: "תרגול 3 — נוירון לינארי והסתברות",
+        lessons: 1,
+        duration: 0,
+        lessonIds: [compTutorial03.id],
+        topics: compTutorial03.sections.map(s => s.title),
+      },
     ]
   },
   {
