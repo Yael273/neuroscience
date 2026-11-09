@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Bookmark, BookmarkCheck, CheckCircle2, ChevronDown, RotateCcw } from "lucide-react";
+import { Bookmark, BookmarkCheck,BookOpen, CheckCircle2, ChevronDown, RotateCcw } from "lucide-react";
 import InteractiveImage from "./InteractiveImage";
 import ProcessFlow from "./ProcessFlow";
 import LessonVisual from "./LessonVisual";
@@ -7,7 +7,31 @@ import MathLessonContent from "./MathLessonContent";
 import "../styles/learning-colors.css";
 import { assetUrl } from "../utils/assetUrl";
 
+// Normalize paths so /images/x.svg and public/images/x.svg count as the same asset.
+const imageKey = (src) => String(src || "")
+  .trim()
+  .replace(/^\/?public\//, "")
+  .replace(/^\/+/, "");
 
+const isPictureBlock = (block) =>
+  block?.type === "image" || block?.type === "diagram";
+
+// Prefer an interactive section.image with hotspots; otherwise show its
+// counterpart inside visualBlocks and suppress the redundant section.image.
+function uniqueVisualBlocks(section) {
+  const seen = new Set();
+  const interactiveSource = section.image?.hotspots?.length
+    ? imageKey(section.image.src)
+    : "";
+  return (section.visualBlocks || []).filter((block) => {
+    if (!isPictureBlock(block)) return true;
+    const src = imageKey(block.src || block.asset);
+    if (!src) return true;
+    if (src === interactiveSource || seen.has(src)) return false;
+    seen.add(src);
+    return true;
+  });
+}
 
 // Opt-in textbook layout: only sections with learningFlow use this renderer.
 // Other lessons continue to use the original JSON structure and layout.
@@ -36,6 +60,7 @@ function LessonFlowVisual({ block }) {
 }
 
 function LessonNarrative({ section, lessonId }) {
+  const shownPictures = new Set();
   return (
     <div className="textbook-reading">
       {section.learningQuestion && (
@@ -57,12 +82,30 @@ function LessonNarrative({ section, lessonId }) {
           );
         }
         if (part.type === "visual") {
-          return <LessonFlowVisual key={i} block={section.visualBlocks?.[part.index]} />;
+          const block = section.visualBlocks?.[part.index];
+          if (!block) return null;
+          if (isPictureBlock(block)) {
+            const src = imageKey(block.src || block.asset);
+            if (src && shownPictures.has(src)) return null;
+            if (src) shownPictures.add(src);
+            return <div className={`learning-visual learning-visual--${block.type} textbook-visual`} key={i}>
+              <LessonVisual block={block} />
+            </div>;
+          }
+          if (["chart", "calculator", "frameSequence"].includes(block.type)) {
+            return <div className={`learning-visual learning-visual--${block.type} textbook-visual`} key={i}>
+              <LessonVisual block={block} />
+            </div>;
+          }
+          return <LessonFlowVisual key={i} block={block} />;
         }
         if (part.type === "image") {
           // Support multiple positioned slide images per topic, with legacy fallback.
           const image = part.src ? part : section.image;
           if (!image?.src) return null;
+          const src = imageKey(image.src);
+          if (src && shownPictures.has(src)) return null;
+          if (src) shownPictures.add(src);
           return image.hotspots?.length ? (
             <InteractiveImage key={`${lessonId}-${section.id}-${i}`} image={image} title={section.title} />
           ) : (
@@ -72,8 +115,24 @@ function LessonNarrative({ section, lessonId }) {
             </figure>
           );
         }
+
         if (part.type === "takeaway") {
-          return <aside className="textbook-note" key={i}><strong>{part.title || "מה חשוב לזכור?"}</strong><p>{part.text}</p></aside>;
+          const isFirstNote =
+            i === 0 || section.learningFlow[i - 1]?.type !== "takeaway";
+
+          return (
+            <aside className="textbook-note" key={i}>
+              {isFirstNote && (
+                <div className="textbook-note-group-title">
+                  <BookOpen size={17} />
+                  <span>מה חשוב להבין?</span>
+                </div>
+              )}
+
+              <strong>{part.title || "מה חשוב לזכור?"}</strong>
+              <p>{part.text}</p>
+            </aside>
+          );
         }
         return null;
       })}
@@ -180,6 +239,13 @@ export default function InteractiveSummary({
         const answered = selected !== undefined;
         const correct = answered && selected === check?.correctAnswer;
         const hasImage = Boolean(section.image?.src);
+        const visualBlocks = uniqueVisualBlocks(section);
+        const sectionImageKey = imageKey(section.image?.src);
+        const sectionImageInVisualBlocks = visualBlocks.some(block =>
+          isPictureBlock(block) && imageKey(block.src || block.asset) === sectionImageKey
+        );
+        const showSectionImage = hasImage &&
+          (Boolean(section.image?.hotspots?.length) || !sectionImageInVisualBlocks);
         const isExpanded = expanded[section.id] !== false;
 
         return (
@@ -250,9 +316,9 @@ export default function InteractiveSummary({
 
 
 
-                    {section.visualBlocks?.length > 0 && (
+                    {visualBlocks.length > 0 && (
                       <div className="learning-visual-blocks">
-                        {section.visualBlocks.map((block, blockIndex) => (
+                        {visualBlocks.map((block, blockIndex) => (
                           <div className={`learning-visual learning-visual--${block.type}`} key={`${section.id}-visual-${blockIndex}`}>
                             <h4>{block.title}</h4>
                             {block.type === "comparison" && (
@@ -266,24 +332,6 @@ export default function InteractiveSummary({
                                   ))}</tbody>
                                 </table>
                               </div>
-                            )}
-
-
-                            {(block.type === "image" || block.type === "diagram") && (
-                              <figure className="learning-figure">
-                                <img
-                                  src={block.src || block.asset}
-                                  alt={block.alt || block.description || block.title || "תרשים לימודי"}
-                                  className="learning-figure-image"
-                                  loading="lazy"
-                                />
-
-                                {(block.caption || block.description) && (
-                                  <figcaption>
-                                    {block.caption || block.description}
-                                  </figcaption>
-                                )}
-                              </figure>
                             )}
 
 
@@ -303,11 +351,11 @@ export default function InteractiveSummary({
                     )}
 
 
-                    {hasImage && section.image.hotspots?.length > 0 && (
+                    {showSectionImage && section.image.hotspots?.length > 0 && (
                       <InteractiveImage key={`${lessonId}-${section.id}`} image={section.image} title={section.title} />
                     )}
 
-                    {hasImage && !section.image.hotspots?.length && (
+                    {showSectionImage && !section.image.hotspots?.length && (
                       <figure className="interactive-topic-figure">
                         <img src={assetUrl(section.image.src)} alt={section.image.alt || section.title} loading="lazy" />
                         <figcaption>מתוך המצגת המקורית · שקופית {section.image.slide}</figcaption>

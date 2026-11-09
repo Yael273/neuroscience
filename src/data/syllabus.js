@@ -24,6 +24,7 @@ import compMathReview from "./lessons/compcog-math-review.json";
 import compLecture03 from "./lessons/compcog-lecture03.json";
 import compTutorial02 from "./lessons/compcog-tutorial02.json";
 import compTutorial03 from "./lessons/compcog-tutorial03.json";
+import geneticsTutorial02 from "./lessons/genetics-tutorial02.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -184,7 +185,17 @@ export const subjects = [
       lessons: 1,
       duration: null,
       topics: [geneticsTutorial.title]
-    }]
+    },
+    {
+      id: "genetics-tutorial02-chapter",
+      name: "תרגול 2 — רב־אלליות ויחסי דומיננטיות",
+      description: "יחסי דומיננטיות, רב־אלליות, הכלאות, ABO ו-Rh",
+      lessons: 1,
+      duration: 0,
+      lessonIds: [geneticsTutorial02.id],
+      topics: geneticsTutorial02.sections.map((section) => section.title),
+    }
+    ]
   },
   {
     id: "molecular_neurobiology",

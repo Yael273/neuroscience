@@ -903,49 +903,89 @@
 }
 
 
-/* ===== Book-style summary: deliberately scoped to the summary details only ===== */
-/* Overrides older card/grid rules and per-subject color overrides. */
+/* ============================================
+   Unified lesson explanations: structure only.
+   Palette tokens are defined in learning-colors.css.
+   ============================================ */
 .interactive-summary .interactive-topic .interactive-topic-details {
-    display: block !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
     max-width: 100%;
     min-width: 0;
-    margin: 10px 0;
-}
-
-.interactive-summary .interactive-topic .interactive-topic-details .interactive-detail {
-    display: block !important;
-    width: 100%;
-    min-width: 0;
     box-sizing: border-box;
-    margin: 10px 0;
-    padding: 10px;
-    /* border: 0 !important; */
-    border-radius: 10px;
+    margin: 24px 0;
+    padding: 24px 28px;
+    direction: rtl;
     text-align: right;
+    background: var(--learn-concept-bg, #eaf3ff);
+    border: 0;
+    border-radius: 17px;
+    box-shadow: none;
 }
 
-.interactive-summary .interactive-topic .interactive-detail .interactive-detail-heading,
-.interactive-summary .interactive-topic .interactive-detail>strong {
+.interactive-summary .interactive-topic .interactive-topic-details::before {
+    content: "מה חשוב להבין?";
     display: block;
     margin: 0;
-    padding: 0;
-    color: #163e31 !important;
-    font-size: clamp(0.3rem, 1.5vw, 1.12rem);
-    line-height: 1.6;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--learn-concept-line, #cbdff5);
+    color: var(--learn-concept-title, #28578f);
+    font-size: 19px;
     font-weight: 750;
+    line-height: 1.55;
+}
+
+.interactive-summary .interactive-topic .interactive-topic-details > .interactive-detail {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0;
+    padding: 20px 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
     text-align: right;
 }
 
-.interactive-summary .interactive-topic .interactive-detail .interactive-detail-text,
-.interactive-summary .interactive-topic .interactive-detail>p {
+.interactive-summary .interactive-topic .interactive-topic-details > .interactive-detail:first-child {
+    padding-top: 20px;
+}
+
+.interactive-summary .interactive-topic .interactive-topic-details > .interactive-detail + .interactive-detail {
+    border-top: 1px solid var(--learn-concept-line, #cbdff5);
+}
+
+.interactive-summary .interactive-topic .interactive-topic-details > .interactive-detail:last-child {
+    padding-bottom: 0;
+}
+
+.interactive-summary .interactive-topic .interactive-topic-details .interactive-detail-heading,
+.interactive-summary .interactive-topic .interactive-topic-details .interactive-detail > strong {
+    display: block;
+    /* margin: 0 0 9px; */
+    padding: 0;
+    color: var(--learn-concept-title, #28578f);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: right;
+}
+
+.interactive-summary .interactive-topic .interactive-topic-details .interactive-detail-text,
+.interactive-summary .interactive-topic .interactive-topic-details .interactive-detail > p {
     margin: 0;
     padding: 0;
-    color: #425b52 !important;
-    font-size: 0.8rem;
-    line-height: 1.75;
+    color: var(--learn-concept-text, #354b65);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.9;
     white-space: pre-line;
+    overflow-wrap: anywhere;
     text-align: right;
-    overflow-wrap: break-word;
 }
 
 .interactive-summary .interactive-topic .interactive-detail .interactive-detail-text.is-clamped {
@@ -970,56 +1010,30 @@
     color: #147c51;
     cursor: pointer;
 }
-
-.interactive-summary .interactive-topic .interactive-detail-more:hover {
-    text-decoration: underline;
-}
-
-.interactive-summary .interactive-topic .interactive-detail-more svg {
-    transition: transform .2s ease;
-}
-
-.interactive-summary .interactive-topic .interactive-detail-more .detail-chevron-up {
-    transform: rotate(180deg);
-}
-
+.interactive-summary .interactive-topic .interactive-detail-more:hover { text-decoration: underline; }
+.interactive-summary .interactive-topic .interactive-detail-more svg { transition: transform .2s ease; }
+.interactive-summary .interactive-topic .interactive-detail-more .detail-chevron-up { transform: rotate(180deg); }
 .interactive-summary .interactive-topic .interactive-detail-more:focus-visible {
     outline: 2px solid #148f55;
     outline-offset: 4px;
     border-radius: 4px;
 }
 
-/* The opening paragraph and accompanying diagrams stay comfortably readable. */
 .interactive-summary .interactive-topic .interactive-topic-summary {
-    max-width: 850px;
     margin: 10px auto 14px;
     line-height: 1.95;
 }
-
 .interactive-summary .interactive-topic .learning-visual-blocks {
     max-width: 100%;
     margin-top: 22px;
 }
-
 @media (max-width: 640px) {
-    .interactive-summary .interactive-topic .interactive-topic-details {
-        margin: 18px auto 22px;
-    }
-
-    .interactive-summary .interactive-topic .interactive-topic-details .interactive-detail {
-        padding: 15px 0 16px;
-    }
-
-    .interactive-summary .interactive-topic .interactive-detail .interactive-detail-text {
-        font-size: .95rem;
-        line-height: 1.85;
-    }
+    .interactive-summary .interactive-topic .interactive-topic-details { padding: 18px 20px; }
+    .interactive-summary .interactive-topic .interactive-topic-details .interactive-detail > p,
+    .interactive-summary .interactive-topic .interactive-topic-details .interactive-detail-text { font-size: 15px; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-    .interactive-summary .interactive-topic .interactive-detail-more svg {
-        transition: none;
-    }
+    .interactive-summary .interactive-topic .interactive-detail-more svg { transition: none; }
 }
 
 
@@ -1113,22 +1127,55 @@
     max-height: 390px;
 }
 
+/* Consecutive lesson takeaways visually form one blue group.
+   The JSX may optionally add .textbook-note-group-title to the first note. */
 .interactive-summary .textbook-note {
-    border-right: 3px solid #4eaa78;
-    border-radius: 0 8px 8px 0;
-    background: #f4faf6;
-    padding: 15px 18px;
-    margin: 22px 0 30px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px 24px;
+    background: var(--learn-concept-bg, #eaf3ff);
+    border: 0;
+    border-radius: 0;
+    text-align: right;
+    direction: rtl;
 }
-
+.interactive-summary .textbook-note:not(.textbook-note + .textbook-note) {
+    margin-top: 24px;
+    border-radius: 16px 16px 0 0;
+}
+.interactive-summary .textbook-note + .textbook-note {
+    border-top: 1px solid var(--learn-concept-line, #cbdff5);
+}
+.interactive-summary .textbook-note:not(:has(+ .textbook-note)) {
+    margin-bottom: 24px;
+    border-radius: 0 0 16px 16px;
+}
+.interactive-summary .textbook-note:not(.textbook-note + .textbook-note):not(:has(+ .textbook-note)) {
+    border-radius: 16px;
+}
 .interactive-summary .textbook-note strong {
-    color: #21573d;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--learn-concept-title, #28578f);
+    font-size: 17px;
+    line-height: 1.6;
 }
-
 .interactive-summary .textbook-note p {
-    margin: 6px 0 0;
-    color: #3f5849;
-    line-height: 1.8;
+    margin: 0;
+    color: var(--learn-concept-text, #354b65);
+    font-size: 16px;
+    line-height: 1.9;
+}
+.interactive-summary .textbook-note-group-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--learn-concept-line, #cbdff5);
+    color: var(--learn-concept-title, #28578f);
+    font-size: 18px;
+    font-weight: 750;
 }
 
 @media (max-width: 640px) {
