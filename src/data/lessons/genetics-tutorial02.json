@@ -49,19 +49,82 @@
           "steps": [
             {
               "title": "מזהים את האללים",
-              "description": "מסמנים אללים שונים באופן חד־משמעי"
+              "description": "מסמנים אללים שונים באופן חד־משמעי",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "דוגמה: שלושה אללים במערכת ABO — נבחר את האללים להצלבה",
+                "alleles": [
+                  {
+                    "symbol": "Iᴬ",
+                    "label": "אלל A",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "Iᴮ",
+                    "label": "אלל B",
+                    "selected": false
+                  },
+                  {
+                    "symbol": "i",
+                    "label": "אלל O",
+                    "selected": true
+                  }
+                ]
+              }
             },
             {
               "title": "מנסחים יחס דומיננטיות",
-              "description": "מגדירים פנוטיפ של כל גנוטיפ אפשרי"
+              "description": "מגדירים פנוטיפ של כל גנוטיפ אפשרי",
+              "visual": {
+                "type": "dominance",
+                "caption": "דוגמה: בגנוטיפ Iᴬi האלל Iᴬ דומיננטי ביחס ל־i",
+                "genotype": [
+                  "Iᴬ",
+                  "i"
+                ],
+                "phenotype": "סוג דם A",
+                "explanation": "הגנוטיפ Iᴬi מתבטא בפנוטיפ A."
+              }
             },
             {
               "title": "מוצאים גמטות",
-              "description": "כל צאצא מקבל אלל אחד מכל הורה"
+              "description": "כל צאצא מקבל אלל אחד מכל הורה",
+              "visual": {
+                "type": "gamete-separation",
+                "caption": "דוגמה: הורה בעל גנוטיפ Iᴬi יוצר שני סוגי גמטות",
+                "genotype": [
+                  "Iᴬ",
+                  "i"
+                ],
+                "explanation": "כל גמטה מכילה אלל אחד. כל סוג יופיע בהסתברות 1/2."
+              }
             },
             {
               "title": "משלבים ומחשבים",
-              "description": "מסיקים יחסים או הסתברויות ומסבירים"
+              "description": "מסיקים יחסים או הסתברויות ומסבירים",
+              "visual": {
+                "type": "punnett-square",
+                "caption": "דוגמה: הכלאה Iᴬi × ii",
+                "parentA": [
+                  "Iᴬ",
+                  "i"
+                ],
+                "parentB": [
+                  "i",
+                  "i"
+                ],
+                "phenotypes": [
+                  [
+                    "סוג A",
+                    "סוג A"
+                  ],
+                  [
+                    "סוג O",
+                    "סוג O"
+                  ]
+                ],
+                "result": "50% סוג דם A ו־50% סוג דם O"
+              }
             }
           ]
         }
@@ -633,15 +696,79 @@
           "steps": [
             {
               "title": "צבע",
-              "description": "שחור 1/4, אפור 1/2, לבן 1/4"
+              "description": "שחור 1/4, אפור 1/2, לבן 1/4",
+              "visual": {
+                "type": "probability-distribution",
+                "caption": "התפלגות צבעי הפרווה בדור F₂ (דומיננטיות חלקית)",
+                "outcomes": [
+                  {
+                    "label": "שחור",
+                    "fraction": "1/4",
+                    "probability": 0.25,
+                    "color": "#475569"
+                  },
+                  {
+                    "label": "אפור",
+                    "fraction": "1/2",
+                    "probability": 0.5,
+                    "color": "#829db3"
+                  },
+                  {
+                    "label": "לבן",
+                    "fraction": "1/4",
+                    "probability": 0.25,
+                    "color": "#b5c9d9"
+                  }
+                ],
+                "explanation": "יחס פנוטיפי 1:2:1 — סכום ההסתברויות שווה ל־1."
+              }
             },
             {
               "title": "קרניים",
-              "description": "ללא קרניים 3/4, עם קרניים 1/4"
+              "description": "ללא קרניים 3/4, עם קרניים 1/4",
+              "visual": {
+                "type": "probability-distribution",
+                "caption": "התפלגות מצב הקרניים בדור F₂ (דומיננטיות מלאה)",
+                "outcomes": [
+                  {
+                    "label": "ללא קרניים",
+                    "fraction": "3/4",
+                    "probability": 0.75,
+                    "color": "#34a684"
+                  },
+                  {
+                    "label": "עם קרניים",
+                    "fraction": "1/4",
+                    "probability": 0.25,
+                    "color": "#d7a36d"
+                  }
+                ],
+                "explanation": "יחס פנוטיפי 3:1, בהתאם למודל שבתרגיל."
+              }
             },
             {
               "title": "פנוטיפ משולב",
-              "description": "למשל אפור חסר קרניים = 1/2 × 3/4 = 3/8"
+              "description": "למשל אפור חסר קרניים = 1/2 × 3/4 = 3/8",
+              "visual": {
+                "type": "independent-product",
+                "caption": "חיבור שני מאפיינים בלתי תלויים לפנוטיפ אחד",
+                "factors": [
+                  {
+                    "label": "אפור",
+                    "fraction": "1/2"
+                  },
+                  {
+                    "label": "ללא קרניים",
+                    "fraction": "3/4"
+                  }
+                ],
+                "equation": "1/2 × 3/4 = 3/8",
+                "resultFraction": "3/8",
+                "numerator": 3,
+                "denominator": 8,
+                "resultText": "3 מתוך 8 צאצאים צפויים להיות אפורים וללא קרניים",
+                "explanation": "כופלים הסתברויות משום שבמודל התרגיל הגנים בלתי תלויים."
+              }
             }
           ]
         }
