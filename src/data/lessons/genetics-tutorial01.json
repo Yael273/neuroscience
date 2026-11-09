@@ -98,19 +98,77 @@
           "steps": [
             {
               "title": "דור P: RR × rr",
-              "description": "זן טהור חלק מוכלא עם זן טהור מקומט"
+              "description": "זן טהור חלק מוכלא עם זן טהור מקומט",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "ההורים: שני זנים טהורים",
+                "alleles": [
+                  {
+                    "symbol": "RR",
+                    "label": "חלק",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "rr",
+                    "label": "מקומט",
+                    "selected": true
+                  }
+                ]
+              }
             },
             {
               "title": "דור F1: כולם Rr",
-              "description": "כל הצאצאים חלקים כי R דומיננטי"
+              "description": "כל הצאצאים חלקים כי R דומיננטי",
+              "visual": {
+                "type": "dominance",
+                "caption": "דור F1: כל הצאצאים מקבלים R מהורה אחד ו־r מהשני",
+                "genotype": [
+                  "R",
+                  "r"
+                ],
+                "phenotype": "100% זרעים חלקים",
+                "explanation": "למרות שהגנוטיפ Rr, הפנוטיפ חלק כי R דומיננטי."
+              }
             },
             {
               "title": "הכלאה עצמית: Rr × Rr",
-              "description": "כל הורה יוצר 50% גמטות R ו־50% r"
+              "description": "כל הורה יוצר 50% גמטות R ו־50% r",
+              "visual": {
+                "type": "gamete-separation",
+                "caption": "הפרדת האללים בהכלאת F1",
+                "genotype": [
+                  "R",
+                  "r"
+                ],
+                "explanation": "כל פרט Rr מייצר גמטות R ו־r, כל אחת בשכיחות 50%."
+              }
             },
             {
               "title": "דור F2",
-              "description": "1 RR : 2 Rr : 1 rr, כלומר 3 חלקים : 1 מקומט"
+              "description": "1 RR : 2 Rr : 1 rr, כלומר 3 חלקים : 1 מקומט",
+              "visual": {
+                "type": "punnett-square",
+                "caption": "מילוי הדרגתי של ריבוע פאנט F2",
+                "parentA": [
+                  "R",
+                  "r"
+                ],
+                "parentB": [
+                  "R",
+                  "r"
+                ],
+                "phenotypes": [
+                  [
+                    "חלק",
+                    "חלק"
+                  ],
+                  [
+                    "חלק",
+                    "מקומט"
+                  ]
+                ],
+                "result": "יחס גנוטיפים 1:2:1; פנוטיפים 3 חלקים : 1 מקומט."
+              }
             }
           ]
         },
@@ -174,15 +232,59 @@
           "steps": [
             {
               "title": "Aa",
-              "description": "לפרט שני אללים שונים"
+              "description": "לפרט שני אללים שונים",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "שני האללים של אותו גן",
+                "alleles": [
+                  {
+                    "symbol": "A",
+                    "label": "אלל אחד",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "a",
+                    "label": "אלל שני",
+                    "selected": true
+                  }
+                ]
+              }
             },
             {
               "title": "מיוזה",
-              "description": "האללים נפרדים"
+              "description": "האללים נפרדים",
+              "visual": {
+                "type": "gamete-separation",
+                "caption": "מיוזה: כל גמטה מקבלת רק אחד מהאללים",
+                "genotype": [
+                  "A",
+                  "a"
+                ],
+                "explanation": "הדוגמה מתארת את הפרדת האללים, ולא את כל שלבי המיוזה."
+              }
             },
             {
               "title": "50% A ו־50% a",
-              "description": "כל גמטה מקבלת אלל אחד"
+              "description": "כל גמטה מקבלת אלל אחד",
+              "visual": {
+                "type": "probability-distribution",
+                "caption": "שכיחות סוגי הגמטות",
+                "outcomes": [
+                  {
+                    "label": "A",
+                    "probability": 0.5,
+                    "fraction": "50%",
+                    "color": "#4776b6"
+                  },
+                  {
+                    "label": "a",
+                    "probability": 0.5,
+                    "fraction": "50%",
+                    "color": "#25a375"
+                  }
+                ],
+                "explanation": "במודל מנדלי פשוט כל אלל מועבר למחצית הגמטות."
+              }
             }
           ]
         },
@@ -427,23 +529,81 @@
           "steps": [
             {
               "title": "קוראים סימונים",
-              "description": "מזהים דור, מין, תכונה וקשרי הורות"
+              "description": "מזהים דור, מין, תכונה וקשרי הורות",
+              "visual": {
+                "type": "pedigree-example",
+                "caption": "מקרא אילן יוחסין",
+                "focus": "legend",
+                "explanation": "ריבוע = זכר; עיגול = נקבה; מילוי = מציג את התכונה."
+              }
             },
             {
               "title": "מחפשים רמזים חזקים",
-              "description": "ילד בעל פנוטיפ רצסיבי משני הורים שאינם מציגים אותו תומך ברצסיביות"
+              "description": "ילד בעל פנוטיפ רצסיבי משני הורים שאינם מציגים אותו תומך ברצסיביות",
+              "visual": {
+                "type": "pedigree-example",
+                "caption": "דוגמה: שני הורים שאינם מציגים תכונה וילד המבטא אותה",
+                "focus": "parents",
+                "explanation": "במודל אוטוזומלי רצסיבי, התוצאה מתאימה לשני הורים נשאים."
+              }
             },
             {
               "title": "משייכים גנוטיפים ודאיים",
-              "description": "למשל aa לכל בעל פנוטיפ רצסיבי במודל"
+              "description": "למשל aa לכל בעל פנוטיפ רצסיבי במודל",
+              "visual": {
+                "type": "pedigree-example",
+                "caption": "סימון גנוטיפים ודאיים",
+                "focus": "affected",
+                "explanation": "לילד המבטא פנוטיפ רצסיבי משייכים aa; כל אחד מהוריו הוא Aa בדוגמה זו."
+              }
             },
             {
               "title": "מסמנים אי־ודאות",
-              "description": "A_ כשידוע רק שקיים לפחות A אחד"
+              "description": "A_ כשידוע רק שקיים לפחות A אחד",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "לפני שיודעים הכול, חלק מהגנוטיפים נותרים לא מוכרעים",
+                "alleles": [
+                  {
+                    "symbol": "AA",
+                    "label": "בריא שאינו נשא",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "Aa",
+                    "label": "בריא נשא",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "aa",
+                    "label": "בעל פנוטיפ רצסיבי",
+                    "selected": false
+                  }
+                ]
+              }
             },
             {
               "title": "מחשבים הסתברויות",
-              "description": "מעדכנים לפי מידע נוסף כמו היות הפרט בריא"
+              "description": "מעדכנים לפי מידע נוסף כמו היות הפרט בריא",
+              "visual": {
+                "type": "probability-distribution",
+                "caption": "הסתברות מותנית בקרב צאצאים בריאים",
+                "outcomes": [
+                  {
+                    "label": "AA",
+                    "probability": 0.3333333333333333,
+                    "fraction": "1/3",
+                    "color": "#4776b6"
+                  },
+                  {
+                    "label": "Aa",
+                    "probability": 0.6666666666666666,
+                    "fraction": "2/3",
+                    "color": "#25a375"
+                  }
+                ],
+                "explanation": "מתוך AA, Aa, Aa בלבד: הסיכוי לנשאות הוא 2/3, ולא 1/2."
+              }
             }
           ]
         },
@@ -527,23 +687,90 @@
           "steps": [
             {
               "title": "דור ההורים",
-              "description": "RR אדום × rr צהוב"
+              "description": "RR אדום × rr צהוב",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "דור ההורים: צבע פרי",
+                "alleles": [
+                  {
+                    "symbol": "RR",
+                    "label": "עגבנייה אדומה",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "rr",
+                    "label": "עגבנייה צהובה",
+                    "selected": true
+                  }
+                ]
+              }
             },
             {
               "title": "גמטות",
-              "description": "כל הורה RR נותן R; כל הורה rr נותן r"
+              "description": "כל הורה RR נותן R; כל הורה rr נותן r",
+              "visual": {
+                "type": "gamete-separation",
+                "caption": "הורים טהורים יוצרים כל אחד סוג גמטה אחד",
+                "genotype": [
+                  "R",
+                  "r"
+                ],
+                "explanation": "R מגיע מהורה RR; r מגיע מהורה rr. כאן שני העיגולים מייצגים מקורות הוריים שונים."
+              }
             },
             {
               "title": "דור F1",
-              "description": "כולם Rr ואדומים"
+              "description": "כולם Rr ואדומים",
+              "visual": {
+                "type": "dominance",
+                "caption": "כל צאצאי F1 הם Rr",
+                "genotype": [
+                  "R",
+                  "r"
+                ],
+                "phenotype": "עגבנייה אדומה",
+                "explanation": "כל הצאצאים הטרוזיגוטים ובעלי פנוטיפ אדום."
+              }
             },
             {
               "title": "F1 × F1",
-              "description": "Rr × Rr; כל הורה נותן R או r"
+              "description": "Rr × Rr; כל הורה נותן R או r",
+              "visual": {
+                "type": "gamete-separation",
+                "caption": "כל צמח F1 מייצר שני סוגי גמטות",
+                "genotype": [
+                  "R",
+                  "r"
+                ],
+                "explanation": "R ו־r, כל אחד בהסתברות 1/2."
+              }
             },
             {
               "title": "דור F2",
-              "description": "25% RR, 50% Rr, 25% rr; 75% אדומים ו־25% צהובים"
+              "description": "25% RR, 50% Rr, 25% rr; 75% אדומים ו־25% צהובים",
+              "visual": {
+                "type": "punnett-square",
+                "caption": "הכלאת F1 × F1: ריבוע פאנט F2",
+                "parentA": [
+                  "R",
+                  "r"
+                ],
+                "parentB": [
+                  "R",
+                  "r"
+                ],
+                "phenotypes": [
+                  [
+                    "אדום",
+                    "אדום"
+                  ],
+                  [
+                    "אדום",
+                    "צהוב"
+                  ]
+                ],
+                "result": "25% RR, 50% Rr, 25% rr; כלומר 75% אדומים ו־25% צהובים."
+              }
             }
           ]
         },
@@ -642,23 +869,78 @@
           "steps": [
             {
               "title": "סימוני השושלת",
-              "description": "בודקים מי ההורים והצאצאים ואילו פרטים מסומנים"
+              "description": "בודקים מי ההורים והצאצאים ואילו פרטים מסומנים",
+              "visual": {
+                "type": "pedigree-example",
+                "caption": "הבנת הקשרים המשפחתיים",
+                "focus": "legend",
+                "explanation": "זהו אילן יוחסין סכמטי להמחשה, לא שחזור של השושלת בשקופית."
+              }
             },
             {
               "title": "אופן הורשה",
-              "description": "מנסים מודל רצסיבי ודומיננטי ובודקים התאמה"
+              "description": "מנסים מודל רצסיבי ודומיננטי ובודקים התאמה",
+              "visual": {
+                "type": "pedigree-example",
+                "caption": "רמז להורשה אוטוזומלית רצסיבית",
+                "focus": "parents",
+                "explanation": "שני הורים ללא פנוטיפ רצסיבי יכולים להוליד ילד aa אם שניהם נשאים."
+              }
             },
             {
               "title": "גנוטיפים",
-              "description": "מסמנים גנוטיפים מוכרחים ואלטרנטיבות"
+              "description": "מסמנים גנוטיפים מוכרחים ואלטרנטיבות",
+              "visual": {
+                "type": "pedigree-example",
+                "caption": "שיוך גנוטיפים לפי הפנוטיפים",
+                "focus": "affected",
+                "explanation": "הילד המסומן aa; ההורים הבריאים חייבים להיות Aa בדוגמה זו."
+              }
             },
             {
               "title": "הסתברות מותנית",
-              "description": "כאשר ידוע שפרט בריא, מסירים אפשרויות חולות לפני נרמול"
+              "description": "כאשר ידוע שפרט בריא, מסירים אפשרויות חולות לפני נרמול",
+              "visual": {
+                "type": "probability-distribution",
+                "caption": "התניה על כך שהצאצא בריא",
+                "outcomes": [
+                  {
+                    "label": "AA",
+                    "probability": 0.3333333333333333,
+                    "fraction": "1/3",
+                    "color": "#4776b6"
+                  },
+                  {
+                    "label": "Aa",
+                    "probability": 0.6666666666666666,
+                    "fraction": "2/3",
+                    "color": "#25a375"
+                  }
+                ],
+                "explanation": "aa (1/4) הוסר מהמרחב האפשרי; הסתברויות הבריאים מנורמלות ל־1."
+              }
             },
             {
               "title": "חישוב בן/בת",
-              "description": "בהורשה אוטוזומלית ובאי־תלות, כופלים ב־1/2 רק אם השאלה מבקשת מין מסוים"
+              "description": "בהורשה אוטוזומלית ובאי־תלות, כופלים ב־1/2 רק אם השאלה מבקשת מין מסוים",
+              "visual": {
+                "type": "independent-product",
+                "caption": "הסתברות משותפת לבן חולה",
+                "factors": [
+                  {
+                    "label": "מחלה אוטוזומלית",
+                    "fraction": "1/4"
+                  },
+                  {
+                    "label": "בן",
+                    "fraction": "1/2"
+                  }
+                ],
+                "resultFraction": "1/8",
+                "numerator": 1,
+                "denominator": 8,
+                "resultText": "הסתברות לבן חולה = 1/8, בהנחת עצמאות מין הצאצא והגנוטיפ."
+              }
             }
           ]
         },
@@ -771,19 +1053,92 @@
           "steps": [
             {
               "title": "מזהים יחס",
-              "description": "מחלקים בקבוצה הקטנה ומחפשים 1:1 או 3:1"
+              "description": "מחלקים בקבוצה הקטנה ומחפשים 1:1 או 3:1",
+              "visual": {
+                "type": "ratio-analysis",
+                "caption": "מנתוני צאצאים ליחס מקורב",
+                "items": [
+                  {
+                    "label": "אפורים",
+                    "value": 118,
+                    "color": "#4776b6"
+                  },
+                  {
+                    "label": "לבנים",
+                    "value": 39,
+                    "color": "#25a375"
+                  }
+                ],
+                "explanation": "118/39 ≈ 3.03, לכן היחס קרוב ל־3:1."
+              }
             },
             {
               "title": "בונים הצעה",
-              "description": "משייכים גנוטיפים שעשויים ליצור יחס כזה"
+              "description": "משייכים גנוטיפים שעשויים ליצור יחס כזה",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "גנוטיפים אפשריים בהנחת דומיננטיות מלאה",
+                "alleles": [
+                  {
+                    "symbol": "Gg",
+                    "label": "הורה אפור נשא",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "Gg",
+                    "label": "הורה אפור נשא",
+                    "selected": true
+                  }
+                ]
+              }
             },
             {
               "title": "מאמתים",
-              "description": "בונים טבלת פאנט ומוודאים שהפנוטיפים תואמים"
+              "description": "בונים טבלת פאנט ומוודאים שהפנוטיפים תואמים",
+              "visual": {
+                "type": "punnett-square",
+                "caption": "טבלת פאנט מאשרת את היחס 3:1",
+                "parentA": [
+                  "G",
+                  "g"
+                ],
+                "parentB": [
+                  "G",
+                  "g"
+                ],
+                "phenotypes": [
+                  [
+                    "אפור",
+                    "אפור"
+                  ],
+                  [
+                    "אפור",
+                    "לבן"
+                  ]
+                ],
+                "result": "יחס צפוי 3 אפורים : 1 לבן."
+              }
             },
             {
               "title": "נזהרים ממדגם סופי",
-              "description": "היחס שנצפה קרוב לצפוי אך לא בהכרח זהה לו"
+              "description": "היחס שנצפה קרוב לצפוי אך לא בהכרח זהה לו",
+              "visual": {
+                "type": "ratio-analysis",
+                "caption": "מדגם לעומת יחס תיאורטי",
+                "items": [
+                  {
+                    "label": "אפורים שנצפו",
+                    "value": 118,
+                    "color": "#4776b6"
+                  },
+                  {
+                    "label": "לבנים שנצפו",
+                    "value": 39,
+                    "color": "#25a375"
+                  }
+                ],
+                "explanation": "היחס במדגם לא חייב להיות בדיוק 3:1; בוחנים עד כמה הוא קרוב למודל."
+              }
             }
           ]
         },
@@ -854,19 +1209,43 @@
           "steps": [
             {
               "title": "AaBb × AaBb",
-              "description": "שני פרטים הטרוזיגוטים בשני גנים"
+              "description": "שני פרטים הטרוזיגוטים בשני גנים",
+              "visual": {
+                "type": "dihybrid-cross",
+                "caption": "שני ההורים הטרוזיגוטים בשני הגנים",
+                "phase": "parents",
+                "explanation": "AaBb × AaBb; מניחים הפרדה בלתי תלויה."
+              }
             },
             {
               "title": "כל הורה יוצר 4 גמטות",
-              "description": "AB, Ab, aB, ab"
+              "description": "AB, Ab, aB, ab",
+              "visual": {
+                "type": "dihybrid-cross",
+                "caption": "כל הורה יוצר ארבעה סוגי גמטות",
+                "phase": "gametes",
+                "explanation": "AB, Ab, aB, ab — כל אחת בהסתברות 1/4."
+              }
             },
             {
               "title": "מסדרים 4×4",
-              "description": "16 צירופים בעלי הסתברות שווה"
+              "description": "16 צירופים בעלי הסתברות שווה",
+              "visual": {
+                "type": "dihybrid-cross",
+                "caption": "ריבוע פאנט דו־היברידי 4×4",
+                "phase": "square",
+                "explanation": "16 צירופים בעלי הסתברות שווה של 1/16."
+              }
             },
             {
               "title": "מסווגים לפנוטיפים",
-              "description": "9 A_B_, 3 A_bb, 3 aaB_, 1 aabb"
+              "description": "9 A_B_, 3 A_bb, 3 aaB_, 1 aabb",
+              "visual": {
+                "type": "dihybrid-cross",
+                "caption": "הצירופים מסווגים לארבע קבוצות פנוטיפיות",
+                "phase": "phenotypes",
+                "explanation": "9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb."
+              }
             }
           ]
         },
@@ -1044,23 +1423,143 @@
           "steps": [
             {
               "title": "ניסוח השערות",
-              "description": "H₀: היחס 9:3:3:1; H₁: יחס שונה"
+              "description": "H₀: היחס 9:3:3:1; H₁: יחס שונה",
+              "visual": {
+                "type": "chi-square-table",
+                "caption": "השערות לבדיקת יחס 9:3:3:1",
+                "focus": "hypotheses",
+                "observed": [
+                  315,
+                  108,
+                  101,
+                  32
+                ],
+                "expected": [
+                  312.75,
+                  104.25,
+                  104.25,
+                  34.75
+                ],
+                "names": [
+                  "עגול צהוב",
+                  "עגול ירוק",
+                  "מקומט צהוב",
+                  "מקומט ירוק"
+                ],
+                "explanation": "H₀: היחס 9:3:3:1. H₁: ההתפלגות שונה."
+              }
             },
             {
               "title": "חישוב צפויים",
-              "description": "E = מספר הכולל × השבר הצפוי בכל קבוצה"
+              "description": "E = מספר הכולל × השבר הצפוי בכל קבוצה",
+              "visual": {
+                "type": "chi-square-table",
+                "caption": "הספירות הצפויות מחושבות לפי 556 × שכיחות יחסית",
+                "focus": "expected",
+                "observed": [
+                  315,
+                  108,
+                  101,
+                  32
+                ],
+                "expected": [
+                  312.75,
+                  104.25,
+                  104.25,
+                  34.75
+                ],
+                "names": [
+                  "עגול צהוב",
+                  "עגול ירוק",
+                  "מקומט צהוב",
+                  "מקומט ירוק"
+                ],
+                "explanation": "E = N × p. ההסתברויות: 9/16, 3/16, 3/16, 1/16."
+              }
             },
             {
               "title": "חישוב תרומה",
-              "description": "לכל קבוצה: (O−E)²/E"
+              "description": "לכל קבוצה: (O−E)²/E",
+              "visual": {
+                "type": "chi-square-table",
+                "caption": "כל שורה תורמת (O−E)²/E לסטטיסטי",
+                "focus": "contributions",
+                "observed": [
+                  315,
+                  108,
+                  101,
+                  32
+                ],
+                "expected": [
+                  312.75,
+                  104.25,
+                  104.25,
+                  34.75
+                ],
+                "names": [
+                  "עגול צהוב",
+                  "עגול ירוק",
+                  "מקומט צהוב",
+                  "מקומט ירוק"
+                ],
+                "explanation": "מחברים את התרומות לקבלת χ² ≈ 0.47."
+              }
             },
             {
               "title": "דרגות חופש",
-              "description": "df=4−1=3 כאשר ההסתברויות נקבעו מראש"
+              "description": "df=4−1=3 כאשר ההסתברויות נקבעו מראש",
+              "visual": {
+                "type": "chi-square-table",
+                "caption": "מספר הקטגוריות פחות 1",
+                "focus": "degrees",
+                "observed": [
+                  315,
+                  108,
+                  101,
+                  32
+                ],
+                "expected": [
+                  312.75,
+                  104.25,
+                  104.25,
+                  34.75
+                ],
+                "names": [
+                  "עגול צהוב",
+                  "עגול ירוק",
+                  "מקומט צהוב",
+                  "מקומט ירוק"
+                ],
+                "explanation": "df = 4−1 = 3, כי ההסתברויות נקבעו מראש."
+              }
             },
             {
               "title": "השוואה והחלטה",
-              "description": "χ² מחושב לעומת הערך הקריטי לפי α ו־df"
+              "description": "χ² מחושב לעומת הערך הקריטי לפי α ו־df",
+              "visual": {
+                "type": "chi-square-table",
+                "caption": "השוואה לערך הקריטי",
+                "focus": "decision",
+                "observed": [
+                  315,
+                  108,
+                  101,
+                  32
+                ],
+                "expected": [
+                  312.75,
+                  104.25,
+                  104.25,
+                  34.75
+                ],
+                "names": [
+                  "עגול צהוב",
+                  "עגול ירוק",
+                  "מקומט צהוב",
+                  "מקומט ירוק"
+                ],
+                "explanation": "χ² ≈ 0.47 קטן מ־7.82; לכן אין לדחות את H₀ ברמה 0.05."
+              }
             }
           ]
         },
@@ -1160,27 +1659,118 @@
           "steps": [
             {
               "title": "מזהים יחס",
-              "description": "5,470 : 1,802 : 1,798 : 603 קרוב ל־9:3:3:1"
+              "description": "5,470 : 1,802 : 1,798 : 603 קרוב ל־9:3:3:1",
+              "visual": {
+                "type": "ratio-analysis",
+                "caption": "התוצאות שנצפו ב־F2",
+                "items": [
+                  {
+                    "label": "סגול־מנוצה",
+                    "value": 5470,
+                    "color": "#4776b6"
+                  },
+                  {
+                    "label": "סגול־מאוצבע",
+                    "value": 1802,
+                    "color": "#8760b3"
+                  },
+                  {
+                    "label": "אדום־מנוצה",
+                    "value": 1798,
+                    "color": "#25a375"
+                  },
+                  {
+                    "label": "אדום־מאוצבע",
+                    "value": 603,
+                    "color": "#d49a37"
+                  }
+                ],
+                "explanation": "בקירוב 9:3:3:1, תחת דומיננטיות מלאה ואי־תלות."
+              }
             },
             {
               "title": "מגדירים אללים",
-              "description": "A סגול, a אדום, B מנוצה, b מאוצבע"
+              "description": "A סגול, a אדום, B מנוצה, b מאוצבע",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "מקרא האללים בתרגיל",
+                "alleles": [
+                  {
+                    "symbol": "A",
+                    "label": "סגול",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "a",
+                    "label": "אדום",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "B",
+                    "label": "עלים מנוצים",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "b",
+                    "label": "עלים מאוצבעים",
+                    "selected": true
+                  }
+                ]
+              }
             },
             {
               "title": "הורים טהורים",
-              "description": "AABB × aabb"
+              "description": "AABB × aabb",
+              "visual": {
+                "type": "allele-identification",
+                "caption": "בחירת ההורים הטהורים על סמך המודל",
+                "alleles": [
+                  {
+                    "symbol": "AABB",
+                    "label": "סגול־מנוצה",
+                    "selected": true
+                  },
+                  {
+                    "symbol": "aabb",
+                    "label": "אדום־מאוצבע",
+                    "selected": true
+                  }
+                ]
+              }
             },
             {
               "title": "דור F1",
-              "description": "כולם AaBb, סגולים ומנוצים"
+              "description": "כולם AaBb, סגולים ומנוצים",
+              "visual": {
+                "type": "dominance",
+                "caption": "צאצאי F1 הטרוזיגוטים בשני הגנים",
+                "genotype": [
+                  "Aa",
+                  "Bb"
+                ],
+                "phenotype": "סגול ומנוצה",
+                "explanation": "כל צאצאי F1 הם AaBb לפי המודל."
+              }
             },
             {
               "title": "הכלאה עצמית",
-              "description": "AaBb × AaBb"
+              "description": "AaBb × AaBb",
+              "visual": {
+                "type": "dihybrid-cross",
+                "caption": "הכלאה עצמית של F1",
+                "phase": "gametes",
+                "explanation": "AaBb × AaBb — ארבע גמטות לכל הורה."
+              }
             },
             {
               "title": "דור F2",
-              "description": "9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb"
+              "description": "9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb",
+              "visual": {
+                "type": "dihybrid-cross",
+                "caption": "תוצאה צפויה ב־F2",
+                "phase": "phenotypes",
+                "explanation": "9:3:3:1, בהתאם לקבוצות הפנוטיפיות שהוגדרו."
+              }
             }
           ]
         },

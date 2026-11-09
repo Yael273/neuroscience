@@ -437,3 +437,42 @@
  .process-flow .process-flow-result-cells > span,
  .process-flow .process-flow-product-result { animation: none; opacity: 1; transform: none; }
 }
+
+/* Tutorial 1 — illustrations, all scoped to ProcessFlow */
+.process-flow .process-flow-pedigree { text-align:center; max-width:550px; margin:auto; }
+.process-flow .process-flow-pedigree svg { display:block; width:100%; max-height:245px; margin:auto; }
+.process-flow .process-flow-pedigree-highlights { animation:pf-pedigree-highlight 1.3s ease 400ms both; }
+@keyframes pf-pedigree-highlight { from {opacity:0; transform:scale(.98);transform-origin:center} to {opacity:1;transform:scale(1);transform-origin:center} }
+.process-flow .process-flow-pedigree p, .process-flow .process-flow-ratio p, .process-flow .process-flow-chi p, .process-flow .process-flow-dihybrid p {color:#4f675e;font-size:14px;text-align:center;line-height:1.85;margin:14px auto 0;max-width:650px;}
+.process-flow .process-flow-ratio {max-width:660px;margin:auto;display:grid;gap:13px;}
+.process-flow .process-flow-ratio-row {display:grid;grid-template-columns:minmax(95px,170px) minmax(50px,1fr) 65px;align-items:center;gap:10px;}
+.process-flow .process-flow-ratio-row>span {font-size:13px;color:#305f52;font-weight:650;}
+.process-flow .process-flow-ratio-row>strong {color:#285e6b;text-align:center;font-size:14px;}
+.process-flow .process-flow-ratio-track {height:20px;background:#e9f0ef;border-radius:12px;overflow:hidden;}
+.process-flow .process-flow-ratio-fill {height:100%;width:var(--ratio-width);background:var(--ratio-color);border-radius:inherit;transform:scaleX(0);transform-origin:right;animation:pf-ratio-fill 850ms ease forwards;animation-delay:var(--demo-delay);}
+@keyframes pf-ratio-fill {to {transform:scaleX(1)}}
+.process-flow .process-flow-chi {max-width:700px;margin:auto;}
+.process-flow .process-flow-chi-scroll {max-width:100%;overflow-x:auto;}
+.process-flow .process-flow-chi table {width:100%;min-width:420px;border-collapse:collapse;text-align:right;font-size:13px;}
+.process-flow .process-flow-chi th,.process-flow .process-flow-chi td {padding:9px 12px;border-bottom:1px solid #e0ebe7;}
+.process-flow .process-flow-chi thead {background:#e7f2ee;color:#225c48;}
+.process-flow .process-flow-chi tbody tr {animation:pf-show 500ms both;animation-delay:var(--demo-delay);}
+.process-flow .process-flow-chi-headline {display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;background:#edf7f2;padding:20px;border-radius:14px;animation:pf-show 600ms both;}
+.process-flow .process-flow-chi-headline strong {color:#176d50;font-size:20px;}
+.process-flow .process-flow-chi-headline span {color:#526b60;font-size:16px;}
+.process-flow .process-flow-dihybrid {text-align:center;max-width:680px;margin:auto;}
+.process-flow .process-flow-dihybrid-parents {display:flex;gap:22px;justify-content:center;align-items:center;}
+.process-flow .process-flow-dihybrid-parents span {background:#e8f3ff;color:#285b9e;font-size:23px;font-weight:800;border-radius:14px;padding:20px;animation:pf-show 600ms both;}
+.process-flow .process-flow-dihybrid-parents b {font-size:25px;color:#398c70;}
+.process-flow .process-flow-dihybrid-gametes {display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
+.process-flow .process-flow-dihybrid-gametes span {font-size:20px;color:#215d80;font-weight:750;padding:18px;background:#e9f6f1;border:1px solid #c9e6d9;border-radius:50%;min-width:65px;animation:pf-split 550ms both;animation-delay:var(--demo-delay);}
+.process-flow .process-flow-dihybrid-table {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;max-width:490px;margin:auto;}
+.process-flow .process-flow-dihybrid-table span {display:grid;place-items:center;padding:8px 3px;border-radius:7px;min-height:42px;overflow-wrap:anywhere;font-size:clamp(10px,2.5vw,14px);font-weight:600;}
+.process-flow .process-flow-dihybrid-table .head {background:#e0f2e9;color:#246f52;}
+.process-flow .process-flow-dihybrid-table .cell {background:#e9f1ff;color:#285a8d;animation:pf-cell-enter 400ms both;animation-delay:var(--demo-delay);}
+.process-flow .process-flow-dihybrid-ratios {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}
+.process-flow .process-flow-dihybrid-ratios span {padding:18px 6px;border-radius:10px;border-top:4px solid var(--ratio-color);background:#f3f8fb;display:flex;flex-direction:column;gap:8px;animation:pf-show 550ms both;animation-delay:var(--demo-delay);}
+.process-flow .process-flow-dihybrid-ratios strong {font-size:15px;color:#254e62;}
+.process-flow .process-flow-dihybrid-ratios small {font-size:14px;color:#466b62;}
+@media(max-width:520px) {.process-flow .process-flow-ratio-row {grid-template-columns:95px minmax(40px,1fr) 46px;gap:6px}.process-flow .process-flow-ratio-row>span {font-size:11px}.process-flow .process-flow-dihybrid-ratios {gap:3px}.process-flow .process-flow-dihybrid-ratios strong {font-size:12px}.process-flow .process-flow-dihybrid-ratios span {padding:12px 2px}}
+@media(prefers-reduced-motion:reduce){.process-flow .process-flow-pedigree-highlights,.process-flow .process-flow-ratio-fill,.process-flow .process-flow-chi tbody tr,.process-flow .process-flow-chi-headline,.process-flow .process-flow-dihybrid-parents span,.process-flow .process-flow-dihybrid-gametes span,.process-flow .process-flow-dihybrid-table .cell,.process-flow .process-flow-dihybrid-ratios span {animation:none!important;transform:none!important;opacity:1!important}}

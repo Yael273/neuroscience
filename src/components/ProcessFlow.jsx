@@ -120,6 +120,72 @@ function StepDemonstration({ visual }) {
           {visual.explanation && <p className="process-flow-probability-explain">{visual.explanation}</p>}
         </div>
       )}
+
+      {type === "pedigree-example" && (
+        <div className="process-flow-pedigree">
+          <svg viewBox="0 0 420 215" role="img" aria-label="אילן יוחסין סכמטי: שני הורים בריאים נשאים וילד עם פנוטיפ רצסיבי" preserveAspectRatio="xMidYMid meet">
+            <line x1="120" y1="58" x2="300" y2="58" stroke="#78938b" strokeWidth="3" />
+            <line x1="210" y1="58" x2="210" y2="148" stroke="#78938b" strokeWidth="3" />
+            <rect x="96" y="34" width="48" height="48" rx="3" fill="#e9f3ff" stroke="#3a72a5" strokeWidth="3" />
+            <circle cx="300" cy="58" r="24" fill="#e9f3ff" stroke="#3a72a5" strokeWidth="3" />
+            <rect x="186" y="130" width="48" height="48" rx="3" fill="#325c89" stroke="#325c89" strokeWidth="3" />
+            <g fontSize="17" fill="#21435e" fontWeight="700" textAnchor="middle">
+              <text x="120" y="24">{visual.focus === "legend" ? "□" : "Aa"}</text>
+              <text x="300" y="24">{visual.focus === "legend" ? "○" : "Aa"}</text>
+              <text x="210" y="204">{visual.focus === "legend" ? "בעל התכונה" : "aa"}</text>
+            </g>
+            {visual.focus !== "legend" && <g className="process-flow-pedigree-highlights"><circle cx="120" cy="58" r="34" fill="none" stroke="#35b57c" strokeWidth="3" strokeDasharray="5 5"/><circle cx="300" cy="58" r="34" fill="none" stroke="#35b57c" strokeWidth="3" strokeDasharray="5 5"/></g>}
+          </svg>
+          <p>{visual.explanation}</p>
+        </div>
+      )}
+
+      {type === "ratio-analysis" && (
+        <div className="process-flow-ratio">
+          {(visual.items || []).map((item,i) => {
+            const max = Math.max(1,...(visual.items || []).map(x=>Number(x.value)||0));
+            return <div className="process-flow-ratio-row" key={i} style={{"--demo-delay":`${i*170}ms`}}>
+              <span>{item.label}</span>
+              <div className="process-flow-ratio-track"><div className="process-flow-ratio-fill" style={{"--ratio-width":`${100*(Number(item.value)||0)/max}%`,"--ratio-color":item.color||"#36a97d"}}/></div>
+              <strong dir="ltr">{Number(item.value).toLocaleString('en-US')}</strong>
+            </div>;
+          })}
+          {visual.explanation && <p>{visual.explanation}</p>}
+        </div>
+      )}
+
+      {type === "chi-square-table" && (() => {
+        const observed = visual.observed || [];
+        const expected = visual.expected || [];
+        const terms = observed.map((o,i)=>(o-expected[i])**2/expected[i]);
+        const total = terms.reduce((sum,t)=>sum+t,0);
+        return <div className="process-flow-chi" dir="rtl">
+          {visual.focus === "hypotheses" ? <div className="process-flow-chi-headline"><strong>H₀: 9:3:3:1</strong><span>לעומת</span><strong>H₁: יחס שונה</strong></div> :
+          visual.focus === "degrees" ? <div className="process-flow-chi-headline"><strong>4 קטגוריות</strong><span>− 1 =</span><strong>df = 3</strong></div> :
+          visual.focus === "decision" ? <div className="process-flow-chi-headline"><strong>χ² ≈ {total.toFixed(2)}</strong><span>קטן מ־</span><strong>7.82</strong><span>← אין לדחות את H₀</span></div> :
+          <div className="process-flow-chi-scroll"><table><thead><tr><th>קבוצה</th><th>נצפה O</th><th>צפוי E</th>{visual.focus === "contributions" && <th dir="ltr">(O−E)²/E</th>}</tr></thead><tbody>
+            {observed.map((o,i)=><tr key={i} style={{"--demo-delay":`${i*240}ms`}}><th>{visual.names?.[i]}</th><td>{o}</td><td>{expected[i].toFixed(2)}</td>{visual.focus === "contributions" && <td>{terms[i].toFixed(3)}</td>}</tr>)}
+          </tbody></table></div>}
+          {visual.explanation && <p>{visual.explanation}</p>}
+        </div>;
+      })()}
+
+      {type === "dihybrid-cross" && (
+        <div className="process-flow-dihybrid">
+          {visual.phase === "parents" && <div className="process-flow-dihybrid-parents" dir="ltr"><span>AaBb</span><b>×</b><span>AaBb</span></div>}
+          {visual.phase === "gametes" && <div className="process-flow-dihybrid-gametes" dir="ltr">{["AB","Ab","aB","ab"].map((g,i)=><span key={g} style={{"--demo-delay":`${i*220}ms`}}>{g}</span>)}</div>}
+          {visual.phase === "square" && <div className="process-flow-dihybrid-table" dir="ltr" role="img" aria-label="ריבוע פאנט 4 על 4 של הכלאת AaBb כפול AaBb">
+            <span className="head">×</span>{["AB","Ab","aB","ab"].map(g=><span key={`h${g}`} className="head">{g}</span>)}
+            {["AB","Ab","aB","ab"].map((a,ri)=><React.Fragment key={a}><span className="head">{a}</span>{["AB","Ab","aB","ab"].map((b,ci)=>{
+              const pair=(upper,lower)=>[upper,lower].sort((x,y)=>(x===x.toUpperCase()?0:1)-(y===y.toUpperCase()?0:1)).join("");
+              const genotype=pair(a[0],b[0])+pair(a[1],b[1]);
+              return <span className="cell" key={`${a}-${b}`} style={{"--demo-delay":`${(ri*4+ci)*80}ms`}}>{genotype}</span>;
+            })}</React.Fragment>)}
+          </div>}
+          {visual.phase === "phenotypes" && <div className="process-flow-dihybrid-ratios">{[["A_B_","9/16","#3277a8"],["A_bb","3/16","#8960b2"],["aaB_","3/16","#2d9f82"],["aabb","1/16","#c5902b"]].map(([k,v,c],i)=><span key={k} style={{"--demo-delay":`${i*220}ms`,"--ratio-color":c}}><strong>{k}</strong><small>{v}</small></span>)}</div>}
+          {visual.explanation && <p>{visual.explanation}</p>}
+        </div>
+      )}
     </div>
   );
 }
