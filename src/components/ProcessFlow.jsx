@@ -13,6 +13,23 @@ function StepDemonstration({ visual }) {
     <div className="process-flow-demo" aria-label={visual.caption || "המחשה של השלב"}>
       {visual.caption && <div className="process-flow-demo-label">{visual.caption}</div>}
 
+      {type === "concept-sequence" && (
+        <div className="process-flow-concept-sequence" role="list">
+          {(visual.items || []).map((item, index) => (
+            <React.Fragment key={index}>
+              <div className="process-flow-concept-item" role="listitem" style={{ "--demo-delay": `${index * 220}ms` }}>
+                <span className="process-flow-concept-count" aria-hidden="true">{index + 1}</span>
+                <strong>{item.label}</strong>
+                {item.description && <p>{item.description}</p>}
+              </div>
+              {index < (visual.items || []).length - 1 && (
+                <span className="process-flow-concept-arrow" aria-hidden="true" style={{ "--demo-delay": `${index * 220 + 110}ms` }}>←</span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      )}
+
       {type === "allele-identification" && (
         <div className="process-flow-alleles" dir="ltr">
           {(visual.alleles || []).map((allele, i) => (
@@ -266,7 +283,7 @@ export default function ProcessFlow({ block }) {
             <div key={`${safeStep}-${replay}`} className="process-flow-demo-stage">
               <StepDemonstration visual={current.visual} />
             </div>
-            <span className="process-flow-demo-disclaimer">דוגמה להמחשה; אינה מחליפה את נתוני התרגיל.</span>
+            <span className="process-flow-demo-disclaimer">המחשה לימודית סכמטית; אינה ממצא אמפירי ואינה מחליפה את המקור.</span>
           </div>
         )}
       </div>

@@ -29,6 +29,7 @@ import compTutorial02 from "../data/lessons/compcog-tutorial02.json";
 import compTutorial03 from "../data/lessons/compcog-tutorial03.json";
 import geneticsTutorial02 from "../data/lessons/genetics-tutorial02.json";
 import compLecture04 from "../data/lessons/compcog-lecture04.json";
+import consciousnessLesson03 from "../data/lessons/consciousness-lesson03.json";
 
 import "../styles/interactive-summary.css";
 
@@ -61,6 +62,7 @@ const lessonMap = {
   [compTutorial03.id]: compTutorial03,
   [geneticsTutorial02.id]: geneticsTutorial02,
   [compLecture04.id]: compLecture04,
+  [consciousnessLesson03.id]: consciousnessLesson03,
 };
 
 export default function LessonPage({

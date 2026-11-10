@@ -26,6 +26,7 @@ import compTutorial02 from "./lessons/compcog-tutorial02.json";
 import compTutorial03 from "./lessons/compcog-tutorial03.json";
 import geneticsTutorial02 from "./lessons/genetics-tutorial02.json";
 import compLecture04 from "./lessons/compcog-lecture04.json";
+import consciousnessLesson03 from "./lessons/consciousness-lesson03.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -326,7 +327,20 @@ export const subjects = [
         lessons: 1,
         duration: consciousnessLesson.duration?.estimatedStudyMinutes ?? null,
         topics: consciousnessLesson.sections.map(section => section.title)
-      }
+      },
+      {
+        id: "consciousness-chapter-03",
+        name: "שיעור 3 — תחושת עצמי, זיכרון וסכיזופרניה",
+        description:
+          "עצמי מינימלי ונרטיבי, זיכרון אוטונואטי, agency ו־ownership, סכיזופרניה ודיסוציאציה",
+        lessons: 1,
+        duration: null,
+        lessonIds: [consciousnessLesson03.id],
+        topics: consciousnessLesson03.sections.map(
+          (section) => section.title
+        ),
+      },
+
     ]
   },
   {

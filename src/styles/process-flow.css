@@ -476,3 +476,39 @@
 .process-flow .process-flow-dihybrid-ratios small {font-size:14px;color:#466b62;}
 @media(max-width:520px) {.process-flow .process-flow-ratio-row {grid-template-columns:95px minmax(40px,1fr) 46px;gap:6px}.process-flow .process-flow-ratio-row>span {font-size:11px}.process-flow .process-flow-dihybrid-ratios {gap:3px}.process-flow .process-flow-dihybrid-ratios strong {font-size:12px}.process-flow .process-flow-dihybrid-ratios span {padding:12px 2px}}
 @media(prefers-reduced-motion:reduce){.process-flow .process-flow-pedigree-highlights,.process-flow .process-flow-ratio-fill,.process-flow .process-flow-chi tbody tr,.process-flow .process-flow-chi-headline,.process-flow .process-flow-dihybrid-parents span,.process-flow .process-flow-dihybrid-gametes span,.process-flow .process-flow-dihybrid-table .cell,.process-flow .process-flow-dihybrid-ratios span {animation:none!important;transform:none!important;opacity:1!important}}
+
+/* Psychology and cognition: explanatory content animation, not just navigation. */
+.process-flow .process-flow-concept-sequence {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 10px; padding: 12px 2px; direction: rtl;
+}
+.process-flow .process-flow-concept-item {
+  flex: 1 1 140px; min-width: 130px; max-width: 240px;
+  background: #f2f7ff; border: 1px solid #dce7f8; border-radius: 14px;
+  padding: 14px 13px; text-align: right;
+  opacity: 0; animation: concept-appear 650ms cubic-bezier(.18,.72,.23,1) var(--demo-delay, 0ms) forwards;
+}
+.process-flow .process-flow-concept-count {
+  display: inline-grid; place-items: center; width: 26px; height: 26px;
+  background: #dbeafb; color: #235f9d; border-radius: 50%;
+  font-size: 13px; font-weight: 800; margin-bottom: 9px;
+}
+.process-flow .process-flow-concept-item strong { display: block; color: #23518a; font-size: 15px; line-height: 1.5; }
+.process-flow .process-flow-concept-item p { margin: 7px 0 0; color: #405772; line-height: 1.65; font-size: 13px; }
+.process-flow .process-flow-concept-arrow {
+  color: #3b9c89; font-size: 26px; font-weight: 700;
+  opacity: 0; animation: concept-appear 450ms ease var(--demo-delay,0ms) forwards;
+}
+@keyframes concept-appear {
+  from { opacity: 0; transform: translateY(10px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media(max-width:650px) {
+  .process-flow .process-flow-concept-sequence { flex-direction: column; align-items: stretch; }
+  .process-flow .process-flow-concept-item { max-width: none; width: 100%; flex: none; box-sizing: border-box; }
+  .process-flow .process-flow-concept-arrow { align-self: center; transform: rotate(-90deg); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .process-flow .process-flow-concept-item,
+  .process-flow .process-flow-concept-arrow { animation: none; opacity: 1; }
+}
