@@ -25,6 +25,7 @@ import compLecture03 from "./lessons/compcog-lecture03.json";
 import compTutorial02 from "./lessons/compcog-tutorial02.json";
 import compTutorial03 from "./lessons/compcog-tutorial03.json";
 import geneticsTutorial02 from "./lessons/genetics-tutorial02.json";
+import compLecture04 from "./lessons/compcog-lecture04.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -139,6 +140,16 @@ export const subjects = [
         duration: 0,
         lessonIds: [compTutorial03.id],
         topics: compTutorial03.sections.map(s => s.title),
+      },
+      {
+        id: "compcog-chapter-04",
+        name: "הרצאה 4 — ירידה במורד הגרדיאנט והתכנסות בממוצע",
+        description:
+          "Gradient Descent, קצב למידה, למידה בנוירון ליניארי וניתוח התכנסות.",
+        lessons: 1,
+        duration: null,
+        lessonIds: [compLecture04.id],
+        topics: compLecture04.sections.map((section) => section.title),
       },
     ]
   },

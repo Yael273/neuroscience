@@ -28,6 +28,7 @@ import compLecture03 from "../data/lessons/compcog-lecture03.json";
 import compTutorial02 from "../data/lessons/compcog-tutorial02.json";
 import compTutorial03 from "../data/lessons/compcog-tutorial03.json";
 import geneticsTutorial02 from "../data/lessons/genetics-tutorial02.json";
+import compLecture04 from "../data/lessons/compcog-lecture04.json";
 
 import "../styles/interactive-summary.css";
 
@@ -59,6 +60,7 @@ const lessonMap = {
   [compTutorial02.id]: compTutorial02,
   [compTutorial03.id]: compTutorial03,
   [geneticsTutorial02.id]: geneticsTutorial02,
+  [compLecture04.id]: compLecture04,
 };
 
 export default function LessonPage({
