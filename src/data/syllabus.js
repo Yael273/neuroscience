@@ -27,6 +27,7 @@ import compTutorial03 from "./lessons/compcog-tutorial03.json";
 import geneticsTutorial02 from "./lessons/genetics-tutorial02.json";
 import compLecture04 from "./lessons/compcog-lecture04.json";
 import consciousnessLesson03 from "./lessons/consciousness-lesson03.json";
+import brainImagingLesson04 from "./lessons/brain-imaging-lesson04.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -307,6 +308,19 @@ export const subjects = [
         lessonIds: [brainImagingLesson03.id],
         topics: brainImagingLesson03.sections.map((section) => section.title),
       },
+      {
+        id: "brain-imaging-chapter-04",
+        name: "שיעור 4 — פיזיקת MRI: יצירת אות וקידוד מרחבי",
+        description:
+          "ספין, RF, רלקסציה T1/T2, גרדיאנטים, בחירת חתך, פורייה ו-k-space",
+        lessons: 1,
+        duration: null,
+        lessonIds: [brainImagingLesson04.id],
+        topics: brainImagingLesson04.sections.map(
+          (section) => section.title
+        ),
+      },
+
     ]
   },
 
