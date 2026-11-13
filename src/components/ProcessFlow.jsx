@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ArrowLeft, BookOpen, Check, CircleHelp, FileText, Flag, RotateCcw } from "lucide-react";
 import "../styles/process-flow.css";
+import MolecularDemo from "./MolecularDemo";
 
 const icons = [BookOpen, FileText, CircleHelp, Flag];
 
@@ -12,6 +13,8 @@ function StepDemonstration({ visual }) {
   return (
     <div className="process-flow-demo" aria-label={visual.caption || "המחשה של השלב"}>
       {visual.caption && <div className="process-flow-demo-label">{visual.caption}</div>}
+
+      {type === "molecular-animation" && <MolecularDemo visual={visual} />}
 
       {type === "concept-sequence" && (
         <div className="process-flow-concept-sequence" role="list">

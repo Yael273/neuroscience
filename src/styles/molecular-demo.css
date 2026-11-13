@@ -1,0 +1,325 @@
+/* Isolated animation visuals used only inside a molecular-animation ProcessFlow step. */
+.molecular-demo {
+    width: 100%;
+    padding: 10px 8px 4px;
+    border: 1px solid #d8e9e6;
+    background: #fbfefd;
+    border-radius: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+.molecular-demo-caption {
+    font-size: 15px;
+    color: #257d68;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.molecular-demo-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+}
+
+.molecular-demo-note {
+    color: #647876;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 2px 0 6px;
+}
+
+.molecular-demo-svg .mol-pulse {
+    animation: mol-pulse 2.1s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.molecular-demo-svg .mol-cue {
+    animation: mol-fade-in 600ms ease-out both;
+}
+
+.molecular-demo-svg .mol-draw {
+    stroke-dasharray: 720;
+    stroke-dashoffset: 720;
+    animation: mol-draw 2s ease-out both;
+}
+
+.molecular-demo-svg .mol-mt-grow {
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+    animation: mol-draw 2.5s ease-out both;
+}
+
+.molecular-demo-svg .mol-mt {
+    animation: mol-gentle 2.4s ease-in-out infinite alternate;
+}
+
+.molecular-demo-svg .mol-filopodium {
+    transform-box: fill-box;
+    transform-origin: 0% 50%;
+    animation: mol-wave 2.4s ease-in-out infinite alternate;
+}
+
+.molecular-demo-svg .mol-actin {
+    stroke-dashoffset: 0;
+    animation: mol-flow 2s linear infinite;
+}
+
+.molecular-demo-svg .mol-flow-back {
+    animation: mol-flow 2s linear infinite;
+}
+
+.molecular-demo-svg .mol-route {
+    stroke-dasharray: 8 7;
+    stroke-dashoffset: 85;
+    animation: mol-route 2s ease-out forwards;
+}
+
+.molecular-demo-svg .mol-grow-dot {
+    animation: mol-pulse 2.4s ease-in-out infinite;
+    transform-origin: 150px 128px;
+}
+
+.molecular-demo-svg .mol-transport-forward {
+    animation: mol-forward 3.3s linear infinite;
+}
+
+.molecular-demo-svg .mol-transport-backward {
+    animation: mol-backward 3.3s linear infinite;
+}
+
+.molecular-demo-svg .mol-stay-cargo {
+    animation: mol-gentle 1.6s ease-in-out infinite alternate;
+}
+
+.molecular-demo-svg .mol-lane-0 {
+    animation: mol-lane-fast 3.8s linear infinite;
+}
+
+.molecular-demo-svg .mol-lane-1 {
+    animation: mol-lane-mid 5.8s steps(5, end) infinite;
+}
+
+.molecular-demo-svg .mol-lane-2 {
+    animation: mol-lane-slow 6.2s linear infinite;
+}
+
+.molecular-demo-svg .mol-lane-3 {
+    animation: mol-diffuse 4.8s ease-in-out infinite alternate;
+}
+
+.molecular-demo-svg .mol-pile-left {
+    animation: mol-pile-left 2.8s ease-out both;
+}
+
+.molecular-demo-svg .mol-pile-right {
+    animation: mol-pile-right 2.8s ease-out both;
+}
+
+.molecular-demo-svg .mol-kymo-line {
+    stroke-dasharray: 155;
+    stroke-dashoffset: 155;
+    animation: mol-draw 2s ease-out both;
+}
+
+.molecular-demo-svg .mol-gfp-left {
+    animation: mol-gfp-left 3s ease-in-out infinite alternate;
+}
+
+.molecular-demo-svg .mol-gfp-no-shift {
+    animation: mol-gentle 2.8s ease-in-out infinite alternate;
+}
+
+.molecular-demo-svg .mol-ring-appear {
+    animation: mol-fade-in 800ms ease-out both;
+}
+
+.molecular-demo-svg .mol-syn-vesicle {
+    animation: mol-vesicles 2.8s ease-in-out infinite alternate;
+}
+
+.molecular-demo-svg .mol-spine-expand {
+    transform-origin: 343px 170px;
+    animation: mol-spine-grow 2.2s ease-out both;
+}
+
+@keyframes mol-pulse {
+
+    0%,
+    100% {
+        opacity: .6;
+        transform: scale(.94)
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1)
+    }
+}
+
+@keyframes mol-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes mol-draw {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes mol-route {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes mol-wave {
+    from {
+        transform: rotate(-6deg)
+    }
+
+    to {
+        transform: rotate(6deg)
+    }
+}
+
+@keyframes mol-flow {
+    to {
+        stroke-dashoffset: 40
+    }
+}
+
+@keyframes mol-gentle {
+    to {
+        transform: translateY(-5px)
+    }
+}
+
+@keyframes mol-forward {
+    from {
+        transform: translateX(-34px)
+    }
+
+    to {
+        transform: translateX(380px)
+    }
+}
+
+@keyframes mol-backward {
+    from {
+        transform: translateX(25px)
+    }
+
+    to {
+        transform: translateX(-380px)
+    }
+}
+
+@keyframes mol-lane-fast {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(340px)
+    }
+}
+
+@keyframes mol-lane-mid {
+
+    0%,
+    12% {
+        transform: translateX(0)
+    }
+
+    25%,
+    45% {
+        transform: translateX(85px)
+    }
+
+    55%,
+    75% {
+        transform: translateX(170px)
+    }
+
+    100% {
+        transform: translateX(280px)
+    }
+}
+
+@keyframes mol-lane-slow {
+    to {
+        transform: translateX(110px)
+    }
+}
+
+@keyframes mol-diffuse {
+    from {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(36px)
+    }
+
+    to {
+        transform: translateX(-13px)
+    }
+}
+
+@keyframes mol-pile-left {
+    to {
+        transform: translateX(65px)
+    }
+}
+
+@keyframes mol-pile-right {
+    to {
+        transform: translateX(-66px)
+    }
+}
+
+@keyframes mol-gfp-left {
+    to {
+        transform: translateX(-95px)
+    }
+}
+
+@keyframes mol-vesicles {
+    to {
+        transform: translate(-28px, 20px)
+    }
+}
+
+@keyframes mol-spine-grow {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(1.17, 1.12)
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .molecular-demo-svg * {
+        animation: none !important;
+    }
+
+    .molecular-demo-svg .mol-draw,
+    .molecular-demo-svg .mol-mt-grow,
+    .molecular-demo-svg .mol-kymo-line {
+        stroke-dashoffset: 0 !important;
+    }
+}

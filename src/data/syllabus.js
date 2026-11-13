@@ -28,6 +28,7 @@ import geneticsTutorial02 from "./lessons/genetics-tutorial02.json";
 import compLecture04 from "./lessons/compcog-lecture04.json";
 import consciousnessLesson03 from "./lessons/consciousness-lesson03.json";
 import brainImagingLesson04 from "./lessons/brain-imaging-lesson04.json";
+import molecularLecture04 from "./lessons/molecular-neurobiology-lecture04.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -262,7 +263,20 @@ export const subjects = [
           "תעלות סידן מסוג CaV וארגונן באזור הפעיל",
           "הקשר בין ארגון הסינפסה לתכונות השחרור"
         ]
-      }
+      },
+      {
+        id: "molecular-neurobiology-chapter-04",
+        name: "שיעור 4 — שלד התא הנוירונלי והסינפסות",
+        description:
+          "חרוט גדילה, ניווט אקסונים, אקטין ומיקרוטובולים, הובלה אקסונלית ושינויים בסינפסה",
+        lessons: 1,
+        duration: null,
+        lessonIds: [molecularLecture04.id],
+        topics: molecularLecture04.sections.map(
+          (section) => section.title
+        ),
+      },
+
     ]
   },
 
