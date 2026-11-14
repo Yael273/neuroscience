@@ -51,19 +51,43 @@
           "steps": [
             {
               "title": "1. שלפוחית מרוחקת",
-              "description": "רכיבי SNARE מופרדים בין שתי הממברנות"
+              "description": "רכיבי SNARE מופרדים בין שתי הממברנות",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-snare-cycle",
+                "phase": 0,
+                "caption": "המחשה סכמטית של התהליך — ארבעת השלבים המרכזיים"
+              }
             },
             {
               "title": "2. עגינה",
-              "description": "נוצר trans-SNARE המביא את הממברנות לקרבה"
+              "description": "נוצר trans-SNARE המביא את הממברנות לקרבה",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-snare-cycle",
+                "phase": 1,
+                "caption": "המחשה סכמטית של התהליך — ארבעת השלבים המרכזיים"
+              }
             },
             {
               "title": "3. איחוי",
-              "description": "הקומפלקס הופך ל־cis-SNARE"
+              "description": "הקומפלקס הופך ל־cis-SNARE",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-snare-cycle",
+                "phase": 2,
+                "caption": "המחשה סכמטית של התהליך — ארבעת השלבים המרכזיים"
+              }
             },
             {
               "title": "4. מחזור",
-              "description": "נדרש פירוק אנזימטי של הקומפלקס היציב"
+              "description": "נדרש פירוק אנזימטי של הקומפלקס היציב",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-snare-cycle",
+                "phase": 3,
+                "caption": "המחשה סכמטית של התהליך — ארבעת השלבים המרכזיים"
+              }
             }
           ]
         },
@@ -228,19 +252,43 @@
           "steps": [
             {
               "title": "cis-SNARE יציב",
-              "description": "רכיבי החלבון צמודים לאחר האיחוי"
+              "description": "רכיבי החלבון צמודים לאחר האיחוי",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-nsf-recycle",
+                "phase": 0,
+                "caption": "המחשה סכמטית של התהליך — מחזור פירוק SNARE"
+              }
             },
             {
               "title": "גיוס α-SNAP ו־NSF",
-              "description": "נוצר מכלול גדול על גבי SNARE"
+              "description": "נוצר מכלול גדול על גבי SNARE",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-nsf-recycle",
+                "phase": 1,
+                "caption": "המחשה סכמטית של התהליך — מחזור פירוק SNARE"
+              }
             },
             {
               "title": "ATP hydrolysis",
-              "description": "NSF מניע את פירוק הקומפלקס"
+              "description": "NSF מניע את פירוק הקומפלקס",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-nsf-recycle",
+                "phase": 2,
+                "caption": "המחשה סכמטית של התהליך — מחזור פירוק SNARE"
+              }
             },
             {
               "title": "רכיבים חופשיים",
-              "description": "אפשר להכין אותם למחזור איחוי נוסף"
+              "description": "אפשר להכין אותם למחזור איחוי נוסף",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-nsf-recycle",
+                "phase": 3,
+                "caption": "המחשה סכמטית של התהליך — מחזור פירוק SNARE"
+              }
             }
           ]
         }
@@ -404,19 +452,43 @@
           "steps": [
             {
               "title": "SNAREs חופשיים",
-              "description": "Qa, Qb, Qc, R עדיין לא מאוגדים"
+              "description": "Qa, Qb, Qc, R עדיין לא מאוגדים",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-zipper",
+                "phase": 0,
+                "caption": "המחשה סכמטית של התהליך — מודל הרוכסן"
+              }
             },
             {
               "title": "trans-SNARE רופף",
-              "description": "נוצר מגע ראשוני בין הממברנות"
+              "description": "נוצר מגע ראשוני בין הממברנות",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-zipper",
+                "phase": 1,
+                "caption": "המחשה סכמטית של התהליך — מודל הרוכסן"
+              }
             },
             {
               "title": "הרכבה חלקית",
-              "description": "נוצר מצב שממתין להפעלה"
+              "description": "נוצר מצב שממתין להפעלה",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-zipper",
+                "phase": 2,
+                "caption": "המחשה סכמטית של התהליך — מודל הרוכסן"
+              }
             },
             {
               "title": "סידן וחיישן סידן",
-              "description": "מתאפשרת השלמת ה־zippering ואיחוי"
+              "description": "מתאפשרת השלמת ה־zippering ואיחוי",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-zipper",
+                "phase": 3,
+                "caption": "המחשה סכמטית של התהליך — מודל הרוכסן"
+              }
             }
           ]
         }
@@ -564,19 +636,43 @@
           "steps": [
             {
               "title": "Syntaxin סגורה",
-              "description": "Habc מגביל גישה לאזור ה־SNARE"
+              "description": "Habc מגביל גישה לאזור ה־SNARE",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-munc-priming",
+                "phase": 0,
+                "caption": "המחשה סכמטית של התהליך — מ־Syntaxin סגורה לקומפלקס פעיל"
+              }
             },
             {
               "title": "Munc18 קושר",
-              "description": "מייצב ומבקר מצב התחלתי"
+              "description": "מייצב ומבקר מצב התחלתי",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-munc-priming",
+                "phase": 1,
+                "caption": "המחשה סכמטית של התהליך — מ־Syntaxin סגורה לקומפלקס פעיל"
+              }
             },
             {
               "title": "Munc13 מקרב שלפוחית",
-              "description": "מסייע לפתיחת Syntaxin"
+              "description": "מסייע לפתיחת Syntaxin",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-munc-priming",
+                "phase": 2,
+                "caption": "המחשה סכמטית של התהליך — מ־Syntaxin סגורה לקומפלקס פעיל"
+              }
             },
             {
               "title": "הרכבה מבוקרת",
-              "description": "SNAP-25 ו־Synaptobrevin מצטרפים"
+              "description": "SNAP-25 ו־Synaptobrevin מצטרפים",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-munc-priming",
+                "phase": 3,
+                "caption": "המחשה סכמטית של התהליך — מ־Syntaxin סגורה לקומפלקס פעיל"
+              }
             }
           ]
         }
@@ -877,19 +973,43 @@
           "steps": [
             {
               "title": "פוטנציאל פעולה",
-              "description": "נפתחות תעלות VGCC"
+              "description": "נפתחות תעלות VGCC",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-calcium-release",
+                "phase": 0,
+                "caption": "המחשה סכמטית של התהליך — איך אות סידן מוביל לשחרור?"
+              }
             },
             {
               "title": "עלייה מקומית ב־Ca²⁺",
-              "description": "הסידן מגיע לקרבת שלפוחית מוכנה"
+              "description": "הסידן מגיע לקרבת שלפוחית מוכנה",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-calcium-release",
+                "phase": 1,
+                "caption": "המחשה סכמטית של התהליך — איך אות סידן מוביל לשחרור?"
+              }
             },
             {
               "title": "Synaptotagmin מגיב",
-              "description": "שינוי קונפורמציה ואינטראקציות ממברנה"
+              "description": "שינוי קונפורמציה ואינטראקציות ממברנה",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-calcium-release",
+                "phase": 2,
+                "caption": "המחשה סכמטית של התהליך — איך אות סידן מוביל לשחרור?"
+              }
             },
             {
               "title": "השלמת איחוי",
-              "description": "כוח SNARE מאפשר fusion ושחרור"
+              "description": "כוח SNARE מאפשר fusion ושחרור",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-calcium-release",
+                "phase": 3,
+                "caption": "המחשה סכמטית של התהליך — איך אות סידן מוביל לשחרור?"
+              }
             }
           ]
         }
@@ -1212,19 +1332,43 @@
           "steps": [
             {
               "title": "מוסיפים בופר",
-              "description": "למשל BAPTA או EGTA"
+              "description": "למשל BAPTA או EGTA",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-buffers",
+                "phase": 0,
+                "caption": "המחשה סכמטית של התהליך — ניסוי בופרים — היגיון ההסקה"
+              }
             },
             {
               "title": "משווים Pr",
-              "description": "בודקים השפעה על שחרור"
+              "description": "בודקים השפעה על שחרור",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-buffers",
+                "phase": 1,
+                "caption": "המחשה סכמטית של התהליך — ניסוי בופרים — היגיון ההסקה"
+              }
             },
             {
               "title": "בודקים מהירות קישור",
-              "description": "BAPTA לוכד סידן מהר יותר"
+              "description": "BAPTA לוכד סידן מהר יותר",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-buffers",
+                "phase": 2,
+                "caption": "המחשה סכמטית של התהליך — ניסוי בופרים — היגיון ההסקה"
+              }
             },
             {
               "title": "מסיקים על צימוד",
-              "description": "הבדל רגישויות מעיד על קירבה יחסית"
+              "description": "הבדל רגישויות מעיד על קירבה יחסית",
+              "visual": {
+                "type": "molecular-animation",
+                "scene": "l3-buffers",
+                "phase": 3,
+                "caption": "המחשה סכמטית של התהליך — ניסוי בופרים — היגיון ההסקה"
+              }
             }
           ]
         }

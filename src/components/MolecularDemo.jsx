@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/molecular-demo.css";
+import SynapticReleaseDemo from "./SynapticReleaseDemo";
 
 /**
  * Animated, schematic molecular neuroscience demonstrations.
@@ -151,6 +152,7 @@ export default function MolecularDemo({ visual }) {
           {phase >= 3 && <path d="M70 195 L348 195 Q373 177 367 142 Q365 120 351 113" fill="none" stroke="#2f9f78" strokeWidth="8" className="mol-mt-grow" />}
           <Text x={175} y={83}>{['Baseline', 'גירוי LTP', 'שינוי F-actin', 'כניסת מיקרוטובולים', 'מעקב אחרי Washout'][Math.min(phase, 4)]}</Text>
         </g>}
+        {scene.startsWith("l3-") && <SynapticReleaseDemo scene={scene} phase={phase} />}
       </svg>
       <p className="molecular-demo-note">תרשים מונפש וסכמטי להמחשה בלבד; אינו משחזר תנועה מיקרוסקופית שנמדדה בניסוי.</p>
     </div>

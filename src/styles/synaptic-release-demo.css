@@ -1,0 +1,14 @@
+/* Scoped SVG animations for molecular neuroscience lecture 3. */
+.molecular-demo .syn-appear { transform-box: fill-box; transform-origin: center; animation: syn-appear .48s ease-out both; }
+.molecular-demo .syn-draw { stroke-dasharray: 400; stroke-dashoffset: 400; animation: syn-draw .9s ease-out forwards; }
+.molecular-demo .syn-ion { animation: syn-ion-drift 1.7s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+.molecular-demo .syn-nt-release { animation: syn-nt-release 1.4s ease-out both; transform-box: fill-box; transform-origin: center; }
+.molecular-demo .syn-dash { animation: syn-dash 1.5s linear infinite; }
+@keyframes syn-appear { from { opacity:0; transform: scale(.88); } to { opacity:1; transform: scale(1); } }
+@keyframes syn-draw { to { stroke-dashoffset:0; } }
+@keyframes syn-ion-drift { from { opacity:.55; transform:translateY(-5px) } to { opacity:1; transform:translateY(6px) } }
+@keyframes syn-nt-release { from { opacity:.45; transform:translateY(-12px) } to { opacity:1; transform:translateY(12px) } }
+@keyframes syn-dash { to { stroke-dashoffset:-36; } }
+@media (prefers-reduced-motion: reduce) {
+ .molecular-demo .syn-appear,.molecular-demo .syn-draw,.molecular-demo .syn-ion,.molecular-demo .syn-nt-release,.molecular-demo .syn-dash { animation:none; stroke-dashoffset:0; opacity:1; }
+}
