@@ -122,12 +122,12 @@ function LessonNarrative({ section, lessonId }) {
 
           return (
             <aside className="textbook-note" key={i}>
-              {isFirstNote && (
+              {/* {isFirstNote && (
                 <div className="textbook-note-group-title">
                   <BookOpen size={17} />
                   <span>מה חשוב להבין?</span>
                 </div>
-              )}
+              )} */}
 
               <strong>{part.title || "מה חשוב לזכור?"}</strong>
               <p>{part.text}</p>
