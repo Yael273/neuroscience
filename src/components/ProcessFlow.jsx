@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ArrowLeft, BookOpen, Check, CircleHelp, FileText, Flag, RotateCcw } from "lucide-react";
 import "../styles/process-flow.css";
 import MolecularDemo from "./MolecularDemo";
+import AppliedGeneticsDemo from "./AppliedGeneticsDemo";
 
 const icons = [BookOpen, FileText, CircleHelp, Flag];
 
@@ -15,6 +16,7 @@ function StepDemonstration({ visual }) {
       {visual.caption && <div className="process-flow-demo-label">{visual.caption}</div>}
 
       {type === "molecular-animation" && <MolecularDemo visual={visual} />}
+      {type === "applied-genetics-animation" && <AppliedGeneticsDemo visual={visual} />}
 
       {type === "concept-sequence" && (
         <div className="process-flow-concept-sequence" role="list">

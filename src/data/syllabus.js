@@ -29,6 +29,7 @@ import compLecture04 from "./lessons/compcog-lecture04.json";
 import consciousnessLesson03 from "./lessons/consciousness-lesson03.json";
 import brainImagingLesson04 from "./lessons/brain-imaging-lesson04.json";
 import molecularLecture04 from "./lessons/molecular-neurobiology-lecture04.json";
+import appliedGeneticsTutorial01 from "./lessons/applied-genetics-tutorial01.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -382,6 +383,7 @@ export const subjects = [
     chapters: [
       {
         id: "applied-genetics-lecture-1",
+        group: "lectures",
         name: "הרצאה 1 — מבוא לגנטיקה יישומית",
         description: appliedGenetics.description,
         lessonIds: [appliedGenetics.id],
@@ -391,13 +393,27 @@ export const subjects = [
       },
       {
         id: "applied-genetics-lecture-2",
+        group: "lectures",
         name: "הרצאה 2 — סמנים גנטיים ותאחיזה",
         description: "סמנים גנטיים, משפחות אינפורמטיביות, שיטות לזיהוי שונות ב-DNA, PCR, RFLP, RAPD ו-SCAR",
         lessons: 1,
         duration: 0,
         lessonIds: [appliedGeneticsLecture02.id],
         topics: appliedGeneticsLecture02.sections.map(section => section.title)
-      }
+      },
+      {
+        id: "applied-genetics-chapter-tutorial-01",
+        group: "tutorials",
+        name: "תרגול 1 — סמנים גנטיים, תאחיזה ושונות גנטית",
+        description:
+          "סמנים גנטיים, משפחות אינפורמטיביות, Gene Diversity, תאחיזה והרדי–ויינברג",
+        lessons: 1,
+        duration: null,
+        lessonIds: [appliedGeneticsTutorial01.id],
+        topics: appliedGeneticsTutorial01.sections.map(
+          (section) => section.title
+        ),
+      },
     ]
   },
 

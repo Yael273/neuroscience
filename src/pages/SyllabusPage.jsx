@@ -1,11 +1,31 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Search, X } from 'lucide-react';
+import { ArrowRight, BookOpen, CheckCircle2, PencilLine, Search, X } from 'lucide-react';
 import ProgressBar from "../components/ProgressBar";
 import Hero from '../components/Hero'; import ChapterCard from '../components/ChapterCard';
 export default function SyllabusPage({ subject, onLessonOpen, studyProgress, activeChapterId }) {
     const [query, setQuery] = useState(''); const [opened, setOpened] = useState(null); const [completed, setCompleted] = useState(() => JSON.parse(localStorage.getItem('syllabus-completed') || '{}'));
     const filtered = subject.chapters.filter(ch => (ch.name + ' ' + ch.description + ' ' + ch.topics.join(' ')).includes(query.trim()));
     const mark = (id, i) => { const next = { ...completed, [id + ':' + i]: !completed[id + ':' + i] }; setCompleted(next); localStorage.setItem('syllabus-completed', JSON.stringify(next)); };
+    // Classify chapters by explicit metadata first, then by their Hebrew titles.
+    // A subject is grouped only when it contains both lectures and tutorials.
+    const getChapterGroup = (chapter) => {
+        if (chapter.group === 'lectures' || chapter.group === 'tutorials') {
+            return chapter.group;
+        }
+        const name = chapter.name || '';
+        if (/תרגול(?:ים)?/.test(name)) return 'tutorials';
+        if (/הרצא(?:ה|ות)/.test(name)) return 'lectures';
+        return 'other';
+    };
+    const subjectChapterGroups = subject.chapters.map(getChapterGroup);
+    const hasGroups = subjectChapterGroups.includes('lectures') && subjectChapterGroups.includes('tutorials');
+    const chapterGroups = hasGroups
+        ? [
+            { id: 'lectures', title: 'הרצאות', Icon: BookOpen, chapters: filtered.filter(chapter => getChapterGroup(chapter) === 'lectures') },
+            { id: 'tutorials', title: 'תרגולים', Icon: PencilLine, chapters: filtered.filter(chapter => getChapterGroup(chapter) === 'tutorials') },
+            { id: 'other', title: 'נושאים נוספים', Icon: BookOpen, chapters: filtered.filter(chapter => getChapterGroup(chapter) === 'other') },
+          ].filter(group => group.chapters.length > 0)
+        : [{ id: 'all', title: '', Icon: BookOpen, chapters: filtered }];
     const lessonIds = subject.chapters.flatMap(
         chapter => chapter.lessonIds || []
     );
@@ -42,23 +62,43 @@ export default function SyllabusPage({ subject, onLessonOpen, studyProgress, act
                 </div>
                 <span>{filtered.length} פרקים</span>
             </div>
-            <div className="chapters-list">
-                {filtered.map((chapter, index) => (
-                    <ChapterCard
-                        key={chapter.id}
-                        chapter={chapter}
-                        index={subject.chapters.indexOf(chapter)}
-                        featured={chapter.id === activeChapterId}
-                        onOpen={onLessonOpen}
-                        completed={
-                            (chapter.lessonIds?.length || 0) > 0 &&
-                            chapter.lessonIds.every(id =>
-                                studyProgress.data.completedLessonIds.includes(id)
-                            )
-                        }
-                    />
-                ))}
-            </div>
+            {chapterGroups.map(group => (
+                <div key={group.id} className="syllabus-chapter-group" style={{ marginTop: hasGroups ? 28 : 0 }}>
+                    {hasGroups && (
+                        <div
+                            className="syllabus-group-heading"
+                            style={{
+                                display: 'flex', alignItems: 'center', gap: 10,
+                                direction: 'rtl', marginBottom: 16,
+                                paddingBottom: 12, borderBottom: '1px solid #dce8e1'
+                            }}
+                        >
+                            <group.Icon size={20} aria-hidden="true" color={subject.color || '#287b64'} />
+                            <h3 style={{ fontSize: 20, margin: 0, fontWeight: 750 }}>{group.title}</h3>
+                            <span style={{ marginInlineStart: 'auto', fontSize: 13, color: '#82968b' }}>
+                                {group.chapters.length} {group.id === 'lectures' ? 'הרצאות' : group.id === 'tutorials' ? 'תרגולים' : 'פרקים'}
+                            </span>
+                        </div>
+                    )}
+                    <div className="chapters-list">
+                        {group.chapters.map(chapter => (
+                            <ChapterCard
+                                key={chapter.id}
+                                chapter={chapter}
+                                index={subject.chapters.indexOf(chapter)}
+                                featured={chapter.id === activeChapterId}
+                                onOpen={onLessonOpen}
+                                completed={
+                                    (chapter.lessonIds?.length || 0) > 0 &&
+                                    chapter.lessonIds.every(id =>
+                                        studyProgress.data.completedLessonIds.includes(id)
+                                    )
+                                }
+                            />
+                        ))}
+                    </div>
+                </div>
+            ))}
         </section>
         <footer className="footer">
             <strong>

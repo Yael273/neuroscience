@@ -1224,3 +1224,82 @@
     color: var(--text-secondary, #64748b);
     line-height: 1.6;
 }
+
+/* ============================================================
+   Unified narrative explanations (learningFlow / explanation)
+   Adjacent explanations form ONE blue reading group, like the
+   existing "מה חשוב להבין?" panel. No JSX or JSON changes needed.
+   ============================================================ */
+.interactive-summary .textbook-reading > .textbook-subsection {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    background: var(--learn-concept-bg, #eaf3ff);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    direction: rtl;
+    text-align: right;
+}
+
+/* First row of a consecutive group: shared title and rounded top. */
+.interactive-summary .textbook-reading > .textbook-subsection:not(.textbook-subsection + .textbook-subsection) {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-radius: 17px 17px 0 0;
+}
+
+.interactive-summary .textbook-reading > .textbook-subsection:not(.textbook-subsection + .textbook-subsection)::before {
+    content: "מה חשוב להבין?";
+    display: block;
+    margin-bottom: 1px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--learn-concept-line, #cbdff5);
+    color: var(--learn-concept-title, #28578f);
+    font-size: 19px;
+    font-weight: 750;
+    line-height: 1.55;
+}
+
+/* Thin dividers instead of gaps/cards within the group. */
+.interactive-summary .textbook-reading > .textbook-subsection + .textbook-subsection {
+    border-top: 1px solid var(--learn-concept-line, #cbdff5);
+}
+
+/* Bottom rounding for a group; standalone explanations get all corners. */
+.interactive-summary .textbook-reading > .textbook-subsection:not(:has(+ .textbook-subsection)) {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-radius: 0 0 17px 17px;
+}
+.interactive-summary .textbook-reading > .textbook-subsection:not(.textbook-subsection + .textbook-subsection):not(:has(+ .textbook-subsection)) {
+    border-radius: 17px;
+}
+
+.interactive-summary .textbook-reading > .textbook-subsection > h4 {
+    margin: 5px 0 9px;
+    color: var(--learn-concept-title, #28578f);
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+.interactive-summary .textbook-reading > .textbook-subsection > p {
+    margin: 0;
+    color: var(--learn-concept-text, #354b65);
+    font-size: 16px;
+    line-height: 1.9;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+    .interactive-summary .textbook-reading > .textbook-subsection {
+        padding: 17px 18px;
+    }
+    .interactive-summary .textbook-reading > .textbook-subsection > p {
+        font-size: 15px;
+        line-height: 1.82;
+    }
+}
