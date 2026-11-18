@@ -30,6 +30,7 @@ import consciousnessLesson03 from "./lessons/consciousness-lesson03.json";
 import brainImagingLesson04 from "./lessons/brain-imaging-lesson04.json";
 import molecularLecture04 from "./lessons/molecular-neurobiology-lecture04.json";
 import appliedGeneticsTutorial01 from "./lessons/applied-genetics-tutorial01.json";
+import geneticsTutorial03 from "./lessons/genetics-tutorial03.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -209,7 +210,16 @@ export const subjects = [
       duration: 0,
       lessonIds: [geneticsTutorial02.id],
       topics: geneticsTutorial02.sections.map((section) => section.title),
-    }
+    },
+    {
+      id: "genetics-tutorial03-chapter",
+      name: "תרגול 3 — השפעות סביבה וביטוי גנים",
+      description: geneticsTutorial03.description,
+      lessonIds: [geneticsTutorial03.id],
+      lessons: 1,
+      duration: null,
+      topics: geneticsTutorial03.sections.map(section => section.title)
+    },
     ]
   },
   {

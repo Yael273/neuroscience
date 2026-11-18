@@ -1,0 +1,106 @@
+/* Scoped interactive explanatory examples — only genetics tutorial 3 */
+.process-flow .gen3-step-demo {
+  margin: 0 0 18px;
+  padding: clamp(16px, 3vw, 26px);
+  background: #f4f8ff;
+  border: 1px solid #d8e8fc;
+  border-radius: 17px;
+  color: #29476a;
+  text-align: right;
+  animation: gen3-panel-enter .34s cubic-bezier(.2,.8,.2,1) both;
+}
+.process-flow .gen3-demo-count {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2879b5;
+  margin-bottom: 7px;
+}
+.process-flow .gen3-demo-heading h5 {
+  margin: 0 0 7px;
+  color: #174d85;
+  font-size: clamp(17px, 1.8vw, 21px);
+  line-height: 1.5;
+}
+.process-flow .gen3-demo-heading p {
+  margin: 0 0 17px;
+  color: #536c85;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.process-flow .gen3-demo-formula {
+  margin: 4px 0 18px;
+  padding: 14px 10px;
+  border: 1px solid #c9dcf4;
+  border-radius: 12px;
+  background: white;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 750;
+  text-align: center;
+  color: #165f9b;
+  unicode-bidi: plaintext;
+  overflow-wrap: anywhere;
+}
+.process-flow .gen3-demo-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+  gap: 10px;
+}
+.process-flow .gen3-demo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  min-height: 114px;
+  justify-content: center;
+  padding: 12px 10px;
+  border: 1px solid #cfe2f7;
+  border-radius: 13px;
+  background: #fff;
+  animation: gen3-tile-enter .4s both;
+  animation-delay: calc(var(--gen3-item-order) * 85ms);
+}
+.process-flow .gen3-demo-comparison .gen3-demo-item:nth-child(2n) {background:#f6fff9;border-color:#d0e9d9}
+.process-flow .gen3-demo-item-symbol {
+  display: grid;
+  place-items:center;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: #e4f1ff;
+  color: #176eac;
+  font-size: 14px;
+  font-weight: 750;
+}
+.process-flow .gen3-demo-item-label { font-weight: 700; font-size: 13px; line-height: 1.5 }
+.process-flow .gen3-demo-item-value { color: #166ba5; font-size: 15px; line-height: 1.6; overflow-wrap:anywhere; }
+.process-flow .gen3-demo-result {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  background: #e6f6ee;
+  border: 1px solid #c7ead7;
+  color: #226348;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.process-flow .gen3-demo-result span {flex:0 0 auto;font-weight:900}
+.process-flow .gen3-demo-result p {margin:0}
+.process-flow .gen3-demo-table-wrap {overflow-x:auto;max-width:100%;}
+.process-flow .gen3-demo-table {border-collapse:collapse;width:100%;background:#fff;border-radius:10px;overflow:hidden;font-size:14px;}
+.process-flow .gen3-demo-table th,.process-flow .gen3-demo-table td {padding:11px 12px;border:1px solid #d7e4f5;text-align:center;}
+.process-flow .gen3-demo-table th {background:#dceeff;color:#145d96}
+.process-flow .gen3-demo-bars {display:grid;gap:13px}
+.process-flow .gen3-demo-bar {display:grid;grid-template-columns:70px 1fr 55px;gap:10px;align-items:center;font-size:13px}
+.process-flow .gen3-demo-bar-track {height:15px;background:#e5edf5;border-radius:20px;overflow:hidden}
+.process-flow .gen3-demo-bar-fill {height:100%;background:linear-gradient(90deg,#4aa1d1,#1b719f);border-radius:20px;animation:gen3-bar-grow .85s ease-out both;animation-delay:calc(var(--gen3-item-order) * 110ms);width:var(--gen3-bar)}
+.process-flow .gen3-demo-bar strong {font-variant-numeric:tabular-nums}
+@keyframes gen3-panel-enter {from {opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes gen3-tile-enter {from {opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes gen3-bar-grow {from{width:0}to{width:var(--gen3-bar)}}
+@media (max-width:640px){.process-flow .gen3-step-demo{padding:14px}.process-flow .gen3-demo-items{grid-template-columns:repeat(2,minmax(0,1fr))}.process-flow .gen3-demo-item{min-height:98px}.process-flow .gen3-demo-bar{grid-template-columns:60px 1fr 45px}}
+@media (prefers-reduced-motion:reduce){.process-flow .gen3-step-demo,.process-flow .gen3-demo-item,.process-flow .gen3-demo-bar-fill {animation:none!important;transition:none!important}}
