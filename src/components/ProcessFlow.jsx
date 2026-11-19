@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ArrowLeft, BookOpen, Check, CircleHelp, FileText, Flag } from "lucide-react";
 import "../styles/process-flow.css";
 import GeneticsStepDemo from "./GeneticsStepDemo";
+import GeneticsLectureFlowDemo from "./GeneticsLectureFlowDemo";
 
 const icons = [BookOpen, FileText, CircleHelp, Flag];
 
@@ -74,6 +75,14 @@ export default function ProcessFlow({ block }) {
 
         {block?.interactiveDemo === "genetics-tutorial03" && (
           <GeneticsStepDemo step={current} stepIndex={activeStep} totalSteps={steps.length} />
+        )}
+
+        {block?.interactiveDemo === "genetics-lectures-03-04" && (
+          <GeneticsLectureFlowDemo
+            step={current}
+            stepIndex={activeStep}
+            title={block?.title}
+          />
         )}
 
         <div className="process-flow-current" aria-live="polite">

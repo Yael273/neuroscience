@@ -32,6 +32,8 @@ import molecularLecture04 from "./lessons/molecular-neurobiology-lecture04.json"
 import appliedGeneticsTutorial01 from "./lessons/applied-genetics-tutorial01.json";
 import geneticsTutorial03 from "./lessons/genetics-tutorial03.json";
 import appliedGeneticsLecture03 from "./lessons/applied-genetics-lecture03.json";
+import geneticsLecture03 from "./lessons/genetics-lecture03.json";
+import geneticsLecture04 from "./lessons/genetics-lecture04.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -220,6 +222,26 @@ export const subjects = [
       lessons: 1,
       duration: null,
       topics: geneticsTutorial03.sections.map(section => section.title)
+    },
+    {
+      id: "genetics-lecture03-chapter",
+      group: "lectures",
+      name: "הרצאה 3 — התבטאות גנים: המאזן בין סביבה לתורשה",
+      description: geneticsLecture03.description,
+      lessonIds: [geneticsLecture03.id],
+      lessons: 1,
+      duration: geneticsLecture03.duration?.estimatedStudyMinutes ?? null,
+      topics: geneticsLecture03.sections.map(section => section.title)
+    },
+    {
+      id: "genetics-lecture04-chapter",
+      group: "lectures",
+      name: "הרצאה 4 — אינטראקציות בין גנים, אפיסטאזיס ולתאליות",
+      description: geneticsLecture04.description,
+      lessonIds: [geneticsLecture04.id],
+      lessons: 1,
+      duration: geneticsLecture04.duration?.estimatedStudyMinutes ?? null,
+      topics: geneticsLecture04.sections.map(section => section.title)
     },
     ]
   },
