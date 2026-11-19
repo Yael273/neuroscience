@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-label="חמישה פסים בכל פרופיל, שלושה מהם משותפים, תוצאה 0.60">
+<style>
+text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#20425e}
+.head{font-size:27px;font-weight:700;fill:#17476d}
+.label{font-size:18px;font-weight:600}
+.small{font-size:15px}
+.mono{font-size:22px;font-weight:700;letter-spacing:1px}
+.card{fill:#f4f8fc;stroke:#c8dced;stroke-width:2}
+.blue{fill:#3d94c6}.green{fill:#36a480}.orange{fill:#e8a856}.red{fill:#de6e6e}
+.pulse{animation:pulse 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.blink{animation:blink 9s ease-in-out infinite}
+.move{animation:mover 9s ease-in-out infinite}
+.flow{stroke:#3193ad;stroke-width:3;stroke-dasharray:10 8;animation:dash 2s linear infinite}
+@keyframes pulse{0%,12%,100%{opacity:.25;transform:scale(.98)}20%,80%{opacity:1;transform:scale(1)}}
+@keyframes blink{0%,15%,100%{opacity:.2}25%,80%{opacity:1}}
+@keyframes mover{0%,12%{transform:translateX(-15px);opacity:.2}24%,85%{transform:translateX(0);opacity:1}100%{opacity:.2}}
+@keyframes dash{to{stroke-dashoffset:-36}}
+@media(prefers-reduced-motion:reduce){.pulse,.blink,.move,.flow{animation:none}}
+</style><rect x="0" y="0" width="960" height="470" rx="26" fill="#ffffff"/>
+<text x="480" y="46" class="head" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">Band Sharing: סופרים פסים משותפים</text>
+<rect x="180" y="98" width="245" height="263" rx="16" class="card"/><rect x="535" y="98" width="245" height="263" rx="16" class="card"/><text x="300" y="127" text-anchor="middle" class="label" direction="rtl" unicode-bidi="plaintext">פרט A</text><rect x="260" y="151" width="95" height="11" rx="3" fill="#37a585" class="pulse"/><rect x="260" y="194" width="95" height="11" rx="3" fill="#3c8fc4" class="pulse"/><rect x="260" y="235" width="95" height="11" rx="3" fill="#37a585" class="pulse"/><rect x="260" y="284" width="95" height="11" rx="3" fill="#37a585" class="pulse"/><rect x="260" y="321" width="95" height="11" rx="3" fill="#3c8fc4" class="pulse"/><text x="655" y="127" text-anchor="middle" class="label" direction="rtl" unicode-bidi="plaintext">פרט B</text><rect x="615" y="151" width="95" height="11" rx="3" fill="#37a585" class="pulse"/><rect x="615" y="210" width="95" height="11" rx="3" fill="#3c8fc4" class="pulse"/><rect x="615" y="235" width="95" height="11" rx="3" fill="#37a585" class="pulse"/><rect x="615" y="284" width="95" height="11" rx="3" fill="#37a585" class="pulse"/><rect x="615" y="345" width="95" height="11" rx="3" fill="#3c8fc4" class="pulse"/><text x="480" y="401" text-anchor="middle" class="mono">BS = 2 × 3 / (5 + 5) = 0.60</text><text x="480" y="431" text-anchor="middle" class="small" direction="rtl" unicode-bidi="plaintext">3 פסים משותפים מתוך 5 בכל פרופיל • דוגמה להמחשה בלבד</text>
+</svg>

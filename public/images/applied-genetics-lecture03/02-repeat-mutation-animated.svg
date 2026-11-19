@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" role="img" aria-label="המחשה של שחלוף לא שווה והחלקה בזמן שכפול DNA">
+<style>
+text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#20425e}
+.head{font-size:27px;font-weight:700;fill:#17476d}
+.label{font-size:18px;font-weight:600}
+.small{font-size:15px}
+.mono{font-size:22px;font-weight:700;letter-spacing:1px}
+.card{fill:#f4f8fc;stroke:#c8dced;stroke-width:2}
+.blue{fill:#3d94c6}.green{fill:#36a480}.orange{fill:#e8a856}.red{fill:#de6e6e}
+.pulse{animation:pulse 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.blink{animation:blink 9s ease-in-out infinite}
+.move{animation:mover 9s ease-in-out infinite}
+.flow{stroke:#3193ad;stroke-width:3;stroke-dasharray:10 8;animation:dash 2s linear infinite}
+@keyframes pulse{0%,12%,100%{opacity:.25;transform:scale(.98)}20%,80%{opacity:1;transform:scale(1)}}
+@keyframes blink{0%,15%,100%{opacity:.2}25%,80%{opacity:1}}
+@keyframes mover{0%,12%{transform:translateX(-15px);opacity:.2}24%,85%{transform:translateX(0);opacity:1}100%{opacity:.2}}
+@keyframes dash{to{stroke-dashoffset:-36}}
+@media(prefers-reduced-motion:reduce){.pulse,.blink,.move,.flow{animation:none}}
+</style><rect x="0" y="0" width="960" height="450" rx="26" fill="#ffffff"/>
+<text x="480" y="46" class="head" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">מנגנונים לשינוי מספר החזרות</text>
+<rect x="44" y="92" width="400" height="300" rx="19" class="card"/><rect x="516" y="92" width="400" height="300" rx="19" class="card"/><text x="244" y="128" text-anchor="middle" class="label" direction="rtl" unicode-bidi="plaintext">שחלוף לא שווה</text><text x="716" y="128" text-anchor="middle" class="label" direction="rtl" unicode-bidi="plaintext">Slippage בשכפול DNA</text><line x1="75" y1="177" x2="411" y2="177" stroke="#729cb9" stroke-width="5"/><rect x="125" y="164" width="39" height="26" rx="5" class="blue"/><rect x="173" y="164" width="39" height="26" rx="5" class="blue"/><rect x="221" y="164" width="39" height="26" rx="5" class="blue"/><rect x="269" y="164" width="39" height="26" rx="5" class="blue"/><rect x="317" y="164" width="39" height="26" rx="5" class="blue"/><line x1="75" y1="225" x2="411" y2="225" stroke="#729cb9" stroke-width="5"/><rect x="137" y="212" width="39" height="26" rx="5" class="blue"/><rect x="185" y="212" width="39" height="26" rx="5" class="blue"/><rect x="233" y="212" width="39" height="26" rx="5" class="blue"/><rect x="281" y="212" width="39" height="26" rx="5" class="blue"/><rect x="329" y="212" width="39" height="26" rx="5" class="blue"/><path d="M 192 196 L 271 211" class="flow" fill="none"/><text x="244" y="282" class="small" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">יישור לא מדויק של החזרות</text><text x="244" y="313" text-anchor="middle" class="small" direction="rtl" unicode-bidi="plaintext">עשוי לשנות את מספרן</text><line x1="550" y1="177" x2="880" y2="177" stroke="#729cb9" stroke-width="5"/><rect x="610" y="162" width="32" height="30" rx="4" class="green"/><rect x="649" y="162" width="32" height="30" rx="4" class="green"/><rect x="688" y="162" width="32" height="30" rx="4" class="green"/><rect x="727" y="162" width="32" height="30" rx="4" class="green"/><rect x="766" y="162" width="32" height="30" rx="4" class="green"/><rect x="805" y="162" width="32" height="30" rx="4" class="green"/><path d="M 740 183 q -48 45 0 78 q 48 40 0 65" stroke="#e8a856" stroke-width="6" fill="none" class="pulse"/><text x="716" y="355" text-anchor="middle" class="small" direction="rtl" unicode-bidi="plaintext">לולאה של חזרות בזמן השכפול</text>
+</svg>

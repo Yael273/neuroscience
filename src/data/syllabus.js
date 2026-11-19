@@ -31,6 +31,7 @@ import brainImagingLesson04 from "./lessons/brain-imaging-lesson04.json";
 import molecularLecture04 from "./lessons/molecular-neurobiology-lecture04.json";
 import appliedGeneticsTutorial01 from "./lessons/applied-genetics-tutorial01.json";
 import geneticsTutorial03 from "./lessons/genetics-tutorial03.json";
+import appliedGeneticsLecture03 from "./lessons/applied-genetics-lecture03.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -423,6 +424,16 @@ export const subjects = [
         topics: appliedGeneticsTutorial01.sections.map(
           (section) => section.title
         ),
+      },
+      {
+        id: "applied-genetics-lecture-3",
+        group: "lectures",
+        name: "הרצאה 3 — סמנים גנטיים וטביעת אצבע גנטית",
+        description: appliedGeneticsLecture03.description,
+        lessonIds: [appliedGeneticsLecture03.id],
+        lessons: 1,
+        duration: appliedGeneticsLecture03.duration?.estimatedStudyMinutes ?? null,
+        topics: appliedGeneticsLecture03.sections.map(section => section.title)
       },
     ]
   },

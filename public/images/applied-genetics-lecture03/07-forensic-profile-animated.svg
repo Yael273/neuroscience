@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" role="img" aria-label="ג׳ל סכמטי של פרופיל ראיה חשוד לא תואם ופרופיל תואם">
+<style>
+text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#20425e}
+.head{font-size:27px;font-weight:700;fill:#17476d}
+.label{font-size:18px;font-weight:600}
+.small{font-size:15px}
+.mono{font-size:22px;font-weight:700;letter-spacing:1px}
+.card{fill:#f4f8fc;stroke:#c8dced;stroke-width:2}
+.blue{fill:#3d94c6}.green{fill:#36a480}.orange{fill:#e8a856}.red{fill:#de6e6e}
+.pulse{animation:pulse 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.blink{animation:blink 9s ease-in-out infinite}
+.move{animation:mover 9s ease-in-out infinite}
+.flow{stroke:#3193ad;stroke-width:3;stroke-dasharray:10 8;animation:dash 2s linear infinite}
+@keyframes pulse{0%,12%,100%{opacity:.25;transform:scale(.98)}20%,80%{opacity:1;transform:scale(1)}}
+@keyframes blink{0%,15%,100%{opacity:.2}25%,80%{opacity:1}}
+@keyframes mover{0%,12%{transform:translateX(-15px);opacity:.2}24%,85%{transform:translateX(0);opacity:1}100%{opacity:.2}}
+@keyframes dash{to{stroke-dashoffset:-36}}
+@media(prefers-reduced-motion:reduce){.pulse,.blink,.move,.flow{animation:none}}
+</style><rect x="0" y="0" width="960" height="450" rx="26" fill="#ffffff"/>
+<text x="480" y="46" class="head" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">השוואת פרופילי DNA: שלילה מול התאמה</text>
+<rect x="50" y="92" width="260" height="280" class="card" rx="14"/><rect x="350" y="92" width="260" height="280" class="card" rx="14"/><rect x="650" y="92" width="260" height="280" class="card" rx="14"/><text x="180" y="128" text-anchor="middle" class="label" direction="rtl" unicode-bidi="plaintext">כתם הדם</text><rect x="112" y="167" width="138" height="12" rx="3" fill="#378dbe" class="pulse" style="animation-delay:0.00s"/><rect x="112" y="227" width="138" height="12" rx="3" fill="#378dbe" class="pulse" style="animation-delay:0.00s"/><rect x="112" y="287" width="138" height="12" rx="3" fill="#378dbe" class="pulse" style="animation-delay:0.00s"/><text x="480" y="128" text-anchor="middle" class="label" direction="rtl" unicode-bidi="plaintext">חשוד עם אי־התאמה</text><rect x="412" y="167" width="138" height="12" rx="3" fill="#d46a68" class="pulse" style="animation-delay:0.65s"/><rect x="412" y="262" width="138" height="12" rx="3" fill="#d46a68" class="pulse" style="animation-delay:0.65s"/><rect x="412" y="307" width="138" height="12" rx="3" fill="#d46a68" class="pulse" style="animation-delay:0.65s"/><text x="780" y="128" text-anchor="middle" class="label" direction="rtl" unicode-bidi="plaintext">פרופיל תואם</text><rect x="712" y="167" width="138" height="12" rx="3" fill="#3ca587" class="pulse" style="animation-delay:1.30s"/><rect x="712" y="227" width="138" height="12" rx="3" fill="#3ca587" class="pulse" style="animation-delay:1.30s"/><rect x="712" y="287" width="138" height="12" rx="3" fill="#3ca587" class="pulse" style="animation-delay:1.30s"/><text x="480" y="414" class="small" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">אי־התאמה אמינה יכולה לשלול מקור; התאמה תומכת בקשר לדגימה אך אינה מוכיחה אשמה</text>
+</svg>

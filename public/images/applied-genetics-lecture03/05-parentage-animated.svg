@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" role="img" aria-label="השוואה בין אם ילד ושני אבות מועמדים בלוקוס אחד">
+<style>
+text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#20425e}
+.head{font-size:27px;font-weight:700;fill:#17476d}
+.label{font-size:18px;font-weight:600}
+.small{font-size:15px}
+.mono{font-size:22px;font-weight:700;letter-spacing:1px}
+.card{fill:#f4f8fc;stroke:#c8dced;stroke-width:2}
+.blue{fill:#3d94c6}.green{fill:#36a480}.orange{fill:#e8a856}.red{fill:#de6e6e}
+.pulse{animation:pulse 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.blink{animation:blink 9s ease-in-out infinite}
+.move{animation:mover 9s ease-in-out infinite}
+.flow{stroke:#3193ad;stroke-width:3;stroke-dasharray:10 8;animation:dash 2s linear infinite}
+@keyframes pulse{0%,12%,100%{opacity:.25;transform:scale(.98)}20%,80%{opacity:1;transform:scale(1)}}
+@keyframes blink{0%,15%,100%{opacity:.2}25%,80%{opacity:1}}
+@keyframes mover{0%,12%{transform:translateX(-15px);opacity:.2}24%,85%{transform:translateX(0);opacity:1}100%{opacity:.2}}
+@keyframes dash{to{stroke-dashoffset:-36}}
+@media(prefers-reduced-motion:reduce){.pulse,.blink,.move,.flow{animation:none}}
+</style><rect x="0" y="0" width="960" height="450" rx="26" fill="#ffffff"/>
+<text x="480" y="46" class="head" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">בדיקת הורות: מחפשים אלל שאינו אימהי</text>
+<text x="480" y="90" text-anchor="middle" class="small" direction="rtl" unicode-bidi="plaintext">דוגמה לימודית: נתוני אללים לדוגמה (לא נתונים מהטבלה המקורית)</text><rect x="36" y="123" width="209" height="232" rx="16" class="card"/><text x="140" y="162" class="label" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">אם</text><rect x="59" y="200" width="75" height="76" rx="12" fill="#d8eff7" stroke="#91bbcb"/><text x="96" y="247" class="mono" text-anchor="middle">12</text><rect x="149" y="200" width="75" height="76" rx="12" fill="#f5e9d9" stroke="#91bbcb"/><text x="186" y="247" class="mono" text-anchor="middle">15</text><rect x="267" y="123" width="209" height="232" rx="16" class="card"/><text x="371" y="162" class="label" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">ילד</text><rect x="290" y="200" width="75" height="76" rx="12" fill="#d8eff7" stroke="#91bbcb"/><text x="327" y="247" class="mono" text-anchor="middle">12</text><rect x="380" y="200" width="75" height="76" rx="12" fill="#dff5e7" stroke="#91bbcb"/><text x="417" y="247" class="mono" text-anchor="middle">18</text><rect x="498" y="123" width="209" height="232" rx="16" class="card"/><text x="602" y="162" class="label" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">אב מועמד 1</text><rect x="521" y="200" width="75" height="76" rx="12" fill="#f5e9d9" stroke="#91bbcb"/><text x="558" y="247" class="mono" text-anchor="middle">17</text><rect x="611" y="200" width="75" height="76" rx="12" fill="#dff5e7" stroke="#91bbcb"/><text x="648" y="247" class="mono" text-anchor="middle">18</text><rect x="729" y="123" width="209" height="232" rx="16" class="card"/><text x="833" y="162" class="label" text-anchor="middle" direction="rtl" unicode-bidi="plaintext">אב מועמד 2</text><rect x="752" y="200" width="75" height="76" rx="12" fill="#f5e9d9" stroke="#91bbcb"/><text x="789" y="247" class="mono" text-anchor="middle">14</text><rect x="842" y="200" width="75" height="76" rx="12" fill="#f5e9d9" stroke="#91bbcb"/><text x="879" y="247" class="mono" text-anchor="middle">16</text><path d="M 367 380 L 598 380" class="flow"/><text x="480" y="416" text-anchor="middle" class="small" direction="rtl" unicode-bidi="plaintext">אלל 12 יכול להגיע מהאם • אלל 18 חייב להגיע מהאב • רק מועמד 1 מתאים בלוקוס זה</text>
+</svg>
