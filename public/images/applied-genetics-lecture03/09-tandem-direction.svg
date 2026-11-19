@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-label="Tandem repeats — חזרות באותו כיוון">
+    <rect width="960" height="280" rx="22" fill="#f4f9ff"/>
+    <line x1="74" y1="170" x2="888" y2="170" stroke="#d2e5f5" stroke-width="3" stroke-dasharray="8 8"/>
+    <polygon points="160,135 248,135 248,111 297,170 248,229 248,205 160,205" fill="#e66369" stroke="#225784" stroke-width="5" stroke-linejoin="round"/><polygon points="330,135 418,135 418,111 467,170 418,229 418,205 330,205" fill="#e66369" stroke="#225784" stroke-width="5" stroke-linejoin="round"/><polygon points="500,135 588,135 588,111 637,170 588,229 588,205 500,205" fill="#e66369" stroke="#225784" stroke-width="5" stroke-linejoin="round"/><polygon points="670,135 758,135 758,111 807,170 758,229 758,205 670,205" fill="#e66369" stroke="#225784" stroke-width="5" stroke-linejoin="round"/>
+    </svg>

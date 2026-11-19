@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-label="Inverted repeats — חזרות בכיוונים הפוכים">
+    <rect width="960" height="280" rx="22" fill="#f4f9ff"/>
+    <line x1="74" y1="170" x2="888" y2="170" stroke="#d2e5f5" stroke-width="3" stroke-dasharray="8 8"/>
+    <polygon points="260,135 348,135 348,111 397,170 348,229 348,205 260,205" fill="#e66369" stroke="#225784" stroke-width="5" stroke-linejoin="round"/><polygon points="707,135 619,135 619,111 570,170 619,229 619,205 707,205" fill="#e66369" stroke="#225784" stroke-width="5" stroke-linejoin="round"/>
+    </svg>

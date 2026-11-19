@@ -1,0 +1,281 @@
+/* Faithful to the reference infographic, but all text is real selectable HTML. */
+.rdna {
+    --rdna-blue: #214e80;
+    --rdna-outline: #b8d5f1;
+    color: #173b60;
+    direction: rtl;
+    text-align: right;
+    width: 100%;
+    max-width: 1180px;
+    margin: 22px auto 28px;
+    font-family: inherit
+}
+
+.rdna * {
+    box-sizing: border-box
+}
+
+.rdna-banner {
+    border-radius: 18px;
+    background: linear-gradient(110deg, #dbeeff, #b8d8f7);
+    padding: 19px 22px;
+    margin-bottom: 22px;
+    text-align: center
+}
+
+.rdna-banner h3 {
+    font-size: clamp(23px, 3vw, 37px);
+    font-weight: 800;
+    color: #13355d;
+    margin: 0;
+    line-height: 1.45
+}
+
+.rdna-panel {
+    border: 2px solid var(--rdna-outline);
+    border-radius: 20px;
+    background: linear-gradient(105deg, #f5faff, #eaf4ff);
+    padding: 22px;
+    margin-bottom: 20px;
+    min-width: 0
+}
+
+.rdna-mainhead {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 20px;
+    align-items: center;
+    min-height: 136px
+}
+
+.rdna-maintext {
+    align-self: center;
+    text-align: right;
+    padding-inline-start: 14px
+}
+
+.rdna-maintext h4 {
+    display: block;
+    background: #c7e1fb;
+    border-radius: 999px;
+    padding: 7px 26px;
+    font-size: clamp(21px, 2.4vw, 30px);
+    font-weight: 800;
+    text-align: center;
+    color: #16447b;
+    margin: 0 0 12px
+}
+
+.rdna-maintext p {
+    margin: 0;
+    font-size: clamp(15px, 1.45vw, 19px);
+    line-height: 1.85;
+    color: #233d55
+}
+
+.rdna-graphic {
+    border-inline-start: 2px solid #c0d7ed;
+    min-height: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline-start: 15px;
+    min-width: 0
+}
+
+.rdna-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    max-width: 440px;
+    direction: ltr
+}
+
+.rdna-arrow {
+    width: 25%;
+    max-width: 100px;
+    height: auto;
+    flex: 1 1 0;
+    filter: drop-shadow(0 2px 0 #d6e7f3)
+}
+
+.rdna-arrow--reverse {
+    transform: rotate(180deg)
+}
+
+.rdna-subgroup {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 135px;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+    direction: ltr
+}
+
+.rdna-subitems {
+    background: #e4f1fd;
+    border-radius: 17px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0
+}
+
+.rdna-subitem {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(195px, 34%);
+    align-items: stretch;
+    gap: 0;
+    direction: ltr;
+    background: #f7fbff;
+    border: 1px solid #bcd7ee;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 87px;
+    box-shadow: 0 2px 7px #a5c7e51c
+}
+
+.rdna-subtitle {
+    direction: rtl;
+    grid-column: 2;
+    grid-row: 1;
+    padding: 13px 15px;
+    background: #d5e8fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-inline-start: 2px solid #b5d2eb
+}
+
+.rdna-subtitle h5 {
+    font-size: clamp(15px, 1.55vw, 19px);
+    font-weight: 800;
+    line-height: 1.5;
+    color: #194b83;
+    text-align: center;
+    margin: 0;
+    overflow-wrap: anywhere
+}
+
+.rdna-helix {
+    font-size: 26px;
+    color: #235e98;
+    font-weight: 800;
+    line-height: 1
+}
+
+.rdna-subitem p {
+    grid-column: 1;
+    grid-row: 1;
+    direction: rtl;
+    margin: 0;
+    padding: 13px 18px;
+    text-align: center;
+    align-self: center;
+    font-size: clamp(14px, 1.45vw, 17px);
+    line-height: 1.75;
+    color: #213951
+}
+
+.rdna-subitem bdi {
+    white-space: nowrap;
+    font-weight: 650
+}
+
+.rdna-subgroup-label {
+    direction: rtl;
+    text-align: center;
+    color: #174b82;
+    background: #cfe5fc;
+    padding: 16px 7px;
+    border-radius: 18px;
+    font-weight: 800;
+    line-height: 1.5
+}
+
+.rdna-subgroup-label small {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px
+}
+
+.rdna-panel--inverted .rdna-mainhead {
+    min-height: 123px
+}
+
+.rdna-panel--inverted .rdna-arrows {
+    max-width: 280px;
+    gap: 24px
+}
+
+@media(max-width:760px) {
+    .rdna-panel {
+        padding: 14px
+    }
+
+    .rdna-mainhead {
+        grid-template-columns: 1fr;
+        gap: 12px
+    }
+
+    .rdna-graphic {
+        border-inline-start: none;
+        border-top: 1px solid #c4ddf4;
+        padding: 14px 0 0;
+        min-height: 75px
+    }
+
+    .rdna-maintext {
+        padding: 0
+    }
+
+    .rdna-subgroup {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px
+    }
+
+    .rdna-subgroup-label {
+        width: 100%;
+        padding: 9px
+    }
+
+    .rdna-subgroup-label small {
+        display: inline;
+        margin-inline-start: 8px
+    }
+
+    .rdna-subitems {
+        width: 100%
+    }
+
+    .rdna-subitem {
+        grid-template-columns: 1fr;
+        direction: rtl
+    }
+
+    .rdna-subtitle,
+    .rdna-subitem p {
+        grid-column: 1;
+        grid-row: auto
+    }
+
+    .rdna-subtitle {
+        border-inline-start: 0;
+        border-bottom: 1px solid #b5d2eb;
+        padding: 9px
+    }
+
+    .rdna-subitem p {
+        padding: 12px
+    }
+
+    .rdna-arrows {
+        max-width: 315px
+    }
+}

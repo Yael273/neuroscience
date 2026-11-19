@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Bookmark, BookmarkCheck,BookOpen, CheckCircle2, ChevronDown, RotateCcw } from "lucide-react";
+import { Bookmark, BookmarkCheck, BookOpen, CheckCircle2, ChevronDown, RotateCcw } from "lucide-react";
 import InteractiveImage from "./InteractiveImage";
 import ProcessFlow from "./ProcessFlow";
 import LessonVisual from "./LessonVisual";
 import MathLessonContent from "./MathLessonContent";
 import "../styles/learning-colors.css";
 import { assetUrl } from "../utils/assetUrl";
+import RepetitiveDNAHierarchy from "./RepetitiveDNAHierarchy";
 
 // Normalize paths so /images/x.svg and public/images/x.svg count as the same asset.
 const imageKey = (src) => String(src || "")
@@ -70,6 +71,9 @@ function LessonNarrative({ section, lessonId }) {
         </div>
       )}
       {(section.learningFlow || []).map((part, i) => {
+        if (part.type === "repetitiveDNAHierarchy") {
+          return <RepetitiveDNAHierarchy key={i} />;
+        }
         if (part.type === "intro" || part.type === "paragraph") {
           return <p className="textbook-paragraph" key={i}>{part.text}</p>;
         }
