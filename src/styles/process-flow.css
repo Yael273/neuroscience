@@ -513,26 +513,20 @@
   .process-flow .process-flow-concept-arrow { animation: none; opacity: 1; }
 }
 
-/* Lecture 3–4 step-by-step explanatory stage (preserves older lesson animations). */
-.process-flow .gen34-stage {margin:18px 0 20px;padding:clamp(18px,3vw,28px);border:1px solid #cfe4dd;border-radius:17px;background:#f3f9f6;overflow:hidden;}
-.process-flow .gen34-stage-label {font-size:13px;color:#13734f;font-weight:800;margin:0 0 14px;}
-.process-flow .gen34-stage-card {background:white;border:1px solid #d9e8e2;border-radius:15px;padding:18px;animation:gen34-emerge .65s ease-out both;}
-.process-flow .gen34-stage-title {color:#185e4b;font-size:18px;font-weight:800;margin:0 0 12px;}
-.process-flow .gen34-demo-chain {display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;direction:rtl;}
-.process-flow .gen34-demo-token {background:#eaf3fc;border:1px solid #bbd8e9;color:#225884;padding:13px 17px;border-radius:12px;font-size:17px;font-weight:800;text-align:center;min-width:95px;animation:gen34-emerge .6s ease both;animation-delay:var(--gen34-delay,0ms);}
-.process-flow .gen34-demo-token.is-muted {background:#f7e9eb;border-color:#efc5cb;color:#a54b58;text-decoration:line-through;}
-.process-flow .gen34-demo-token.is-focus {background:#e1f5eb;border-color:#8fd1ad;color:#116f48;box-shadow:0 0 0 3px #dff4e8;}
-.process-flow .gen34-demo-arrow {color:#338e79;font-size:22px;font-weight:900;}
-.process-flow .gen34-demo-formula {direction:ltr;unicode-bidi:isolate;font-size:clamp(22px,3.5vw,34px);font-weight:850;color:#1c6590;text-align:center;margin:16px 0 4px;animation:gen34-pop .7s ease both;}
-.process-flow .gen34-demo-caption {font-size:14px;color:#46675c;line-height:1.8;text-align:center;margin:14px 0 0;}
-.process-flow .gen34-demo-bars {display:grid;gap:12px;max-width:570px;margin:0 auto;}
-.process-flow .gen34-demo-bar {display:grid;grid-template-columns:90px 1fr 65px;gap:12px;align-items:center;}
-.process-flow .gen34-demo-bar-label {font-size:13px;font-weight:750;color:#235d4b;}
-.process-flow .gen34-demo-bar-track {background:#e2ebe9;border-radius:12px;height:23px;overflow:hidden;}
-.process-flow .gen34-demo-bar-fill {display:block;height:100%;width:var(--gen34-width);background:var(--gen34-color,#4da98d);border-radius:12px;transform:scaleX(0);transform-origin:right;animation:gen34-grow .8s ease both;animation-delay:var(--gen34-delay,0ms);}
-.process-flow .gen34-demo-bar-value {text-align:left;font-size:13px;font-weight:800;color:#23634f;}
-@keyframes gen34-grow {to{transform:scaleX(1)}}
-@keyframes gen34-emerge {from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes gen34-pop {from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}
-@media(max-width:620px){.process-flow .gen34-demo-bar{grid-template-columns:70px 1fr 50px;gap:6px}.process-flow .gen34-demo-token{padding:10px 9px;min-width:70px;font-size:14px}}
-@media(prefers-reduced-motion:reduce){.process-flow .gen34-stage-card,.process-flow .gen34-demo-token,.process-flow .gen34-demo-formula,.process-flow .gen34-demo-bar-fill{animation:none!important;opacity:1;transform:none}}
+
+/* Learning controls - additions to the original stylesheet */
+.process-flow .process-flow-progress-track { width:100%;height:7px;margin:18px 0 0;background:#e6f0e9;border-radius:999px;overflow:hidden;direction:rtl; }
+.process-flow .process-flow-progress-track > span { display:block;height:100%;background:#30a76f;border-radius:999px;transition:width .35s ease; }
+.process-flow .process-flow-explanation {padding:17px 20px;margin:16px 0;background:#f5faf7;border-right:4px solid #29a36b;border-radius:12px;animation:pfExplainIn .25s ease;}
+.process-flow .process-flow-explanation-heading {color:#186b49;font-weight:800;font-size:15px;}
+.process-flow .process-flow-explanation p {margin:8px 0 0;color:#3e5a4b;line-height:1.85;font-size:14px;}
+.process-flow .process-flow-keyword {background:#d8f3e1;color:#116840;border-radius:4px;padding:0 3px;font-weight:750;}
+.process-flow .process-flow-expand {display:inline-flex;gap:7px;align-items:center;border:0;background:none;color:#116f4d;font:inherit;font-size:13px;font-weight:750;cursor:pointer;padding:10px 0 2px;}
+.process-flow .process-flow-more {padding:9px 14px 12px;margin-top:8px;background:#fff;border:1px solid #dcece2;border-radius:10px;}
+.process-flow .process-flow-more ul {margin:8px 0;padding-right:20px;color:#3e5a4b;line-height:1.85;}
+.process-flow .process-flow-actions {display:flex;gap:9px;align-items:center;flex-wrap:wrap;justify-content:flex-end;margin-top:16px;}
+.process-flow .process-flow-secondary {display:inline-flex;align-items:center;gap:6px;padding:10px 13px;background:#ecf6f0;border:1px solid #cee5d7;border-radius:9px;color:#1e6d4d;font:inherit;font-size:13px;font-weight:700;cursor:pointer;}
+.process-flow .process-flow-secondary:disabled {opacity:.5;cursor:not-allowed;}
+.process-flow .process-flow-next {display:inline-flex;align-items:center;gap:7px;}
+@keyframes pfExplainIn {from {opacity:.3;transform:translateY(5px)}to {opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.process-flow .process-flow-explanation{animation:none}.process-flow .process-flow-progress-track > span{transition:none}}

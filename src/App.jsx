@@ -42,9 +42,11 @@ import geneticsTutorial03 from "./data/lessons/genetics-tutorial03.json";
 import appliedGeneticsLecture03 from "./data/lessons/applied-genetics-lecture03.json";
 import geneticsLecture03 from "./data/lessons/genetics-lecture03.json";
 import geneticsLecture04 from "./data/lessons/genetics-lecture04.json";
+import neuroLesson4 from "./data/lessons/neuro-lesson04.json";
+import neuroPractice4 from "./data/lessons/neuro4-interactive-practice.json";
 
 const lessonsById = Object.fromEntries(
-  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, appliedGenetics, molecularLecture03, buddhismLecture01, buddhismLecture02, buddhismLecture03, appliedGeneticsLecture02, neuroLesson22, brainImagingLesson03, compLecture02, compMathReview, compLecture03, compTutorial02, compTutorial03, geneticsTutorial02, compLecture04, consciousnessLesson03, brainImagingLesson04, molecularLecture04, appliedGeneticsTutorial01, geneticsTutorial03, appliedGeneticsLecture03, geneticsLecture03, geneticsLecture04].map(lesson => [lesson.id, lesson])
+  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, appliedGenetics, molecularLecture03, buddhismLecture01, buddhismLecture02, buddhismLecture03, appliedGeneticsLecture02, neuroLesson22, brainImagingLesson03, compLecture02, compMathReview, compLecture03, compTutorial02, compTutorial03, geneticsTutorial02, compLecture04, consciousnessLesson03, brainImagingLesson04, molecularLecture04, appliedGeneticsTutorial01, geneticsTutorial03, appliedGeneticsLecture03, geneticsLecture03, geneticsLecture04, neuroLesson4, neuroPractice4].map(lesson => [lesson.id, lesson])
 );
 
 export default function App() {

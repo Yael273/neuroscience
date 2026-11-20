@@ -34,6 +34,8 @@ import geneticsTutorial03 from "./lessons/genetics-tutorial03.json";
 import appliedGeneticsLecture03 from "./lessons/applied-genetics-lecture03.json";
 import geneticsLecture03 from "./lessons/genetics-lecture03.json";
 import geneticsLecture04 from "./lessons/genetics-lecture04.json";
+import neuroLesson04 from "./lessons/neuro-lesson04.json";
+import neuro4Practice from "./lessons/neuro4-interactive-practice.json";
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -51,6 +53,7 @@ export const subjects = [
     chapters: [
       {
         id: 'evolution-models',
+        group: "lectures",
         name: 'התפתחות מודלים תפקודיים של המוח',
         description: lesson1.description,
         lessonIds: [lesson1.id],
@@ -60,6 +63,7 @@ export const subjects = [
       },
       {
         id: 'nervous-system-introduction',
+        group: "lectures",
         name: 'מבוא למערכת העצבים',
         description: neuroLesson2.description,
         lessonIds: [neuroLesson2.id],
@@ -69,13 +73,34 @@ export const subjects = [
       },
       {
         id: "neuro-chapter-2",
+        group: "lectures",
         name: "שיעור 2 — אנטומיה כללית ועקרונות ארגון במערכת העצבים המרכזית",
         description: "מבנה מערכת העצבים, מסלולים תחושתיים ומוטוריים, חציית קו האמצע, הומונקולוס, צרבלום וגרעיני בסיס",
         lessons: 1,
         duration: 0,
         lessonIds: [neuroLesson22.id],
         topics: neuroLesson22.sections.map((section) => section.title),
-      }
+      },
+      {
+        id: "neuro-lecture04-chapter",
+        group: "lectures",
+        name: "שיעור 4 — קרומי המוח, מערכת החדרים ו־CSF",
+        description: neuroLesson04.description,
+        lessonIds: [neuroLesson04.id],
+        lessons: 1,
+        duration: null,
+        topics: neuroLesson04.sections.map(section => section.title),
+      },
+      {
+        id: "neuro4-practice-chapter",
+        group: "tutorials",
+        name: "תרגול אינטראקטיבי — אנטומיה, חתכים ודגם מוח",
+        description: neuro4Practice.description,
+        lessonIds: [neuro4Practice.id],
+        lessons: 1,
+        duration: null,
+        topics: neuro4Practice.sections.map(section => section.title),
+      },
     ]
   },
 
