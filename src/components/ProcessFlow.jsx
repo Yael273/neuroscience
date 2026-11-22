@@ -3,6 +3,7 @@ import { ArrowLeft, BookOpen, Check, CircleHelp, FileText, Flag } from "lucide-r
 import "../styles/process-flow.css";
 import GeneticsStepDemo from "./GeneticsStepDemo";
 import NeuroStepDemo from "./NeuroStepDemo";
+import MRIStepDemo from "./MRIStepDemo";
 
 const icons = [BookOpen, FileText, CircleHelp, Flag];
 
@@ -70,6 +71,10 @@ export default function ProcessFlow({ block }) {
             title={block.title}
             kind={block.demoKind || "flow"}
           />
+        )}
+
+        {block?.interactiveDemo === "mri" && (
+          <MRIStepDemo step={steps[activeStep]} stepIndex={activeStep} kind={block.demoKind || "image"} />
         )}
 
         {/* ניווט מינימלי, ללא כרטיס הסבר כפול, הרחבה, פס או הפעלה אוטומטית. */}

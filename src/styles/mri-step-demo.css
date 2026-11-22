@@ -1,0 +1,84 @@
+.process-flow .mri-step-demo {
+    background: #f4faff;
+    border: 1px solid #d9eaf2;
+    border-radius: 16px;
+    padding: 16px 14px 9px;
+    margin: 18px 0 12px;
+    text-align: center;
+    overflow: hidden
+}
+
+.process-flow .mri-step-title {
+    display: block;
+    color: #176b86;
+    font-size: 15px;
+    margin: 0 auto 6px
+}
+
+.process-flow .mri-step-illustration {
+    display: block;
+    width: min(100%, 570px);
+    height: auto;
+    margin: auto;
+    max-height: 310px
+}
+
+.process-flow .mri-scene-caption {
+    font: 600 15px Arial, sans-serif;
+    text-anchor: middle;
+    fill: #426a7f
+}
+
+.process-flow .mri-step-note {
+    color: #76909d;
+    font-size: 11px;
+    margin: 1px 0 5px
+}
+
+.process-flow .mri-scene-appear {
+    animation: mri-appear .35s ease both
+}
+
+.process-flow .mri-dash {
+    animation: mri-dash 1.9s linear infinite
+}
+
+.process-flow .mri-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: mri-pulse 1.6s ease-in-out infinite
+}
+
+@keyframes mri-appear {
+    from {
+        opacity: .2;
+        transform: scale(.93)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes mri-dash {
+    to {
+        stroke-dashoffset: -35
+    }
+}
+
+@keyframes mri-pulse {
+    50% {
+        opacity: .56;
+        transform: scale(1.08)
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .process-flow .mri-scene-appear,
+    .process-flow .mri-dash,
+    .process-flow .mri-pulse {
+        animation: none
+    }
+}

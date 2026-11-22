@@ -54,6 +54,11 @@
                     "description": "מסיט את המגנטיזציה"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 0,
+                "caption": "גרעיני מימן מגיבים לשדה ולפולס RF"
               }
             },
             {
@@ -72,6 +77,11 @@
                     "description": "מאיפה הגיע האות?"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 1,
+                "caption": "מפעילים גרדיאנטים בתדר ובפאזה"
               }
             },
             {
@@ -90,9 +100,16 @@
                     "description": "תמונה מרחבית"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 2,
+                "caption": "מפרידים את מקורות האות בטרנספורמציה מתמטית"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "image"
         }
       ],
       "check": {
@@ -164,6 +181,11 @@
                     "description": "גרעין מימן"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 0,
+                "caption": "מים ושומן מכילים מימן בכמות רבה"
               }
             },
             {
@@ -182,6 +204,11 @@
                     "description": "מגיב לשדה חיצוני"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 1,
+                "caption": "לפרוטון מומנט מגנטי"
               }
             },
             {
@@ -200,9 +227,16 @@
                     "description": "מגנטיזציה נטו"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 2,
+                "caption": "תרומות גרעינים רבות מצטברות"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "image"
         }
       ],
       "check": {
@@ -428,6 +462,11 @@
                     "description": "מגנטיזציה אורכית"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "rf",
+                "stage": 0,
+                "caption": "M נוטה לאורך B₀"
               }
             },
             {
@@ -446,6 +485,11 @@
                     "description": "העברת אנרגיה"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "rf",
+                "stage": 1,
+                "caption": "B₁ מופעל בתדר לרמור"
               }
             },
             {
@@ -464,9 +508,16 @@
                     "description": "רכיב רוחבי מדיד"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "rf",
+                "stage": 2,
+                "caption": "מגנטיזציה רוחבית מופיעה"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "rf"
         }
       ],
       "check": {
@@ -535,6 +586,11 @@
                     "description": "מגנטיזציה רוחבית"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "fid",
+                "stage": 0,
+                "caption": "הפעלת RF משנה את M"
               }
             },
             {
@@ -553,6 +609,11 @@
                     "description": "אות אלקטרומגנטי"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "fid",
+                "stage": 1,
+                "caption": "Mxy משתנה בכיוון בזמן"
               }
             },
             {
@@ -571,9 +632,16 @@
                     "description": "נתונים לשחזור"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "fid",
+                "stage": 2,
+                "caption": "סליל הקליטה מקבל FID"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "fid"
         }
       ],
       "check": {
@@ -810,6 +878,11 @@
                     "description": "עירור טווח תדרים"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "gradient",
+                "stage": 0,
+                "caption": "מגדירים איזו שכבה תתרום אות"
               }
             },
             {
@@ -828,6 +901,11 @@
                     "description": "סכום התדרים"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "gradient",
+                "stage": 1,
+                "caption": "מפרידים מיקומים לפי תדר בזמן קליטה"
               }
             },
             {
@@ -846,9 +924,16 @@
                     "description": "ההיסט נשמר"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "gradient",
+                "stage": 2,
+                "caption": "מוסיפים היסט פאזה תלוי מיקום"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "gradient"
         }
       ],
       "check": {
@@ -923,6 +1008,11 @@
                     "description": "f משתנה"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "slice",
+                "stage": 0,
+                "caption": "התדר המקומי משתנה לאורך הציר"
               }
             },
             {
@@ -941,6 +1031,11 @@
                     "description": "טווח תדרים"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "slice",
+                "stage": 1,
+                "caption": "הפולס מכיל רוחב פס מסוים"
               }
             },
             {
@@ -959,9 +1054,16 @@
                     "description": "תחום העוררות"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "slice",
+                "stage": 2,
+                "caption": "רק הטווח המתאים מתעורר"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "slice"
         }
       ],
       "check": {
@@ -1109,6 +1211,11 @@
                     "description": "תדר אחר"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "frequency",
+                "stage": 0,
+                "caption": "הגרדיאנט פועל בזמן הקליטה"
               }
             },
             {
@@ -1127,6 +1234,11 @@
                     "description": "S(t)"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "frequency",
+                "stage": 1,
+                "caption": "כל המיקומים תורמים לאותו סליל"
               }
             },
             {
@@ -1145,9 +1257,16 @@
                     "description": "שיוך לתנוחות x"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "frequency",
+                "stage": 2,
+                "caption": "ניתוח פורייה מזהה רכיבי תדר"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "frequency"
         }
       ],
       "check": {
@@ -1215,6 +1334,11 @@
                     "description": "ציר y"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "phase",
+                "stage": 0,
+                "caption": "לפני הגרדיאנט ספינים עשויים להיות מסונכרנים"
               }
             },
             {
@@ -1233,6 +1357,11 @@
                     "description": "Δφ גדול"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "phase",
+                "stage": 1,
+                "caption": "מיקומים שונים צוברים זוויות שונות"
               }
             },
             {
@@ -1251,9 +1380,16 @@
                     "description": "היסט תלוי מיקום"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "phase",
+                "stage": 2,
+                "caption": "הפרשי הפאזה נותרים"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "phase"
         }
       ],
       "check": {
@@ -1321,6 +1457,11 @@
                     "description": "מאפייני תרומה"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "fourier",
+                "stage": 0,
+                "caption": "כל מיקום תורם אות"
               }
             },
             {
@@ -1339,6 +1480,11 @@
                     "description": "קידודי פאזה"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "fourier",
+                "stage": 1,
+                "caption": "אין תמונה מיידית"
               }
             },
             {
@@ -1357,9 +1503,16 @@
                     "description": "מרחב פיזי"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "fourier",
+                "stage": 2,
+                "caption": "משחזרים מיקומים"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "fourier"
         }
       ],
       "check": {
@@ -1517,6 +1670,11 @@
                     "description": "k-space"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "kspace",
+                "stage": 0,
+                "caption": "תדר ופאזה מקודדים את המרחב"
               }
             },
             {
@@ -1535,6 +1693,11 @@
                     "description": "פרטים חדים"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "kspace",
+                "stage": 1,
+                "caption": "קווי נתונים נצברים במערך"
               }
             },
             {
@@ -1553,9 +1716,16 @@
                     "description": "תמונה מרחבית"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "kspace",
+                "stage": 2,
+                "caption": "התמרת פורייה הפוכה"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "kspace"
         }
       ],
       "check": {
@@ -1671,6 +1841,11 @@
                     "description": "מגנטיזציה אורכית"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 0,
+                "caption": "B₀ מארגן מגנטיזציה נטו"
               }
             },
             {
@@ -1689,6 +1864,11 @@
                     "description": "שינויים בזמן"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 1,
+                "caption": "RF יוצר Mxy ולאחריו T1/T2"
               }
             },
             {
@@ -1707,6 +1887,11 @@
                     "description": "שני צירים"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 2,
+                "caption": "בחירת חתך, תדר ופאזה"
               }
             },
             {
@@ -1725,9 +1910,16 @@
                     "description": "MRI"
                   }
                 ]
+              },
+              "demo": {
+                "scene": "image",
+                "stage": 3,
+                "caption": "k-space ופורייה הפוכה"
               }
             }
-          ]
+          ],
+          "interactiveDemo": "mri",
+          "demoKind": "image"
         },
         {
           "type": "takeaway",

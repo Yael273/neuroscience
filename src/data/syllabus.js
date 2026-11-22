@@ -36,6 +36,9 @@ import geneticsLecture03 from "./lessons/genetics-lecture03.json";
 import geneticsLecture04 from "./lessons/genetics-lecture04.json";
 import neuroLesson04 from "./lessons/neuro-lesson04.json";
 import neuro4Practice from "./lessons/neuro4-interactive-practice.json";
+import brainImaging5 from "./lessons/brain-imaging-lecture05.json";
+import brainImaging6 from "./lessons/brain-imaging-lecture06.json";
+
 
 // Only subjects with real uploaded material appear here.
 // Progress is calculated automatically using useStudyProgress.
@@ -393,7 +396,26 @@ export const subjects = [
           (section) => section.title
         ),
       },
-
+      {
+        id: "brain-imaging-lecture-5",
+        group: "lectures",
+        name: "שיעור 5 — יצירת תמונת MRI ורצפי דופק",
+        description: brainImaging5.description,
+        lessonIds: [brainImaging5.id],
+        lessons: 1,
+        duration: brainImaging5.duration?.estimatedStudyMinutes ?? null,
+        topics: brainImaging5.sections.map(section => section.title)
+      },
+      {
+        id: "brain-imaging-lecture-6",
+        group: "lectures",
+        name: "שיעור 6 — אות MRI, fMRI, רזולוציה ויחס אות לרעש",
+        description: brainImaging6.description,
+        lessonIds: [brainImaging6.id],
+        lessons: 1,
+        duration: brainImaging6.duration?.estimatedStudyMinutes ?? null,
+        topics: brainImaging6.sections.map(section => section.title)
+      },
     ]
   },
 
