@@ -38,6 +38,7 @@ import neuroLesson04 from "./lessons/neuro-lesson04.json";
 import neuro4Practice from "./lessons/neuro4-interactive-practice.json";
 import brainImaging5 from "./lessons/brain-imaging-lecture05.json";
 import brainImaging6 from "./lessons/brain-imaging-lecture06.json";
+import geneticsTutorial4 from "./lessons/genetics-tutorial04.json";
 
 
 // Only subjects with real uploaded material appear here.
@@ -270,6 +271,18 @@ export const subjects = [
       lessons: 1,
       duration: geneticsLecture04.duration?.estimatedStudyMinutes ?? null,
       topics: geneticsLecture04.sections.map(section => section.title)
+    },
+    {
+      id: "genetics-tutorial-4",
+      group: "tutorials",
+      name: "תרגול 4 — אינטראקציה בין גנים ולתאליות",
+      description: geneticsTutorial4.description,
+      lessonIds: [geneticsTutorial4.id],
+      lessons: 1,
+      duration: geneticsTutorial4.duration?.estimatedStudyMinutes ?? null,
+      topics: geneticsTutorial4.sections.map(
+        section => section.title
+      )
     },
     ]
   },

@@ -4,6 +4,8 @@ import "../styles/process-flow.css";
 import GeneticsStepDemo from "./GeneticsStepDemo";
 import NeuroStepDemo from "./NeuroStepDemo";
 import MRIStepDemo from "./MRIStepDemo";
+import GeneticsTutorial4Demo from "./GeneticsTutorial4Demo";
+
 
 const icons = [BookOpen, FileText, CircleHelp, Flag];
 
@@ -76,6 +78,16 @@ export default function ProcessFlow({ block }) {
         {block?.interactiveDemo === "mri" && (
           <MRIStepDemo step={steps[activeStep]} stepIndex={activeStep} kind={block.demoKind || "image"} />
         )}
+
+
+        {block?.interactiveDemo === "genetics-tutorial04" && (
+          <GeneticsTutorial4Demo
+            step={steps[activeStep]}
+            stepIndex={activeStep}
+            totalSteps={steps.length}
+          />
+        )}
+
 
         {/* ניווט מינימלי, ללא כרטיס הסבר כפול, הרחבה, פס או הפעלה אוטומטית. */}
         <div className="process-flow-current">

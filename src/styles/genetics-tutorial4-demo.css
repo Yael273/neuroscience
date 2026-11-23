@@ -1,0 +1,749 @@
+/* Visual mechanism explanations for Genetics tutorial 4. The ProcessFlow above remains unchanged. */
+.process-flow .genetics-tutorial4-demo {
+    direction: rtl;
+    margin: 16px 0 18px;
+    padding: 18px 20px;
+    background: #f3faf7;
+    border: 1px solid #d7e8df;
+    border-radius: 18px;
+    overflow: hidden;
+    color: #234d3c;
+}
+
+.process-flow .g4-scene {
+    animation: g4-enter .38s ease both;
+    min-height: 180px;
+}
+
+.process-flow .g4-caption {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #386b56;
+    margin: 17px 0 0;
+}
+
+.process-flow .g4-allele-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 740px;
+    margin: auto;
+}
+
+.process-flow .g4-class {
+    background: white;
+    min-height: 119px;
+    padding: 12px 10px;
+    border: 2px solid #d8e8df;
+    border-radius: 15px;
+    transition: opacity .3s, filter .3s, transform .3s, border-color .3s;
+}
+
+.process-flow .g4-class.g4-focus {
+    border-color: #23a978;
+    box-shadow: 0 0 0 3px #dff4ea;
+    transform: translateY(-3px);
+}
+
+.process-flow .g4-class.g4-muted {
+    opacity: .35;
+    filter: grayscale(.6);
+}
+
+.process-flow .g4-class-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: #305a48;
+    font-size: 13px;
+}
+
+.process-flow .g4-class-top span {
+    color: #6f8b7d;
+}
+
+.process-flow .g4-pips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    align-items: center;
+    min-height: 33px;
+    margin: 9px 0 6px;
+}
+
+.process-flow .g4-pip {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    border-radius: 50%;
+    border: 1px solid #aab9b2;
+    background: var(--pip, #ddd);
+    animation: g4-pip-in .38s ease both;
+    animation-delay: var(--delay, 0ms);
+}
+
+.process-flow .result-blue {
+    --pip: #448bd6
+}
+
+.process-flow .result-red {
+    --pip: #e86d69
+}
+
+.process-flow .result-white {
+    --pip: #fff
+}
+
+.process-flow .result-black {
+    --pip: #334451
+}
+
+.process-flow .result-gray {
+    --pip: #aab6bf
+}
+
+.process-flow .result-brown {
+    --pip: #9d754c
+}
+
+.process-flow .result-yellow {
+    --pip: #eed05e
+}
+
+.process-flow .result-albino {
+    --pip: #fff
+}
+
+.process-flow .result-mutant {
+    --pip: #c96582
+}
+
+.process-flow .result-normal {
+    --pip: #5eb996
+}
+
+.process-flow .result-piping {
+    --pip: #9786dc
+}
+
+.process-flow .result-tip {
+    --pip: #6cb2d4
+}
+
+.process-flow .result-spiny {
+    --pip: #d39e53
+}
+
+.process-flow .g4-outcome {
+    color: #2d5e4a;
+    display: block;
+    font-size: 12px;
+}
+
+.process-flow .g4-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto 0;
+}
+
+.process-flow .g4-total-part {
+    min-width: 80px;
+    border-radius: 12px;
+    background: #e0f1e8;
+    text-align: center;
+    padding: 9px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.process-flow .g4-total-part b {
+    font-size: 22px;
+    color: #186944;
+}
+
+.process-flow .g4-total-part small {
+    font-size: 11px;
+}
+
+.process-flow .g4-colon {
+    font-size: 22px;
+}
+
+.process-flow .g4-process-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: auto;
+}
+
+.process-flow .g4-producer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 2px solid #d3e2da;
+    padding: 18px;
+    border-radius: 17px;
+    min-width: 105px;
+    opacity: .4;
+    transition: opacity .35s, border-color .35s;
+}
+
+.process-flow .g4-producer.on {
+    opacity: 1;
+    border-color: #5cb58b;
+}
+
+.process-flow .g4-producer span {
+    font-weight: 750;
+}
+
+.process-flow .g4-producer small {
+    color: #597b69;
+}
+
+.process-flow .g4-molecule {
+    width: 36px;
+    height: 36px;
+    border-radius: 40% 60% 50% 50%;
+    background: #dba2df;
+    animation: g4-bob 1.8s ease-in-out infinite;
+}
+
+.process-flow .g4-molecule.b {
+    background: #76c4c6;
+    animation-delay: .4s;
+}
+
+.process-flow .g4-operation {
+    font-size: 24px;
+    font-weight: 800;
+    color: #27794f;
+}
+
+.process-flow .g4-product {
+    border-radius: 16px;
+    min-width: 116px;
+    min-height: 104px;
+    background: #fff;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    border: 2px dashed #bdcec5;
+}
+
+.process-flow .g4-product.complete {
+    border: 2px solid #57b28b;
+    background: #e4f3ff;
+}
+
+.process-flow .g4-product-disc {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #dce5e0;
+}
+
+.process-flow .g4-product.complete .g4-product-disc {
+    background: #447fcb;
+    animation: g4-pip-in .5s both;
+}
+
+.process-flow .g4-mini-cases {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 17px;
+    flex-wrap: wrap;
+}
+
+.process-flow .g4-case {
+    background: white;
+    border: 1px solid #c8e1d4;
+    border-radius: 10px;
+    padding: 9px 11px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    transition: opacity .3s;
+}
+
+.process-flow .g4-case.dim {
+    opacity: .25
+}
+
+.process-flow .g4-case b {
+    color: #278759;
+    font-size: 20px;
+}
+
+.process-flow .g4-gate-track {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-flow .g4-gene,
+.process-flow .g4-color-output {
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #cfe3d8;
+    padding: 22px 14px;
+    min-width: 100px;
+    text-align: center;
+    font-weight: 750;
+}
+
+.process-flow .g4-gate {
+    position: relative;
+    width: 72px;
+    height: 85px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    border: 3px solid #66b69a;
+    overflow: hidden;
+    background: #e4f6ed;
+}
+
+.process-flow .g4-gate span {
+    z-index: 2;
+    text-align: center;
+    font-size: 12px;
+}
+
+.process-flow .g4-gate::after {
+    content: "";
+    background: #d55e5e;
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    transform: rotate(0deg);
+    transition: transform .4s;
+}
+
+.process-flow .g4-gate.open::after {
+    background: #5eb68a;
+    transform: rotate(90deg) translateX(32px);
+}
+
+.process-flow .g4-color-output.hidden {
+    opacity: .35;
+}
+
+.process-flow .g4-lethal-scene {
+    max-width: 730px;
+    margin: auto;
+}
+
+.process-flow .g4-parents,
+.process-flow .g4-survivors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 17px;
+    flex-wrap: wrap;
+}
+
+.process-flow .g4-parents span {
+    background: #fff;
+    border: 1px solid #e0e5d8;
+    border-radius: 12px;
+    padding: 8px 14px;
+}
+
+.process-flow .g4-offspring {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.process-flow .g4-child {
+    background: #fff;
+    border: 1px solid #dce9e1;
+    min-height: 116px;
+    padding: 14px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    position: relative;
+    transition: opacity .4s, transform .4s, filter .4s;
+}
+
+.process-flow .g4-child.removed {
+    opacity: .28;
+    filter: grayscale(1);
+    transform: scale(.9);
+}
+
+.process-flow .g4-mouse-shape {
+    font-size: 32px;
+}
+
+.process-flow .g4-child b {
+    font-size: 13px;
+}
+
+.process-flow .g4-child small {
+    font-size: 11px;
+}
+
+.process-flow .g4-crossout {
+    position: absolute;
+    font-size: 58px;
+    color: #c33b48;
+}
+
+.process-flow .g4-survivors {
+    margin: 14px 0 0;
+    gap: 8px;
+}
+
+.process-flow .g4-survivors b {
+    background: #daf1e5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.process-flow .g4-survivors small {
+    width: 100%;
+    text-align: center;
+}
+
+.process-flow .g4-blood-key {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.process-flow .g4-blood-key span {
+    background: white;
+    border: 1px solid #d4e4db;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+.process-flow .g4-blood-key .g4-blocked {
+    background: #fff0ee;
+    text-decoration: line-through;
+}
+
+.process-flow .g4-red-cell {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, #f6aaa9 10%, #d76b70 66%, #b54053 84%);
+    border: 7px solid #cd5a65;
+    margin: 30px auto 12px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    font-weight: 750;
+    font-size: 12px;
+    box-shadow: inset 0 0 24px #8a3a46;
+}
+
+.process-flow .g4-red-cell em {
+    font-style: normal;
+    padding: 8px;
+}
+
+.process-flow .g4-antenna {
+    position: absolute;
+    top: -23px;
+    left: 28px;
+    width: 7px;
+    height: 25px;
+    background: #278e96;
+    border-radius: 6px;
+    animation: g4-antigen .5s both;
+}
+
+.process-flow .g4-antenna:nth-child(2) {
+    left: 63px;
+}
+
+.process-flow .g4-antenna:nth-child(3) {
+    left: 98px;
+}
+
+.process-flow .g4-blood-result {
+    text-align: center;
+    font-weight: 750;
+    color: #3b705c;
+}
+
+.process-flow .g4-rat-branch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.process-flow .g4-rat-branch>* {
+    border: 1px solid #d6e5da;
+    background: #fff;
+    border-radius: 9px;
+    padding: 7px 11px;
+}
+
+.process-flow .g4-rat-branch .g4-branch-active {
+    background: #ddf4e6;
+    border-color: #57bc86;
+}
+
+.process-flow .g4-rat-colors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.process-flow .g4-rat-tile {
+    min-width: 96px;
+    border: 1px solid #d8e5dc;
+    border-radius: 12px;
+    padding: 13px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    background: #fff;
+    transition: opacity .3s;
+}
+
+.process-flow .g4-rat-tile .g4-pip {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+}
+
+.process-flow .g4-rat-tile.quiet {
+    opacity: .23;
+}
+
+.process-flow .g4-rat-tile.selected {
+    box-shadow: 0 0 0 2px #4db680;
+}
+
+.process-flow .g4-rat-tile small {
+    font-size: 11px;
+}
+
+.process-flow .g4-compare-suppressor,
+.process-flow .g4-suppressor-ratio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.process-flow .g4-suppressor-case {
+    background: #fff;
+    border: 2px solid #d6e5dd;
+    border-radius: 12px;
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.process-flow .g4-suppressor-case.selected {
+    border-color: #51b68d;
+}
+
+.process-flow .g4-suppressor-ratio {
+    margin-top: 18px;
+}
+
+.process-flow .g4-suppressor-ratio b {
+    background: #d9f0e4;
+    padding: 9px;
+    border-radius: 8px;
+}
+
+.process-flow .g4-fruit-bars {
+    max-width: 550px;
+    margin: auto;
+}
+
+.process-flow .g4-fruit-row {
+    display: grid;
+    grid-template-columns: 75px 1fr 42px;
+    align-items: center;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.process-flow .g4-bar-track {
+    background: #e1e7e4;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.process-flow .g4-bar-track i {
+    height: 100%;
+    background: #68a6cc;
+    display: block;
+    transition: width .45s;
+}
+
+.process-flow .g4-fruit-row:nth-child(2) .g4-bar-track i {
+    background: #ccc9b3;
+}
+
+.process-flow .g4-fruit-type {
+    text-align: center;
+    margin: 16px 0 0;
+    font-weight: 750;
+}
+
+.process-flow .g4-family {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.process-flow .g4-family-person {
+    background: #fff;
+    border: 2px solid #c6e1d4;
+    padding: 16px 22px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 750;
+}
+
+.process-flow .g4-family-person small {
+    font-weight: 400;
+    color: #5c8170;
+}
+
+.process-flow .g4-family-line {
+    width: 2px;
+    height: 30px;
+    background: #6ca990;
+    margin: auto;
+}
+
+.process-flow .g4-family-person.child {
+    margin: auto;
+    border-color: #45996c;
+}
+
+.process-flow .g4-pedigree-highlight {
+    text-align: center;
+    background: #dcefe6;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 12px auto 0;
+    max-width: 420px;
+}
+
+@keyframes g4-enter {
+    from {
+        opacity: 0;
+        transform: translateY(7px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes g4-pip-in {
+    from {
+        opacity: .15;
+        transform: scale(.25)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes g4-bob {
+    50% {
+        transform: translateY(-6px)
+    }
+}
+
+@keyframes g4-antigen {
+    from {
+        transform: scaleY(0)
+    }
+
+    to {
+        transform: scaleY(1)
+    }
+}
+
+@media(max-width:640px) {
+    .process-flow .genetics-tutorial4-demo {
+        padding: 14px 10px
+    }
+
+    .process-flow .g4-allele-tiles {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .process-flow .g4-offspring {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .process-flow .g4-class {
+        min-height: 110px
+    }
+
+    .process-flow .g4-red-cell {
+        margin-top: 28px
+    }
+
+    .process-flow .g4-case {
+        padding: 7px
+    }
+
+    .process-flow .g4-fruit-row {
+        grid-template-columns: 65px 1fr 40px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .process-flow .genetics-tutorial4-demo *,
+    .process-flow .g4-scene {
+        animation: none !important;
+        transition: none !important
+    }
+}
