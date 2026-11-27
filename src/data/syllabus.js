@@ -40,6 +40,7 @@ import brainImaging5 from "./lessons/brain-imaging-lecture05.json";
 import brainImaging6 from "./lessons/brain-imaging-lecture06.json";
 import geneticsTutorial4 from "./lessons/genetics-tutorial04.json";
 import geneticsStudyGuide from "./lessons/genetics-study-guide-site-ready.json";
+import geneticsLecture05 from "./lessons/genetics-lecture05.json";
 
 
 // Only subjects with real uploaded material appear here.
@@ -294,6 +295,16 @@ export const subjects = [
       lessons: 1,
       duration: geneticsStudyGuide.duration?.estimatedStudyMinutes ?? null,
       topics: geneticsStudyGuide.sections.map(section => section.title)
+    },
+    {
+      id: "genetics-lecture-5",
+      group: "lectures",
+      name: "הרצאה 5 — אפקט אימהי ותורשה מיטוכונדרית",
+      description: geneticsLecture05.description,
+      lessonIds: [geneticsLecture05.id],
+      lessons: 1,
+      duration: geneticsLecture05.duration?.estimatedStudyMinutes ?? null,
+      topics: geneticsLecture05.sections.map(section => section.title)
     },
     ]
   },

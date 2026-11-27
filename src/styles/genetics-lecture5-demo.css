@@ -1,0 +1,37 @@
+/* החלפת שלבים מיידית, ללא מעברי fade/slide/zoom. */
+.gl5-demo, .gl5-demo * { animation: none !important; transition: none !important; }
+.gl5-demo { direction:rtl; padding:18px 16px; border-radius:16px; border:1px solid #d7e9e1; background:#f8fcfa; margin:18px 0; color:#23423a; }
+.gl5-stage { min-height:155px; display:grid; align-items:center; }
+.gl5-scene { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px; }
+.gl5-box { min-width:155px; min-height:115px; max-width:370px; flex:1 1 155px; border:1px solid #c7dcd4; border-radius:14px; padding:14px 12px; background:#fff; text-align:center; display:flex; flex-direction:column; gap:9px; align-items:center; justify-content:center; }
+.gl5-box.mother { background:#e5f3ec; border-color:#92c9aa; }
+.gl5-box strong { font-size:14px; }
+.gl5-content { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.gl5-content small { font-size:12px; line-height:1.5; }
+.gl5-arrow { font-size:25px; color:#528d71; font-weight:700; }
+.gl5-gene { direction:ltr; unicode-bidi:embed; font-weight:800; font-size:18px; }
+.gl5-egg { width:64px;height:70px; border-radius:50%;border:3px solid #a2bcd8;background:#e8f1fc; display:flex; flex-wrap:wrap;justify-content:center;align-items:center; gap:2px; margin:auto; }
+.gl5-mrna { padding:4px 6px; background:#f2dfb5;border-radius:8px; font-size:12px; color:#66501c;font-weight:700; }
+.gl5-embryo { display:flex; flex-direction:column; align-items:center; gap:6px; }
+.gl5-snail { display:flex; flex-direction:column;align-items:center; font-size:11px; }
+.gl5-snail-shell { font-size:53px;line-height:1;color:#ba8d5d; }
+.gl5-snail.left .gl5-snail-shell { display:block;transform:scaleX(-1); color:#8d92cb; }
+.gl5-snail-group {display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.gl5-snail-group .gl5-snail-shell {font-size:32px;}
+.gl5-dot { display:inline-block; width:11px;height:11px; border-radius:50%; background:#61a5a4; border:1px solid #408a8a; }
+.gl5-dot.bad { background:#da8279;border-color:#ba675e; }
+.gl5-dot.small { width:12px;height:12px; }
+.gl5-cell {display:flex;flex-direction:column;align-items:center;gap:7px;}
+.gl5-cell-inside {width:88px;min-height:70px;display:flex;flex-wrap:wrap;align-content:center;align-items:center;justify-content:center;gap:5px;border:3px solid #9dbae5;border-radius:50%;background:#e8effb;padding:8px;}
+.gl5-cell-row { display:flex;align-items:center;gap:13px;flex-wrap:wrap;justify-content:center; }
+.gl5-offspring {display:flex;gap:9px;}
+.gl5-offspring-dot {width:24px;height:24px;border:2px solid #55947a;border-radius:50%;background:#a5d9bc;}
+.gl5-offspring-dot.bad { background:#f3b7b0;border-color:#cb7d74; }
+.gl5-membrane { display:flex;gap:7px;align-items:center;justify-content:center;flex-wrap:wrap;max-width:420px;border-block:8px double #b2d5d0;padding:15px 5px; }
+.gl5-ox-node {background:#e4f3eb;border:1px solid #93bfaa;border-radius:8px;padding:8px 9px;font-size:12px;font-weight:bold;direction:ltr;}
+.gl5-pair { display:flex;justify-content:center;gap:12px; }
+.gl5-person {display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:2px solid #6387a5;background:#d6e6f4;color:#365b7a;font-weight:800;border-radius:50%;}
+.gl5-person.affected, .gl5-person.mother {background:#f0b1b7;border-color:#ca6975;color:#923f4a;}
+.gl5-person.muted {background:#d6e6f4;color:#365b7a;}
+.gl5-caption {margin:14px 0 0;text-align:center; font-size:14px;line-height:1.7;}
+@media(max-width:600px){.gl5-box{min-width:140px}.gl5-arrow{font-size:20px}.gl5-demo{padding:12px}}

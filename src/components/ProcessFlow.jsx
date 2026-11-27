@@ -6,6 +6,7 @@ import NeuroStepDemo from "./NeuroStepDemo";
 import MRIStepDemo from "./MRIStepDemo";
 import GeneticsTutorial4Demo from "./GeneticsTutorial4Demo";
 import GeneticsStudyGuideDemo from "./GeneticsStudyGuideDemo";
+import GeneticsLecture5Demo from "./GeneticsLecture5Demo";
 
 
 const icons = [BookOpen, FileText, CircleHelp, Flag];
@@ -84,6 +85,12 @@ export default function ProcessFlow({ block }) {
           />
         )}
 
+        {block?.interactiveDemo === "genetics-study-guide" && (
+          <GeneticsStudyGuideDemo
+            stepIndex={activeStep}
+            kind={block.demoKind || "workflow"}
+          />
+        )}
 
         {block?.interactiveDemo === "mri" && (
           <MRIStepDemo step={steps[activeStep]} stepIndex={activeStep} kind={block.demoKind || "image"} />

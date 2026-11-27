@@ -43,6 +43,7 @@ import brainImaging5 from "../data/lessons/brain-imaging-lecture05.json";
 import brainImaging6 from "../data/lessons/brain-imaging-lecture06.json";
 import geneticsTutorial4 from "../data/lessons/genetics-tutorial04.json";
 import geneticsStudyGuide from "../data/lessons/genetics-study-guide-site-ready.json";
+import geneticsLecture05 from "../data/lessons/genetics-lecture05.json";
 
 import "../styles/interactive-summary.css";
 
@@ -88,7 +89,8 @@ const lessonMap = {
   [brainImaging5.id]: brainImaging5,
   [brainImaging6.id]: brainImaging6,
   [geneticsTutorial4.id]: geneticsTutorial4,
-  [geneticsStudyGuide.id]: geneticsStudyGuide
+  [geneticsStudyGuide.id]: geneticsStudyGuide,
+  [geneticsLecture05.id]: geneticsLecture05,
 };
 
 export default function LessonPage({

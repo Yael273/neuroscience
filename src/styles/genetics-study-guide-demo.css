@@ -275,7 +275,6 @@ to {
     opacity: 1;
     transform: scale(1)
 }
-}
 
 @media(max-width:600px) {
     .process-flow .gsg-demo {
@@ -315,4 +314,102 @@ to {
     animation: none !important;
     transition: none !important;
     animation-delay: 0ms !important;
+}
+
+/* New source-based demonstrations: instant changes with no transition effects. */
+.process-flow .gsg-teaching-diagram {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 130px;
+    padding: 8px
+}
+
+.process-flow .gsg-data-cards {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%
+}
+
+.process-flow .gsg-data-cards>span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    text-align: center;
+    min-width: 130px;
+    flex: 1 1 130px;
+    max-width: 260px;
+    background: #e9f7ee;
+    color: #185c3d;
+    border: 1px solid #bbddc9;
+    border-radius: 12px;
+    padding: 13px
+}
+
+.process-flow .gsg-data-cards b {
+    font-size: 20px
+}
+
+.process-flow .gsg-data-cards small {
+    font-size: 13px;
+    color: #386c53;
+    line-height: 1.6
+}
+
+.process-flow .gsg-four {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(85px, 1fr));
+    gap: 8px;
+    width: min(360px, 100%);
+    direction: ltr
+}
+
+.process-flow .gsg-four>span {
+    border: 1px solid #b8d7c5;
+    border-radius: 9px;
+    background: #e8f5ed;
+    padding: 13px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 750;
+    color: #1e6845
+}
+
+.process-flow .gsg-four>span.is-eliminated {
+    background: #f8e9e9;
+    color: #9b4545;
+    text-decoration: line-through;
+    border-color: #e8b2b2
+}
+
+.process-flow .gsg-four>span.is-muted {
+    background: #f9eeee;
+    color: #9b4545
+}
+
+.process-flow .gsg-teaching-diagram .gsg-ratio {
+    align-items: center
+}
+
+.process-flow .gsg-teaching-diagram *,
+.process-flow .gsg-teaching-diagram {
+    animation: none !important;
+    transition: none !important
+}
+
+@media(max-width:520px) {
+    .process-flow .gsg-data-cards>span {
+        min-width: 112px
+    }
+
+    .process-flow .gsg-four>span {
+        font-size: 14px
+    }
 }
