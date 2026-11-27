@@ -47,10 +47,11 @@ import neuroPractice4 from "./data/lessons/neuro4-interactive-practice.json";
 import brainImaging5 from "./data/lessons/brain-imaging-lecture05.json";
 import brainImaging6 from "./data/lessons/brain-imaging-lecture06.json";
 import geneticsTutorial4 from "./data/lessons/genetics-tutorial04.json";
+import geneticsStudyGuide from "./data/lessons/genetics-study-guide-site-ready.json";
 
 
 const lessonsById = Object.fromEntries(
-  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, appliedGenetics, molecularLecture03, buddhismLecture01, buddhismLecture02, buddhismLecture03, appliedGeneticsLecture02, neuroLesson22, brainImagingLesson03, compLecture02, compMathReview, compLecture03, compTutorial02, compTutorial03, geneticsTutorial02, compLecture04, consciousnessLesson03, brainImagingLesson04, molecularLecture04, appliedGeneticsTutorial01, geneticsTutorial03, appliedGeneticsLecture03, geneticsLecture03, geneticsLecture04, neuroLesson4, neuroPractice4, brainImaging5, brainImaging6, geneticsTutorial4].map(lesson => [lesson.id, lesson])
+  [neuroLesson, neuroLesson2, compLecture, compTutorial, neuropathologyIntro, geneticsLecture, geneticsTutorial, molecularLecture, molecularLecture2, brainImagingLesson, brainImagingLesson2, consciousnessLesson, appliedGenetics, molecularLecture03, buddhismLecture01, buddhismLecture02, buddhismLecture03, appliedGeneticsLecture02, neuroLesson22, brainImagingLesson03, compLecture02, compMathReview, compLecture03, compTutorial02, compTutorial03, geneticsTutorial02, compLecture04, consciousnessLesson03, brainImagingLesson04, molecularLecture04, appliedGeneticsTutorial01, geneticsTutorial03, appliedGeneticsLecture03, geneticsLecture03, geneticsLecture04, neuroLesson4, neuroPractice4, brainImaging5, brainImaging6, geneticsTutorial4, geneticsStudyGuide].map(lesson => [lesson.id, lesson])
 );
 
 export default function App() {

@@ -1,0 +1,318 @@
+.process-flow .gsg-demo {
+    margin: 16px 0;
+    padding: 16px;
+    background: #f7fcf9;
+    border: 1px solid #d9eee2;
+    border-radius: 15px;
+    color: #284c3b
+}
+
+.process-flow .gsg-demo-heading {
+    font-weight: 800;
+    text-align: center;
+    color: #186747;
+    font-size: 15px;
+    margin-bottom: 14px
+}
+
+.process-flow .gsg-scene {
+    min-height: 172px;
+    display: grid;
+    place-items: center;
+    overflow: hidden
+}
+
+.process-flow .gsg-stack {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.process-flow .gsg-ratio,
+.process-flow .gsg-cross,
+.process-flow .gsg-multiply,
+.process-flow .gsg-gene-map,
+.process-flow .gsg-verify {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.process-flow .gsg-cell {
+    background: #e5f4ed;
+    border: 1px solid #abdac3;
+    color: #1c6747;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.process-flow .gsg-cell.gsg-joined {
+    background: #d4eafa;
+    border-color: #9bc9e8;
+    color: #23668d
+}
+
+.process-flow .gsg-cell.gsg-dark {
+    background: #f6e6e8;
+    border-color: #e3b3bd;
+    color: #883b4d
+}
+
+.process-flow .gsg-cell.gsg-blue {
+    background: #e5eefc;
+    border-color: #b3c8e7;
+    color: #2e5b92
+}
+
+.process-flow .gsg-caption {
+    font-size: 13px;
+    color: #486957;
+    text-align: center;
+    line-height: 1.8
+}
+
+.process-flow .gsg-result {
+    font-weight: 900;
+    color: #16784c;
+    font-size: 25px;
+    direction: ltr;
+}
+
+.process-flow .gsg-check {
+    background: #24885a;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 13px;
+    font-size: 20px;
+}
+
+.process-flow .gsg-cross {
+    font-size: 20px;
+    font-weight: 800;
+    direction: ltr
+}
+
+.process-flow .gsg-clusters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    direction: ltr
+}
+
+.process-flow .gsg-cluster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    min-width: 85px;
+}
+
+.process-flow .gsg-group-0 {
+    background: #e1f1ff;
+    border-color: #83b7e1;
+    color: #265b91
+}
+
+.process-flow .gsg-group-1 {
+    background: #e6f5e8;
+    border-color: #96c99b;
+    color: #396b41
+}
+
+.process-flow .gsg-group-2 {
+    background: #fce9e2;
+    border-color: #e3b09e;
+    color: #9b4a32
+}
+
+.process-flow .gsg-group-3 {
+    background: #f2e9fa;
+    border-color: #c7ace1;
+    color: #704b96
+}
+
+.process-flow .gsg-cluster>span {
+    font-size: 12px
+}
+
+.process-flow .gsg-mini-dots {
+    display: grid;
+    grid-template-columns: repeat(3, 7px);
+    gap: 3px;
+    min-height: 30px;
+    align-content: center
+}
+
+.process-flow .gsg-mini-dots i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .66
+}
+
+.process-flow .gsg-prob-two {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center
+}
+
+.process-flow .gsg-prob-two>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.process-flow .gsg-multiply>b {
+    font-size: 24px
+}
+
+.process-flow .gsg-fraction {
+    font-size: 26px;
+    direction: ltr;
+    color: #186f4c
+}
+
+.process-flow .gsg-sixteen {
+    width: 180px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px
+}
+
+.process-flow .gsg-sixteen i {
+    height: 19px;
+    background: #e1e9e5;
+    border-radius: 5px;
+}
+
+.process-flow .gsg-sixteen i.is-match {
+    background: #54b783
+}
+
+.process-flow .gsg-offspring {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px
+}
+
+.process-flow .gsg-mouse {
+    position: relative;
+    border: 2px solid #d1dcd5;
+    background: #fff;
+    border-radius: 15px;
+    min-width: 87px;
+    min-height: 108px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.process-flow .gsg-mouse-face {
+    background: #f3d37d;
+    border-radius: 50%;
+    width: 42px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #715f37;
+    font-size: 11px
+}
+
+.process-flow .gsg-ears {
+    letter-spacing: 3px
+}
+
+.process-flow .gsg-mouse:last-child .gsg-mouse-face {
+    background: #a38d79;
+    color: #fff
+}
+
+.process-flow .gsg-mouse.is-lethal {
+    opacity: .35;
+    filter: grayscale(1);
+}
+
+.process-flow .gsg-mouse.is-removed {
+    opacity: .18;
+    transform: scale(.75);
+}
+
+.process-flow .gsg-x {
+    position: absolute;
+    font-size: 55px;
+    color: #d4424d;
+    top: 22px;
+}
+
+.process-flow .gsg-note {
+    margin: 14px 0 0;
+    text-align: center;
+    color: #739184;
+    font-size: 11px;
+    line-height: 1.6
+}
+
+to {
+    opacity: 1;
+    transform: scale(1)
+}
+}
+
+@media(max-width:600px) {
+    .process-flow .gsg-demo {
+        padding: 12px
+    }
+
+    .process-flow .gsg-cell {
+        font-size: 13px;
+        padding: 9px
+    }
+
+    .process-flow .gsg-cluster {
+        min-width: 64px;
+        padding: 8px
+    }
+
+    .process-flow .gsg-offspring {
+        gap: 5px
+    }
+
+    .process-flow .gsg-mouse {
+        min-width: 65px;
+        padding: 6px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .process-flow .gsg-demo * {
+        animation: none !important;
+    }
+}
+
+/* Step changes appear immediately, with no transition or entrance effect. */
+.process-flow .gsg-demo *,
+.process-flow .gsg-demo *::before,
+.process-flow .gsg-demo *::after {
+    animation: none !important;
+    transition: none !important;
+    animation-delay: 0ms !important;
+}

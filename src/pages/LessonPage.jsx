@@ -42,6 +42,7 @@ import neuro4Practice from "../data/lessons/neuro4-interactive-practice.json";
 import brainImaging5 from "../data/lessons/brain-imaging-lecture05.json";
 import brainImaging6 from "../data/lessons/brain-imaging-lecture06.json";
 import geneticsTutorial4 from "../data/lessons/genetics-tutorial04.json";
+import geneticsStudyGuide from "../data/lessons/genetics-study-guide-site-ready.json";
 
 import "../styles/interactive-summary.css";
 
@@ -86,7 +87,8 @@ const lessonMap = {
   [neuro4Practice.id]: neuro4Practice,
   [brainImaging5.id]: brainImaging5,
   [brainImaging6.id]: brainImaging6,
-  [geneticsTutorial4.id]: geneticsTutorial4
+  [geneticsTutorial4.id]: geneticsTutorial4,
+  [geneticsStudyGuide.id]: geneticsStudyGuide
 };
 
 export default function LessonPage({

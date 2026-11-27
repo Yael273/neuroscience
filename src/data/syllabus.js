@@ -39,6 +39,7 @@ import neuro4Practice from "./lessons/neuro4-interactive-practice.json";
 import brainImaging5 from "./lessons/brain-imaging-lecture05.json";
 import brainImaging6 from "./lessons/brain-imaging-lecture06.json";
 import geneticsTutorial4 from "./lessons/genetics-tutorial04.json";
+import geneticsStudyGuide from "./lessons/genetics-study-guide-site-ready.json";
 
 
 // Only subjects with real uploaded material appear here.
@@ -283,6 +284,16 @@ export const subjects = [
       topics: geneticsTutorial4.sections.map(
         section => section.title
       )
+    },
+    {
+      id: "genetics-study-guide",
+      group: "other",
+      name: "סיכום ושיטות עבודה למבחן",
+      description: geneticsStudyGuide.description,
+      lessonIds: [geneticsStudyGuide.id],
+      lessons: 1,
+      duration: geneticsStudyGuide.duration?.estimatedStudyMinutes ?? null,
+      topics: geneticsStudyGuide.sections.map(section => section.title)
     },
     ]
   },
